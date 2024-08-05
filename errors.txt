@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script_jenya_ch2.rpy", line 1204: expected statement.
+    jenya normal smile hands
+                            ^
+
+Ren'Py Version: Ren'Py 8.1.2.23090503
+Mon May  6 09:10:00 2024
