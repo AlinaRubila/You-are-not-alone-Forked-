@@ -1,11 +1,11 @@
 label jenya_good_end:
 
     #Спрайт Жени грустный
-    show jenya sada at right2 with dissolve
+    show jenya sad homea at right2 with dissolve
     j "Что ж, это нужно сделать. Просто мне страшно… Я не знаю как начать."
 
     #Спрайт Гг с улыбкой
-    show mc normal crosseda at left2 with dissolve
+    show mc smile homea at left2 with dissolve
     mc "Просто начни говорить. А дальше слова сами польются."
 
     mc "Не пытайся переспорить родителей, а постарайся донести до них свои чувства и переживания."
@@ -14,20 +14,20 @@ label jenya_good_end:
 
     #Спрайт Жени с улыбкой
 
-    show jenya normal smilea at right2 with dissolve
+    show jenya smile2 homea at right2 with dissolve
 
     j "Спасибо. Это так страшно, но… Я должна это сделать. Я обязательно с ними поговорю."
 
     #Спрайт гг с улыбкой
 
-    show mc smilea at left2 with dissolve
+    #show mc smilea at left2 with dissolve
 
     mc "Я верю в тебя! А сейчас давай сосредоточимся на экзамене. Успешная сдача экзамена — это ещё один шаг к перепоступлению!"
 
     n "В глазах Жени загорелся решительный огонёк. Теперь я был уверен, что она готова отвечать за своё счастье."
 
-    hide mc smilea at left2 with dissolve
-    hide jenya normal smilea at right2 with dissolve
+    hide mc smile homea with dissolve
+    hide jenya smile2 homea with dissolve
 
     "Мы вернулись к учёбе. Спустя полчаса мы наконец-то закончили. Вроде к экзамену готовы… Голова уже раскалывалась от количества информации, а мы с Женей очень устали."
 
