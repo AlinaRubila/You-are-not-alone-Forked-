@@ -72,6 +72,8 @@ label jenya_bad_end:
 
     show alex normala at right2 with dissolve
 
+    play music wholesome
+
     a "Ты готов?"
 
     show mc normala  at left2 with dissolve
@@ -155,6 +157,7 @@ label jenya_bad_end:
 
     "Держа образ Евы в голове, загадка которой продолжала меня напрягать, я перешагнул через порог, взял билет и сел на место."
 
+    stop music
     scene bg_classroom with dissolve
 
     "Мне очень повезло – билет попался удачный. Я знал почти всё, кроме одного нюанса, который всё время висел у меня на языке, но вспомнить его я так и не смог, поэтому мне поставили 4. Хоть возможность выйти на 5 и была, я не расстроился..."
@@ -206,6 +209,7 @@ label jenya_bad_end:
     $ persistent.poster5 = True
 
     #Чёрный фон
+    stop music
     $ quick_menu = False
     scene black with dissolve
     #Звук ветра - nope

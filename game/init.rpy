@@ -124,6 +124,7 @@ define audio.park = "audio/park.mp3"
 define audio.sincerely = "audio/Sincerely.mp3"
 define audio.stamp = "audio/stamp.mp3"
 define audio.bibika = "audio/bibika.mp3"
+define audio.sadness = "audio/happy-sad.mp3"
 
 # Переменные
 

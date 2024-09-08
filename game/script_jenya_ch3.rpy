@@ -32,7 +32,6 @@ label jenya_cp3:
     #Смена фона. (Фон комнаты Гг и его соседа Тимура)
     #scene bg_room_dawn  with dissolve  #по смыслу вроде подходит
     #Музыка обычная, стандартная, спокойная.
-    play music audio.cozy
 
     "К слову о загадках, мой сосед –  это бермудский треугольник, если бы последний был человеком."
 
@@ -43,7 +42,7 @@ label jenya_cp3:
     "Поэтому за последнее время я сказал ему три или четыре предложения, как максимум, в остальное время мы общались взглядами и мимикой, считай телепатически... Такие вот дела."
 
     #Звук толпы в столовой. - nope
-    #play music audio.cozy
+    play music audio.cozy
     #Фон университетской столовой на пряниках.
     scene cj_canteen_timur with dissolve
 
@@ -320,6 +319,7 @@ label jenya_cp3:
 
     #Спрайт расстроенной Жени.
     show jenya sada at right2 with dissolve
+    play music audio.sadness
 
     j "Я тупая?"
 
@@ -373,7 +373,7 @@ label jenya_cp3:
     #Звук музыки приглушённый, грустный вайб
     show jenya sada at right2 with dissolve
     show mc sad crosseda at left2 with dissolve
-    play music audio.sincerely
+
     n "Улыбка исчезла, остался только печальный взгляд."
 
     #Спрайт расстроенной Жени.
@@ -398,12 +398,13 @@ label jenya_cp3:
     n "Я заметил, как она задумалась."
 
     j "Так, всё, хватит о грустном."
+    stop music fadeout 2.0
     show jenya normal smilea at right2 with dissolve
 
     n "Она попыталась улыбнуться."
 
     #Музыка плавно меняется на обычную, хорошую.
-    stop music fadeout 1.0
+
     play music audio.cozy
     #Спрайт Гг.
 

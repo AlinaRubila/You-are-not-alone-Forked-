@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script_jenya_ch2.rpy", line 1204: expected statement.
-    jenya normal smile hands
-                            ^
+File "game/script_jenya_ch1.rpy", line 529: expected end of line
+    stop sound city
+               ^
 
 Ren'Py Version: Ren'Py 8.1.2.23090503
-Mon May  6 09:10:00 2024
+Sun Sep  8 17:24:03 2024
