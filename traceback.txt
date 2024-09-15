@@ -1,30 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script_jenya_ch2.rpy", line 737, in script
-    show jenya normal smile wintera at right2 with dissolve
-Exception: Image 'jenya normal smile' does not accept attributes 'wintera'.
+  File "game/script_jenya_ending_good.rpy", line 224, in script
+    show jenya normal smile2 homea at right2 with dissolve
+Exception: Image 'jenya normal' does not accept attributes 'smile2 homea'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script_jenya_ch2.rpy", line 737, in script
-    show jenya normal smile wintera at right2 with dissolve
-  File "C:\Program Files\renpy-8.1.2-sdk\renpy\ast.py", line 1428, in execute
+  File "game/script_jenya_ending_good.rpy", line 224, in script
+    show jenya normal smile2 homea at right2 with dissolve
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\ast.py", line 1428, in execute
     show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "C:\Program Files\renpy-8.1.2-sdk\renpy\ast.py", line 1391, in show_imspec
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\ast.py", line 1391, in show_imspec
     renpy.config.show(name,
-  File "C:\Program Files\renpy-8.1.2-sdk\renpy\exports.py", line 733, in show
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\exports.py", line 733, in show
     if not base.find_target() and renpy.config.missing_show:
-  File "C:\Program Files\renpy-8.1.2-sdk\renpy\display\image.py", line 421, in find_target
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\image.py", line 421, in find_target
     self.target = target._duplicate(a)
-  File "C:\Program Files\renpy-8.1.2-sdk\renpy\display\core.py", line 499, in _duplicate
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\core.py", line 499, in _duplicate
     args.extraneous()
-  File "C:\Program Files\renpy-8.1.2-sdk\renpy\display\core.py", line 362, in extraneous
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\core.py", line 362, in extraneous
     raise Exception("Image '{}' does not accept attributes '{}'.".format(
-Exception: Image 'jenya normal smile' does not accept attributes 'wintera'.
+Exception: Image 'jenya normal' does not accept attributes 'smile2 homea'.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.1.2.23090503
 Ты не один 0.1
-Mon May  6 08:12:46 2024
+Sun Sep 15 19:44:56 2024
