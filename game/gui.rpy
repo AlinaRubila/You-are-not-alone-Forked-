@@ -352,14 +352,14 @@ define gui.history_height = None
 
 ## Местоположение, ширина и выравнивание заголовка, показывающего имя говорящего
 ## персонажа.
-define gui.history_name_xpos = 242
-define gui.history_name_ypos = 0
+define gui.history_name_xpos = 220
+define gui.history_name_ypos = 47
 define gui.history_name_width = 233
 define gui.history_name_xalign = 1.0
 
 ## Местоположение, ширина и выравнивание диалогового текста.
 define gui.history_text_xpos = 255
-define gui.history_text_ypos = 3
+define gui.history_text_ypos = 45
 define gui.history_text_width = 1110
 define gui.history_text_xalign = 0.0
 
