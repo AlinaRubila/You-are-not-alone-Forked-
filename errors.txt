@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script_jenya_ch1.rpy", line 529: expected end of line
-    stop sound city
-               ^
+File "game/screens.rpy", line 293: 'c' is not a keyword argument or valid child of the add statement.
+    c.ellipse((150, 50), 150, 50, fill="#00000080")
+     ^
 
-Ren'Py Version: Ren'Py 8.1.2.23090503
-Sun Sep  8 17:24:03 2024
+Ren'Py Version: Ren'Py 8.3.2.24090902
+Wed Sep 18 18:33:45 2024

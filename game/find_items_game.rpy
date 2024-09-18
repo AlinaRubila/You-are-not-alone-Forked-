@@ -36,7 +36,7 @@ init python:
     images_auto()
 
     # курсоры
-    config.mouse = {"default": [("images/c/default.png", 1, 1)],
+    config.mouse = {"default": [("images/c/default.png", 16, 16)],
         "hand": [("images/c/hand1.png", 2, 10),
         ("images/c/hand1.png", 2, 10), ("images/c/hand1.png", 2, 10),
         ("images/c/hand1.png", 2, 10), ("images/c/hand2.png", 2, 10),
@@ -48,6 +48,7 @@ init python:
     # координаты мышки
     def hf_hint_at_f(trans, st, at):
         trans.pos = renpy.get_mouse_pos()
+
         return 0
 
 # НАСТРОЙКИ
