@@ -47,14 +47,14 @@ image snow2 = Fixed(SnowBlossom("gui/snow2.png", 50, xspeed=(20, 50), yspeed=(10
 
 #Анимация продолжения диалога
 image ctc_atl:
-       "gui/ctc.png",
-       subpixel True
-       yalign 0.93 xalign 0.5
-       parallel:
-           block:
-               linear 2.0 alpha 1.0
-               linear 1.0 alpha 0.3
-               repeat
+    "gui/ctc.png",
+    subpixel True
+    yalign 0.93 xalign 0.5
+    parallel:
+        block:
+            linear 2.0 alpha 1.0
+            linear 1.0 alpha 0.3
+            repeat
 
 
 #Выбор подсаживания
