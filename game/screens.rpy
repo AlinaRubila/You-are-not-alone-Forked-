@@ -245,10 +245,7 @@ screen choice(items):
                             text_align 0.5
                             xsize 400
             vbar value YScrollValue('choice_vp') xmaximum 10 ymaximum 350
-    
-transform zoom_x_only(scale_x=1.0):
-    xzoom scale_x
-
+                      
 style choice_vbox is vbox
 style choice_button is button
 style choice_button_text is button_text

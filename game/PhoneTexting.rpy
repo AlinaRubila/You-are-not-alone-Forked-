@@ -1,5 +1,3 @@
-# Here's the code for the phone!
-
 define nvl_mode = "phone"  ##Allow the NVL mode to become a phone conversation
 define MC_Name = "Я" ##The name of the main character, used to place them on the screen
 
@@ -74,78 +72,93 @@ screen nvl_phonetext(dialogue):
     style_prefix None
 
     $ previous_d_who = None
-    for id_d, d in enumerate(dialogue):
-        if d.who == None: # Narrator
-            text d.what:
-                    xpos -335
-                    ypos 0.0
-                    xsize 350
-                    text_align 0.5
-                    italic True
-                    size 28
-                    slow_cps False
-                    id d.what_id
-                    if d.current:
-                        at message_narrator
-        else:
-            if d.who == MC_Name:
-                $ message_frame = "phone_send_frame.png"
-            else:
-                $ message_frame = "phone_received_frame.png"
-
-            hbox:
-                spacing 10
-                if d.who == MC_Name:
-                    box_reverse True
-
-                #If this is the first message of the character, show an icon
-                if previous_d_who != d.who:
-                    if d.who == MC_Name:
-                        $ message_icon = "phone_send_icon.png"
-                    else:
-                        $ message_icon = "phone_received_icon.png"
-
-                    add message_icon:
-                        if d.current:
-                            at message_appear_icon()
-
-                else:
-                    null width 107
-
-                vbox:
-                    yalign 1.0
-                    if d.who != MC_Name and previous_d_who != d.who:
-                        text d.who
-
-                    frame:
-                        padding (20,20)
-
-
-                        background Frame(message_frame, 23,23,23,23)
+    vbox:
+        ypos -30
+        xsize 495
+        for id_d, d in enumerate(dialogue):
+            if d.who == None: # Narrator
+                frame:
+                    xsize 550
+                    xpos -20
+                    background Frame("phone_send_frame.png", 23,23,23,23)
+                    text d.what:
+                        xpos -335
+                        ypos 0.0
                         xsize 350
-
+                        text_align 0.5
+                        italic True
+                        size 22
+                        slow_cps False
+                        id d.what_id
                         if d.current:
-                            if d.who == MC_Name:
-                                at message_appear(1)
-                            else:
-                                at message_appear(-1)
+                            at message_narrator
+            else:
+                if d.who == MC_Name:
+                    $ message_frame = "phone_send_frame.png"
+                else:
+                    $ message_frame = "phone_received_frame.png"
+                if previous_d_who == d.who:
+                    null height 3
+                else:
+                    null height 12
+                    
+                hbox:
+                    if d.who == MC_Name:
+                        box_reverse True
+                        xpos 25
 
-                        text d.what:
-                            pos (0,0)
-                            xsize 350
-                            slow_cps False
+                    #If this is the first message of the character, show an icon
+                    if previous_d_who != d.who:
+                        if d.who == MC_Name:
+                            $ message_icon = "phone_send_icon.png"
+                        else:
+                            $ message_icon = "phone_received_icon.png"
+
+                        add message_icon:
+                            size (75,75)
+                            yalign 0.25
+                            if d.current:
+                                at message_appear_icon()
+                    else:
+                        null width 75
+                    null width 10
+                    frame:
+                        padding (20,10,20,15)
+                        background Frame(message_frame, 23,23,23,23)
+
+                        xsize 370
+                        vbox:
+                            spacing -10
+                            if d.who != MC_Name and previous_d_who != d.who:
+                                text d.who:
+                                    ypos -10
+                                    color "#5c5c5c"
+                            elif d.who == MC_Name and previous_d_who != d.who:
+                                text d.who:
+                                    xpos 310
+                                    ypos -10
+                                    color "#5f5f5f"
+                            if d.current:
+                                if d.who == MC_Name:
+                                    at message_appear(1)
+                                else:
+                                    at message_appear(-1)
+
+                            text d.what:
+                                pos (0,0)
+                                xsize 360
+                                slow_cps False
 
 
-                            if d.who == MC_Name :
-                                color "#FFF"
-                                text_align 1.0
-                                xpos -580
-                            else:
-                                color "#000"
+                                if d.who == MC_Name :
+                                    color "#000000"
+                                    text_align 1.0
+                                    xpos -560
+                                else:
+                                    color "#000000"
 
-
-                            id d.what_id
-        $ previous_d_who = d.who
+                                id d.what_id
+            $ previous_d_who = d.who
 
 style phoneFrame is default
 
@@ -158,7 +171,7 @@ style phoneFrame_frame:
 
 style phoneFrame_viewport:
     yfill True
-    xfill True
+    xfill False
 
     yoffset -20
 

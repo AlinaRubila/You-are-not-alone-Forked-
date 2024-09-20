@@ -57,7 +57,7 @@ screen guyChoice():
 label jenya_cp1:
 
     if persistent.ending1 and persistent.ending122:
-         scene bg_rut
+        scene bg_rut
     else:
         scene bg_rutnoeve
 
