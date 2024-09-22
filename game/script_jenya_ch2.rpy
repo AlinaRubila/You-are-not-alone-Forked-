@@ -637,7 +637,7 @@ label jenya_cp2:
 
             show mc smile wintera at left2 with dissolve
 
-            mc "Согласен. С таким человеком рядом вид становится еще прекраснее."
+            mc "Согласен. С таким человеком рядом вид становится ещё прекраснее."
 
             show jenya normal smile wintera at right2 with dissolve
 
@@ -902,32 +902,32 @@ label jenya_cp2:
 
     scene black with dissolve #мини-игра на поиск предметов
     label find_game:
-         $ hf_init("bg_room_zhenya_dark1", 10,
-             ("candle", 580, 565, _("Свеча")),
-             ("tablecloth", 335, 835, _("Скатерть")),
-             ("incense", 900, 500, _("Благовония")),
-             ("amulet", 1600, 630, _("Оберег")),
-             mouse=True,
-             inventory=False,
-             hint=True,
-             hover=brightness(.05),
-             w=200,
-             h=200
-         )
+        $ hf_init("bg_room_zhenya_dark1", 10,
+            ("candle", 580, 565, _("Свеча")),
+            ("tablecloth", 335, 835, _("Скатерть")),
+            ("incense", 900, 500, _("Благовония")),
+            ("amulet", 1600, 630, _("Оберег")),
+            mouse=True,
+            inventory=False,
+            hint=True,
+            hover=brightness(.05),
+            w=200,
+            h=200
+        )
 
-         $ hf_bg()
-         with dissolve
+        $ hf_bg()
+        with dissolve
 
-         centered "{size=+24}{color=#ffffe0}Собери все предметы"
+        centered "{size=+24}{color=#ffffe0}Собери все предметы"
 
-         $ hf_start()
+        $ hf_start()
 
-         $ renpy.pause(1, hard=True)
+        $ renpy.pause(1, hard=True)
 
-         if hf_return == 0:
-             centered "{size=+24}{color=#ffffe0}У тебя получилось!"
-         else:
-             centered "{size=+24}{color=#ffffe0}Не расстраивайся! \nНе собрано предметов: [hf_return]."
+        if hf_return == 0:
+            centered "{size=+24}{color=#ffffe0}У тебя получилось!"
+        else:
+            centered "{size=+24}{color=#ffffe0}Не расстраивайся! \nНе собрано предметов: [hf_return]."
     if hf_return != 0:
         menu:
             "Попробуешь ещё раз?"

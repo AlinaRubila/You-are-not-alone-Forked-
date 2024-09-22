@@ -194,7 +194,6 @@ screen input(prompt):
         xpadding 170
         ypadding 70
         vbox:
-
             text prompt style "input_prompt"
             input id "input"
 
@@ -241,7 +240,9 @@ screen choice(items):
                 xalign 0.5
                 vbox:
                     for i in items:
-                        textbutton i.caption action i.action
+                        textbutton i.caption action i.action:
+                            xsize 300
+                            text_align 0.5
             vbar value YScrollValue('choice_vp') xmaximum 10 ymaximum 350
 style choice_vbox is vbox
 style choice_button is button
