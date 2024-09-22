@@ -1,25 +1,31 @@
-<<<<<<< HEAD
-Wed Sep 18 19:14:18 2024
+Sun Sep 22 22:47:09 2024
 Windows-10-10.0.19045
 Ren'Py 8.1.2.23090503
  
 
-Bootstrap to the start of init.init. took 0.07s
+Bootstrap to the start of init.init. took 0.09s
 Early init. took 0.01s
-Loader init. took 0.26s
-Loading error handling. took 0.12s
-Loading script. took 1.93s
-Loading save slot metadata. took 0.71s
+Loader init. took 0.15s
+Loading error handling. took 0.14s
+Could not load C:\Users\angry\OneDrive\Рабочий стол\новеллы\You-are-not-alone-Forked-\game/PhoneTexting.rpyc
+Could not load C:\Users\angry\OneDrive\Рабочий стол\новеллы\You-are-not-alone-Forked-\game/find_items_game.rpyc
+Could not load C:\Users\angry\OneDrive\Рабочий стол\новеллы\You-are-not-alone-Forked-\game/screens.rpyc
+Could not load C:\Users\angry\OneDrive\Рабочий стол\новеллы\You-are-not-alone-Forked-\game/script.rpyc
+Could not load C:\Users\angry\OneDrive\Рабочий стол\новеллы\You-are-not-alone-Forked-\game/script_jenya_ch1.rpyc
+Could not load C:\Users\angry\OneDrive\Рабочий стол\новеллы\You-are-not-alone-Forked-\game/script_jenya_ch2.rpyc
+Loading script. took 2.88s
+Loading save slot metadata. took 0.72s
 Loading persistent. took 0.00s
-Running init code. took 0.49s
-Loading analysis data. took 0.10s
+Running init code. took 0.39s
+Loading analysis data. took 0.09s
 Analyze and compile ATL. took 0.02s
-Reloading save slot metadata. took 0.50s
+Reloading save slot metadata. took 0.67s
 Index archives took 0.00s
-Dump and make backups. took 0.19s
+Backing up script files to 'C:\\Users\\angry\\AppData\\Roaming/RenPy/backups\\You-are-not-alone-Forked-':
+Dump and make backups. took 0.25s
 Cleaning cache. took 0.00s
 Making clean stores. took 0.00s
-Initial gc. took 0.07s
+Initial gc. took 0.11s
 DPI scale factor: 1.500000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: b"Couldn't load nvlib." (can be ignored)
@@ -27,15 +33,15 @@ Creating interface object. took 0.01s
 Cleaning stores took 0.00s
 Init translation took 0.13s
 Build styles took 0.01s
-Load screen analysis took 0.09s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.19s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.08s
-Running _start took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.05s
+Save screen analysis took 0.04s
+Prepare screens took 0.36s
+Save pyanalysis. took 0.04s
+Save bytecode. took 0.10s
+Running _start took 0.01s
 Performance test:
-Interface start. took 0.15s
+Interface start. took 0.26s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -47,5 +53,10 @@ Version: b'4.6.0 Compatibility Profile Context 24.3.1.240216'
 Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1731, 974) drawable=(1731, 974)
 Maximum texture size: 4096x4096
-=======
->>>>>>> origin/ForAnagor
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.01s
+Load screen analysis took 0.24s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.01s
