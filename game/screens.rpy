@@ -237,12 +237,15 @@ screen choice(items):
                 xfill False
                 yfill False
                 mousewheel True
-                maximum 1200, 350
+                maximum 400, 350              
                 xalign 0.5
                 vbox:
-                    for i in items:
-                        textbutton i.caption action i.action
+                    for i in items:   
+                        textbutton i.caption action i.action:
+                            text_align 0.5
+                            xsize 400
             vbar value YScrollValue('choice_vp') xmaximum 10 ymaximum 350
+                      
 style choice_vbox is vbox
 style choice_button is button
 style choice_button_text is button_text
@@ -261,15 +264,36 @@ style choice_button_text is default:
     properties gui.button_text_properties("choice_button")
 
 
+
+## вывод подсказок при наведении на кнопки быстрого меню
+screen mm_tooltip(ttcontent):
+    zorder 9999
+    text ttcontent:
+        xanchor 1.0
+        yanchor 1.0
+        xpos 610
+        ypos 1068
+        xsize 300
+        ysize 100
+        at mm_tooltip_show
+        font gui.name_text_font
+
+## анимация появления подсказки
+transform mm_tooltip_show(delaytimer=0.0, duration=0.25):
+    alpha 0.0
+    parallel:
+        linear duration alpha 0.5
+
 ## Экран быстрого меню #########################################################
 ##
 ## Быстрое меню показывается внутри игры, чтобы обеспечить лёгкий доступ к
 ## внеигровым меню.
-
 screen quick_menu():
 
     ## Гарантирует, что оно появляется поверх других экранов.
     zorder 50
+
+    $ tt = GetTooltip()
 
     if quick_menu:
 
@@ -280,23 +304,52 @@ screen quick_menu():
             yalign 0.99
             spacing 5
 
+
             #textbutton _("Назад") action Rollback()
-            imagebutton auto "gui/qm/qm_rollback_%s.png" focus_mask True action Rollback()
+            imagebutton auto "gui/qm/qm_rollback_%s.png" focus_mask True:
+                hovered Show("mm_tooltip", ttcontent="Назад")
+                unhovered Hide("mm_tooltip")
+                action [Hide("mm_tooltip"), Rollback()]
             #textbutton _("История") action ShowMenu('history')
-            imagebutton auto "gui/qm/qm_history_%s.png" focus_mask True action ShowMenu('history')
+            imagebutton auto "gui/qm/qm_history_%s.png" focus_mask True:
+                hovered Show("mm_tooltip", ttcontent="История")
+                unhovered Hide("mm_tooltip")
+                action [Hide("mm_tooltip"), ShowMenu("history")]
             #textbutton _("Пропуск") action Skip() alternate Skip(fast=True, confirm=True)
-            imagebutton auto "gui/qm/qm_skip_%s.png" focus_mask True action Skip() alternate Skip(fast=True, confirm=True)
+            imagebutton auto "gui/qm/qm_skip_%s.png" focus_mask True:
+                hovered Show("mm_tooltip", ttcontent="Пропустить")
+                unhovered Hide("mm_tooltip")
+                action [Hide("mm_tooltip"), Skip()]
+                alternate Skip(fast=True, confirm=True)
             #textbutton _("Авто") action Preference("auto-forward", "toggle")
-            imagebutton auto "gui/qm/qm_auto_%s.png" focus_mask True action Preference("auto-forward", "toggle")
+            imagebutton auto "gui/qm/qm_auto_%s.png" focus_mask True:
+                hovered Show("mm_tooltip", ttcontent="Автодиалог")
+                unhovered Hide("mm_tooltip")
+                action [Hide("mm_tooltip"), Preference("auto-forward", "toggle")]
             #textbutton _("Сохранить") action ShowMenu('save')
-            imagebutton auto "gui/qm/qm_save_%s.png" focus_mask True action ShowMenu('save')
+            imagebutton auto "gui/qm/qm_save_%s.png" focus_mask True:
+                hovered Show("mm_tooltip", ttcontent="Сохранения")
+                unhovered Hide("mm_tooltip")
+                action [Hide("mm_tooltip"), ShowMenu("save")]
             #textbutton _("Б.Сохр") action QuickSave()
-            imagebutton auto "gui/qm/qm_qsave_%s.png" focus_mask True action QuickSave()
+            imagebutton auto "gui/qm/qm_qsave_%s.png" focus_mask True:
+                hovered Show("mm_tooltip", ttcontent="Быстрое сохранение")
+                unhovered Hide("mm_tooltip")
+                action [Hide("mm_tooltip"), QuickSave()]
             #textbutton _("Б.Загр") action QuickLoad()
-            imagebutton auto "gui/qm/qm_qload_%s.png" focus_mask True action QuickLoad()
+            imagebutton auto "gui/qm/qm_qload_%s.png" focus_mask True:
+                hovered Show("mm_tooltip", ttcontent="Быстрая загрузка")
+                unhovered Hide("mm_tooltip")
+                action [Hide("mm_tooltip"), QuickLoad()]
             #textbutton _("Опции") action ShowMenu('preferences')
-            imagebutton auto "gui/qm/qm_preferences_%s.png" focus_mask True action ShowMenu('preferences')
-            imagebutton auto "gui/qm/qm_hide_%s.png" focus_mask True action HideInterface()
+            imagebutton auto "gui/qm/qm_preferences_%s.png" focus_mask True:
+                hovered Show("mm_tooltip", ttcontent="Настройки")
+                unhovered Hide("mm_tooltip")
+                action [Hide("mm_tooltip"), ShowMenu("preferences")]
+            imagebutton auto "gui/qm/qm_hide_%s.png" focus_mask True:
+                hovered Show("mm_tooltip", ttcontent="Скрыть интерфейс")
+                unhovered Hide("mm_tooltip")
+                action [Hide("mm_tooltip"), HideInterface()]
         imagebutton auto "gui/qm/qm_diary_%s.png" xpos 30 ypos 5 focus_mask True action ShowMenu('diary')
 
 
@@ -363,7 +416,7 @@ screen navigation():
             #yalign 0.4
             imagebutton auto "gui/button/bt_backmm_%s.png" xpos 1533 ypos 890 focus_mask True action MainMenu() hovered [ Play("sound", "audio/bumaga.ogg") ]
 
-       # textbutton _("Об игре") action ShowMenu("about")
+        # textbutton _("Об игре") action ShowMenu("about")
 
         #if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 

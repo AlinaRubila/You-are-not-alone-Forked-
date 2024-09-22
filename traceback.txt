@@ -1,30 +1,48 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script_jenya_ending_good.rpy", line 224, in script
-    show jenya normal smile2 homea at right2 with dissolve
-Exception: Image 'jenya normal' does not accept attributes 'smile2 homea'.
+After initialization, but before game start.
+  File "game/screens.rpy", line 283, in prepare_screen
+    screen mm_tooltip(ttcontent):
+  File "game/screens.rpy", line 283, in prepare
+    screen mm_tooltip(ttcontent):
+  File "game/screens.rpy", line 285, in prepare
+    frame:
+  File "game/screens.rpy", line 285, in prepare
+    frame:
+  File "game/screens.rpy", line 286, in <module>
+    background Frame(32, 32, tile=True)
+Exception: Not a displayable: 32
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script_jenya_ending_good.rpy", line 224, in script
-    show jenya normal smile2 homea at right2 with dissolve
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\ast.py", line 1428, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\ast.py", line 1391, in show_imspec
-    renpy.config.show(name,
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\exports.py", line 733, in show
-    if not base.find_target() and renpy.config.missing_show:
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\image.py", line 421, in find_target
-    self.target = target._duplicate(a)
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\core.py", line 499, in _duplicate
-    args.extraneous()
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\core.py", line 362, in extraneous
-    raise Exception("Image '{}' does not accept attributes '{}'.".format(
-Exception: Image 'jenya normal' does not accept attributes 'smile2 homea'.
+  File "C:\Users\anago\OneDrive\Desktop\renpy-8.3.2-sdk\renpy\bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "C:\Users\anago\OneDrive\Desktop\renpy-8.3.2-sdk\renpy\main.py", line 652, in main
+    run(restart)
+  File "C:\Users\anago\OneDrive\Desktop\renpy-8.3.2-sdk\renpy\main.py", line 94, in run
+    renpy.display.screen.prepare_screens()
+  File "C:\Users\anago\OneDrive\Desktop\renpy-8.3.2-sdk\renpy\display\screen.py", line 1026, in prepare_screens
+    s.ast.prepare_screen()
+  File "game/screens.rpy", line 283, in prepare_screen
+    screen mm_tooltip(ttcontent):
+  File "game/screens.rpy", line 283, in prepare
+    screen mm_tooltip(ttcontent):
+  File "game/screens.rpy", line 285, in prepare
+    frame:
+  File "game/screens.rpy", line 285, in prepare
+    frame:
+  File "C:\Users\anago\OneDrive\Desktop\renpy-8.3.2-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/screens.rpy", line 286, in <module>
+    background Frame(32, 32, tile=True)
+  File "C:\Users\anago\OneDrive\Desktop\renpy-8.3.2-sdk\renpy\display\imagelike.py", line 210, in __init__
+    self.image = renpy.easy.displayable(image)
+  File "C:\Users\anago\OneDrive\Desktop\renpy-8.3.2-sdk\renpy\easy.py", line 145, in displayable
+    raise Exception("Not a displayable: %r" % (d,))
+Exception: Not a displayable: 32
 
-Windows-10-10.0.19045 AMD64
-Ren'Py 8.1.2.23090503
+Windows-10-10.0.22631 AMD64
+Ren'Py 8.3.2.24090902
 Ты не один 0.1
-Sun Sep 15 19:44:56 2024
+Wed Sep 18 19:03:30 2024

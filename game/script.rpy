@@ -47,14 +47,14 @@ image snow2 = Fixed(SnowBlossom("gui/snow2.png", 50, xspeed=(20, 50), yspeed=(10
 
 #Анимация продолжения диалога
 image ctc_atl:
-       "gui/ctc.png",
-       subpixel True
-       yalign 0.93 xalign 0.5
-       parallel:
-           block:
-               linear 2.0 alpha 1.0
-               linear 1.0 alpha 0.3
-               repeat
+    "gui/ctc.png",
+    subpixel True
+    yalign 0.93 xalign 0.5
+    parallel:
+        block:
+            linear 2.0 alpha 1.0
+            linear 1.0 alpha 0.3
+            repeat
 
 
 #Выбор подсаживания
@@ -261,7 +261,7 @@ label start:
 
     "Я залез в рюкзак рукой, и немного покопавшись там, достал телефон."
 
-    nvl_narrator "{size=+8}{color=#2f4f4f}Айти и прочие радости жизни"
+    nvl_narrator "{size=+8}{color=#000000}Айти и прочие радости жизни"
     mc_nvl "Ребят, какая у нас аудитория?"
     a_nvl "3305. Дай бог, чтобы ты вообще дошёл до неё..."
     j_nvl "Давай быстрее пока препод не пришёл!"

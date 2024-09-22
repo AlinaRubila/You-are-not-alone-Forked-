@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script_jenya_ch1.rpy", line 529: expected end of line
-    stop sound city
-               ^
+File "game/screens.rpy", line 241: 'xzoom' is not a keyword argument or valid child of the viewport statement.
+    xzoom 0.5
+         ^
 
-Ren'Py Version: Ren'Py 8.1.2.23090503
-Sun Sep  8 17:24:03 2024
+Ren'Py Version: Ren'Py 8.3.2.24090902
+Thu Sep 19 19:00:41 2024
