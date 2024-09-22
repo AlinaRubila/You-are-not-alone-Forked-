@@ -637,7 +637,7 @@ label jenya_cp2:
 
             show mc smile wintera at left2 with dissolve
 
-            mc "Согласен. С таким человеком рядом вид становится еще прекраснее."
+            mc "Согласен. С таким человеком рядом вид становится ещё прекраснее."
 
             show jenya normal smile wintera at right2 with dissolve
 
