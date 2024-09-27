@@ -449,7 +449,7 @@ label jenya_cp2:
 
     scene black with dissolve
     stop music
-    play music room
+    play background room
     #Таинственная музыка - пусть будет стук
     play sound stuk
 
@@ -735,7 +735,8 @@ label jenya_cp2:
             j "Ничего страшного. Хорошего дня!"
 
             #Таинственная музыка. - nope
-            play music room
+            play background room
+            play music darkrooms
 
             scene bg_hallway_day with dissolve
 
@@ -826,6 +827,7 @@ label jenya_cp2:
     "Что-то прохладно, надо бы окно закрыть."
 
     #Нагнетающая музыка. - nope
+    play music darkrooms
     #Фон дороги, вид из окна Гг. - nope
     scene cj_trace with dissolve
 
@@ -948,6 +950,7 @@ label jenya_cp2:
     "Тем временем Женя разложила передо мной тёмную скатерть с золотистыми узорами. Достав из мешочка колоду карт, она начала её перетасовывать, что-то нашёптывая."
 
     #Таинственная мелодия. - nope
+    play music darkrooms
 
     "Женя положила на скатерть карты рубашкой вверх."
 
