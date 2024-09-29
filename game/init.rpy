@@ -5,6 +5,7 @@ define j = Character('Женя', ctc="ctc_atl", ctc_position="fixed", color="#51
 define t = Character('Тимур', ctc="ctc_atl", ctc_position="fixed", color="#51483f", image='timur', callback=name_callback, cb_name="timur")
 define a = Character('Александр', ctc="ctc_atl", ctc_position="fixed", color="#51483f", image='alex', callback=name_callback, cb_name="alex")
 define e = Character('Ева', color="#51483f")
+define od = Character('Ольга Дмитриевна', ctc_position="fixed", color="#51483f", image='comenda', callback=name_callback, cb_name="comenda")
 define un = Character('???', ctc="ctc_atl", ctc_position="fixed", color="#51483f")
 
 #Теги для сообщений
@@ -104,8 +105,8 @@ image alex normala = At('alex normal', sprite_highlight('alex'))
 
 # Музыка
 
-define audio.city = "audio/music/first_dream.mp3"
-define audio.snow = "audio/music/snowsteps.mp3"
+define audio.city = "audio/first_dream.mp3"
+define audio.snow = "audio/snowsteps.mp3"
 define audio.base = "audio/Morning.ogg"
 define audio.bumaga = "audio/perelist.mp3"
 define audio.clock = "audio/signal.mp3"
