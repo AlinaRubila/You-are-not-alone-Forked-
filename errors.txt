@@ -2,9 +2,11 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 241: 'xzoom' is not a keyword argument or valid child of the viewport statement.
-    xzoom 0.5
-         ^
+The label timur is defined twice, at File "game/script_timur.rpyc", line 3:
 
-Ren'Py Version: Ren'Py 8.3.2.24090902
-Thu Sep 19 19:00:41 2024
+and File "game/script_timur_ch1.rpy", line 3:
+label timur:
+
+
+Ren'Py Version: Ren'Py 8.1.2.23090503
+Sun Sep 29 15:25:49 2024
