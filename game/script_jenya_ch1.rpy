@@ -71,7 +71,8 @@ label jenya_cp1:
 
     scene cj_meet_jenya with dissolve
 
-    play music cozy
+    stop background fadeout 2.0
+    play music cozy fadein 1.0
 
     mc "Привет, не против, если подсяду?"
 
@@ -134,7 +135,6 @@ label jenya_cp1:
     else:
         scene cookieNo with dissolve
 
-        #Спрайт смущённого гг с рукой за головой
 
         #show screen scr_over
         scene bg_rutnoeve with dissolve
@@ -360,7 +360,7 @@ label jenya_cp1:
 
             scene bg_classroom with dissolve
 
-            show jenya surprisea at right2 with dissolve
+            show jenya grina at right2 with dissolve
             show mc normala at left2 with dissolve
 
             j "Ну как тебе первый день?"
@@ -380,12 +380,13 @@ label jenya_cp1:
             j "Ой, так я тоже! Пошли вместе!"
 
             stop music
-            play music city
+            play background city
             scene black with dissolve
             scene bg_street_night_winter with dissolve
-            #hide bg_classroom with dissolve
 
             "Не дожидаясь моего ответа, Женя взяла меня под руку и повела в сторону общежития."
+
+            "Что ж, первый день прошёл не так уж и плохо, как я думал поначалу..."
 
             pause 1
             scene black with dissolve
@@ -412,51 +413,57 @@ label jenya_cp1:
         jump ChoiceExcursion
 
         label ChoiceExcursion:
-            menu:
-                "Столовая" if visitCanteen:
-                    $ skolko_mest_na_excursion += 1
-                    $ visitCanteen = False
-                    jump Canteen #находится в скрипте places_excursion.rpy
-                "Парк" if visitPark:
-                    $ visitPark = False
-                    $ skolko_mest_na_excursion += 1
-                    jump Park #находится в скрипте places_excursion.rpy
-                "Библиотека" if visitLibrary:
-                    $ visitLibrary = False
-                    $ skolko_mest_na_excursion += 1
-                    jump Library #находится в скрипте places_excursion.rpy
-                "По домам" if skolko_mest_na_excursion == 3:
-                    "По домам!"
+            if skolko_mest_na_excursion < 3:
+                menu:
+                    "Столовая" if visitCanteen:
+                        $ skolko_mest_na_excursion += 1
+                        $ visitCanteen = False
+                        jump Canteen #находится в скрипте places_excursion.rpy
+                    "Парк" if visitPark:
+                        $ visitPark = False
+                        $ skolko_mest_na_excursion += 1
+                        jump Park #находится в скрипте places_excursion.rpy
+                    "Библиотека" if visitLibrary:
+                        $ visitLibrary = False
+                        $ skolko_mest_na_excursion += 1
+                        jump Library #находится в скрипте places_excursion.rpy
+                    #"По домам" if skolko_mest_na_excursion == 3:
+                        #"По домам!"
 
-            if skolko_mest_na_excursion==3:
-                #Музыка спокойная, средняя по звучанию
-                stop music
-                scene black with dissolve
-                pause 2
-                play sound city
-                play music sincerely
-                scene cj_aftertalk with dissolve
+        #Музыка спокойная, средняя по звучанию
+        stop background
+        stop music fadeout 1.0
+        scene black with dissolve
+        pause 1
+        play background city
+        play music sincerely
+        scene cj_aftertalk with dissolve
 
-                $ persistent.poster2 = True
+        $ persistent.poster2 = True
 
-                j "Ну, самое главное я тебе показала, можно и по домам. Ты, кстати, где живёшь?"
+        j "Ну, самое главное я тебе показала, можно и по домам. Ты, кстати, где живёшь?"
 
-                mc "В 3 общаге."
+        mc "В 3 общаге."
 
-                j "Ой, так я тоже! Пошли вместе!"
+        j "Ой, так я тоже! Пошли вместе!"
 
-                if persistent.jenya_meet != True:
-                    $ renpy.notify("В дневнике появилась новая запись!")
-                $ persistent.jenya_meet = True
+        if persistent.jenya_meet != True:
+            $ renpy.notify("В дневнике появилась новая запись!")
+        $ persistent.jenya_meet = True
 
-                "Не дожидаясь моего ответа, Женя взяла меня под руку и повела в сторону общежития."
+        "Не дожидаясь моего ответа, Женя взяла меня под руку и повела в сторону общежития."
 
-                pause 1
+        "Что ж, первый день прошёл не так уж и плохо, как я думал поначалу."
 
-                scene black with dissolve
+        "Даже успел познакомиться с одногруппницей. Может, оно и к лучшему..."
 
+        pause 1
+
+        scene black with dissolve
+
+    stop background fadeout 1.0
     scene bg_room_evening with dissolve
-    stop sound
+    play sound door
 
     if persistent.jenya_meet != True:
         $ renpy.notify("В дневнике появилась новая запись!")
@@ -465,6 +472,7 @@ label jenya_cp1:
     "Домой я пришёл обессилевший, и поэтому сразу лёг спать."
 
     "Утро вечера мудренее..."
+    stop music fadeout 1.0
 
     pause 1
 
@@ -472,8 +480,8 @@ label jenya_cp1:
 
     #Сон с Евой
 
-    play music city
-    pause 2
+    play background wind fadein 3.0
+    pause 1
     show snow1
     show snow2
     with dissolve
@@ -519,12 +527,11 @@ label jenya_cp1:
 
     "Голос незнакомки всегда звучал неожиданно и резко. Словно холодная горсть снега, что внезапно попала за шиворот."
 
-    mc "Что…что ты имеешь ввиду?"
+    mc "Что… что ты имеешь в виду?"
 
     #Спрайт черного силуэта
 
     un "Я…"
-
 
     play sound ambulance
 
@@ -542,7 +549,7 @@ label jenya_cp1:
     "И вот, когда я, казалось, достиг дна этой темноты, я проснулся, и цвет, что я видел, сменился на белый, цвет потолка моей комнаты в общаге."
 
     stop sound
-    stop music
+    stop background
     scene black with off
 
     pause 1
@@ -557,7 +564,7 @@ label jenya_cp1:
     scene bg_room_morning at pan
     with dissolve
 
-    play music room
+    play background room
 
     "С трудом повернувшись, я выглянул в окно, на дорогу за общагой."
 
@@ -577,11 +584,10 @@ label jenya_cp1:
     "Это решение показалось мне разумным, потому что во время школы этот метод всегда помогал мне растрястись и настроиться на нужный лад."
 
     play sound steps
-    stop music
     scene black with dissolve
     scene cj_nocockroach with dissolve
 
-    play music shower
+    play background shower fadein 1.0
 
     "Я позволил себе расслабиться, пытаясь смыть с себя все негативные мысли и страхи, которые преследовали меня после странного сна."
 
@@ -611,11 +617,11 @@ label jenya_cp1:
 
     "Ой, фу, неважно. Надеюсь он убежал и больше мы с ним не пересечемся."
 
-    stop music
+    stop background
     play sound steps
     scene black with dissolve
     scene bg_room_morning with dissolve
-    play music room
+    play background room
 
     "После я вернулся в комнату."
 
@@ -629,13 +635,13 @@ label jenya_cp1:
 
             "Благо моя комната недалеко от кухни. "
 
+            play music home
             scene black with dissolve
             scene bg_hallway_light with dissolve
 
             "Я прошёл через коридор общаги, уже ставший мне привычным."
 
             scene bg_kitchen_evening with dissolve
-            play music evening
 
             "Вошёл в место, где будут готовиться мои “кулинарные шедевры”."
 
@@ -694,6 +700,7 @@ label jenya_cp1:
             $ relate_jenya += 5
             $ eda = True
 
+            stop music fadeout 2.0
         "Разобрать вещи":
 
             play music sincerely
@@ -761,6 +768,7 @@ label jenya_cp1:
         pause 2
 
         scene black with dissolve
+        play background room
 
         play sound stuk
 
@@ -774,6 +782,8 @@ label jenya_cp1:
         play sound door
 
         "За дверью никого не оказалось, но на полу лежала тарелка, обёрнутая в пищевую плёнку."
+
+        play music sunshine fadein 1.0
 
         "В тарелке был свежий завтрак."
 
@@ -791,6 +801,7 @@ label jenya_cp1:
 
     scene black with dissolve
 
-    stop music
+    stop music fadeout 1.0
+    stop background fadeout 1.0
 
     jump jenya_cp2

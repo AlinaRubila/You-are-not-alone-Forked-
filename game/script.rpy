@@ -57,7 +57,6 @@ image ctc_atl:
             linear 1.0 alpha 0.3
             repeat
 
-
 #Выбор подсаживания
 screen rutChoice():
     imagebutton:
@@ -93,7 +92,7 @@ init python:
 label start:
 
     #Чёрный экран с анимацией падающего снега, на фоне звуки ветра.
-
+    stop music fadeout 1.0
     $ quick_menu = False
     scene black
 
@@ -102,7 +101,7 @@ label start:
     with dissolve
     pause 3
 
-    play music city
+    play background city
     $ quick_menu = True
 
     "Конец января."
@@ -116,8 +115,6 @@ label start:
     "\"Если снежинка не растает…\""
 
     "Я напел этот мотив себе под нос, но слова с глухим стуком будто бы провалились куда-то. {w}В бездонное небо, может быть. {w}Или в сугроб."
-
-    #звуки шагов по сугробам
 
     play sound snow
 
@@ -159,7 +156,7 @@ label start:
 
     un "Меня зовут…"
 
-    stop music
+    stop background
 
     play sound clock
 
@@ -206,7 +203,7 @@ label start:
     hide snow1
     hide snow2
 
-    play music wholesome
+    play music chill
 
     stop sound
 
@@ -302,11 +299,11 @@ label start:
 
     "Да неужели!"
 
-    stop music
+    stop music fadeout 2.0
 
     play sound door
 
-    play music room
+    play background people
 
     if persistent.ending1 and persistent.ending122:
         scene bg_rut with dissolve

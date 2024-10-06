@@ -3,10 +3,11 @@ label Canteen:
     #Музыка ритмичная, спокойная, средняя по звучанию
 
     stop music
+    stop background
 
     play sound steps
 
-    play music room
+    play background room
 
     scene black with dissolve
 
@@ -37,7 +38,8 @@ label Canteen:
 
     scene bg_canteen with dissolve
 
-    play music wholesome
+    play music evening
+    play background people
 
     "Университетская столовая была, как и взрослая жизнь, более холодной. За столами сидели не то подростки, не то взрослые. Сидели и что-то задумчиво писали в ноутбуках, попивая латте на кокосовом молоке."
 
@@ -55,11 +57,12 @@ label Canteen:
 
     mc "Напрашиваешься на комплимент?"
 
-    show jenya normala at right2 with dissolve
-    j @ smile "Возможно."
+    show jenya smilea at right2 with dissolve
+    j "Возможно."
 
-    j "Куда пойдём дальше?"
-
+    if skolko_mest_na_excursion < 3:
+        show jenya normala at right2 with dissolve
+        j "Куда пойдём дальше?"
     jump ChoiceExcursion
 
 label Park:
@@ -72,10 +75,12 @@ label Park:
 
     j "Моё любимое место!"
 
+    stop music fadeout 2.0
+    stop background
     scene black with dissolve
     play sound steps
     pause 1
-    play music park
+    play background park
     scene bg_park_winter with dissolve
 
     "Обнаружение новых парков в жилых районах это всегда как маленький праздник. Они отличаются от больших парков вроде Измайловского или Зарядья. "
@@ -88,31 +93,31 @@ label Park:
 
     j "Ну, это обычный парк, но мне тут очень нравится, особенно осенью. Тут даже специально стоят столики для студентов, поэтому я иногда делаю тут домашку. А закат здесь просто закачаешься."
 
-    j "Куда пойдём дальше?"
+    if skolko_mest_na_excursion < 3:
+        j "Куда пойдём дальше?"
 
     jump ChoiceExcursion
 
 label Library:
 
     #Музыка очень тихая и очень спокойная
-
-    scene black with dissolve
-    play sound steps
-    pause 1
-    play music evening
-    scene bg_library with dissolve
-
-    show mc talk crosseda at left2 with dissolve
+    show mc normala at left2 with dissolve
     show jenya normala at right2 with dissolve
 
     mc "Думаю, библиотека мне однажды может пригодиться."
 
     j "Возможно."
 
-    show mc normala at left2 with dissolve
-
     hide mc normala at left2 with dissolve
     hide jenya normala at right2 with dissolve
+    stop music
+    stop background
+
+    scene black with dissolve
+    play sound steps
+    pause 1
+    play music chill
+    scene bg_library with dissolve
 
     n "Библиотека была далека от Александрийской. Тут и там стояли кожаные пустующие диванчики, забитые различной (в основном профессиональной) литературой шкафы, и самое главное - почти никого нет."
 
@@ -132,6 +137,7 @@ label Library:
 
     show jenya normala at right2 with dissolve
 
-    j "Куда пойдём дальше?"
+    if skolko_mest_na_excursion < 3:
+        j "Куда пойдём дальше?"
 
     jump ChoiceExcursion

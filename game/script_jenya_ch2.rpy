@@ -15,6 +15,8 @@ label jenya_cp2:
 
     pause 0.5
 
+    play sound coffee
+
     scene cj_chapter2 with dissolve
 
     pause 3
@@ -41,9 +43,11 @@ label jenya_cp2:
 
     n"Уже наяву меня стали преследовать странные происшествия. То стакан упадёт со стола, то дверь сама откроется. А однажды ночью я обнаружил на окне отпечаток руки. Я мог бы спихнуть всё на Тимура, но рука явно была не мужская."
 
-    play music base
+    stop music fadeout 2.0
 
     scene black with dissolve
+
+    play background room
 
     play sound signal
 
@@ -66,15 +70,17 @@ label jenya_cp2:
     #Спокойная мелодия
 
     scene bg_street_morning_winter with dissolve
+    play background city
 
     n"Какой же привычной стала, раньше необычная для меня, дорога в университет. Иду уже на автомате. Хоть тут не надо напрягать моё сонное сознание."
 
     "Те же магазины, та же дорога, кажется, что даже прохожие каждый день одинаковые."
 
+    stop music fadeout 0.5
     scene black with dissolve
     mc "А?"
 
-    play sound bibika
+    play sound tire
 
     scene bg_street_morning_winter at tremble
 
@@ -148,9 +154,9 @@ label jenya_cp2:
 
     n"Я точно не хочу, чтобы Женя опять так переживала и боялась за меня."
 
-    play music wholesome
     scene bg_hallway with dissolve
-    #Смена музыки
+    play music knowledge fadein 1.0
+    play background people
 
     n"До универа мы дошли без происшествий. Постепенно и напряжение начинало уходить. И разговоры о правилах ПДД перетекли в приятную дружескую беседу."
 
@@ -162,7 +168,8 @@ label jenya_cp2:
     show mc smilea  at left2 with dissolve
     j "И оказалось, что всё это время ответы были близко, ведь…"
 
-    play sound signal
+    stop music fadeout 1.0
+    play music jenyar
     n "Как только зазвонил телефон, Женя резко изменилась в лице."
 
     show jenya surprisea at right2 with dissolve
@@ -177,7 +184,7 @@ label jenya_cp2:
 
     "Женя ответила на звонок."
 
-    stop sound
+    stop music
 
     j "Да, мамочка… Доброе утро."
 
@@ -223,7 +230,8 @@ label jenya_cp2:
 
     j "Всё в порядке. Смотри, пара уже начинается!"
 
-    play music sincerely
+    stop background
+    play music evening
     scene cj_meet_jenya_angry with dissolve
 
     n"Пара началась. Женя уткнулась в тетрадь, не обращая внимания ни на препода, ни на меня."
@@ -244,6 +252,8 @@ label jenya_cp2:
 
     "Я должен с ней поговорить!"
 
+    stop music fadeout 1.0
+    play background room
     scene bg_classroom2 with dissolve
 
     "Я не мог дождаться окончания пары, чтобы побыстрее пересечься и поговорить с Женей. И как только стрелка на часах пробила 10:30, Женя быстро выбежала из аудитории."
@@ -268,6 +278,7 @@ label jenya_cp2:
             scene cj_trashcan_blur with dissolve
             play sound bumaga
             show cj_portret with dissolve
+            play music sunshine
 
             n"Я не поверил своим глазам. Развернув бумажку, я обнаружил на ней мой портрет."
 
@@ -281,7 +292,7 @@ label jenya_cp2:
             if persistent.jenya_frombin != True:
                 $ renpy.notify("В дневнике появилась новая запись!")
             $ persistent.jenya_frombin = True
-
+            stop music fadeout 1.0
         "Не лезть в мусорку":
             $ vzal = 0
 
@@ -291,6 +302,8 @@ label jenya_cp2:
             "Подавив своё любопытство, я отошёл от мусорки."
 
     scene bg_hallway with dissolve
+    play background people
+    play music chill
     #Спокойная музыка.
 
     n"Я вышел в коридор, выискивая глазами Женю. Долго искать не пришлось."
@@ -340,8 +353,9 @@ label jenya_cp2:
 
     "Уже в хорошем настроении мы с Женей двинулись на следующую пару. В этот раз полтора часа пролетели незаметно."
 
+    scene black with dissolve
     #Весёлая музыка.
-    play music base
+    play music funny fadein 1.0
     scene cj_alex at pan with dissolve
 
     a "У меня для вас есть информация…"
@@ -407,10 +421,11 @@ label jenya_cp2:
 
             "Видимо, у нас разные понятия романтики."
 
-    play music wholesome
+    "Спустя ещё несколько минут Шнурок наконец-то нас отпустил. Женя схватила меня под руку и под радостные крики “Свобода!” мы выбежали из аудитории."
 
-    play sound city
     scene black with dissolve
+    play music together
+    play background city
 
     scene bg_street_morning_winter with dissolve
 
@@ -430,10 +445,10 @@ label jenya_cp2:
 
     n "Как же я рад, что мы с Женей дружим. С ней так комфортно, подумал я, и за затянувшимся диалогом не заметил, как мы дошли до общаги."
 
-    stop sound
+    stop background
     scene black with dissolve
     scene  bg_room_evening with dissolve
-    play music evening
+    play music home
 
     n"Зайдя к себе в комнату, я увидел, что Тимура, как обычно, нет дома."
 
@@ -448,9 +463,8 @@ label jenya_cp2:
     "Поэтому я незамедлительно рванул в свою тёплую постель и вырубился, только коснувшись подушки."
 
     scene black with dissolve
-    stop music
+    stop music fadeout 2.0
     play background room
-    #Таинственная музыка - пусть будет стук
     play sound stuk
 
     mc "А? Что? Кто здесь?"
@@ -478,7 +492,7 @@ label jenya_cp2:
 
     scene  bg_room_dawn at pan with dissolve
     #Спокойная музыка.
-    play music sincerely
+    play music home
 
     n"По моему телу струился холодный пот."
 
@@ -499,6 +513,7 @@ label jenya_cp2:
     n"Выполнив все свои водные процедуры, я направился на кухню."
 
     "В коридоре я почувствовал приятный запах блинов."
+    play background cooking
 
     "Зайдя на кухню, я был рад снова увидеть Женю, которая готовила завтрак."
 
@@ -533,6 +548,8 @@ label jenya_cp2:
     "И у Жени получалось очень хорошо. Быстрыми отточенными движениями она ловко переворачивала блины один за другим."
     "Может для многих в этом и нет ничего особенного, но для меня это верх мастерства."
     "Видимо, мастерство моего соседа - это игнорирование окружающего мира. Ну вот, даже сейчас я вспомнил про него."
+
+    stop background fadeout 1.0
 
     show mc normal homea at left2 with dissolve
 
@@ -629,7 +646,8 @@ label jenya_cp2:
             $ relate_jenya += 15
             #"Возможно мини-игра."
             #Приятная музыка.
-            play music wholesome
+            play music leaves
+            play background park
             scene bg_park_winter with dissolve
             show jenya smile wintera at right2 with dissolve
 
@@ -700,8 +718,9 @@ label jenya_cp2:
 
             n"Когда я рассмотрел свой портрет и передал его назад Жене, у меня на коленях оказался её личный стикер. Мелочь, а приятно. Обязательно вклею его в свой дневник."
 
-            #Смена музыки.
-            play music sincerely
+
+            stop background
+            play music home fadein 1.0
             scene bg_hallway_light with dissolve
 
             n"Погуляв ещё какое-то время, мы вернулись в общежитие."
@@ -734,9 +753,8 @@ label jenya_cp2:
 
             j "Ничего страшного. Хорошего дня!"
 
-            #Таинственная музыка. - nope
             play background room
-            play music darkrooms
+            play music mystery
 
             scene bg_hallway_day with dissolve
 
@@ -756,12 +774,14 @@ label jenya_cp2:
             "Интересно, там кто-то живёт?"
 
             "Я решился постучать в дверь."
+            play sound stuk
 
             "По-видимому никто не собирался открывать."
 
             #Фон двери приближается
             "Я приложил ухо к двери, пытаясь хоть что-то услышать. Наверное, со стороны я выгляжу странно, но моё любопытство взяло верх."
 
+            play sound screamer
             #Пугающий, резкий звук.
 
             "Я отскочил от двери и упал на спину."
@@ -792,7 +812,6 @@ label jenya_cp2:
             mc "Спасибо."
 
             #Смена на комфортную музыку
-            play music sincerely
 
             scene bg_room_dawn with dissolve
 
@@ -811,18 +830,24 @@ label jenya_cp2:
             "Что это за номер? Зачем я вообще всем этим занимаюсь?"
 
             "Стоял под дверью из сна, подслушивал, а теперь забрал чужую вещь и копаюсь в ней."
+            play sound bumaga
+            scene bg_room_dawn with dissolve
 
-            play music room
             n"Поборов своё любопытство, я положил листок обратно в книгу. Да и что я мог бы сделать? Позвонить по номеру? И что бы я сказал?"
+
             "”Здравствуйте, Вася! Я нашёл ваш номер в книге, которую мне дала девушка из комнаты, которая мне приснилась.” Я и сам ничего бы не понял, поступи мне такой звонок."
             scene black with dissolve
-            scene bg_room_evening with dissolve
 
+            scene bg_room_evening with dissolve
 
     n"Неожиданно моё тело накрыла невероятная усталость. Каждая частичка меня молила прилечь и отдохнуть."
     "Я лёг на кровать и всего на мгновение прикрыл глаза."
+    stop music fadeout 2.0
+    scene black with off
+
     #Шумный звук ветра. - nope
     #Звук открывающегося окна. - nope
+    scene bg_room_morning with dissolve
 
     "Что-то прохладно, надо бы окно закрыть."
 
@@ -846,11 +871,12 @@ label jenya_cp2:
     "Но меня же никто не может видеть с улицы! Тем более, сейчас темно. Почему же тогда я ощущаю на себе взгляд?"
     #Фон затемняется
     "Я пулей побежал в свою кровать, зарылся в одеяло и пытался как можно скорее уснуть."
+    scene black with dissolve
 
     #Добрая музыка
-    play music wholesome
+    play music sincerely fadein 1.0
     #Фон с рассветом в комнате Гг.
-    scene bg_room_morning with dissolve
+    scene bg_room_dawn with dissolve
 
     n"Я резко открыл глаза. Где я? Это всё ещё сон?"
 
@@ -869,7 +895,7 @@ label jenya_cp2:
     n"Время шесть утра?! Как рано…"
 
     "Недолго думая, я сразу же спустился в квартиру к Жене и начал стучать в дверь."
-    scene bg_hallway_dark with dissolve
+    scene bg_hallway_light with dissolve
 
     play sound stuk
 
@@ -943,14 +969,11 @@ label jenya_cp2:
     with dissolve
 
     scene cj_divination with dissolve
-    play music evening
+    play music mystery
 
     n"Женя принялась за подготовку к гаданию. На прикроватной тумбе она поставила зажжённую свечу и благовония. Воздух в комнате  постепенно заполнился запахом хвои."
 
     "Тем временем Женя разложила передо мной тёмную скатерть с золотистыми узорами. Достав из мешочка колоду карт, она начала её перетасовывать, что-то нашёптывая."
-
-    #Таинственная мелодия. - nope
-    play music darkrooms
 
     "Женя положила на скатерть карты рубашкой вверх."
 
@@ -1026,8 +1049,8 @@ label jenya_cp2:
         j "Ой, не волнуйся, главное, чтобы тебе стало легче."
 
     scene bg_room_zhenya_dark2 with dissolve
-    #Обычная мелодия.
-    play music cozy
+
+    play music together fadein 1.0
     n"Женя принялась копошиться в своих вещах. Через мгновение мне вручили оберег."
 
     scene cj_gift with dissolve
@@ -1081,8 +1104,6 @@ label jenya_cp2:
     mc "Давай."
     n"Долго мы сидеть не стали и тут же отправились на кухню."
 
-    #Приятная музыка.
-
     scene bg_kitchen_morning with dissolve
     show jenya smile2 homea at right2 with dissolve
     show mc normal homea at left2 with dissolve
@@ -1129,11 +1150,17 @@ label jenya_cp2:
     mc "Ладно."
 
     show cj_cooking with dissolve
+    play background cooking
 
     n"Кулинарный процесс активно пошёл."
 
     "Бурлила вода в кастрюле, шкворчала сковородка, нож стучал по разделочной доске."
 
     "Страх и тревога от недавнего сна исчезли во время приятной беседы с Женей. А прохладный оберег на груди наполнял меня уверенностью и спокойствием."
+
+    scene black with dissolve
+
+    stop music fadeout 1.0
+    stop background fadeout 1.0
 
     jump jenya_cp3

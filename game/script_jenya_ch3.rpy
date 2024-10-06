@@ -10,7 +10,8 @@ label jenya_cp3:
     centered "{size=+24}{color=#ffffe0}Глава 3"
 
     #Звук птиц за окном. (весенняя спокойная мелодия).
-    play music morning
+    play music leaves
+    play background birds
 
     scene bg_room_dawn with dissolve
 
@@ -36,8 +37,11 @@ label jenya_cp3:
 
     "Поэтому за последнее время я сказал ему три или четыре предложения, как максимум, в остальное время мы общались взглядами и мимикой, считай телепатически... Такие вот дела."
 
-    #Звук толпы в столовой. - nope
-    play music audio.cozy
+    stop music fadeout 1.0
+    stop background fadeout 1.0
+    scene black with dissolve
+    play music knowledge
+    play background people
 
     scene cj_canteen_timur with dissolve
 
@@ -143,6 +147,7 @@ label jenya_cp3:
 
     n "Нет! Язык-предатель!"
     hide timur sada with dissolve
+    stop music fadeout 1.0
 
     "Из-за приступа моего словесного недержания Тимур встал и молча ушёл."
 
@@ -152,6 +157,8 @@ label jenya_cp3:
 
     "Что ж... Поражения случаются. Возможно даже случаются каждый день, что поделать. Чтобы отвлечься, я решил пойти и просто позаниматься в библиотеке."
 
+    stop background fadeout 1.0
+    play music chill
     scene bg_library with dissolve
 
     "Я решил почитать что-то из азиатской литературы, но такое всегда было тяжело найти, тем более в студенческой библиотеке."
@@ -176,7 +183,7 @@ label jenya_cp3:
     "Сказал я, не зная, на что рассчитываю."
 
     hide mc surprisea with dissolve
-    play music audio.cozy
+    play music chill
 
     "Мычание прекратилось. Я выдохнул, и снова взглянул на амулет."
 
@@ -200,7 +207,7 @@ label jenya_cp3:
 
     "Быстрым шагом почти бегом, аккуратно и испуганно я направился к краю библиотеки и повернул за угол стены, вздрогнув от увиденного."
 
-    play music audio.evening
+    play music home
 
     "Прямо за углом всё это время сидела Женя, нависающая над какой-то книгой, и громко мычала."
 
@@ -276,13 +283,13 @@ label jenya_cp3:
     "А вопросов у неё была тьма-тьмущая, иногда они даже повторялись, что изредка заставляло меня недовольно вздыхать."
 
     #Музыка становится тише.
-    play music stuk
-    stop music
+    play sound pen
+    stop music fadeout 2.0
 
     "Заметив это, Женя отбросила ручку и громко спросила:"
 
     show jenya sada at right2 with dissolve
-    play music audio.sadness
+    play music sadness
 
     j "Я тупая?"
 
@@ -296,7 +303,7 @@ label jenya_cp3:
 
     j "Я имею в виду профильные предметы. Все эти коды, числа, массивы... Я их терпеть не могу!"
 
-    #Звук руки, ударяющей стол.
+    play sound table
     n "На этом моменте она ударила рукой по столу."
 
     mc "Жень, может тебе это…"
@@ -324,7 +331,6 @@ label jenya_cp3:
 
     mc "Может быть, сейчас ты и ошиблась с направлением, но, пробуя себя в разном, когда-нибудь ты найдешь то, чем действительно хочешь заниматься. Главное – следовать своему сердцу."
 
-    #Звук музыки приглушённый, грустный вайб
     show jenya sada at right2 with dissolve
     show mc sad crosseda at left2 with dissolve
 
@@ -355,7 +361,7 @@ label jenya_cp3:
 
     #Музыка плавно меняется на обычную, хорошую.
 
-    play music audio.cozy
+    play music leaves fadein 1.0
 
     show mc normal crosseda at left2 with dissolve
 
@@ -366,8 +372,6 @@ label jenya_cp3:
     j "Давай. Спасибо за поддержку."
 
     scene bg_uni_day with dissolve
-
-    play music base
 
     show jenya normal smilea at right2 with dissolve
 
@@ -394,10 +398,11 @@ label jenya_cp3:
 
     "Не знаю, из приличия ли Женя хвалила меня, или мои кулинарные навыки действительно улучшились. Наверное, не зря учителя в школе называли меня «умным, но ленивым».  Может, я и поваром мог бы стать, если бы не ленился!"
 
-    #Спокойная музыка.
-    play music audio.cozy
+    stop music fadeout 2.0
 
     scene black with dissolve
+    pause 1
+    play music sunshine
 
     scene bg_room_dawn at pan with dissolve
 
@@ -412,8 +417,6 @@ label jenya_cp3:
 
     menu:
         "Приготовить блинчики":
-            #Музыка становится чуть ритмичнее.
-            play music morning
 
             "Точно! Помню, она говорила, что любит блины."
 
@@ -426,13 +429,14 @@ label jenya_cp3:
             "Но я, не отчаиваясь, попробовал снова. Спустя 3-4 провала блины начали получаться. Неровные, рвущиеся, но вкусные."
 
             "Когда закончилось тесто, я красиво выложил блины на тарелку, убрал за собой и в предвкушении направился к Жене. Это странно, но я испытывал сильное волнение и переживал за то, как она отреагирует. Я очень хотел её порадовать."
+            stop music fadeout 2.0
 
             $ relate_jenya += 15
             $ favorite_food = True
+            play music together fadein 1.0
 
         "Приготовить овсянку":
-            #Музычка такая добрая, ритмичная.
-            play music morning
+
             scene cj_porige with dissolve
 
             "Я пока не до конца уверен в своих кулинарных способностях. Поэтому решил, что лучше просто приготовлю ей овсянку."
@@ -440,9 +444,10 @@ label jenya_cp3:
             "Я сварил её в кастрюле и украсил ягодами. Получилось достаточно симпатично. Думаю, Жене должно понравиться."
 
             "Я убрал за собой на кухне. Переживания за Женю меня не покидали. Успокоившись, я пошёл к комнате моей подруги."
+            stop music fadeout 2.0
 
             #Музыка более приглушённая.
-            play music base
+            play music sincerely fadein 1.0
 
     scene bg_hallway_day with dissolve
 
@@ -474,7 +479,6 @@ label jenya_cp3:
         show jenya smile2 homea at right2 with dissolve
         j "Хорошо, хорошо."
 
-        #Смена музыки на другую, более активную.
         play music wholesome
 
     else:
@@ -502,8 +506,7 @@ label jenya_cp3:
     scene black with dissolve
     scene bg_room_evening with dissolve
 
-    play music stuk
-    stop music
+    play sound stuk
 
     if favorite_food:
         "В дверь постучали."
@@ -518,13 +521,15 @@ label jenya_cp3:
         "Я открыл дверь, и там стояла Женя. Она всё ещё была уставшей и немного расстроенной."
 
     #Музыка обычная.
-    play music base
+    play music evening
+    play background room
 
     "Мы сели за стол и приступили к учёбе. Я обратил внимание, что Женя очень серьёзная. Она так ответственно и старательно всё делает. Видно было, что, когда что-то не получается, это выводит её из себя."
 
     "Мы делали учебные задания уже несколько часов. Женя не отвлекалась и говорила со мной только по теме. Я решил поинтересоваться, как она себя чувствует."
 
     show mc normal homea at left2 with dissolve
+    stop music fadeout 2.0
 
     mc "С тобой всё в порядке?"
 
@@ -533,6 +538,7 @@ label jenya_cp3:
     j "Родители опять за своё. А мне очень обидно, у нас постоянные ссоры. Я очень устала, а долги всё не кончаются."
 
     n "Я заметил, как её глаза начали наполняться слезами."
+    play music gone fadein 1.0
 
     show mc smile homea at left2 with dissolve
     mc "Ну-ну, тихо. С экзаменами у тебя всё будет просто отлично, я в тебя верю. А вот насчёт родителей… надо что-то менять. Может, стоит с ними серьезно поговорить?"
