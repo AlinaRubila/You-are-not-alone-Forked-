@@ -5,6 +5,7 @@ define j = Character('Женя', ctc="ctc_atl", ctc_position="fixed", color="#51
 define t = Character('Тимур', ctc="ctc_atl", ctc_position="fixed", color="#51483f", image='timur', callback=name_callback, cb_name="timur")
 define a = Character('Александр', ctc="ctc_atl", ctc_position="fixed", color="#51483f", image='alex', callback=name_callback, cb_name="alex")
 define e = Character('Ева', color="#51483f")
+define od = Character('Ольга Дмитриевна', ctc_position="fixed", color="#51483f", image='comenda', callback=name_callback, cb_name="comenda")
 define un = Character('???', ctc="ctc_atl", ctc_position="fixed", color="#51483f")
 
 #Теги для сообщений
@@ -101,11 +102,28 @@ image timur thoughtfula = At('timur thoughtful', sprite_highlight('timur'))
 
 image alex normala = At('alex normal', sprite_highlight('alex'))
 
+image comenda normal = At('commandant normal', sprite_highlight('comenda'))
+image comenda angry = At('commandant angry', sprite_highlight('comenda'))
+image comenda home normal = At('commandant home normal', sprite_highlight('comenda'))
+image comenda home angry = At('commandant home angry', sprite_highlight('comenda'))
+image comenda home scared = At('commandant home scared', sprite_highlight('comenda'))
+
+image eve normal = At('eva normal', sprite_highlight('e'))
+image eve silhouette = At('eva silhouette ', sprite_highlight('e'))
+image eve silhouette black = At('eva silhouette black', sprite_highlight('e'))
+image eve silhouette black glow = At('eva silhouette black glow', sprite_highlight('e'))
+image eve silhouette grey = At('eva silhouette grey', sprite_highlight('e'))
+image eve silhouette grey glow = At('eva silhouette grey glow', sprite_highlight('e'))
+image eve silhouette transparent = At('eva silhouette transparent', sprite_highlight('e'))
+image eve ghost = At('ghost', sprite_highlight('e'))
+image eve ghost darker = At('ghost darker', sprite_highlight('e'))
+image eve ghost darkest = At('ghost darkest', sprite_highlight('e'))
+image eve ghost silhouette = At('silhouette', sprite_highlight('e'))
 
 # Музыка
 
-define audio.city = "audio/music/first_dream.mp3"
-define audio.snow = "audio/music/snowsteps.mp3"
+define audio.city = "audio/first_dream.mp3"
+define audio.snow = "audio/snowsteps.mp3"
 define audio.base = "audio/Morning.ogg"
 define audio.bumaga = "audio/perelist.mp3"
 define audio.clock = "audio/signal.mp3"
