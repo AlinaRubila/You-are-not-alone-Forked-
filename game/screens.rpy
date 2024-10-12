@@ -150,7 +150,7 @@ init:
             background Image("gui/gtextbox.png", xalign=0.5, yalign=1.0)
 
 style namebox:
-    xpos 480
+    xpos 600
     xanchor gui.name_xalign
     xsize gui.namebox_width
     ypos 0
