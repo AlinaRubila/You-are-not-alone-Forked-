@@ -14,6 +14,11 @@ define askJenya = False
 define askTimur = False
 define askAlex = False
 define askMargo = False
+define askedJenya = False
+define askedTimur = False
+define askedAlex = False
+define askedMargo = False
+define askedAll = 0
 
 #Выбор печенья
 
@@ -173,73 +178,97 @@ label jenya_cp1:
     #После выбора снова на фоне аудитория и спрайт Жени и гг
     #Если есть ещё про кого спросить, то снова появляется изображение с выбором
 
-    if persistent.ending1 and persistent.ending122:
-        scene bg_rut with dissolve
-    else:
-        scene bg_rutnoeve with dissolve
-    call screen guyChoice
+    label talkChoice:
+        if persistent.ending1 and persistent.ending122:
+            scene bg_rut with dissolve
+        else:
+            scene bg_rutnoeve with dissolve
 
-    if askJenya:
+        call screen guyChoice
 
-        scene bg_classroom_blur with dissolve
-        show jenya smilea at right2 with dissolve
-        show mc normala at left2 with dissolve
+        if askJenya and askedJenya == False:
 
-        j "Поживешь - увидишь. Я крутая."
+            scene bg_classroom_blur with dissolve
+            show jenya smilea at right2 with dissolve
+            show mc normala at left2 with dissolve
 
-        show jenya blusha at right2 with dissolve
+            j "Поживешь - увидишь. Я крутая."
 
-        j "Это всё."
+            show jenya blusha at right2 with dissolve
 
-        n "Женя смущённо отводила взгляд, но по её улыбке я понял, что ей было приятно моё любопытство."
+            j "Это всё."
 
-        $ relate_jenya += 5
+            n "Женя смущённо отводила взгляд, но по её улыбке я понял, что ей было приятно моё любопытство."
 
-    elif askTimur:
+            $ relate_jenya += 5
 
-        scene bg_classroom_blur with dissolve
-        show jenya normala at right2 with dissolve
-        show mc normala at left2 with dissolve
+            if (askedAll < 3):
+                $ askedJenya = True
+                $ askedAll += 1
+                call talkChoice
 
-        j "Я попыталась заговорить с ним, но на всё получала односложные ответы. Лучше уж не говорить совсем, чем говорить так."
+        elif askTimur and askedTimur == False:
 
-        j "Но, мне кажется, он этого и добивается. Хоть имя узнала – Тимур. В общем, какой-то он пугающий и мрачный…"
+            scene bg_classroom_blur with dissolve
+            show jenya normala at right2 with dissolve
+            show mc normala at left2 with dissolve
 
-        n "Это же мой сосед в общаге. Ну, теперь хоть имя его знаю. Значит, он не только со мной такой необщительный."
+            j "Я попыталась заговорить с ним, но на всё получала односложные ответы. Лучше уж не говорить совсем, чем говорить так."
 
-        "Самое удивительное, что он пришёл в вуз раньше меня. И как и во все наши предыдущие встречи, всё так же спал."
+            j "Но, мне кажется, он этого и добивается. Хоть имя узнала – Тимур. В общем, какой-то он пугающий и мрачный…"
 
-        "Хоть я и не мог разглядеть лица Тимура, всё равно можно было заметить помятый вид парня."
+            n "Это же мой сосед в общаге. Ну, теперь хоть имя его знаю. Значит, он не только со мной такой необщительный."
 
-        "Возможно, он, как и я, собирался впопыхах, но почему-то мне казалось, что он и не старался выглядеть иначе."
+            "Самое удивительное, что он пришёл в вуз раньше меня. И как и во все наши предыдущие встречи, всё так же спал."
 
-    elif askAlex:
+            "Хоть я и не мог разглядеть лица Тимура, всё равно можно было заметить помятый вид парня."
 
-        scene bg_classroom_blur with dissolve
-        show jenya grina at right2 with dissolve
-        show mc normala at left2 with dissolve
+            "Возможно, он, как и я, собирался впопыхах, но почему-то мне казалось, что он и не старался выглядеть иначе."
 
-        j "Многоуважаемый господин староста! Очень серьёзный человек. Думаю, со своими обязанностями он точно справляется."
+            if askedAll < 3:
+                $ askedTimur = True
+                $ askedAll += 1
+                call talkChoice
 
-        j "Говоря между нами, он душноватый. Не думаю, что мы с ним сходимся."
+        elif askAlex and askedAlex == False:
 
-        j "Но прозвище “Шнурок” забавное. И как же забавно он возмутился, когда я его так назвала."
+            scene bg_classroom_blur with dissolve
+            show jenya grina at right2 with dissolve
+            show mc normala at left2 with dissolve
 
-        n "Шнурок сидел на первом ряду и всем своим видом давал понять, что он здесь не ради шуточек и общения. Его светлые волосы были аккуратно зачёсаны назад, а одежда была  идеально выглаженной и чистой."
+            j "Многоуважаемый господин староста! Очень серьёзный человек. Думаю, со своими обязанностями он точно справляется."
 
-        "Даже сейчас он что-то проверял в своих записях и недовольно поглядывал на болтающих парней сзади."
+            j "Говоря между нами, он душноватый. Не думаю, что мы с ним сходимся."
 
-    elif askMargo:
+            j "Но прозвище “Шнурок” забавное. И как же забавно он возмутился, когда я его так назвала."
 
-        scene bg_classroom_blur with dissolve
-        show jenya normala at right2 with dissolve
-        show mc normala at left2 with dissolve
+            n "Шнурок сидел на первом ряду и всем своим видом давал понять, что он здесь не ради шуточек и общения. Его светлые волосы были аккуратно зачёсаны назад, а одежда была  идеально выглаженной и чистой."
 
-        j @smile "Такая забавная! Глаза сияют при виде Шнурка, а тот дурак дураком вроде умный, а ничего не понимает."
+            "Даже сейчас он что-то проверял в своих записях и недовольно поглядывал на болтающих парней сзади."
 
-        n "И действительно, светловолосая девушка часто кидала смущённые взгляды на парня с первого ряда."
+            if (askedAll < 3):
+                $ askedAlex = True
+                $ askedAll += 1
+                call talkChoice
 
-        "Но кажется его это волновало меньше всего, или он просто не замечал?"
+        elif askMargo and askedMargo == False:
+
+            scene bg_classroom_blur with dissolve
+            show jenya normala at right2 with dissolve
+            show mc normala at left2 with dissolve
+
+            show jenya smile at right2 with dissolve
+            j "Такая забавная! Глаза сияют при виде Шнурка, а тот дурак дураком вроде умный, а ничего не понимает."
+
+            show jenya normala at right2 with dissolve
+            n "И действительно, светловолосая девушка часто кидала смущённые взгляды на парня с первого ряда."
+
+            "Но кажется его это волновало меньше всего, или он просто не замечал?"
+
+            if (askedAll < 3):
+                $ askedMargo = True
+                $ askedAll += 1
+                call talkChoice
 
     play sound door
 
