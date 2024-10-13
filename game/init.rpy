@@ -6,6 +6,7 @@ define t = Character('Тимур', ctc="ctc_atl", ctc_position="fixed", color="#
 define a = Character('Александр', ctc="ctc_atl", ctc_position="fixed", color="#51483f", image='alex', callback=name_callback, cb_name="alex")
 define e = Character('Ева', color="#51483f")
 define od = Character('Ольга Дмитриевна', ctc_position="fixed", color="#51483f", image='comenda', callback=name_callback, cb_name="comenda")
+define od_un = Character('???', ctc_position="fixed", color="#51483f", image='comenda', callback=name_callback, cb_name="comenda")
 define un = Character('???', ctc="ctc_atl", ctc_position="fixed", color="#51483f")
 
 #Теги для сообщений
@@ -148,6 +149,7 @@ define audio.birds = "audio/ambient/birds_out.mp3"
 define audio.cooking = "audio/ambient/cooking.mp3"
 define audio.people = "audio/ambient/people_around.mp3"
 define audio.wind = "audio/ambient/winter_wind.mp3"
+define audio.shop = "audio/ambient/Shop.mp3"
 
 #музыка
 define audio.sincerely = "audio/music/Sincerely.mp3"
