@@ -104,7 +104,7 @@ image alex normala = At('alex normal', sprite_highlight('alex'))
 
 image comenda normal = At('commandant normal', sprite_highlight('comenda'))
 image comenda angry = At('commandant angry', sprite_highlight('comenda'))
-image comenda home normal = At('commandant home normal', sprite_highlight('comenda'))
+image comenda home normala = At('commandant home', sprite_highlight('comenda'))
 image comenda home angry = At('commandant home angry', sprite_highlight('comenda'))
 image comenda home scared = At('commandant home scared', sprite_highlight('comenda'))
 

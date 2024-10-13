@@ -1,89 +1,38 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <renpy.display.im.Image object ('images/bg/bg_hallway.png') at 0x00000000072a79a0>:
-  File "game/script.rpy", line 280, in script
-    "На первый взгляд, всё просто. Третий корпус, третий этаж, пятый кабинет. Но на деле, трудности начались ещё на первом этапе."
-  File "game/script.rpy", line 280, in script
-    "На первый взгляд, всё просто. Третий корпус, третий этаж, пятый кабинет. Но на деле, трудности начались ещё на первом этапе."
-error: Out of memory
+While running game code:
+  File "game/init.rpy", line 107, in script
+    image comenda home normala = At('commandant home normal', sprite_highlight('comenda'))
+  File "game/init.rpy", line 107, in <module>
+    image comenda home normala = At('commandant home normal', sprite_highlight('comenda'))
+Exception: Image 'commandant home' does not accept attributes 'normal'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\bootstrap.py", line 275, in bootstrap
-    renpy.main.main()
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\main.py", line 670, in main
-    run(restart)
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\main.py", line 144, in run
-    renpy.execution.run_context(True)
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\execution.py", line 953, in run_context
-    context.run()
-  File "game/script.rpy", line 280, in script
-    "На первый взгляд, всё просто. Третий корпус, третий этаж, пятый кабинет. Но на деле, трудности начались ещё на первом этапе."
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 444, in raise_
-  File "game/script.rpy", line 280, in script
-    "На первый взгляд, всё просто. Третий корпус, третий этаж, пятый кабинет. Но на деле, трудности начались ещё на первом этапе."
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\ast.py", line 930, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\exports.py", line 1474, in say
-    who(what, *args, **kwargs)
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\character.py", line 1352, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\character.py", line 1003, in do_display
-    display_say(who,
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\character.py", line 693, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\ui.py", line 299, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\core.py", line 3587, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\core.py", line 4180, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\core.py", line 2785, in draw_screen
-    surftree = renpy.display.render.render_screen(
-  File "render.pyx", line 492, in renpy.display.render.render_screen
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\layout.py", line 888, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\layout.py", line 888, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\layout.py", line 888, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\transform.py", line 909, in render
-    return RenderTransform(self).render(width, height, st, at)
-  File "accelerator.pyx", line 979, in renpy.display.accelerator.RenderTransform.render
-  File "accelerator.pyx", line 404, in renpy.display.accelerator.RenderTransform.render_child
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\image.py", line 513, in render
-    return wrap_render(self.target, width, height, st, at)
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\image.py", line 316, in wrap_render
-    rend = render(child, w, h, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\im.py", line 676, in render
-    return cache.get(self, render=True)
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\im.py", line 330, in get
-    surf = image.load()
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\im.py", line 803, in load
-    raise e
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\im.py", line 768, in load
-    surf = renpy.display.pgrender.load_image(f, filename)
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\pgrender.py", line 203, in load_image
-    rv = copy_surface_unscaled(surf)
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\pgrender.py", line 128, in copy_surface
-    rv = surface_unscaled(surf.get_size(), alpha)
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\pgrender.py", line 116, in surface
-    surf = Surface((width + 4, height + 4), 0, sample) # type:ignore
-  File "src/pygame_sdl2/surface.pyx", line 164, in pygame_sdl2.surface.Surface.__init__
-error: Out of memory
+  File "game/init.rpy", line 107, in script
+    image comenda home normala = At('commandant home normal', sprite_highlight('comenda'))
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\ast.py", line 1237, in execute
+    img = renpy.python.py_eval_bytecode(self.code.bytecode)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\python.py", line 1146, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/init.rpy", line 107, in <module>
+    image comenda home normala = At('commandant home normal', sprite_highlight('comenda'))
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\defaultstore.py", line 343, in At
+    rv = i(child=rv)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\atl.py", line 495, in __call__
+    child = child._duplicate(_args)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\image.py", line 459, in _duplicate
+    rv.find_target()
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\image.py", line 421, in find_target
+    self.target = target._duplicate(a)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\core.py", line 499, in _duplicate
+    args.extraneous()
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\core.py", line 362, in extraneous
+    raise Exception("Image '{}' does not accept attributes '{}'.".format(
+Exception: Image 'commandant home' does not accept attributes 'normal'.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.1.2.23090503
 Ты не один 0.1
-Sun Oct  6 21:44:37 2024
+Sun Oct 13 15:24:46 2024
