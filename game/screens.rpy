@@ -338,14 +338,14 @@ screen quick_menu():
                 action [Hide("mm_tooltip"), QuickSave()]
             #textbutton _("Б.Загр") action QuickLoad()
             imagebutton auto "gui/qm/qm_qload_%s.png" focus_mask True:
-                hovered Show("mm_tooltip", ttcontent="Быстрая загрузка")
+                hovered Show("mm_tooltip", ttcontent="Загрузка")
                 unhovered Hide("mm_tooltip")
-                action [Hide("mm_tooltip"), QuickLoad()]
+                action [Hide("mm_tooltip"), ShowMenu("load")]
             #textbutton _("Опции") action ShowMenu('preferences')
             imagebutton auto "gui/qm/qm_preferences_%s.png" focus_mask True:
                 hovered Show("mm_tooltip", ttcontent="Настройки")
                 unhovered Hide("mm_tooltip")
-                action [Hide("mm_tooltip"), ShowMenu("preferences")]
+                action [Hide("mm_tooltip"), ("preferences")]
             imagebutton auto "gui/qm/qm_hide_%s.png" focus_mask True:
                 hovered Show("mm_tooltip", ttcontent="Скрыть интерфейс")
                 unhovered Hide("mm_tooltip")
