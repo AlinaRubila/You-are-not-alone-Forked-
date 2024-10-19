@@ -4,27 +4,33 @@ define seeJenya = False
 define seeAlex = False
 define seeTimur = False
 define seeMargo = False
+define sawPerson = 0
 define visitKitchen = True
 define visitDayroom = True
 define visitLaundry = True
 define dormPlaces = 0
+
 screen guySee():
-    imagebutton:
-        xalign 0.5189
-        yalign 0.411
-        auto "images/rutChoice/jenya_button_%s.png" focus_mask True action [SetVariable("seeJenya", True), Return(value=None)]
-    imagebutton:
-        xalign 0.7889
-        yalign 0.825
-        auto "images/rutChoice/alex_button_%s.png" focus_mask True action [SetVariable("seeAlex", True), Return(value=None)]
-    imagebutton:
-        xalign 0.914
-        yalign 0.563
-        auto "images/rutChoice/timur_button_%s.png" focus_mask True action [SetVariable("seeTimur", True), Return(value=None)]
-    imagebutton:
-        xalign 0.0895
-        yalign 0.357
-        auto "images/rutChoice/margo_button_%s.png" focus_mask True action [SetVariable("seeMargo", True), Return(value=None)]
+    if seeJenya == False:
+        imagebutton:
+            xalign 0.5189
+            yalign 0.411
+            auto "images/rutChoice/jenya_button_%s.png" focus_mask True action [Jump("sJenya"), Return(value=None)]
+    if seeAlex == False:
+        imagebutton:
+            xalign 0.7889
+            yalign 0.825
+            auto "images/rutChoice/alex_button_%s.png" focus_mask True action [Jump("sAlex"), Return(value=None)]
+    if seeTimur == False:
+        imagebutton:
+            xalign 0.914
+            yalign 0.563
+            auto "images/rutChoice/timur_button_%s.png" focus_mask True action [Jump("sTimur"), Return(value=None)]
+    if seeMargo == False:
+        imagebutton:
+            xalign 0.0895
+            yalign 0.357
+            auto "images/rutChoice/margo_button_%s.png" focus_mask True action [Jump("sMargo"), Return(value=None)]
 label timur:
 
     if persistent.ending1 and persistent.ending122:
@@ -44,14 +50,15 @@ label timur:
     show timur normal at right2 with dissolve
     un "..."
 
-    hide mc smilea with dissolve
     hide timur normal with dissolve
 
     "Не дождавшись ответа, я сел рядом."
 
+    show mc normala at left2 with dissolve
     mc "Какой-то совсем не разговорчивый… Может, не выспался?"
 
     "Мой потенциальный друг лишь поднял глаза вверх и тотчас же опустил их вновь, так ничего мне и не ответив."
+    hide mc normala with dissolve
 
     "Молчание – знак согласия, так что я кинул свои вещи рядом с ним и присел. Вещи, брошенные мною, сформировали определенную стену между нами, будто бы эмоциональной стены было недостаточно."
 
@@ -69,6 +76,7 @@ label timur:
 
     menu:
         "Заговорить":
+            show mc normala at left2 with dissolve
             mc "Привет, меня зовут [mcname], а тебя?"
             $ talkWith = True
 
@@ -76,9 +84,6 @@ label timur:
 
             "Ни слова в ответ, а в качестве добивающей атаки он и вовсе повернул голову к окну, рассматривая небо. Но сдаваться рано, попробую зайти через стратегию сожительства."
 
-            #Спрайт Гг обычный.
-
-            show mc normala with dissolve
             mc "Мы с тобой теперь живем в одной комнате. Надеюсь поладим, как никак несколько лет вместе жить. Ты не волнуйся, я не слишком конфликтный."
 
             hide mc normala with dissolve
@@ -109,25 +114,52 @@ label timur:
             "Но придется довольствоваться тем, что есть и просто попытаться хотя бы что-то выяснить о своих одногруппниках, взглянув на них."
 
     call screen guySee
-    if seeJenya:
-        "Рядом с нами сидела рыжеволосая девочка. С виду она очень даже милая. Интересно, что она пишет в своём блокноте? Или она рисует? Выглядит она очень стильно, похожа на творческого человека. Интересно, почему она выбрала направление информационной безопасности?"
-    if seeAlex:
-        "На первом ряду сидел светловолосый парень. Одет он очень официально. Видно, опрятный и ухоженный. Взгляд очень серьезный и сосредоточенный."
+    label sJenya:
+        if seeJenya == False:
+            "Рядом с нами сидела рыжеволосая девочка. С виду она очень даже милая. Интересно, что она пишет в своём блокноте? Или она рисует? Выглядит она очень стильно, похожа на творческого человека."
 
-        "Хоть преподаватель еще и не пришёл, мальчик уже открыл тетрадь и задумчиво держал ручку в руках. Мне кажется, он сможет стать старостой, выглядит очень ответственным человеком."
-    if seeMargo:
-        "Мой взгляд остановился на светловолосой девочке. Судя по всему, семинары и лекции – далеко не самая важная для неё вещь в этой аудитории."
+            "Интересно, почему она выбрала направление информационной безопасности?"
+            $ sawPerson += 1
+            $ seeJenya = True
+            if sawPerson < 4:
+                call screen guySee
+    label sAlex:
+        if seeAlex == False:
+            "На первом ряду сидел светловолосый парень. Одет он очень официально. Видно, опрятный и ухоженный. Взгляд очень серьезный и сосредоточенный."
 
-        "Я заметил, что она слишком часто поглядывает на парня с первого ряда. И каждый раз вздыхает. Она точно где-то в своих мыслях. В мыслях об их будущем? Интересные одногруппники, мне кажется у них бы могло что-то получиться. Хотя откуда мне знать?"
-    if seeTimur:
-        "Мой сосед по парте оставался неизменным. Он лег на парту и надел наушники. Очевидно, что пара его абсолютно не интересует. Да и знакомиться со мной он желанием не горит… Это уж точно."
+            "Хоть преподаватель еще и не пришёл, мальчик уже открыл тетрадь и задумчиво держал ручку в руках. Мне кажется, он сможет стать старостой, выглядит очень ответственным человеком."
+            $ sawPerson += 1
+            $ seeAlex = True
+            if sawPerson < 4:
+                call screen guySee
+    label sMargo:
+        if seeMargo == False:
+            "Мой взгляд остановился на светловолосой девочке. Судя по всему, семинары и лекции – далеко не самая важная для неё вещь в этой аудитории."
+
+            "Я заметил, что она слишком часто поглядывает на парня с первого ряда. И каждый раз вздыхает. Она точно где-то в своих мыслях. В мыслях об их будущем? Интересные одногруппники, мне кажется у них бы могло что-то получиться. Хотя откуда мне знать?"
+
+            $ sawPerson += 1
+            $ seeMargo = True
+            if sawPerson < 4:
+                call screen guySee
+    label sTimur:
+        if seeTimur == False:
+            "Мой сосед по парте оставался неизменным. Он лег на парту и надел наушники. Очевидно, что пара его абсолютно не интересует. Да и знакомиться со мной он желанием не горит… Это уж точно."
+            $ sawPerson += 1
+            $ seeTimur = True
+            if sawPerson < 4:
+                call screen guySee
 
     if talkWith:
         "Видимо меня ждут годы одиночества при наличии соседа по комнате. Это хуже всего. Я как бы с ним, но в то же время и нет. Неужели он не понимает, как важен налаженный контакт между людьми? Почитай книжку о том как улыбаться, Влад Дракула."
     else:
-        "Он явно не самый болтливый человек на свете, но возможно у него просто сейчас нет настроения."
+        "Мой сосед явно не самый болтливый человек на свете, но возможно у него просто сейчас нет настроения."
 
         "Может быть, случилось что. Завтра будет новый день, и, может быть, лучи восходящего солнца сумеют зарядить его позитивом."
+
+    scene black with dissolve
+    pause 0.5
+    scene bg_hallway
 
     "Остаток дня был преступно скучен, время шло медленнее, чем улитка, ползущая в замедленной съёмке. Иногда я от скуки просился в туалет, а сам в это время просто ходил и смотрел вокруг или сидел в телефоне."
 
@@ -137,6 +169,9 @@ label timur:
 
     "Ходят слухи, что тот препод, у которого отменили пару, в принципе очень проблемный и может не явится на пару только лишь по своему желанию. Однако, большинство студентов этому только рады."
 
+    scene black with dissolve
+    scene bg_park_winter with dissolve
+    play background city
     #Фон крыльца третьей общаги - Его нет
     #Музыка энергичная.
     play music wholesome
@@ -145,19 +180,17 @@ label timur:
 
     "Она стояла, прислонившись к стене."
 
-    #Спрайт Гг удивлённый.
-    show mc surprisea at left2 with dissolve
+    show mc surprise wintera at left2 with dissolve
     mc "О, Здравствуйте."
 
     #Спрайт ОД с улыбкой. - Такого нет использовал обычный
     show comenda normal at right2 with dissolve
     od_un "Здравствуй, ты из какой комнаты?"
 
-    #Спрайт Гг обычный
-    show mc normala at left2 with dissolve
-    mc "Я из 412."
+    #запомните - гг из 205 комнаты! Это было сказано ещё в первой главе Жени
+    show mc normal wintera at left2 with dissolve
+    mc "Я из 205."
 
-    #Спрайт ОД.
     show comenda normal at right2 with dissolve
     od_un "О, так ты в комнате с Тимуром?"
 
@@ -169,9 +202,7 @@ label timur:
 
     od "Хочешь проведу небольшую экскурсию?"
 
-    #Спрайт Гг, улыбается.
-
-    show mc smilea at left2 with dissolve
+    show mc smile wintera at left2 with dissolve
 
     mc "Было бы неплохо."
 
@@ -193,12 +224,13 @@ label timur:
                     $ dormPlaces += 1
                     $ visitLaundry = False
                     jump Laundry
-    #Спрайт ОД.
 
-    show comenda normal at right2 with dissolve
+    scene black with dissolve
+    pause 0.5
+    scene bg_hallway_light with dissolve
+    show comenda home normala at right2 with dissolve
     od "Ну вот, вроде бы всё показала, но если вдруг возникнут вопросы, то обязательно приходи."
 
-    #Спрайт Гг улыбается.
     show mc smilea at left2 with dissolve
     mc "Спасибо вам большое."
 
@@ -208,10 +240,11 @@ label timur:
     od "Не шуметь после 23:00."
     od "Возвращаться в общежитие до 00:00."
 
-    #Спрайт Гг обычный.
-
     show mc normala at left2 with dissolve
     mc "Хорошо, я понял."
+    hide comenda home normala with dissolve
+    hide mc normala with dissolve
+    scene bg_room_evening with dissolve
 
     "После небольшой экскурсии от коменданта, я вернулся в комнату. Я рад, что Ольга Дмитриевна показала мне общагу, теперь хоть понимаю, где живу."
 
@@ -222,17 +255,16 @@ label timur:
     "Общажная кровать, в удобстве которой я сомневался, сегодня показалась мне на удивление мягкой. Я провалился в сон в тот же миг, как моё лицо коснулось подушки."
 
     #Фон чёрного экрана с падающим снегом.
-    #Звуки метели.
-    scene black
-
+    stop music fadeout 1.0
+    scene black with off
     show snow1
     show snow2
     with dissolve
-    pause 3
+    pause 2
     play background winter_wind fadein 1.0
     "Сквозь сильную метель пробивался женский силуэт. Я узнал его, именно с ним мы разговаривали в прошлый раз."
 
-    #Спрайт чёрного женского силуэта Евы.
+    #Спрайт чёрного силуэта Евы.
     show eve silhouette black glow at right2 with dissolve
 
     un "Вот мы и снова встретились."
@@ -243,7 +275,6 @@ label timur:
 
     #Спрайт Гг злой.
 
-    show mc angry crosseda at left2 with dissolve
     mc "Кто ты? Почему ты мне снишься? Что ты хочешь от меня?!"
 
     #Спрайт чёрного силуэта Евы.
@@ -252,6 +283,7 @@ label timur:
 
     "Что? Что всё это значит? Но этот вопрос я задал уже в пустоту. Силуэт стал размытым, а затем и вовсе слился с белой пеленой метели."
 
+    hide eve ghost darkest with dissolve
     "Всё медленно прояснилось и посветлело. Девушка исчезла, а я оказался в каком-то помещении. Что происходит?"
 
     "Находясь в полном недоумении, я пытался понять, реально ли всё вокруг меня."
@@ -260,10 +292,9 @@ label timur:
     #Медленный переход (можно сделать переход с морганием Гг) на общажную комнату.
 
     stop background fadeout 1.0
+    pause 1
     scene black with dissolve
-    scene bg_room with dissolve
-    scene black with dissolve
-    scene bg_room with dissolve
+    scene bg_room_morning with onn
     play music chill
 
     "Я пробежался взглядом по помещению. Перекошенный карниз, мой чемодан, вещи, которые я вчера не разобрал из-за усталости. Напротив меня спал мой новый товарищ – Тимур. Я определённо в своей комнате."
@@ -272,8 +303,8 @@ label timur:
 
     "Чтобы разогнать эти мысли и окончательно прийти в себя, я направился в душ."
 
-    #Звук шума воды в душе.
-    #Фон душевой комнатки.
+    scene black with dissolve
+    play sound steps
 
     play background shower fadein 0.5
     scene bg_shower with dissolve
@@ -281,11 +312,11 @@ label timur:
     "Вода окутывала меня теплом и успокаивающим шумом. Я позволил себе расслабиться под тёплыми струями, пытаясь смыть с себя все негативные мысли и страхи, которые преследовали меня после странного сна. Я не понимал, к чему мне это снится, но принятие душа действительно давало успокаивающий эффект."
 
     "Постепенно я начал чувствовать, как напряжение покидало моё тело, и спокойствие возвращалось ко мне. Я закрыл глаза и постарался сосредоточиться только на звуке воды, который успокаивал мои нервы."
-
-    #Фон комнаты Гг.
+    scene black with dissolve
+    play sound steps
 
     stop background fadeout 0.5
-    scene bg_room with dissolve
+    scene bg_room_dawn with dissolve
 
     "В душе я был примерно полчаса, но когда я вернулся, ничего не изменилось. Тимур спал все в той же позе."
 
@@ -301,34 +332,30 @@ label timur:
 
     "Повернувшись обратно, я увидел, что он уже развернулся и сверлил меня злобным взглядом человека, чей сон так нагло прервали. Видимо, стоит заканчивать с раскладыванием вещей, по крайней мере, пока Тимур не проснется."
 
-    #Перед скримером должна быть тишина, а после звук пробегания насекомого.
     #Скример таракана.
-    stop music
+    stop music fadeout 0.5
 
-    scene cj_cockroach_screamer1 at zoomin
+    scene сj_cockroach_bed at zoomin
     play sound screamer2
     pause 1
-    scene cj_cockroach_screamer2 at tremble
+    scene сj_cockroach_bed_screamer at tremble
     pause 1
 
-    #Спрайт испуганного Гг.
-    show mc surprisea at left2
-    mc "Твою ж…!"
+    mc "Твою ж!"
 
-    scene bg_room
+    scene bg_room_dawn with dissolve
 
-    #Спрайт злой Тимур.
-    show timur angrya at right2 with dissolve
+    show timur angry homea at right2 with dissolve
     t "Ты что орешь с утра пораньше?! Спать мешаешь. В единственный выходной!"
 
-    #Спрайт испуганного Гг.
-    show mc surprisea at left2 with dissolve
+    show mc surprise homea at left2 with dissolve
     mc "Да у нас в комнате..."
 
-    hide mc surprisea
-    hide timur angrya
+    hide timur angry homea with dissolve
 
     "Я опять обернулся на своего соседа, но его уже не волновал ни я, ни этот огромный таракан. Тимур просто скрылся под одеялом."
+
+    hide mc surprise homea with dissolve
 
     "Таракан к тому времени, кстати, тоже убежал в неизвестном направлении. Все вернулось на круги своя."
 
@@ -344,17 +371,18 @@ label timur:
 
     menu:
         "Спросить":
-            #Спрайт Гг обычный.
 
-            show mc normala at left2 with dissolve
+            show  mc normal wintera at left2 with dissolve
             mc "Тебе что-то взять в магазине?"
 
-            #Спрайт злой Тимур.
-            show timur angrya at right2 with dissolve
+            show timur angry homea at right2 with dissolve
 
             t "Да вали ты уже."
+            hide timur angry homea with dissolve
 
             "Что ж, ничего нового. Другой реакции я и не ожидал… Сделал вид, что грубость Тимура никак меня не задела. Тем не менее из общежития я вышел с испорченным настроением."
+
+            hide mc normal wintera with dissolve
         "Не спрашивать":
             "Я замер у двери, Тимур в очередной раз с осуждением посмотрел на меня. Этот взгляд убил моё желание как-либо ему помогать. Я решил пойти в магазин и купить лишь нужные мне товары. Тимур и сам справится, обойдется!"
 
@@ -376,10 +404,9 @@ label timur:
 
     "Мои мысли прервал супермаркет, оказавшийся прямо передо мной. Витая в облаках, я даже не заметил, как дошёл до него. Я зашёл внутрь."
 
-    #Фон внутри пятёрочки.
     #Спокойная музыка на фоне, с приглушёнными звуками пробивания продуктов.
     scene bg_grossery_shop with dissolve
-    play music shop fadein 0.5
+    play background shop fadein 0.5
 
     "Я ходил по торговым прилавкам, и постепенно моя корзина наполнялась продуктами."
 
@@ -387,19 +414,26 @@ label timur:
 
     "Я набирал продукты механически и не глядя, как вдруг моё внимание привлёк стеллаж с журналами. На нижней полке я увидел яркую обложку со знакомым персонажем."
 
+    show cj_magazine with dissolve
+
     "Я присел на корточки и взял журнал в руки. Не может быть. С яркой обложки на меня смотрела главная героиня моего любимого аниме “Маленькая волшебница и её магические друзья”. Вот это удача!"
 
     "Никогда не видел, чтобы такие журналы продавались прямо в супермаркете. Этот ещё и последним остался!"
 
+    play sound bumaga
+
     "Я пролистнул журнал и увидел крутой постер с моим любимым персонажем. Не думая больше ни секунды, я положил журнал в корзину и направился на кассу."
+    hide cj_magazine with dissolve
+    stop background
+    play background city
+    scene bg_street_morning_winter with dissolve
 
     "По пути к общаге я уже не думал о неудачном утре. Я представлял, как круто будет повесить свой новый постер из журнала на стену. Этот элемент интерьера станет для меня поддержкой, и хоть что-то в нашей с Тимуром комнате будет вызывать позитив."
 
+    stop background fadeout 1.0
     "С нетерпением я пришел в общежитие. Быстро убрав продукты в холодильник, я, полный счастья, отправился в свою комнату."
 
-    #Фон комнаты Гг.
-
-    scene bg_room with dissolve
+    scene bg_room_evening with dissolve
 
     "Когда я вошёл, мой сосед уже не спал. Он сидел на кровати и переписывался с кем-то. На то, что я вошёл в комнату, он не обратил внимания. Ну и пусть, хотя бы без негатива в этот раз..."
 
@@ -414,11 +448,9 @@ label timur:
 
     "Я отошёл немного подальше от стены. Выглядит чудесно! Этот постер не мог не вызывать у меня улыбку, как хорошо, что я его нашёл. Но тут внезапно из-за спины я услышал угрюмый голос…"
 
-    #Спрайт злой Тимур.
-    show timur angrya at right2 with dissolve
+    show timur angry homea at right2 with dissolve
     t "Сними постер."
 
-    #Спрайт злой Гг.
     show mc angry crosseda at left2 with dissolve
 
     mc "Не буду, почему я должен его снимать?"
@@ -426,9 +458,6 @@ label timur:
     t "Потому что я не хочу, чтобы это здесь висело!"
 
     mc "Да не буду я ничего снимать из-за твоей хотелки!"
-
-    hide timur angrya
-    hide mc angry crosseda
 
     "Он поднялся с кровати и стал двигаться в мою сторону, прожигая меня взглядом."
 
@@ -440,7 +469,6 @@ label timur:
 
     #Спрайт злой Тимур.
 
-    show timur angrya at right2 with dissolve
     t "В последний раз говорю, сними постер. Cейчас же."
 
     #Спрайт злой Гг.
@@ -465,8 +493,9 @@ label timur:
 
     #Тяжёлый звук падения карниза.
     #Фон комнаты Гг, но теперь разрушенной.
+    scene black with dissolve
 
-    scene bg_room_morning
+    scene bg_room_ruined with dissolve
 
     "Карниз рухнул нам с Тимуром на головы, оставив нам шишки на макушке и заодно охладив головы."
 
@@ -485,13 +514,13 @@ label timur:
     "Например, могла войти Ольга Дмитриевна. Конечно же, если что-то может пойти не так, именно так оно и идёт."
 
     #Спрайт Од.
-    show comenda normal at right2 with dissolve
+    show comenda home normala at right2 with dissolve
     od "Что у вас тут…"
 
     "Она даже не смогла договорить. Видимо такой беспорядок на её практике случался нечасто. Со стороны возможно действительно можно решить, что мы сделали это специально. Она смотрела на всё ошарашенными глазами, и как назло со стены продолжал медленно сползать кусок обоев."
 
     #спрайт коменды должен быть недовольным!
-    show comenda angry at right2 with dissolve
+    show comenda home angrya at right2 with dissolve
     od "Что это такое? Что вы тут устроили? Как это понимать?!"
 
     #Спрайт злой Гг.
@@ -499,7 +528,7 @@ label timur:
     mc "Это он во всём виноват!"
 
     #Спрайт злой Тимур.
-    show timur angrya with dissolve
+    show timur angry homea with dissolve
 
     t "Это я виноват?! Да если бы ты послушал меня, ничего бы этого не было!"
 
@@ -508,6 +537,10 @@ label timur:
     mc "Но..."
 
     od "Я всё сказала."
+
+    hide comenda home angrya with dissolve
+    hide timur angry homea with dissolve
+    hide mc angry crosseda with dissolve
 
     "Я было хотел что-то сказать, но она, переняв агрессивное настроение нашей комнаты, развернулась и ушла, хлопнув дверью, окончательно тем самым добив едва державшийся кусок обоев, заставив его принять поражение и рухнуть."
 

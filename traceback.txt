@@ -1,38 +1,34 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/init.rpy", line 107, in script
-    image comenda home normala = At('commandant home normal', sprite_highlight('comenda'))
-  File "game/init.rpy", line 107, in <module>
-    image comenda home normala = At('commandant home normal', sprite_highlight('comenda'))
-Exception: Image 'commandant home' does not accept attributes 'normal'.
+  File "game/script_timur_ch1.rpy", line 137, in script
+    call screen thinkAbout
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+Exception: Screen thinkAbout is not known.
+
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/init.rpy", line 107, in script
-    image comenda home normala = At('commandant home normal', sprite_highlight('comenda'))
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\ast.py", line 1237, in execute
-    img = renpy.python.py_eval_bytecode(self.code.bytecode)
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\python.py", line 1146, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/init.rpy", line 107, in <module>
-    image comenda home normala = At('commandant home normal', sprite_highlight('comenda'))
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\defaultstore.py", line 343, in At
-    rv = i(child=rv)
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\atl.py", line 495, in __call__
-    child = child._duplicate(_args)
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\image.py", line 459, in _duplicate
-    rv.find_target()
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\image.py", line 421, in find_target
-    self.target = target._duplicate(a)
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\core.py", line 499, in _duplicate
-    args.extraneous()
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\core.py", line 362, in extraneous
-    raise Exception("Image '{}' does not accept attributes '{}'.".format(
-Exception: Image 'commandant home' does not accept attributes 'normal'.
+  File "game/script_timur_ch1.rpy", line 137, in script
+    call screen thinkAbout
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\ast.py", line 2259, in execute
+    self.call("execute")
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\ast.py", line 2241, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\statements.py", line 342, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\exports.py", line 3333, in call_screen
+    show_screen(_screen_name, _transient=True, *args, **kwargs)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\screen.py", line 1220, in show_screen
+    raise Exception("Screen %s is not known.\n" % (name[0],))
+Exception: Screen thinkAbout is not known.
+
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.1.2.23090503
 Ты не один 0.1
-Sun Oct 13 15:24:46 2024
+Sun Oct 20 00:09:26 2024

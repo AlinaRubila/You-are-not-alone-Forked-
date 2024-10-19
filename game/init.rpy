@@ -99,6 +99,7 @@ image timur sada = At('timur sad', sprite_highlight('timur'))
 image timur smilea = At('timur smile', sprite_highlight('timur'))
 image timur surprisea = At('timur surprise', sprite_highlight('timur'))
 image timur thoughtfula = At('timur thoughtful', sprite_highlight('timur'))
+image timur angry homea = At('timur angry home', sprite_highlight('timur'))
 
 
 image alex normala = At('alex normal', sprite_highlight('alex'))
@@ -106,7 +107,7 @@ image alex normala = At('alex normal', sprite_highlight('alex'))
 image comenda normal = At('commandant normal', sprite_highlight('comenda'))
 image comenda angry = At('commandant angry', sprite_highlight('comenda'))
 image comenda home normala = At('commandant home', sprite_highlight('comenda'))
-image comenda home angry = At('commandant home angry', sprite_highlight('comenda'))
+image comenda home angrya = At('commandant home angry', sprite_highlight('comenda'))
 image comenda home scared = At('commandant home scared', sprite_highlight('comenda'))
 
 image eve normal = At('eva normal', sprite_highlight('e'))

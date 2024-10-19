@@ -1,9 +1,12 @@
 label Kitchen:
+    show mc normala at left2 with dissolve
     mc "Что-то есть захотелось, где у вас тут кухня?"
 
     od "Пойдем покажу."
 
+    stop background
     stop music
+    scene black with dissolve
 
     play sound steps
 
@@ -27,11 +30,11 @@ label Kitchen:
 
     "У другой стены были две раковины, большие как мойдодыр. В одной из них была только холодная вода, поэтому спрос на первую был в разы больше. Не повезло холодной воде, что она жир с трудом отмывает!"
 
-    #Спрайт ОД.
-    show comenda normal at right2 with dissolve
+    show comenda home normala at right2 with dissolve
 
     od "Это кухня. В холодильнике полки поделены между жильцами, с плитой будь осторожнее, она долго разогревается."
 
+    show mc normala at left2 with dissolve
     mc "Хорошо, я понял, спасибо большое."
 
     if dormPlaces < 3:
@@ -43,13 +46,13 @@ label Dayroom:
 
     od "Она на первом этаже."
 
+    stop background
     stop music
+    scene black with dissolve
 
     play sound steps
 
-    play music room
-
-    scene black with dissolve
+    play background room
 
     scene bg_canteen with dissolve
 
@@ -62,8 +65,10 @@ label Dayroom:
     "Единственным, что привлекало внимание были стены этой комнаты - покрытые фотографиями, рисунками, и парой плакатов с правилами дорожного движения и проживания в общежитии, на которых вместо привычных всем детишек и животных, был изображён персонаж какого-то аниме."
 
     "Видимо, автор этих художеств был фанатом японской мультипликации."
+    show comenda home normala at right2 with dissolve
 
     od "Здесь у нас комната отдыха. Не мусорить. Можно сидеть ночью, но главное тихо."
+    show mc smilea at left2 with dissolve
 
     mc "Ого, класс."
 
@@ -76,12 +81,12 @@ label Laundry:
     od "Они стоят на первом этаже."
 
     stop music
-
-    play sound steps
-
-    play music room
+    stop background
 
     scene black with dissolve
+    play sound steps
+
+    play background room
 
     scene bg_laundry with dissolve
 
@@ -90,6 +95,8 @@ label Laundry:
     "Справа и слева двери, которые вели в комнаты живущих там студентов. На одной из дверей было написано “Постирочная”."
 
     "Комендант прошла со мной в комнату. В ней стояло 4 стиральных машины, а сверху над ними – сушилки для белья. Мне кажется, это довольно удобно. Жаль, конечно, что стиралка не в комнате, но то, что она хотя бы есть – не может не радовать."
+
+    show comenda home normala at right2 with dissolve
 
     od "Тут можно вещи постирать и погладить. Не забудь выключать, стиральный порошок иметь свой и хранить здесь."
 

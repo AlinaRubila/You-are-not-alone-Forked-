@@ -2,11 +2,9 @@
 errors listed below, and try again.
 
 
-The label timur is defined twice, at File "game/script_timur.rpyc", line 3:
-
-and File "game/script_timur_ch1.rpy", line 3:
-label timur:
-
+File "game/script_timur_ch1.rpy", line 12: Line is indented, but the preceding define statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    label sJenya:
+    ^
 
 Ren'Py Version: Ren'Py 8.1.2.23090503
-Sun Sep 29 15:25:49 2024
+Sun Oct 20 00:33:56 2024
