@@ -197,10 +197,24 @@ label jenya_cp1:
 
             $ relate_jenya += 5
 
+            $ askJenya = False
+
             if (askedAll < 3):
                 $ askedJenya = True
                 $ askedAll += 1
                 call talkChoice
+
+        elif askJenya and askedJenya == True:
+
+            scene bg_classroom_blur with dissolve
+            show jenya smilea at right2 with dissolve
+            show mc normala at left2 with dissolve
+
+            j "Ты уже обо мне, забыл?"
+
+            $ askJenya = False
+
+            call talkChoice
 
         elif askTimur and askedTimur == False:
 
@@ -218,10 +232,24 @@ label jenya_cp1:
 
             "Хоть я и не мог разглядеть лица Тимура, всё равно можно было заметить помятый вид парня. Возможно, он, как и я, собирался впопыхах, но почему-то мне казалось, что он и не старался выглядеть иначе."
 
-            if askedAll < 3:
+            $ askTimur = False
+
+            if (askedAll < 3):
                 $ askedTimur = True
                 $ askedAll += 1
                 call talkChoice
+
+        elif askTimur and askedTimur == True:
+
+            scene bg_classroom_blur with dissolve
+            show jenya smilea at right2 with dissolve
+            show mc normala at left2 with dissolve
+
+            j "Ты уже о нём, забыл?"
+
+            $ askTimur = False
+
+            call talkChoice
 
         elif askAlex and askedAlex == False:
 
@@ -237,10 +265,24 @@ label jenya_cp1:
 
             "Даже сейчас он что-то проверял в своих записях и недовольно поглядывал на болтающих парней сзади."
 
+            $ askAlex = False
+
             if (askedAll < 3):
                 $ askedAlex = True
                 $ askedAll += 1
                 call talkChoice
+
+        elif askAlex and askedAlex == True:
+
+            scene bg_classroom_blur with dissolve
+            show jenya smilea at right2 with dissolve
+            show mc normala at left2 with dissolve
+
+            j "Ты уже о нём, забыл?"
+
+            $ askAlex = False
+
+            call talkChoice
 
         elif askMargo and askedMargo == False:
 
@@ -256,10 +298,24 @@ label jenya_cp1:
 
             "Но, кажется, его это волновало меньше всего. Или он просто не замечал?"
 
+            $ askMargo = False
+
             if (askedAll < 3):
                 $ askedMargo = True
                 $ askedAll += 1
                 call talkChoice
+
+        elif askMargo and askedMargo == True:
+
+            scene bg_classroom_blur with dissolve
+            show jenya smilea at right2 with dissolve
+            show mc normala at left2 with dissolve
+
+            j "Ты уже о ней, забыл?"
+
+            $ askMargo = False
+
+            call talkChoice
 
     play sound door
 
