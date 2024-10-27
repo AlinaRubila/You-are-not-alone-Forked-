@@ -110,17 +110,14 @@ image comenda home normala = At('commandant home', sprite_highlight('comenda'))
 image comenda home angrya = At('commandant home angry', sprite_highlight('comenda'))
 image comenda home scared = At('commandant home scared', sprite_highlight('comenda'))
 
-image eve normal = At('eva normal', sprite_highlight('e'))
 image eve silhouette = At('eva silhouette ', sprite_highlight('e'))
 image eve silhouette black = At('eva silhouette black', sprite_highlight('e'))
 image eve silhouette black glow = At('eva silhouette black glow', sprite_highlight('e'))
 image eve silhouette grey = At('eva silhouette grey', sprite_highlight('e'))
 image eve silhouette grey glow = At('eva silhouette grey glow', sprite_highlight('e'))
-image eve silhouette transparent = At('eva silhouette transparent', sprite_highlight('e'))
 image eve ghost = At('ghost', sprite_highlight('e'))
 image eve ghost darker = At('ghost darker', sprite_highlight('e'))
 image eve ghost darkest = At('ghost darkest', sprite_highlight('e'))
-image eve ghost silhouette = At('silhouette', sprite_highlight('e'))
 
 # звуки
 define audio.snow = "audio/sounds/snowsteps.mp3"
@@ -140,6 +137,7 @@ define audio.jenyar = "audio/sounds/jenya_ringtone.mp3"
 define audio.pen = "audio/sounds/pen_drop.mp3"
 define audio.coffee = "audio/sounds/spill_coffee.mp3"
 define audio.tire = "audio/sounds/tire.ogg"
+define audio.ruining = "audio/sounds/ruin_room.mp3"
 
 #эмбиент
 define audio.city = "audio/ambient/city.mp3"

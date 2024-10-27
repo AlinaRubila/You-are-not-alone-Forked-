@@ -228,9 +228,9 @@ label jenya_bad_end:
 
     "Женя скрылась за завесой облаков, оставив меня лишь с билетом в руках. Волны смятения, разочарования и необъяснимой тревоги захлестнули меня. Я сел на стул и закрыл лицо руками. Все мои планы и надежды рассыпались в прах с этим одним исчезновением."
 
-    scene cj_goodbye with dissolve
+    #scene cj_goodbye with dissolve
 
-    $ persistent.poster5 = True
+    #$ persistent.poster5 = True
     pause 2
 
     stop music

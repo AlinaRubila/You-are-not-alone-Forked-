@@ -15,6 +15,8 @@ label Kitchen:
     scene black with dissolve
 
     scene bg_kitchen_morning with dissolve
+    play music home
+    play background room
 
     "Кухня была прямо рядом с моей комнатой. Довольно выгодное расположение, так как не придется протаптывать целый коридор, чтобы просто поставить ужин в микроволновку."
 

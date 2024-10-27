@@ -42,6 +42,7 @@ label timur:
 
     "Однако как-то странно, что он пришел сюда раньше меня. Идти нам одно и то же расстояние и одним и тем же путем, но он уже здесь, а я только пришел. Пусть это будет одной из множества его загадок."
 
+    play music evening fadein 1.0
     #Спрайт Гг улыбается.
     show mc smilea at left2 with dissolve
     mc "Привет. Можно сесть?"
@@ -158,8 +159,10 @@ label timur:
         "Может быть, случилось что. Завтра будет новый день, и, может быть, лучи восходящего солнца сумеют зарядить его позитивом."
 
     scene black with dissolve
+    stop music fadeout 1.0
     pause 0.5
     scene bg_hallway
+    play background room
 
     "Остаток дня был преступно скучен, время шло медленнее, чем улитка, ползущая в замедленной съёмке. Иногда я от скуки просился в туалет, а сам в это время просто ходил и смотрел вокруг или сидел в телефоне."
 
@@ -170,9 +173,8 @@ label timur:
     "Ходят слухи, что тот препод, у которого отменили пару, в принципе очень проблемный и может не явится на пару только лишь по своему желанию. Однако, большинство студентов этому только рады."
 
     scene black with dissolve
-    scene bg_park_winter with dissolve
+    scene bg_dorm_winter_evening with dissolve
     play background city
-    #Фон крыльца третьей общаги - Его нет
     #Музыка энергичная.
     play music wholesome
 
@@ -226,6 +228,7 @@ label timur:
                     jump Laundry
 
     scene black with dissolve
+    stop music fadeout 1.0
     pause 0.5
     scene bg_hallway_light with dissolve
     show comenda home normala at right2 with dissolve
@@ -256,6 +259,7 @@ label timur:
 
     #Фон чёрного экрана с падающим снегом.
     stop music fadeout 1.0
+    stop background fadeout 1.0
     scene black with off
     show snow1
     show snow2
@@ -265,7 +269,7 @@ label timur:
     "Сквозь сильную метель пробивался женский силуэт. Я узнал его, именно с ним мы разговаривали в прошлый раз."
 
     #Спрайт чёрного силуэта Евы.
-    show eve silhouette black glow at right2 with dissolve
+    show eve grey black glow with dissolve
 
     un "Вот мы и снова встретились."
 
@@ -278,24 +282,22 @@ label timur:
     mc "Кто ты? Почему ты мне снишься? Что ты хочешь от меня?!"
 
     #Спрайт чёрного силуэта Евы.
-    show eve ghost darkest at right2 with dissolve
     un "Найди меня."
 
     "Что? Что всё это значит? Но этот вопрос я задал уже в пустоту. Силуэт стал размытым, а затем и вовсе слился с белой пеленой метели."
 
-    hide eve ghost darkest with dissolve
+    hide eve grey black glow with dissolve
     "Всё медленно прояснилось и посветлело. Девушка исчезла, а я оказался в каком-то помещении. Что происходит?"
 
     "Находясь в полном недоумении, я пытался понять, реально ли всё вокруг меня."
 
     #На фоне плавно начинает играть спокойная музыка.
-    #Медленный переход (можно сделать переход с морганием Гг) на общажную комнату.
 
     stop background fadeout 1.0
     pause 1
     scene black with dissolve
     scene bg_room_morning with onn
-    play music chill
+    play background room
 
     "Я пробежался взглядом по помещению. Перекошенный карниз, мой чемодан, вещи, которые я вчера не разобрал из-за усталости. Напротив меня спал мой новый товарищ – Тимур. Я определённо в своей комнате."
 
@@ -303,6 +305,7 @@ label timur:
 
     "Чтобы разогнать эти мысли и окончательно прийти в себя, я направился в душ."
 
+    play music chill
     scene black with dissolve
     play sound steps
 
@@ -342,6 +345,7 @@ label timur:
     pause 1
 
     mc "Твою ж!"
+    play background room
 
     scene bg_room_dawn with dissolve
 
@@ -424,13 +428,15 @@ label timur:
 
     "Я пролистнул журнал и увидел крутой постер с моим любимым персонажем. Не думая больше ни секунды, я положил журнал в корзину и направился на кассу."
     hide cj_magazine with dissolve
-    stop background
     play background city
     scene bg_street_morning_winter with dissolve
 
     "По пути к общаге я уже не думал о неудачном утре. Я представлял, как круто будет повесить свой новый постер из журнала на стену. Этот элемент интерьера станет для меня поддержкой, и хоть что-то в нашей с Тимуром комнате будет вызывать позитив."
 
     stop background fadeout 1.0
+    stop music fadeout 0.5
+    play sound door
+
     "С нетерпением я пришел в общежитие. Быстро убрав продукты в холодильник, я, полный счастья, отправился в свою комнату."
 
     scene bg_room_evening with dissolve
@@ -494,6 +500,7 @@ label timur:
     #Тяжёлый звук падения карниза.
     #Фон комнаты Гг, но теперь разрушенной.
     scene black with dissolve
+    play sound ruining
 
     scene bg_room_ruined with dissolve
 
