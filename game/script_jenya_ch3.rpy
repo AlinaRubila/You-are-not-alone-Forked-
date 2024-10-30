@@ -5,9 +5,27 @@ image cj_canteen_timur_blur = im.Blur("cj/cj_canteen_timur.png", 1.5)
 
 label jenya_cp3:
 
+    $ quick_menu = False
+
     scene black with dissolve
 
-    centered "{size=+24}{color=#ffffe0}Глава 3"
+    pause 1
+
+    scene cj_chapter3_start with dissolve
+
+    pause 0.5
+
+    play sound bumaga
+
+    scene cj_chapter3 with dissolve
+
+    pause 3
+
+    scene black with dissolve
+
+    play music wholesome
+
+    $ quick_menu = True
 
     #Звук птиц за окном. (весенняя спокойная мелодия).
     play music leaves
