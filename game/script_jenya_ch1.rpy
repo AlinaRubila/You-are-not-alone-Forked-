@@ -18,7 +18,7 @@ define askedJenya = False
 define askedTimur = False
 define askedAlex = False
 define askedMargo = False
-define askedAll = 0
+define askedPerson = 0
 
 #Выбор печенья
 
@@ -42,22 +42,26 @@ screen cookieChoice():
         auto "images/coockieChoice/lid_button_%s.png" focus_mask True action [Return(value=None)]
 
 screen guyChoice():
-    imagebutton:
-        xalign 0.5189
-        yalign 0.411
-        auto "images/rutChoice/jenya_button_%s.png" focus_mask True action [SetVariable("askJenya", True), Return(value=None)]
-    imagebutton:
-        xalign 0.7889
-        yalign 0.825
-        auto "images/rutChoice/alex_button_%s.png" focus_mask True action [SetVariable("askAlex", True), Return(value=None)]
-    imagebutton:
-        xalign 0.914
-        yalign 0.563
-        auto "images/rutChoice/timur_button_%s.png" focus_mask True action [SetVariable("askTimur", True), Return(value=None)]
-    imagebutton:
-        xalign 0.0895
-        yalign 0.357
-        auto "images/rutChoice/margo_button_%s.png" focus_mask True action [SetVariable("askMargo", True), Return(value=None)]
+    if askJenya == False:
+        imagebutton:
+            xalign 0.5189
+            yalign 0.411
+            auto "images/rutChoice/jenya_button_%s.png" focus_mask True action [Jump("aJenya"), Return(value=None)]
+    if askAlex == False:
+        imagebutton:
+            xalign 0.7889
+            yalign 0.825
+            auto "images/rutChoice/alex_button_%s.png" focus_mask True action [Jump("aAlex"), Return(value=None)]
+    if askTimur == False:
+        imagebutton:
+            xalign 0.914
+            yalign 0.563
+            auto "images/rutChoice/timur_button_%s.png" focus_mask True action [Jump("aTimur"), Return(value=None)]
+    if askMargo == False:
+        imagebutton:
+            xalign 0.0895
+            yalign 0.357
+            auto "images/rutChoice/margo_button_%s.png" focus_mask True action [Jump("aMargo"), Return(value=None)]
 
 label jenya_cp1:
 
@@ -77,7 +81,7 @@ label jenya_cp1:
     scene cj_meet_jenya with dissolve
 
     stop background fadeout 2.0
-    play music cozy fadein 1.0
+    play music cozy fadein 0.5
 
     mc "Привет. Не против, если подсяду?"
 
@@ -171,20 +175,15 @@ label jenya_cp1:
     show jenya thoughtfula at right2 with dissolve
 
     j "Про кого ты хочешь узнать?"
+    hide jenya thoughtfula at right2 with dissolve
+    hide mc normala at left2 with dissolve
+    scene bg_rutnoeve with dissolve
 
     #После выбора снова на фоне аудитория и спрайт Жени и гг
     #Если есть ещё про кого спросить, то снова появляется изображение с выбором
-
-    label talkChoice:
-        if persistent.ending1 and persistent.ending122:
-            scene bg_rut with dissolve
-        else:
-            scene bg_rutnoeve with dissolve
-
-        call screen guyChoice
-
-        if askJenya and askedJenya == False:
-
+    call screen guyChoice
+    label aJenya:
+        if askJenya == False:
             scene bg_classroom_blur with dissolve
             show jenya smilea at right2 with dissolve
             show mc normala at left2 with dissolve
@@ -194,30 +193,40 @@ label jenya_cp1:
             show jenya blusha at right2 with dissolve
 
             n "Женя смущённо отводила взгляд, но по её улыбке я понял, что ей было приятно моё любопытство."
+            hide jenya blusha at right2 with dissolve
+            hide mc normala at left2 with dissolve
 
-            $ relate_jenya += 5
+            scene bg_rutnoeve with dissolve
 
-            $ askJenya = False
-
-            if (askedAll < 3):
-                $ askedJenya = True
-                $ askedAll += 1
-                call talkChoice
-
-        elif askJenya and askedJenya == True:
-
+            $ askJenya = True
+            $ askedPerson += 1
+            if askedPerson <= 2:
+                $ relate_jenya += 5
+            if askedPerson < 4:
+                call screen guyChoice
+    label aAlex:
+        if askAlex == False:
             scene bg_classroom_blur with dissolve
-            show jenya smilea at right2 with dissolve
+            show jenya grina at right2 with dissolve
             show mc normala at left2 with dissolve
 
-            j "Ты уже обо мне, забыл?"
+            j "Многоуважаемый господин староста! Очень серьёзный человек. Думаю, со своими обязанностями он точно справляется."
 
-            $ askJenya = False
+            j "Говоря между нами, он душноватый. Не думаю, что мы с ним подружимся. Но прозвище «Шнурок» забавное. И как же он возмутился, когда я его так назвала!"
 
-            call talkChoice
+            n "Шнурок сидел на первом ряду и всем своим видом давал понять, что он здесь не ради шуточек и общения. Его светлые волосы были аккуратно зачёсаны назад, а одежда была идеально выглаженной и чистой."
 
-        elif askTimur and askedTimur == False:
+            "Даже сейчас он что-то проверял в своих записях и недовольно поглядывал на болтающих парней сзади."
+            hide jenya grina at right2 with dissolve
+            hide mc normala at left2 with dissolve
+            scene bg_rutnoeve with dissolve
 
+            $ askAlex = True
+            $ askedPerson += 1
+            if askedPerson < 4:
+                call screen guyChoice
+    label aTimur:
+        if askTimur == False:
             scene bg_classroom_blur with dissolve
             show jenya normala at right2 with dissolve
             show mc normala at left2 with dissolve
@@ -232,90 +241,33 @@ label jenya_cp1:
 
             "Хоть я и не мог разглядеть лица Тимура, всё равно можно было заметить помятый вид парня. Возможно, он, как и я, собирался впопыхах, но почему-то мне казалось, что он и не старался выглядеть иначе."
 
-            $ askTimur = False
-
-            if (askedAll < 3):
-                $ askedTimur = True
-                $ askedAll += 1
-                call talkChoice
-
-        elif askTimur and askedTimur == True:
-
+            hide jenya normala at right2 with dissolve
+            hide mc normala at left2 with dissolve
+            scene bg_rutnoeve with dissolve
+            $ askTimur = True
+            $ askedPerson += 1
+            if askedPerson < 4:
+                call screen guyChoice
+    label aMargo:
+        if askMargo == False:
             scene bg_classroom_blur with dissolve
-            show jenya smilea at right2 with dissolve
-            show mc normala at left2 with dissolve
-
-            j "Ты уже о нём, забыл?"
-
-            $ askTimur = False
-
-            call talkChoice
-
-        elif askAlex and askedAlex == False:
-
-            scene bg_classroom_blur with dissolve
-            show jenya grina at right2 with dissolve
-            show mc normala at left2 with dissolve
-
-            j "Многоуважаемый господин староста! Очень серьёзный человек. Думаю, со своими обязанностями он точно справляется."
-
-            j "Говоря между нами, он душноватый. Не думаю, что мы с ним подружимся. Но прозвище «Шнурок» забавное. И как же он возмутился, когда я его так назвала!"
-
-            n "Шнурок сидел на первом ряду и всем своим видом давал понять, что он здесь не ради шуточек и общения. Его светлые волосы были аккуратно зачёсаны назад, а одежда была идеально выглаженной и чистой."
-
-            "Даже сейчас он что-то проверял в своих записях и недовольно поглядывал на болтающих парней сзади."
-
-            $ askAlex = False
-
-            if (askedAll < 3):
-                $ askedAlex = True
-                $ askedAll += 1
-                call talkChoice
-
-        elif askAlex and askedAlex == True:
-
-            scene bg_classroom_blur with dissolve
-            show jenya smilea at right2 with dissolve
-            show mc normala at left2 with dissolve
-
-            j "Ты уже о нём, забыл?"
-
-            $ askAlex = False
-
-            call talkChoice
-
-        elif askMargo and askedMargo == False:
-
-            scene bg_classroom_blur with dissolve
-            show jenya normala at right2 with dissolve
-            show mc normala at left2 with dissolve
-
             show jenya smile at right2 with dissolve
+            show mc normala at left2 with dissolve
+
             j "Такая забавная! Глаза сияют при виде Шнурка, а тот дурак дураком: вроде умный, а ничего не понимает."
 
             show jenya normala at right2 with dissolve
             n "И действительно, светловолосая девушка часто кидала смущённые взгляды на парня с первого ряда."
 
             "Но, кажется, его это волновало меньше всего. Или он просто не замечал?"
+            hide jenya normala at right2 with dissolve
+            hide mc normala at left2 with dissolve
+            scene bg_rutnoeve with dissolve
 
-            $ askMargo = False
-
-            if (askedAll < 3):
-                $ askedMargo = True
-                $ askedAll += 1
-                call talkChoice
-
-        elif askMargo and askedMargo == True:
-
-            scene bg_classroom_blur with dissolve
-            show jenya smilea at right2 with dissolve
-            show mc normala at left2 with dissolve
-
-            j "Ты уже о ней, забыл?"
-
-            $ askMargo = False
-
-            call talkChoice
+            $ askMargo = True
+            $ askedPerson += 1
+            if askedPerson < 4:
+                call screen guyChoice
 
     play sound door
 
@@ -558,7 +510,7 @@ label jenya_cp1:
 
     "За пеленой снегопада я разглядел приближающийся силуэт. Теперь я был точно уверен, что мой собеседник — девушка, но очертаний её лица мне было не разглядеть."
 
-    "Я будто оказался в мире двойственностей. Мне было хорошо и легко, но в то же время тревожно и непонятно.{w}Мне было всё интересно, но и абсолютно всё равно."
+    "Я будто оказался в мире двойственностей. Мне было хорошо и легко, но в то же время тревожно и непонятно.{w} Мне было всё интересно, но и абсолютно всё равно."
 
     "Я был свободен, свободнее любой птицы в небе, но в то же время я был прикован к земле, к деревьям вокруг, к девушке, стоящей передо мной."
 

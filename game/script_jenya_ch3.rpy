@@ -1,6 +1,7 @@
 # Начало третьей главы рута Жени
 
 image cj_canteen_timur_blur = im.Blur("cj/cj_canteen_timur.png", 1.5)
+image bg_canteen_blur = im.Blur("bg/bg_canteen.png", 1.5)
 
 
 label jenya_cp3:
@@ -47,7 +48,7 @@ label jenya_cp3:
 
     "А может, Женя тоже, сама того не осознавая, является частью чего-то таинственного и магического. А может, абсолютно все мы — часть этой загадки."
 
-    
+
 
     "К слову о загадках, мой сосед –  это бермудский треугольник, если бы последний был человеком."
 
@@ -81,7 +82,7 @@ label jenya_cp3:
 
     "Я сел напротив Тимура. Тот, в свою очередь, даже не посмотрел на меня."
 
-    scene cj_canteen_timur_blur with dissolve
+    scene bg_canteen_blur with dissolve
 
     show mc normala at left2 with dissolve
 
@@ -319,7 +320,7 @@ label jenya_cp3:
     j "Мне абсолютно все предметы тяжело даются."
 
     show mc normal handa at left2 with dissolve
-    mc "Ты отлично учишься по английскому."
+    mc "Ты неплохо разбираешься в английском."
 
     j "Я имею в виду профильные предметы. Все эти коды, числа, массивы... Я их терпеть не могу!"
 

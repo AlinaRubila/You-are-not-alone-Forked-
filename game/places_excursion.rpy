@@ -28,7 +28,7 @@ label Canteen:
     hide mc talk crosseda with dissolve
     hide jenya smilea with dissolve
 
-    n "Мы шли по бесчисленному количеству переплетений лестниц и пролётов. Проносились мимо полупустых аудиторий и мест, куда не ступала нога человека. Но Женя как охотничья ищейка, стремительно и неумолимо неслась к столовой."
+    n "Мы шли по бесчисленному количеству переплетений лестниц и пролётов. Проносились мимо полупустых аудиторий и мест, куда не ступала нога человека. Но Женя, как охотничья ищейка, стремительно и неумолимо неслась к столовой."
 
     "Я надеялся, что почувствую приближение нашего конечного пункта носом: почувствую запах супов, бутербродов с сервелатом, пюрешки с котлетками и подливом и дешёвого чая с тонной сахара."
 
@@ -97,7 +97,12 @@ label Park:
     jump ChoiceExcursion
 
 label Library:
-
+    stop music
+    stop background
+    scene black with dissolve
+    play sound steps
+    pause 1
+    scene bg_library with dissolve
     #Музыка очень тихая и очень спокойная
     show mc normala at left2 with dissolve
     show jenya normala at right2 with dissolve
@@ -108,14 +113,8 @@ label Library:
 
     hide mc normala at left2 with dissolve
     hide jenya normala at right2 with dissolve
-    stop music
-    stop background
 
-    scene black with dissolve
-    play sound steps
-    pause 1
     play music chill
-    scene bg_library with dissolve
 
     n "Библиотека была далека от Александрийской. Тут и там стояли кожаные пустующие диванчики, забитые различной профессиональной литературой шкафы. И самое главное — почти никого нет."
 

@@ -269,7 +269,7 @@ label timur:
     "Сквозь сильную метель пробивался женский силуэт. Я узнал его, именно с ним мы разговаривали в прошлый раз."
 
     #Спрайт чёрного силуэта Евы.
-    show eve grey black glow with dissolve
+    show eve silhouette grey glow with dissolve
 
     un "Вот мы и снова встретились."
 
@@ -425,9 +425,11 @@ label timur:
     "Никогда не видел, чтобы такие журналы продавались прямо в супермаркете. Этот ещё и последним остался!"
 
     play sound bumaga
+    hide cj_magazine with dissolve
+    show cj_magposter with dissolve
 
     "Я пролистнул журнал и увидел крутой постер с моим любимым персонажем. Не думая больше ни секунды, я положил журнал в корзину и направился на кассу."
-    hide cj_magazine with dissolve
+    hide cj_magposter with dissolve
     play background city
     scene bg_street_morning_winter with dissolve
 

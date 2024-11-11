@@ -236,7 +236,7 @@ screen choice(items):
                 xfill False
                 yfill False
                 mousewheel True
-                maximum 400, 350              
+                maximum 400, 350
                 xalign 0.5
                 vbox:
 
@@ -245,7 +245,7 @@ screen choice(items):
                             xsize 300
                             text_align 0.5
             vbar value YScrollValue('choice_vp') xmaximum 10 ymaximum 350
-                      
+
 style choice_vbox is vbox
 style choice_button is button
 style choice_button_text is button_text
@@ -345,7 +345,7 @@ screen quick_menu():
             imagebutton auto "gui/qm/qm_preferences_%s.png" focus_mask True:
                 hovered Show("mm_tooltip", ttcontent="Настройки")
                 unhovered Hide("mm_tooltip")
-                action [Hide("mm_tooltip"), ("preferences")]
+                action [Hide("mm_tooltip"), ShowMenu("preferences")]
             imagebutton auto "gui/qm/qm_hide_%s.png" focus_mask True:
                 hovered Show("mm_tooltip", ttcontent="Скрыть интерфейс")
                 unhovered Hide("mm_tooltip")

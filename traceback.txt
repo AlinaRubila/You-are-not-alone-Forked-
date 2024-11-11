@@ -1,34 +1,106 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script_timur_ch1.rpy", line 137, in script
-    call screen thinkAbout
-  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-Exception: Screen thinkAbout is not known.
-
+  File "renpy/common/00start.rpy", line 275, in script
+    python:
+  File "renpy/common/00start.rpy", line 275, in script
+    python:
+  File "renpy/common/00start.rpy", line 279, in <module>
+    renpy.call_in_new_context("_main_menu")
+  File "renpy/common/00action_file.rpy", line 479, in __call__
+    renpy.load(fn)
+Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script_timur_ch1.rpy", line 137, in script
-    call screen thinkAbout
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\ast.py", line 2259, in execute
-    self.call("execute")
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\ast.py", line 2241, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\statements.py", line 342, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\exports.py", line 3333, in call_screen
-    show_screen(_screen_name, _transient=True, *args, **kwargs)
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\screen.py", line 1220, in show_screen
-    raise Exception("Screen %s is not known.\n" % (name[0],))
-Exception: Screen thinkAbout is not known.
-
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\bootstrap.py", line 275, in bootstrap
+    renpy.main.main()
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\main.py", line 670, in main
+    run(restart)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\main.py", line 144, in run
+    renpy.execution.run_context(True)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\execution.py", line 953, in run_context
+    context.run()
+  File "renpy/common/00start.rpy", line 275, in script
+    python:
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 444, in raise_
+  File "renpy/common/00start.rpy", line 275, in script
+    python:
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\ast.py", line 1138, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\python.py", line 1122, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00start.rpy", line 279, in <module>
+    renpy.call_in_new_context("_main_menu")
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\game.py", line 349, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\execution.py", line 953, in run_context
+    context.run()
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 444, in raise_
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\ast.py", line 1138, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\python.py", line 1122, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
+    python hide:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
+    ui.interact()
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\core.py", line 3587, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\core.py", line 4548, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\layout.py", line 1179, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\transition.py", line 53, in event
+    return self.new_widget.event(ev, x, y, st) # E1101
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\layout.py", line 1179, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\layout.py", line 1179, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\screen.py", line 770, in event
+    rv = self.child.event(ev, x, y, st)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\layout.py", line 1179, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\layout.py", line 1403, in event
+    rv = super(Window, self).event(ev, x, y, st)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\layout.py", line 281, in event
+    rv = d.event(ev, x - xo, y - yo, st)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\layout.py", line 1179, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\layout.py", line 1403, in event
+    rv = super(Window, self).event(ev, x, y, st)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\layout.py", line 281, in event
+    rv = d.event(ev, x - xo, y - yo, st)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\layout.py", line 1179, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\layout.py", line 281, in event
+    rv = d.event(ev, x - xo, y - yo, st)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\behavior.py", line 1142, in event
+    return handle_click(self.clicked)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\behavior.py", line 1075, in handle_click
+    rv = run(action)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\behavior.py", line 379, in run
+    return action(*args, **kwargs)
+  File "renpy/common/00action_file.rpy", line 479, in __call__
+    renpy.load(fn)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\loadsave.py", line 816, in load
+    log.unfreeze(roots, label="_after_load")
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\rollback.py", line 1108, in unfreeze
+    self.rollback(0, force=True, label=label, greedy=greedy, on_load=True)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\rollback.py", line 908, in rollback
+    self.load_failed()
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\rollback.py", line 826, in load_failed
+    raise Exception("Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?")
+Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.1.2.23090503
 Ты не один 0.1
-Sun Oct 20 00:09:26 2024
+Sun Nov 10 20:27:27 2024
