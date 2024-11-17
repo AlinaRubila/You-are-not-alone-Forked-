@@ -181,7 +181,7 @@ label start:
 
     scene bg_room_morning_blur with onn
 
-    scene bg_room_morning at pan
+    scene bg_room_morning #at pan
     with dissolve
 
     play sound room
