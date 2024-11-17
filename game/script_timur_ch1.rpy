@@ -9,6 +9,7 @@ define visitKitchen = True
 define visitDayroom = True
 define visitLaundry = True
 define dormPlaces = 0
+define helpedWithRepair = False #для 2 главы
 
 screen guySee():
     if seeJenya == False:
@@ -559,4 +560,4 @@ label timur:
 
     "Единственная мысль, что была сейчас у меня в голове, была о Тимуре. Суть её была довольно проста: ну и урод."
 
-return
+    jump timur_cp2
