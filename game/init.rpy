@@ -74,7 +74,6 @@ image mc blush handa = At('mc blush hand', sprite_highlight('mc'))
 image mc blush homea = At('mc blush home', sprite_highlight('mc'))
 image mc blush wintera = At('mc blush winter', sprite_highlight('mc'))
 image mc blusha = At('mc blush', sprite_highlight('mc'))
-image mc normal homea = At('mc normal home', sprite_highlight('mc'))
 image mc sad crosseda = At('mc sad crossed', sprite_highlight('mc'))
 image mc sad handa = At('mc sad hand', sprite_highlight('mc'))
 image mc sad homea = At('mc sad home', sprite_highlight('mc'))
@@ -90,7 +89,8 @@ image mc surprise wintera = At('mc surprise winter', sprite_highlight('mc'))
 image mc surprisea = At('mc surprise', sprite_highlight('mc'))
 image mc thoughtful crosseda = At('mc thoughtful crossed', sprite_highlight('mc'))
 image mc normal crosseda = At('mc normal crossed', sprite_highlight('mc'))
-
+image mc angry poster = At('mc poster mouth closed', sprite_highlight('mc'))
+image mc angry poster2 = At('mc poster mouth opened', sprite_highlight('mc'))
 
 image timur normala = At('timur normal', sprite_highlight('timur'))
 image timur angrya = At('timur angry', sprite_highlight('timur'))
@@ -100,12 +100,14 @@ image timur smilea = At('timur smile', sprite_highlight('timur'))
 image timur surprisea = At('timur surprise', sprite_highlight('timur'))
 image timur thoughtfula = At('timur thoughtful', sprite_highlight('timur'))
 image timur angry homea = At('timur angry home', sprite_highlight('timur'))
-
+image timur angry postera = At('timur angry poster', sprite_highlight('timur'))
+image timur surprise homea = At('timur surprised home', sprite_highlight('timur'))
 
 image alex normala = At('alex normal', sprite_highlight('alex'))
 
 image comenda normal = At('commandant normal', sprite_highlight('comenda'))
 image comenda angry = At('commandant angry', sprite_highlight('comenda'))
+image comenda smile = At('commandant winter smile', sprite_highlight('comenda'))
 image comenda home normala = At('commandant home', sprite_highlight('comenda'))
 image comenda home angrya = At('commandant home angry', sprite_highlight('comenda'))
 image comenda home scared = At('commandant home scared', sprite_highlight('comenda'))
@@ -156,6 +158,7 @@ define audio.base = "audio/Morning.ogg"
 define audio.evening = "audio/music/Past Sadness.mp3"
 define audio.wholesome = "audio/music/Wholesome.mp3"
 define audio.cozy = "audio/music/Cozy.mp3"
+define audio.crossroads = "audio/music/Crossroads.mp3"
 define audio.sadness = "audio/music/Happy-Sad.mp3"
 define audio.chill = "audio/music/Chill.mp3"
 define audio.darkrooms = "audio/music/DarkRooms.mp3"
