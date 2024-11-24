@@ -226,13 +226,13 @@ label jenya_cp2:
 
     stop background
     play music evening
-    scene cj_meet_jenya_angry with dissolve
+    scene cj_meet_jenya_draw with dissolve
 
     n"Пара началась. Женя уткнулась в тетрадь, не обращая внимания ни на препода, ни на меня."
 
     "Я начал волноваться за её настроение. Неужели она мне не доверяет, раз решила не говорить о своих переживаниях?"
 
-    scene cj_meet_jenya_draw with dissolve
+    scene cj_meet_jenya_angry with dissolve
 
     "Женя выглядит более нервно, чем обычно. Она даже не смотрит в мою сторону, а просто всю пару рисует в своей тетрадке."
 
@@ -350,7 +350,8 @@ label jenya_cp2:
     scene black with dissolve
     #Весёлая музыка.
     play music funny fadein 1.0
-    scene cj_alex at pan with dissolve
+    scene cj_alex #at pan 
+    with dissolve
 
     a "У меня для вас есть информация…"
     "Преградой к долгожданной свободе стал Шнурок и его «классный час». Своим серьёзным видом Саша действительно напоминал скорее учителя, чем моего одногруппника."
@@ -461,7 +462,7 @@ label jenya_cp2:
 
     mc "А? Что? Кто здесь?"
 
-    #Спрайт силуэта Евы.
+    show eve silhouette grey glow with dissolve
 
     n "В дверном проёме своей комнаты я увидел чей-то силуэт. Он пристально смотрел на меня. Я никак не мог разглядеть его и определить, чей же он."
 
@@ -482,7 +483,8 @@ label jenya_cp2:
 
     "Над ней была цифра 256. Открыв дверь, я проснулся."
 
-    scene  bg_room_dawn at pan with dissolve
+    scene  bg_room_dawn #at pan 
+    with dissolve
     #Спокойная музыка.
     play music home
 

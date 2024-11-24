@@ -425,7 +425,8 @@ label jenya_cp3:
     pause 1
     play music sunshine
 
-    scene bg_room_dawn at pan with dissolve
+    scene bg_room_dawn #at pan 
+    with dissolve
 
     "Я проснулся. Вчера мы с Женей договорились опять приготовить завтрак вместе. Я умылся, почистил зубы и пошёл на кухню. Обычно в это время Женя уже была там."
 
