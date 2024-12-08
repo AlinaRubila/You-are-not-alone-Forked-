@@ -7,6 +7,7 @@ define a = Character('Александр', ctc="ctc_atl", ctc_position="fixed", 
 define e = Character('Ева', color="#51483f")
 define od = Character('Ольга Дмитриевна', ctc_position="fixed", color="#51483f", image='comenda', callback=name_callback, cb_name="comenda")
 define od_un = Character('???', ctc_position="fixed", color="#51483f", image='comenda', callback=name_callback, cb_name="comenda")
+define j_un = Character('???', ctc_position="fixed", color="#51483f", image='comenda', callback=name_callback, cb_name="jenya")
 define un = Character('???', ctc="ctc_atl", ctc_position="fixed", color="#51483f")
 
 #Теги для сообщений
@@ -94,14 +95,22 @@ image mc angry poster2 = At('mc poster mouth opened', sprite_highlight('mc'))
 
 image timur normala = At('timur normal', sprite_highlight('timur'))
 image timur angrya = At('timur angry', sprite_highlight('timur'))
+image timur angry wintera = At('timur angry look winter', sprite_highlight('timur'))
 image timur normal smilea = At('timur normal smile', sprite_highlight('timur'))
+image timur normal homea = At('timur normal home', sprite_highlight('timur'))
 image timur sada = At('timur sad', sprite_highlight('timur'))
+image timur sad homea = At('timur sad home', sprite_highlight('timur'))
 image timur smilea = At('timur smile', sprite_highlight('timur'))
 image timur surprisea = At('timur surprise', sprite_highlight('timur'))
 image timur thoughtfula = At('timur thoughtful', sprite_highlight('timur'))
 image timur angry homea = At('timur angry home', sprite_highlight('timur'))
 image timur angry postera = At('timur angry poster', sprite_highlight('timur'))
 image timur surprise homea = At('timur surprised home', sprite_highlight('timur'))
+image timur yell wintera = At('timur yelling winter', sprite_highlight('timur'))
+image timur embarrassed homea = At('timur_s smile home', sprite_highlight('timur'))
+image timur smile homea = At('timur smile home', sprite_highlight('timur'))
+image timur happy homea = At('timur happy home', sprite_highlight('timur'))
+
 
 image alex normala = At('alex normal', sprite_highlight('alex'))
 

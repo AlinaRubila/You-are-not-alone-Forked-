@@ -1,28 +1,71 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script_timur_ch1.rpy", line 402, in script
-    scene bg_grossery_shop with Blur
-  File "game/script_timur_ch1.rpy", line 402, in <module>
-    scene bg_grossery_shop with Blur
-NameError: name 'Blur' is not defined
+While loading <renpy.display.im.Image object ('images/cj/cj_tidy_up.jpg') at 0x0000000005249a00>:
+  File "game/script_timur_ch2.rpy", line 359, in script
+    "Тимур вручил мне большой мусорный мешок, купленный нами вчера, и отправил убирать половину комнаты."
+OSError: Couldn't find file 'images/cj/cj_tidy_up.jpg'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script_timur_ch1.rpy", line 402, in script
-    scene bg_grossery_shop with Blur
-  File "C:\Users\anago\OneDrive\Desktop\renpy-8.3.2-sdk\renpy\ast.py", line 1357, in execute
-    paired = renpy.python.py_eval(self.paired)
-  File "C:\Users\anago\OneDrive\Desktop\renpy-8.3.2-sdk\renpy\python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\anago\OneDrive\Desktop\renpy-8.3.2-sdk\renpy\python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script_timur_ch1.rpy", line 402, in <module>
-    scene bg_grossery_shop with Blur
-NameError: name 'Blur' is not defined
+  File "game/script_timur_ch2.rpy", line 359, in script
+    "Тимур вручил мне большой мусорный мешок, купленный нами вчера, и отправил убирать половину комнаты."
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\ast.py", line 930, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\exports.py", line 1474, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\character.py", line 1352, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\character.py", line 1003, in do_display
+    display_say(who,
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\character.py", line 693, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\core.py", line 3587, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\core.py", line 4180, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\core.py", line 2785, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 492, in renpy.display.render.render_screen
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\layout.py", line 888, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\layout.py", line 888, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\layout.py", line 888, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\transform.py", line 909, in render
+    return RenderTransform(self).render(width, height, st, at)
+  File "accelerator.pyx", line 979, in renpy.display.accelerator.RenderTransform.render
+  File "accelerator.pyx", line 404, in renpy.display.accelerator.RenderTransform.render_child
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\image.py", line 513, in render
+    return wrap_render(self.target, width, height, st, at)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\image.py", line 316, in wrap_render
+    rend = render(child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\im.py", line 676, in render
+    return cache.get(self, render=True)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\im.py", line 330, in get
+    surf = image.load()
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\im.py", line 803, in load
+    raise e
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\im.py", line 757, in load
+    filelike = renpy.loader.load(self.filename, directory="images")
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\loader.py", line 833, in load
+    raise IOError("Couldn't find file '%s'." % name)
+OSError: Couldn't find file 'images/cj/cj_tidy_up.jpg'.
 
-Windows-10-10.0.22631 AMD64
-Ren'Py 8.3.2.24090902
+Windows-10-10.0.19045 AMD64
+Ren'Py 8.1.2.23090503
 Ты не один 0.1
-Sat Dec  7 16:56:27 2024
+Sun Dec  8 23:27:21 2024

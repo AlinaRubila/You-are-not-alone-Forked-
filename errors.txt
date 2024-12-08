@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script_timur_ch1.rpy", line 12: Line is indented, but the preceding define statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    label sJenya:
-    ^
+File "game/script_timur_ch2.rpy", line 807: expected simple expression
+    play music sadness fadein
+                             ^
 
 Ren'Py Version: Ren'Py 8.1.2.23090503
-Sun Oct 20 00:33:56 2024
+Sun Dec  8 23:38:24 2024
