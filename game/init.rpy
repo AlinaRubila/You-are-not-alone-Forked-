@@ -149,6 +149,7 @@ define audio.pen = "audio/sounds/pen_drop.mp3"
 define audio.coffee = "audio/sounds/spill_coffee.mp3"
 define audio.tire = "audio/sounds/tire.ogg"
 define audio.ruining = "audio/sounds/ruin_room.mp3"
+define audio.smash = "audio/sounds/smash.wav"
 
 #эмбиент
 define audio.city = "audio/ambient/city.mp3"
@@ -160,6 +161,7 @@ define audio.cooking = "audio/ambient/cooking.mp3"
 define audio.people = "audio/ambient/people_around.mp3"
 define audio.wind = "audio/ambient/winter_wind.mp3"
 define audio.shop = "audio/ambient/Shop.mp3"
+define audio.repair = "audio/ambient/repair.wav"
 
 #музыка
 define audio.sincerely = "audio/music/Sincerely.mp3"
