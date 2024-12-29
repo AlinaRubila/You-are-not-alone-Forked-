@@ -89,7 +89,7 @@ label jenya_bad_end:
     show mc sada at left2 with dissolve
     mc "Я не очень уверен в оценке, жутко нервничаю."
 
-    #Спрайт Шнурка, улыбается.
+    show alex smilea at right2 with dissolve
     a "Я наоборот не сомневаюсь в отличной отметке. Может, мне тебя поспрашивать по темам?"
 
     show mc smile crosseda at left2 with dissolve
@@ -103,21 +103,22 @@ label jenya_bad_end:
     menu:
 
         "Комар":
-            #Спрайт Шнур серьёзный
+            show alex normala at right2 with dissolve
             "Шнурок отрицательно помотал головой."
             show mc sada at left2 with dissolve
             a "Ну… Всякое случается. Ответ: Коммерческий. Ничего, вопрос номер два!"
         "Коммерческий":
-            #Спрайт Шнур улыбается
+            show alex smilea at right2 with dissolve
             "Шнурок улыбнулся и кивнул."
             a "Так держать! Итак, вопрос номер два."
+            show alex normala at right2 with dissolve
         "Комиссионный":
-            #Спрайт Шнур серьёзный
+            show alex normala at right2 with dissolve
             "Шнурок отрицательно помотал головой."
             show mc sada at left2 with dissolve
             a "Ну… Всякое случается. Ответ: Коммерческий. Ничего, вопрос номер два!"
         "Командировочный":
-            #Спрайт Шнур серьёзный
+            show alex normala at right2 with dissolve
             "Шнурок отрицательно помотал головой."
             show mc sada at left2 with dissolve
             a "Ну… Всякое случается. Ответ: Коммерческий. Ничего, вопрос номер два!"
@@ -128,21 +129,25 @@ label jenya_bad_end:
     menu:
 
         "Антивирус":
-            #Спрайт Шнур с улыбкой
+            show alex smilea at right2 with dissolve
             show mc smile crosseda at left2 with dissolve
             a "Другого я от тебя и не ожидал. Итак, поехали к настоящему вопросу. Цветочки кончились."
         "Стражник":
+            show alex gloomya at right2 with dissolve
             show mc sada at left2 with dissolve
             a "Серьёзно? Ты не знаешь про антивирус? Дружище, хватит шутки шутить, давай-ка соберись! Итак, поехали к настоящему вопросу. Цветочки кончились."
         "Египтянин":
+            show alex gloomya at right2 with dissolve
             show mc sada at left2 with dissolve
             a "Серьёзно? Ты не знаешь про антивирус? Дружище, хватит шутки шутить, давай-ка соберись! Итак, поехали к настоящему вопросу. Цветочки кончились."
 
         "Будка":
+            show alex gloomya at right2 with dissolve
             show mc sada at left2 with dissolve
             a "Серьёзно? Ты не знаешь про антивирус? Дружище, хватит шутки шутить, давай-ка соберись! Итак, поехали к настоящему вопросу. Цветочки кончились."
 
     show mc normala at left2 with dissolve
+    show alex normala at right2 with dissolve
     a "Вопрос в следующем — в каком институте был разработан первый механический аналоговый компьютер?"
 
     "Он уставился на меня, ожидая ответа. Ответа я не знаю. Так, Я, соберись! Какие есть варианты…"
@@ -157,15 +162,16 @@ label jenya_bad_end:
         "Оксфорд":
             pass
 
-    #Спрайт Шнур серьёзный
+    show alex gloomya at right2 with dissolve
     "Когда я ответил, я сразу понял, что я ответил неправильно. В принципе, я и так знал, что не знаю, но взгляд Шнурка будто бы усилил моё чувство стыда в 10 раз. Он вздохнул и сказал:"
+    show alex normala at right2 with dissolve
 
     a "Не-а. В Массачусетском. В 1927 году. Вэниваром Бушем. Что ж, удачи тебе! Мне нужно отойти."
+    hide alex normala at right2 with dissolve
 
     n "Он повернулся и ушёл."
     stop music fadeout 1.0
     show mc thoughtful crosseda at left2 with dissolve
-    hide alex normala at right2 with dissolve
 
     "Сказать, что эта викторина выбила у меня землю из-под ног и серьёзно ударила по моей уверенности — это ничего не сказать."
 
@@ -210,7 +216,7 @@ label jenya_bad_end:
 
     "Посещало чувство, что я опоздал, упустил что-то важное. С тяжестью на сердце я побрёл в свою комнату."
 
-    scene bg_room_dawn #at pan 
+    scene bg_room_dawn #at pan
     with dissolve
 
     "В моей берлоге было как всегда тихо и одиноко. На мгновение мне даже захотелось снять амулет, чтобы хоть призрак успокаивал меня своим тихим присутствием."

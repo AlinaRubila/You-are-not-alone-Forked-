@@ -458,6 +458,7 @@ label jenya_cp2:
     stop music fadeout 2.0
     play background room
     play sound stuk
+    scene bg_room_morning with dissolve
 
     mc "А? Что? Кто здесь?"
 
@@ -466,10 +467,12 @@ label jenya_cp2:
     n "В дверном проёме своей комнаты я увидел чей-то силуэт. Он пристально смотрел на меня. Я никак не мог разглядеть его и определить, чей же он."
 
     mc "Кто ты?"
+    hide eve silhouette grey glow with dissolve
 
     n"Я решил подойти, чтобы рассмотреть, кто там стоит. Но вдруг чёрный силуэт начал от меня убегать."
 
     mc "Эй, постой, всё хорошо!"
+    scene bg_hallway_dark with dissolve
 
     play sound steps
 
@@ -636,10 +639,11 @@ label jenya_cp2:
 
         "Да":
             scene black with dissolve
+            pause 1.0
             $ relate_jenya += 15
             #"Возможно мини-игра."
             #Приятная музыка.
-            play music leaves
+            play music leaves fadein 2.0
             play background park
             scene bg_park_winter with dissolve
             show jenya smile wintera at right2 with dissolve

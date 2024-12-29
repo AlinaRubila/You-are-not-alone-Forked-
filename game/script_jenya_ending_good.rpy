@@ -41,7 +41,7 @@ label jenya_good_end:
     "Я погрузился в мир снов, где меня встречали яркие рыжие волосы и знакомый смех."
     pause 1
 
-    scene bg_room_dawn #at pan 
+    scene bg_room_dawn #at pan
     with dissolve
     "Утром я проснулся с прекрасным настроением. Уверен, что с таким-то настроем экзамен у меня в кармане."
 
@@ -70,7 +70,7 @@ label jenya_good_end:
     show mc sada at left2 with dissolve
     mc "Я не очень уверен в оценке, жутко нервничаю."
 
-    #Спрайт Шнурка, улыбается.
+    show alex smilea at right2 with dissolve
     a "Я наоборот не сомневаюсь в отличной отметке. Может, мне тебя поспрашивать по темам?"
 
     show mc smile crosseda  at left2 with dissolve
@@ -84,21 +84,21 @@ label jenya_good_end:
     menu:
 
         "Комар":
-            #Спрайт Шнур серьёзный
+            show alex normala at right2 with dissolve
             "Шнурок отрицательно помотал головой."
             show mc sada at left2 with dissolve
             a "Ну… Всякое случается. Ответ: Коммерческий. Ничего, вопрос номер два!"
         "Коммерческий":
-            #Спрайт Шнур улыбается
+            show alex smilea at right2 with dissolve
             "Шнурок улыбнулся и кивнул."
             a "Так держать! Итак, вопрос номер два."
         "Комиссионный":
-            #Спрайт Шнур серьёзный
+            show alex normala at right2 with dissolve
             "Шнурок отрицательно помотал головой."
             show mc sada at left2 with dissolve
             a "Ну… Всякое случается. Ответ: Коммерческий. Ничего, вопрос номер два!"
         "Командировочный":
-            #Спрайт Шнур серьёзный
+            show alex normala at right2 with dissolve
             "Шнурок отрицательно помотал головой."
             show mc sada at left2 with dissolve
             a "Ну… Всякое случается. Ответ: Коммерческий. Ничего, вопрос номер два!"
@@ -109,17 +109,20 @@ label jenya_good_end:
     menu:
 
         "Антивирус":
-            #Спрайт Шнур с улыбкой
+            show alex smilea at right2 with dissolve
             show mc smile crosseda at left2 with dissolve
             a "Другого я от тебя и не ожидал. Итак, поехали к настоящему вопросу. Цветочки кончились."
         "Стражник":
+            show alex gloomya at right2 with dissolve
             show mc sada at left2 with dissolve
             a "Серьёзно? Ты не знаешь про антивирус? Дружище, хватит шутки шутить, давай-ка соберись! Итак, поехали к настоящему вопросу. Цветочки кончились."
         "Египтянин":
+            show alex gloomya at right2 with dissolve
             show mc sada at left2 with dissolve
             a "Серьёзно? Ты не знаешь про антивирус? Дружище, хватит шутки шутить, давай-ка соберись! Итак, поехали к настоящему вопросу. Цветочки кончились."
 
         "Будка":
+            show alex gloomya at right2 with dissolve
             show mc sada at left2 with dissolve
             a "Серьёзно? Ты не знаешь про антивирус? Дружище, хватит шутки шутить, давай-ка соберись! Итак, поехали к настоящему вопросу. Цветочки кончились."
 
@@ -138,8 +141,9 @@ label jenya_good_end:
         "Оксфорд":
             pass
 
-    #Спрайт Шнур серьёзный
+    show alex gloomya at right2 with dissolve
     "Когда я ответил, я сразу понял, что я ответил неправильно. В принципе, я и так знал, что не знаю, но взгляд Шнурка будто бы усилил моё чувство стыда в 10 раз. Он вздохнул и сказал:"
+    show alex normala at right2 with dissolve
 
     a "Не-а. В Массачусетском. В 1927 году. Вэниваром Бушем. Что ж, удачи тебе! Мне нужно отойти."
     show mc thoughtful crosseda at left2 with dissolve
