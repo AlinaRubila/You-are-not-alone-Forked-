@@ -1,5 +1,7 @@
 define nvl_mode = "phone"  ##Allow the NVL mode to become a phone conversation
 define MC_Name = "Я" ##The name of the main character, used to place them on the screen
+define Jenya = "Женя Лис"
+define Alex = "Староста"
 
 init -1 python:
     phone_position_x = 0.3
@@ -101,7 +103,7 @@ screen nvl_phonetext(dialogue):
                     null height 3
                 else:
                     null height 12
-                    
+
                 hbox:
                     if d.who == MC_Name:
                         box_reverse True
@@ -111,6 +113,10 @@ screen nvl_phonetext(dialogue):
                     if previous_d_who != d.who:
                         if d.who == MC_Name:
                             $ message_icon = "phone_send_icon.png"
+                        elif d.who == Jenya:
+                            $ message_icon = "phone_received_icon_jenya.png"
+                        elif d.who == Alex:
+                            $ message_icon = "phone_received_icon_alex.png"
                         else:
                             $ message_icon = "phone_received_icon.png"
 

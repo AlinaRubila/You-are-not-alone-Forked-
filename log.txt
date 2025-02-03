@@ -1,41 +1,41 @@
-Mon Feb  3 15:48:16 2025
+Tue Feb  4 00:07:05 2025
 Windows-10-10.0.19045
 Ren'Py 8.1.2.23090503
  
 
-Bootstrap to the start of init.init. took 0.05s
+Bootstrap to the start of init.init. took 0.07s
 Early init. took 0.00s
-Loader init. took 0.07s
-Loading error handling. took 0.04s
-Loading script. took 0.68s
-Loading save slot metadata. took 0.08s
+Loader init. took 0.11s
+Loading error handling. took 0.08s
+Loading script. took 0.51s
+Loading save slot metadata. took 0.12s
 Loading persistent. took 0.00s
-Running init code. took 0.14s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.01s
-Reloading save slot metadata. took 0.05s
+Running init code. took 0.19s
+Loading analysis data. took 0.03s
+Analyze and compile ATL. took 0.02s
+Reloading save slot metadata. took 0.08s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\angry\\AppData\\Roaming/RenPy/backups\\You-are-not-alone-Forked-':
-Dump and make backups. took 0.09s
+Dump and make backups. took 0.15s
 Cleaning cache. took 0.00s
 Making clean stores. took 0.00s
-Initial gc. took 0.04s
+Initial gc. took 0.05s
 DPI scale factor: 1.500000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: b"Couldn't load nvlib." (can be ignored)
 Creating interface object. took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.06s
+Init translation took 0.10s
 Build styles took 0.01s
 Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.03s
-Prepare screens took 0.11s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.04s
+Analyze screens took 0.04s
+Save screen analysis took 0.06s
+Prepare screens took 0.17s
+Save pyanalysis. took 0.04s
+Save bytecode. took 0.07s
 Running _start took 0.00s
 Performance test:
-Interface start. took 0.24s
+Interface start. took 0.34s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -48,110 +48,20 @@ Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1731, 974) drawable=(1731, 974)
 Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init. took 67.52s
+Bootstrap to the start of init.init. took 82.06s
 Early init. took 0.00s
-Loader init. took 0.06s
-Loading error handling. took 0.05s
-Loading script. took 0.40s
-Loading save slot metadata. took 0.07s
+Loader init. took 0.09s
+Loading error handling. took 0.08s
+Loading script. took 0.46s
+Loading save slot metadata. took 0.13s
 Loading persistent. took 0.00s
-Running init code. took 0.10s
-Loading analysis data. took 0.03s
-Analyze and compile ATL. took 0.01s
-Reloading save slot metadata. took 0.05s
+Running init code. took 0.18s
+Loading analysis data. took 0.05s
+Analyze and compile ATL. took 0.02s
+Reloading save slot metadata. took 0.07s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\angry\\AppData\\Roaming/RenPy/backups\\You-are-not-alone-Forked-':
-Dump and make backups. took 0.11s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.09s
-DPI scale factor: 1.500000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.07s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.03s
-Prepare screens took 0.11s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.21s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'ATI Technologies Inc.'"
-Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
-Version: b'4.6.0 Compatibility Profile Context 24.3.1.240216'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1731, 974) drawable=(1731, 974)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 245.64s
-Early init. took 0.00s
-Loader init. took 0.07s
-Loading error handling. took 0.03s
-Loading script. took 0.51s
-Loading save slot metadata. took 0.06s
-Loading persistent. took 0.00s
-Running init code. took 0.10s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.01s
-Reloading save slot metadata. took 0.05s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\angry\\AppData\\Roaming/RenPy/backups\\You-are-not-alone-Forked-':
-Dump and make backups. took 0.10s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.07s
-DPI scale factor: 1.500000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.07s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.03s
-Prepare screens took 0.11s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.21s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'ATI Technologies Inc.'"
-Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
-Version: b'4.6.0 Compatibility Profile Context 24.3.1.240216'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1731, 974) drawable=(1731, 974)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 508.43s
-Early init. took 0.00s
-Loader init. took 0.07s
-Loading error handling. took 0.03s
-Loading script. took 0.39s
-Loading save slot metadata. took 0.07s
-Loading persistent. took 0.00s
-Running init code. took 0.10s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.01s
-Reloading save slot metadata. took 0.05s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\angry\\AppData\\Roaming/RenPy/backups\\You-are-not-alone-Forked-':
-Dump and make backups. took 0.09s
+Dump and make backups. took 0.14s
 Cleaning cache. took 0.00s
 Making clean stores. took 0.00s
 Initial gc. took 0.08s
@@ -160,17 +70,17 @@ nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: b"Couldn't load nvlib." (can be ignored)
 Creating interface object. took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.07s
+Init translation took 0.10s
 Build styles took 0.01s
 Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.03s
-Prepare screens took 0.12s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
+Analyze screens took 0.03s
+Save screen analysis took 0.04s
+Prepare screens took 0.16s
+Save pyanalysis. took 0.04s
+Save bytecode. took 0.03s
 Running _start took 0.00s
 Performance test:
-Interface start. took 0.20s
+Interface start. took 0.27s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -182,10 +92,48 @@ Version: b'4.6.0 Compatibility Profile Context 24.3.1.240216'
 Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1731, 974) drawable=(1731, 974)
 Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 161.64s
+Early init. took 0.00s
+Loader init. took 0.15s
+Loading error handling. took 0.05s
+Loading script. took 0.60s
+Loading save slot metadata. took 0.13s
+Loading persistent. took 0.00s
+Running init code. took 0.14s
+Loading analysis data. took 0.03s
+Analyze and compile ATL. took 0.02s
+Reloading save slot metadata. took 0.07s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\angry\\AppData\\Roaming/RenPy/backups\\You-are-not-alone-Forked-':
+Dump and make backups. took 0.16s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.10s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.00s
+Init translation took 0.08s
 Build styles took 0.01s
-Load screen analysis took 0.05s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.04s
+Prepare screens took 0.19s
+Save pyanalysis. took 0.05s
+Save bytecode. took 0.05s
 Running _start took 0.00s
+Performance test:
+Interface start. took 0.27s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Vega 8 Graphics'
+Version: b'4.6.0 Compatibility Profile Context 24.3.1.240216'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1731, 974) drawable=(1731, 974)
+Maximum texture size: 4096x4096
