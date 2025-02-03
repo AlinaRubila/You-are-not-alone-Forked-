@@ -140,11 +140,12 @@ label jenya_cp1:
         "Выпечка была свежей: казалось, что её совсем недавно достали из духовки. Неужели Женя приготовила его сама?"
 
         "Я не заметил, как быстро съел угощение. Всё-таки отсутствие завтрака дало о себе знать."
+        scene bg_classroom_blur with dissolve
 
     else:
         scene cookieNo with dissolve
 
-        scene bg_rutnoeve with dissolve
+        scene bg_classroom_blur with dissolve
 
         mc "Спасибо, но я откажусь"
 
@@ -162,7 +163,6 @@ label jenya_cp1:
 
         "От мыслей о еде меня отвлекла моя новая знакомая."
 
-    scene bg_classroom_blur with dissolve
 
     show jenya normal smilea at right2 with dissolve
 

@@ -61,6 +61,7 @@ label jenya_cp3:
     stop music fadeout 1.0
     stop background fadeout 1.0
     scene black with dissolve
+    pause 2.0
     play music knowledge
     play background people
 
@@ -82,7 +83,7 @@ label jenya_cp3:
 
     "Я сел напротив Тимура. Тот, в свою очередь, даже не посмотрел на меня."
 
-    scene bg_canteen_blur with dissolve
+    scene bg_canteen with dissolve
 
     show mc normala at left2 with dissolve
 
@@ -425,7 +426,7 @@ label jenya_cp3:
     pause 1
     play music sunshine
 
-    scene bg_room_dawn #at pan 
+    scene bg_room_dawn #at pan
     with dissolve
 
     "Я проснулся. Вчера мы с Женей договорились опять приготовить завтрак вместе. Я умылся, почистил зубы и пошёл на кухню. Обычно в это время Женя уже была там."
@@ -455,7 +456,6 @@ label jenya_cp3:
 
             $ relate_jenya += 15
             $ favorite_food = True
-            play music together fadein 1.0
 
         "Приготовить овсянку":
 
@@ -469,7 +469,6 @@ label jenya_cp3:
             stop music fadeout 2.0
 
             #Музыка более приглушённая.
-            play music sincerely fadein 1.0
 
     scene bg_hallway_day with dissolve
 
@@ -481,6 +480,7 @@ label jenya_cp3:
     "Женя стояла передо мной. Она выглядела очень потерянной и уставшей."
 
     if favorite_food:
+        play music together fadein 1.0
         "Зря она, конечно, себя так изматывает."
 
         "Я понял, что хочу помогать ей чаще: она же так устаёт. Да и Женя всегда на моей стороне. Надо почаще устраивать ей сюрпризы!"
@@ -490,7 +490,7 @@ label jenya_cp3:
         j "Спасибо большое, ты мне очень помогаешь. Я так устаю, постоянно учу что-то ночью."
 
         show mc normal homea at left2 with dissolve
-        mc "Ё-маё, каждую ночь? Будь аккуратней, так и до больницы недолго. Давай хотя бы через день."
+        mc "Ё-моё, каждую ночь? Будь аккуратней, так и до больницы недолго. Давай хотя бы через день."
 
         show jenya normal homea at right2 with dissolve
         j "Ладно, хорошо. Просто за экзамен переживаю очень сильно."
@@ -501,9 +501,8 @@ label jenya_cp3:
         show jenya smile2 homea at right2 with dissolve
         j "Хорошо, хорошо."
 
-        play music wholesome
-
     else:
+        play music sincerely fadein 1.0
 
         show jenya sad homea at right2 with dissolve
 
@@ -543,7 +542,8 @@ label jenya_cp3:
         "Я открыл дверь, и там стояла Женя. Она всё ещё была уставшей и немного расстроенной."
 
     #Музыка обычная.
-    play music evening
+    stop music fadeout 2.0
+    #play music evening
     play background room
 
     "Мы сели за стол и приступили к учёбе. Я обратил внимание, что Женя очень серьёзная. Она так ответственно и старательно всё делает. Видно было, что, когда что-то не получается, это выводит её из себя."
@@ -551,7 +551,7 @@ label jenya_cp3:
     "Мы делали учебные задания уже несколько часов. Женя не отвлекалась и говорила со мной только по теме. Я решил поинтересоваться, как она себя чувствует."
 
     show mc normal homea at left2 with dissolve
-    stop music fadeout 2.0
+    play music gone fadein 1.0
 
     mc "С тобой всё в порядке?"
 
@@ -560,7 +560,6 @@ label jenya_cp3:
     j "Родители опять за своё. А мне очень обидно, у нас постоянные ссоры. Я очень устала, а долги всё не кончаются."
 
     n "Я заметил, как её глаза начали наполняться слезами."
-    play music gone fadein 1.0
 
     show mc smile homea at left2 with dissolve
     mc "Ну-ну, тихо. С экзаменами у тебя всё будет просто отлично, я в тебя верю. А вот насчёт родителей… надо что-то менять. Может, стоит с ними серьезно поговорить?"

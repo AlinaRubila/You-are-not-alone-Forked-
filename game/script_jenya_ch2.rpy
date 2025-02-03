@@ -705,7 +705,7 @@ label jenya_cp2:
             n "Женя покраснела."
 
             j "Спасибо."
-            show jenya normal wintera at right2 with dissolve
+            show jenya smile wintera at right2 with dissolve
 
             if vzal == 1:
 
@@ -717,7 +717,9 @@ label jenya_cp2:
 
             n"Когда я рассмотрел свой портрет и передал его назад Жене, у меня на коленях оказался её личный стикер. Мелочь, а приятно. Обязательно вклею его в свой дневник."
 
-            stop background
+            stop background fadeout 2.5
+            scene black with dissolve
+            pause 1.5
             play music home fadein 1.0
             scene bg_hallway_day with dissolve
 
@@ -784,12 +786,11 @@ label jenya_cp2:
             "Я приложил ухо к двери, пытаясь хоть что-то услышать. Наверное, со стороны я выгляжу странно, но моё любопытство взяло верх."
 
             play sound screamer
+            scene cj_door_girl with dissolve
             #Пугающий, резкий звук.
 
             "Я отскочил от двери и упал на спину."
             "Дверь открылась. На пороге стояла девушка, живущая в этой квартире."
-
-            scene cj_door_girl with dissolve
 
             un "Привет. Ты пришёл за книгой?"
 
@@ -846,37 +847,36 @@ label jenya_cp2:
     scene black with off
     pause 1
 
-    #Шумный звук ветра. - nope
     #Звук открывающегося окна. - nope
     scene bg_room_morning with dissolve
-    play background wind
+    play background wind fadein 1.0
 
     "Что-то прохладно, надо бы окно закрыть."
 
     "Неужели я всё-таки уснул? Уже темень такая."
 
-    #Нагнетающая музыка. - nope
     play music darkrooms
-    #Фон дороги, вид из окна Гг. - nope
-    scene cj_trace with dissolve
+
+    scene cj_night_eve_1 with dissolve
     stop background fadeout 1.0
 
     n"Я посмотрел на дорогу. Меня передёрнуло от страха."
 
-    scene cj_trace at tremble
-    with dissolve
     n"Вдоль дороги ходила девушка. В ней я сразу узнал свою таинственную преследовательницу."
 
     mc "Я не могу поверить своим глазам. Это сон? Что происходит?!"
 
-    #Скример.
+    scene cj_night_eve_2 at tremble
 
     n"И тут я вижу на себе взгляд того самого силуэта, который смотрит прямо мне в душу."
 
     "Но меня же никто не может видеть с улицы! Тем более, сейчас темно. Почему же тогда я ощущаю на себе взгляд?"
-    #Фон затемняется
+
+    scene bg_room_morning with dissolve
+
     "Я пулей побежал в свою кровать, зарылся в одеяло и пытался как можно скорее уснуть."
     scene black with dissolve
+    pause 1.0
 
     #Добрая музыка
     play music sincerely fadein 1.0
@@ -1019,9 +1019,9 @@ label jenya_cp2:
         mc "Спасибо большое. Я поговорю с призраком, как только решусь."
 
     if relate_jenya > 40:
-        j "Вижу, что ты стал более открытым к миру, и тебе это воздастся. Появится очень близкий тебе человек… А может, и уже появился."
-
         scene cj_divination2 with dissolve
+
+        j "Вижу, что ты стал более открытым к миру, и тебе это воздастся. Появится очень близкий тебе человек… А может, и уже появился."
 
         n"За всё время моего пребывания здесь ближе всего я стал с Женей… Оу, вот оно что."
 
@@ -1056,9 +1056,10 @@ label jenya_cp2:
         j "Ой, не волнуйся. Главное, чтобы тебе стало легче."
 
     scene bg_room_zhenya_dark2 with dissolve
+    stop music fadeout 1.5
 
-    play music together fadein 1.0
     n"Женя принялась копошиться в своих вещах. Через мгновение мне вручили оберег."
+    play music together fadein 1.0
 
     scene cj_gift with dissolve
     $ persistent.poster3 = True
