@@ -214,6 +214,7 @@ label timur_cp2:
             mc "Это же очевидные намёки, как можно этого не замечать…"
 
             t "Ему стоит внимательнее относиться к людям и смотреть по сторонам."
+            $ relate_timur += 5
             hide mc normala with dissolve
             hide timur normala with dissolve
 
@@ -1107,4 +1108,4 @@ label timur_cp2:
         stop background fadeout 1.0
 
 
-return
+jump timur_cp3

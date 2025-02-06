@@ -70,7 +70,7 @@ screen rutChoice():
     imagebutton:
         xalign 0.914
         yalign 0.563
-        auto "images/rutChoice/timur_button_%s.png" focus_mask True action [Jump("timur_1")]
+        auto "images/rutChoice/timur_button_%s.png" focus_mask True action [Jump("timur")]
 
     if persistent.ending122:
         imagebutton:
