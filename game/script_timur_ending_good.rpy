@@ -6,6 +6,8 @@ label timur_good_end:
     "Я всё ещё чувствую чьё-то присутствие, но оно меня больше не пугает."
 
     #Чёрный фон
-    #Звук ветра
+    play background audio.wind fadein 1.0
     centered "{size=+24}{color=#ffffff}Кому-то ещё нужна твоя помощь"
+    stop background fadeout 1.0
+
 return

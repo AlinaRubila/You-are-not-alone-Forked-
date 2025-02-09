@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script_timur_ch3.rpy", line 221: expected end of line
-    window hide black with off
-                      ^
+File "game/script_timur_ending_bad.rpy", line 10: play requires a file
+    play audio.wind
+              ^
 
-Ren'Py Version: Ren'Py 8.3.4.24120703
-Sun Feb  9 16:49:38 2025
+File "game/script_timur_ending_good.rpy", line 10: play requires a file
+    play audio.wind
+              ^
+
+Ren'Py Version: Ren'Py 8.1.2.23090503
+Sun Feb  9 19:27:41 2025

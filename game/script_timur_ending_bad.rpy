@@ -6,7 +6,8 @@ label timur_bad_end:
     "После переезда Тимура призрак больше ко мне не являлся."
 
     #Чёрный фон
-    #Звук ветра
+    play background audio.wind fadein 1.0
     centered "{size=+24}{color=#ffffff}Давай помогу начать всё сначала."
+    stop background fadeout 1.0
 
 return

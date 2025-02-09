@@ -93,6 +93,7 @@ image mc thoughtful crosseda = At('mc thoughtful crossed', sprite_highlight('mc'
 image mc normal crosseda = At('mc normal crossed', sprite_highlight('mc'))
 image mc angry poster = At('mc poster mouth closed', sprite_highlight('mc'))
 image mc angry poster2 = At('mc poster mouth opened', sprite_highlight('mc'))
+image mc angry homea = At('mc angry home', sprite_highlight('mc'))
 
 image timur normala = At('timur normal', sprite_highlight('timur'))
 image timur angrya = At('timur angry', sprite_highlight('timur'))
@@ -111,6 +112,7 @@ image timur yell wintera = At('timur yelling winter', sprite_highlight('timur'))
 image timur embarrassed homea = At('timur_s smile home', sprite_highlight('timur'))
 image timur smile homea = At('timur smile home', sprite_highlight('timur'))
 image timur happy homea = At('timur happy home', sprite_highlight('timur'))
+image timur smile wintera = At('timur smile winter', sprite_highlight('timur'))
 
 
 image alex normala = At('alex normal', sprite_highlight('alex'))
