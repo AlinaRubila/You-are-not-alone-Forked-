@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 renpy.ftl
 renpy.geometry renpy.texture
 renpy.imagedissolve renpy.imagedissolve
@@ -15,3 +16,22 @@ renpy.texture
 renpy.alpha renpy.texture
 >>>>>>> origin
 renpy.geometry renpy.solid
+=======
+renpy.geometry renpy.matrixcolor renpy.texture
+renpy.dissolve renpy.geometry
+>>>>>>> origin
+>>>>>>> ForAnagor
+renpy.alpha renpy.texture
+=======
+renpy.dissolve renpy.dissolve
+<<<<<<< HEAD
+renpy.geometry renpy.texture
+renpy.geometry renpy.imagedissolve
+renpy.alpha renpy.geometry renpy.texture
+renpy.geometry renpy.solid
+renpy.texture
+renpy.imagedissolve renpy.imagedissolve
+renpy.solid
+renpy.ftl
+renpy.matrixcolor renpy.texture
+>>>>>>> ForINK
