@@ -268,8 +268,9 @@ label timur_cp2:
     stop music fadeout 0.5
     "Но вдруг меня что-то отвлекло. Женский голос за моей спиной…"
 
-    scene cj_renovation_dream with dissolve
     un "Осторожно!"
+
+    scene cj_renovation_dream with dissolve
 
     #полка с грохотом падает, громкий звук
     play sound smash
@@ -565,11 +566,12 @@ label timur_cp2:
                     show jenya normala at right2 with dissolve
                     j "Я многого не знаю, но говорят, что он появился около года назад и ходит по коридорам общаги."
 
+                    show jenya grina at right2 with dissolve
+
                     "Женя нарочито прищурила глаза, словно львица, выжидающая свою добычу, и наклонила голову. Она замолчала, будто стараясь придать атмосфере каплю таинственности и жути. Моё сердце пропустило удар, а может и два. А может и все десять…"
 
                     "И нет, это вовсе не тахикардия. Это липкий, пронизывающий насквозь интерес во мне сжал столь важный для жизни орган. Я не был напуган, а просто с нетерпением ждал её повествования."
 
-                    show jenya grina at right2 with dissolve
                     j "Этого призрака видел только один человек, но он не выдержал такого соседства и съехал с общаги."
 
                     show mc sad crosseda at left2 with dissolve
@@ -638,7 +640,10 @@ label timur_cp2:
                     show mc sad handa at left2 with dissolve
                     mc "Тимур, я…"
 
+                    show timur angry home at right2 with dissolve
+
                     t "Отвали."
+                    hide timur angry home at right2 with dissolve
                     hide mc sad handa at left2 with dissolve
 
                     "Это одно слово гром среди ясного неба, сразу вычеркнуло из моей головы все извинения и объяснения. Хотя…"
