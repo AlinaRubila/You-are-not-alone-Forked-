@@ -27,7 +27,7 @@ screen fifteen_scr:
                         text str(every_tile["tile_value"]) xalign 0.5 yalign 0.5
                         #
                         #####
-                    
+
 
                         #####
                         #
@@ -41,8 +41,8 @@ screen fifteen_scr:
                         #                chosen_img)
                         #
                         #####
-                        
-                    
+
+
                         action [ If (every_tile["tile_number"] not in top_row,
                                 true = If (tiles_list[every_tile["tile_number"]-grid_width]["tile_value"] == empty_tile_value,
                                     true = [SetDict( tiles_list[every_tile["tile_number"]-grid_width], "tile_value", every_tile["tile_value"] ), SetDict( tiles_list[every_tile["tile_number"]], "tile_value", empty_tile_value ) ],
@@ -70,7 +70,7 @@ screen fifteen_scr:
 
     ##### Кнопку, которая будет показывать все изображение, должна быть использована только в случае, если игра использует образы (а не цифры).
     textbutton "Показать картину" action If( renpy.get_screen("full_image"), Hide("full_image"), Show("full_image") ) xalign 0.5 yalign 0.1
-            
+
 screen full_image:
     add chosen_img xalign 0.5 yalign 0.5 at pic_trans
 
@@ -96,7 +96,7 @@ label fifteen_game:
     #Давайте установим Размер игрового поля в плитки, например плитка 9 (3 х 3).
     $ grid_width = 3
     $ grid_height = 3
-   
+
 # Следующие 4 строки используются для задания изображение, чтобы решить (может быть удален классический игра пятнашки).
 # Рекомендуется, что все изображения будут меньше, чем размер экрана.
     $ chosen_img = renpy.random.choice ( ("example1.png", "example2.png") )
@@ -123,7 +123,7 @@ label fifteen_game:
         for i in range(0, grid_height):
             right_column.append (grid_width*(i+1)-1)
 
-   
+
     #Давайте установим игрового поля все плитки на свои места.
     $ tiles_list = []
     python:
@@ -136,7 +136,7 @@ label fifteen_game:
     $ empty_tile_value = renpy.random.randint ( 1, grid_width*grid_height )
     #$ empty_tile_value = grid_width*grid_height
     #
-   
+
     # Некоторые переменные:
     # позволит нам контролировать, если пропустил плитки должны быть показаны
     $ fifteen_is_solved = False
@@ -144,10 +144,10 @@ label fifteen_game:
     $ fifteen_timer = 100
     # позволит нам контролировать Таймер
     $ timer_on = False
-   
+
     # Это показать на экране игры.
     show screen fifteen_scr
-   
+
 # Чтобы быть уверенным, что головоломка может быть решена, просто беспорядочно двигаться некоторые плитки.
 # Этот процесс может быть показано, что игрок - раскомментируйте строку, которая задает паузу между движениями.
 # Количество ходов должно быть достаточно большим, чтобы перетасовать хорошая плитка,
@@ -183,10 +183,10 @@ label fifteen_game:
                         shuffle_moves -= 1
                         #renpy.pause(0.1)           # Если используется пауза должна быть не так долго.
                         renpy.jump("tiles_shuffle")
-               
+
 #Теперь можно запустить Таймер.
     $ timer_on = True
-   
+
     # Игровой цикл.
     label fifteen_game_loop:
         $ result = ui.interact()
@@ -205,7 +205,7 @@ label fifteen_win:
     $ timer_on = False
     $ renpy.pause(0.1, hard = True)
     $ renpy.pause(0.1, hard = True)
-   
+
     # Это покажет недостающие плитки на свои места.
     $ fifteen_is_solved = True
     show mc smile home
@@ -232,7 +232,7 @@ label smth:
     # Здесь может быть какой-то код
     jump fifteen_game_loop
 
-# начало главы    
+# начало главы
 label timur_cp2:
     $ quick_menu = False
 
@@ -859,7 +859,7 @@ label timur_cp2:
                     "Кажется, в этот момент я вспомнил все дыхательные практики, которые помогают бороться со стрессом и, сделав ещё раз глубокий вдох, перешагнул порог в комнату, которая казалась мне сейчас обителью зла."
 
                     play sound door
-                    scene bg_room_nowalls with dissolve
+                    scene bg_room_repair_dark with dissolve
 
                     "Только войдя в неё, я осознал, что уже наступил вечер, а вместе с ним и последствия за моё импульсивное решение пойти в кафе с Женей вместо помощи Тимуру с ремонтом."
 
@@ -1309,6 +1309,7 @@ label timur_cp2:
 
         #музыка затихает
         stop music fadeout 2.0
+        scene bg_room_repair_dark with dissolve
 
         #если потом будет тёмный фон комнаты на ремонте, нужно будет поменять. Пока оставляем прежний
 
@@ -1331,7 +1332,8 @@ label timur_cp2:
         "Было холодно. Я сильнее укутался в одеяло, как вдруг звук скотча заставил меня резко развернуться."
 
         #фон тёмной комнаты гг без света, как в самом начале игры (пока что до ремонта, ибо ремонтной нет)
-        scene bg_room_morning with dissolve
+        scene bg_room_repair_dark with dissolve
+
         "За столом сидела девушка из предыдущего сна и что-то склеивала, напевая какую-то знакомую мелодию. "
 
         "Я встал, медленно приближаясь к ней. Моя рука очень осторожно коснулась её плеча. Мгновение… Секунда…"
