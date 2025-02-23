@@ -652,7 +652,7 @@ label timur_cp2:
 
     pause 0.5
 
-    scene bg_dorm_winter_day with dissolve
+    scene cj_mc_garbage with dissolve
     play background city
 
     "Пока я шёл до мусорного контейнера, было слышно, как мешок трещал и рвался. Он был особенно тяжёлым. Тимур что, гантели в него положил?"

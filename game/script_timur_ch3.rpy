@@ -2,9 +2,17 @@ label timur_cp3:
     $ quick_menu = False
 
     scene black with dissolve
-    centered "{size=+24}{color=#ffffff}Глава 3"
+    pause 1
+
+    scene cj_chapter3_timur1 with dissolve
+
+    pause 0.5
+
+    scene cj_chapter3_timur2 with dissolve
+
+    pause 3
     $ quick_menu = True
-    #фон комнаты без обоев
+    scene bg_room_repair_morning with dissolve
     if helpedWithRepair == False:
         #стандартная музыка - Chill
         play music chill
