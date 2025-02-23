@@ -895,10 +895,10 @@ label timur_cp2:
         hide timur normal homea with dissolve
 
         # ПЯТНАШКИ
-        $ puzzle = Puzzle15("example1.png", size=3)
-        call screen puzzle15_screen
-        label puzzle_solved:
-            "Поздравляю!"
+        # $ puzzle = Puzzle15("example1.png", size=3)
+        # call screen puzzle15_screen
+        # label puzzle_solved:
+        #    "Поздравляю!"
 
         scene bg_room_nowalls with dissolve
         "В конечном итоге, к ремонту мы всё же приступили, а неловкая тишина постепенно перетекла в шутки. Шутки же, в свою очередь, вылились в приятную беседу."
