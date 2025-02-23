@@ -101,7 +101,6 @@ label timur_cp3:
         t "Обои."
 
         ##спрайт гг обычный зимняя одежда
-        show mc normal winter at left2 with dissolve
         mc "Я вижу, что обои, но почему ты меня даже не спросил?"
 
         t "Так мы же вроде вчера решили, какие будем брать."
@@ -110,16 +109,21 @@ label timur_cp3:
 
         t "Ну да."
 
+        show mc normal wintera at left2 with dissolve
+
         "И он замолчал, видимо поняв, что наши вчерашние приколы сегодня уже неактуальны. Кажется он немного смутился."
+
+        show timur sad wintera at right2 with dissolve
 
         t "М-да… Неловко вышло. А ты какие хотел?"
 
         "Я указал на те, что мне понравились."
+        show timur normal winter at right2 with dissolve
 
         t "Эти обои не подходят. У них качество не очень. Я хорошие выбрал… Ну, по качеству."
 
         #спрайт гг возмущённый зимний  Игорь - его нет
-        show mc normal winter at left2 with dissolve
+        show mc normal wintera at left2 with dissolve
 
         mc "Но мне они не нравятся!"
 
@@ -127,9 +131,11 @@ label timur_cp3:
 
         t "Ладно, давай так. Мы подберём обои, которые устроят нас обоих. Ты, соответственно, выберешь цвет, а я отвечаю за качество. По рукам?"
 
-        show mc normal winter at left2 with dissolve
+        show mc smile wintera at left2 with dissolve
 
         mc "По рукам."
+
+        show timur smile wintera at right2 with dissolve
 
         t "Отлично."
 

@@ -1,28 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script_timur_ch3.rpy", line 222, in script
-    scene bg_room_repair_night with diss
-  File "game/script_timur_ch3.rpy", line 222, in <module>
-    scene bg_room_repair_night with diss
-NameError: name 'diss' is not defined
+  File "game/script_timur_ch3.rpy", line 121, in script
+    show timur normal wintera at right2 with dissolve
+Exception: Image 'timur normal' does not accept attributes 'wintera'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script_timur_ch3.rpy", line 222, in script
-    scene bg_room_repair_night with diss
-  File "B:\renpy-8.3.4-sdk\renpy\ast.py", line 1363, in execute
-    paired = renpy.python.py_eval(self.paired)
-  File "B:\renpy-8.3.4-sdk\renpy\python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "B:\renpy-8.3.4-sdk\renpy\python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script_timur_ch3.rpy", line 222, in <module>
-    scene bg_room_repair_night with diss
-NameError: name 'diss' is not defined
+  File "game/script_timur_ch3.rpy", line 121, in script
+    show timur normal wintera at right2 with dissolve
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\ast.py", line 1428, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\ast.py", line 1391, in show_imspec
+    renpy.config.show(name,
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\exports.py", line 733, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\image.py", line 421, in find_target
+    self.target = target._duplicate(a)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\core.py", line 499, in _duplicate
+    args.extraneous()
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\core.py", line 362, in extraneous
+    raise Exception("Image '{}' does not accept attributes '{}'.".format(
+Exception: Image 'timur normal' does not accept attributes 'wintera'.
 
-Windows-10-10.0.22631 AMD64
-Ren'Py 8.3.4.24120703
+Windows-10-10.0.19045 AMD64
+Ren'Py 8.1.2.23090503
 Ты не один 0.1
-Sun Feb  9 16:56:27 2025
+Sun Feb 23 19:36:05 2025
