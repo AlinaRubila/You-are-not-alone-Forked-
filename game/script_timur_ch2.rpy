@@ -52,11 +52,7 @@ screen puzzle15_screen():
         action Show("puzzle15_full_image")
         xalign 0.5
         yalign 0.05
-    textbutton _("Решить"):
-        action Jump("puzzle_solved")
-        xalign 0.5
-        yalign 0.1
-
+    
     frame:
         xalign 0.5
         yalign 0.5
