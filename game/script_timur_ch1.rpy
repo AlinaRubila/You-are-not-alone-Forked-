@@ -191,6 +191,7 @@ label timur:
     od "Тогда это точно Тимур. Ты не переживай, он хороший человек, просто закрытым стал. Я, кстати, Ольга Дмитриевна – комендант общежития."
 
     mc "Я [mcname], приятно познакомиться."
+    show comenda smile at right2 with dissolve
 
     od "Хочешь, проведу небольшую экскурсию?"
 
@@ -271,12 +272,12 @@ label timur:
     mc "Кто ты? Почему ты мне снишься? Что ты хочешь от меня?!"
 
     un "Найди меня."
+    hide eve grey black glow with dissolve
 
     "Что? Что всё это значит?"
 
     "Но этот вопрос я задал уже в пустоту. Силуэт стал размытым, а затем и вовсе слился с белой пеленой."
 
-    hide eve grey black glow with dissolve
     hide snow1
     hide snow2
     pause 1
@@ -285,7 +286,7 @@ label timur:
 
     stop background fadeout 1.0
     scene black with dissolve
-    scene bg_room_morning with onn
+    scene bg_room_dawn with onn
     play background room
     "Всё медленно прояснилось и посветлело. Девушка исчезла, а я оказался в каком-то помещении. Что происходит?"
 
@@ -304,7 +305,7 @@ label timur:
     play background shower fadein 0.5
     scene bg_shower with dissolve
 
-    pause 2
+    pause 4
 
     scene black with dissolve
     play sound steps
@@ -330,7 +331,7 @@ label timur:
 
     scene сj_cockroach_bed at zoomin
     play sound screamer2
-    pause 1
+    pause 0.5
     scene сj_cockroach_bed_screamer at tremble
     pause 1
 
@@ -471,6 +472,8 @@ label timur:
 
     "Кажется, ему было всё равно на мои слова. Иначе как объяснить тот факт, что сразу после моего категоричного отказа он рывком протянул руку с целью сорвать плакат?"
 
+    scene cj_fighting with dissolve
+
     "Я не понимаю, кем он себя возомнил, раз может решать что мне делать в нашей комнате!"
 
     "Резким движением я оттолкнул его руку и сделал маленький шаг вперёд, чтобы оказать на него хоть какое-то давление. Из-за разницы в комплекции, к сожалению, особого эффекта я не добился, но зато угрозу в виде его руки убрать удалось."
@@ -478,8 +481,6 @@ label timur:
     mc "Эй! А ну руки убрал!"
 
     "Тимур в ярости взял меня за плечи и, несмотря на всю свою ненависть, отодвинул в сторону."
-
-    scene cj_fighting with dissolve
 
     "Тут же, воспользовавшись моим изумлением, этот дылда сделал шаг вперёд и схватился за угол плаката.  Он начал его срывать, удерживая меня, словно ребёнка, чтобы я не приближался."
 

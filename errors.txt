@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script_timur_ending_bad.rpy", line 10: play requires a file
-    play audio.wind
-              ^
-
-File "game/script_timur_ending_good.rpy", line 10: play requires a file
-    play audio.wind
-              ^
+File "game/script_timur_ch2.rpy", line 727: Line is indented, but the preceding scene statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    "А в реальность и вовсе вернулся лишь тогда, когда прекрасный голос Жени исчез, а я уже стоял один на один с дверью, отделяющей меня от определённо очень злого Тимура."
+    ^
 
 Ren'Py Version: Ren'Py 8.1.2.23090503
-Sun Feb  9 19:27:41 2025
+Wed Feb 26 01:56:42 2025
