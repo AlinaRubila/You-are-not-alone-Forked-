@@ -1,95 +1,4 @@
-init python:
-    class Puzzle15:
-        def __init__(self, image_path, size=3):
-            self.size = size
-            self.tile_size = 1.0/size
-            self.tiles = list(range(size*size))
-            self.empty_pos = size*size - 1
-            self.image = Image(image_path)
-            self.shuffle()
 
-        def shuffle(self):
-            for _ in range(1000):
-                neighbors = self.get_neighbors(self.empty_pos)
-                self.swap(random.choice(neighbors))
-
-        def get_pos(self, index):
-            return (index % self.size, index // self.size)
-
-        def get_index(self, x, y):
-            return y * self.size + x
-
-        def get_neighbors(self, index):
-            x, y = self.get_pos(index)
-            neighbors = []
-            for dx, dy in [(-1,0), (1,0), (0,-1), (0,1)]:
-                nx, ny = x + dx, y + dy
-                if 0 <= nx < self.size and 0 <= ny < self.size:
-                    neighbors.append(self.get_index(nx, ny))
-            return neighbors
-
-        def swap(self, index):
-            if index in self.get_neighbors(self.empty_pos):
-                self.tiles[self.empty_pos], self.tiles[index] = self.tiles[index], self.tiles[self.empty_pos]
-                self.empty_pos = index
-
-        def is_solved(self):
-            return all(i == self.tiles[i] for i in range(self.size*self.size))
-
-    def puzzle15_action(index):
-        if index in puzzle.get_neighbors(puzzle.empty_pos):
-            puzzle.swap(index)
-            renpy.restart_interaction()
-        if puzzle.is_solved():
-            renpy.hide_screen("puzzle15_screen")
-            renpy.jump("puzzle_solved")
-
-screen puzzle15_screen():
-    zorder 1
-    modal True
-
-    textbutton _("Показать изображение"):
-        action Show("puzzle15_full_image")
-        xalign 0.5
-        yalign 0.05
-    
-    frame:
-        xalign 0.5
-        yalign 0.5
-        background None
-        grid puzzle.size puzzle.size:
-            spacing 2
-            for i in range(puzzle.size * puzzle.size):
-                if i == puzzle.empty_pos:
-                    add Solid("#0000"):
-                        size (200, 200)
-                else:
-                    $ tile_number = puzzle.tiles[i]
-                    $ x = (tile_number % puzzle.size) * puzzle.tile_size
-                    $ y = (tile_number // puzzle.size) * puzzle.tile_size
-
-                    button:
-                        add Transform(puzzle.image,
-                            crop=(x, y, puzzle.tile_size, puzzle.tile_size),
-                            size=(200, 200))
-                        action Function(puzzle15_action, i)
-                        xsize 200
-                        ysize 200
-
-screen puzzle15_full_image():
-    zorder 201
-    modal True
-    button:
-        add puzzle.image:
-            size (600, 600)
-            alpha 0.85
-            xalign 0.505
-            yalign 0.51
-        action Hide("puzzle15_full_image")
-        xfill True
-        yfill True
-
-# начало главы
 label timur_cp2:
     $ quick_menu = False
 
@@ -594,8 +503,9 @@ label timur_cp2:
 
                     "Мне стало не по себе. Я оцепенел от холода, но дело было не в погоде на улице."
 
-                    scene bg_street_morning_winter with dissolve
-                    show jenya normal wintera at right2 with dissolve
+                    # scene bg_street_morning_winter with dissolve
+                    scene cj_flowers_talk with dissolve
+                    # show jenya normal wintera at right2 with dissolve # закомментил спрайты из-за cj (не уверен, что подходит всё)
                     j_un "Привет. Жуткие, правда? Как кровь."
                     stop music
                     play background city
@@ -604,10 +514,10 @@ label timur_cp2:
 
                     "Я обернулся. Рядом со мной стояла моя одногруппница."
 
-                    show mc surprise wintera at left2 with dissolve
+                    # show mc surprise wintera at left2 with dissolve
                     j_un "Прости, что напугала."
 
-                    show mc normal wintera at left2 with dissolve
+                    # show mc normal wintera at left2 with dissolve
                     mc "Ничего страшного. Как тебя зовут? Ты не знаешь, почему здесь лежат эти цветы?"
 
                     j "Женя. А эти цветы… они для призрака общаги."
@@ -618,18 +528,18 @@ label timur_cp2:
 
                     mc "Наверное."
 
-                    show jenya smile wintera at right2 with dissolve
+                    # show jenya smile wintera at right2 with dissolve
                     j "А ты случайно не тот новенький из группы?"
 
-                    show mc smile wintera at left2 with dissolve
+                    # show mc smile wintera at left2 with dissolve
                     mc "Я, кстати, [mcname]. Да, это я."
 
                     j "Я рада, что встретила тебя. А… а ты хорошо разбираешься в объектно-ориентированном программировании?"
 
-                    show mc normal wintera at left2 with dissolve
+                    # show mc normal wintera at left2 with dissolve
                     mc "Не совсем идеально, конечно, но понимаю."
 
-                    show jenya sad wintera at right2 with dissolve
+                    # show jenya sad wintera at right2 with dissolve
                     j "О, а ты можешь мне с этим помочь?"
 
                     "Выражение её лица было таким трогательным, будто милый маленький котёнок смотрел мне в душу. Я был не в силах ей отказать, тем более и так уже подвел сегодня Тимура, не могу же ещё и с Женей так обойтись."
@@ -638,15 +548,15 @@ label timur_cp2:
 
                     mc "Да, давай помогу."
 
-                    show jenya smile wintera at right2 with dissolve
+                    # show jenya smile wintera at right2 with dissolve
                     j "Я очень тебе благодарна. Может, пойдём в кафе и там обсудим?"
 
                     mc "Веди меня."
                     play music leaves
-
                     hide mc normal wintera with dissolve
                     hide jenya smile wintera with dissolve
 
+                    scene bg_street_morning_winter with dissolve
                     "Я шёл вслед за Женей. По дороге я притормозил и оглянулся на наше общежитие. Мне всё ещё было совестно перед Тимуром."
 
                     "Интересно, он что-то скажет, когда я вернусь вечером, или просто промолчит?"
@@ -665,12 +575,13 @@ label timur_cp2:
                     "Выбрав столик у окна, Женя опустилась на стул и позвала официанта, заказав молочный коктейль. Я же сел рядом. Да, просто сел"
 
                     #сюда ставим цг с диска, где Женя и гг сидят в кафе
+                    scene cj_cafe with dissolve
                     "Женя открыла свои конспекты по теме, которая ей трудно давалась. Я пытался ей объяснить всё простыми словами, и, вроде как, она начала даже что-то понимать."
 
                     "После плодотворной работы мы решили сделать небольшой перерыв. А я, дабы не упускать возможность, решил узнать то, что в последнее время меня так сильно интересует. То, от чего мой дух потерял покой – призрак…"
 
                     #переключаемся с цг на просто фон кафешки
-
+                    scene bg_cafe with dissolve
                     show mc normala at left2 with dissolve
                     mc "А что за призрак, можешь рассказать?"
 
@@ -1088,6 +999,7 @@ label timur_cp2:
         hide mc smile homea with dissolve
         hide timur smile homea with dissolve
         #убираем спрайты - здесь будет ЦГ (когда-нибудь оно точно появится...)
+        scene cj_uno with dissolve
 
         play music funny
 
@@ -1097,32 +1009,32 @@ label timur_cp2:
 
         "На словах. Однако во время игры я туго соображал. Тимура, кажется, забавляла моя неумелая игра."
 
-        show timur normal homea at right2 with dissolve
+        # show timur normal homea at right2 with dissolve
         t "Неинтересно как-то выигрывать постоянно. Тебе нужна мотивация к победе."
 
-        show mc normal homea at left2 with dissolve
+        # show mc normal homea at left2 with dissolve
         mc "Предлагаешь сыграть на деньги?"
 
-        show timur surprised home at right2 with dissolve
+        # show timur surprised home at right2 with dissolve
         t "Что? Нет конечно. Игра на деньги – для слабаков. Давай на чай!"
 
-        show mc surprise home at left2 with dissolve
+        # show mc surprise home at left2 with dissolve
         mc "На чай?!"
 
-        show timur smile homea at right2 with dissolve
+        # show timur smile homea at right2 with dissolve
         t "Да, ты прав, просто на чай скучно. Давай на чай с печеньками!"
 
         "Суть была максимально понятна. В начале игры мы делаем ставку в виде чайного пакетика и какой-нибудь вкусности. Победитель забирает всё. И, как ни странно, такая мотивация позволила мне пару раз победить."
 
         "Однако мастерство Тимура в скором времени оставило меня без чайных пакетиков в коробке и трёх шоколадных батончиков. Моих любимых, к слову."
 
-        show mc normal homea at left2 with dissolve
+        # show mc normal homea at left2 with dissolve
         mc "Так нечестно! Ты жульничаешь!"
 
-        show timur happy homea at right2 with dissolve
+        # show timur happy homea at right2 with dissolve
         t "Что? Я? Да никогда в жизни! Фортуна на моей стороне, вот и всё. Учись играть!"
 
-        show mc smile homea at left2 with dissolve
+        # show mc smile homea at left2 with dissolve
         mc "Uno uno uno un momento, сейчас я тебя точно обыграю!"
 
         t "Так-то лучше!"

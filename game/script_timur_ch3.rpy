@@ -1,3 +1,104 @@
+init python:
+    class Puzzle15:
+        def __init__(self, image_path, size=3):
+            self.size = size
+            self.tile_size = 1.0/size
+            self.tiles = list(range(size*size))
+            self.empty_pos = size*size - 1
+            self.image = Image(image_path)
+            self.shuffle()
+
+        def shuffle(self):
+            for _ in range(1000):
+                neighbors = self.get_neighbors(self.empty_pos)
+                self.swap(random.choice(neighbors))
+
+        def get_pos(self, index):
+            return (index % self.size, index // self.size)
+
+        def get_index(self, x, y):
+            return y * self.size + x
+
+        def get_neighbors(self, index):
+            x, y = self.get_pos(index)
+            neighbors = []
+            for dx, dy in [(-1,0), (1,0), (0,-1), (0,1)]:
+                nx, ny = x + dx, y + dy
+                if 0 <= nx < self.size and 0 <= ny < self.size:
+                    neighbors.append(self.get_index(nx, ny))
+            return neighbors
+
+        def swap(self, index):
+            if index in self.get_neighbors(self.empty_pos):
+                self.tiles[self.empty_pos], self.tiles[index] = self.tiles[index], self.tiles[self.empty_pos]
+                self.empty_pos = index
+
+        def is_solved(self):
+            return all(i == self.tiles[i] for i in range(self.size*self.size))
+
+    def puzzle15_action(index):
+        if index in puzzle.get_neighbors(puzzle.empty_pos):
+            puzzle.swap(index)
+            renpy.restart_interaction()
+        if puzzle.is_solved():
+            renpy.hide_screen("puzzle15_screen")
+            renpy.jump("puzzle_solved")
+
+screen puzzle15_screen():
+    zorder 1
+    modal True
+
+    textbutton _("Показать изображение"):
+        action Show("puzzle15_full_image")
+        xalign 0.5
+        yalign 0.85
+    
+    textbutton _("Бросить дело"):
+        action Confirm("Так не хочется клеить обои? Тимур будет зол!", 
+        [Hide("puzzle15_screen"), Jump("puzzle_skipped")]
+    )
+        xalign 0.5
+        yalign 0.1
+    
+    frame:
+        xalign 0.5
+        yalign 0.5
+        background None
+        grid puzzle.size puzzle.size:
+            spacing 2
+            for i in range(puzzle.size * puzzle.size):
+                if i == puzzle.empty_pos:
+                    add Solid("#0000"):
+                        size (200, 200)
+                else:
+                    $ tile_number = puzzle.tiles[i]
+                    $ x = (tile_number % puzzle.size) * puzzle.tile_size
+                    $ y = (tile_number // puzzle.size) * puzzle.tile_size
+
+                    button:
+                        add Transform(puzzle.image,
+                            crop=(x, y, puzzle.tile_size, puzzle.tile_size),
+                            size=(200, 200))
+                        action Function(puzzle15_action, i)
+                        xsize 200
+                        ysize 200
+
+screen puzzle15_full_image():
+    zorder 201
+    modal True
+    button:
+        add puzzle.image:
+            size (600, 603)
+            alpha 0.85
+            xalign 0.505
+            yalign 0.515
+        action Hide("puzzle15_full_image")
+        xfill True
+        yfill True
+
+define wallpapers = ["Wallpaper1", "Wallpaper2"]
+
+# начало главы
 label timur_cp3:
     $ quick_menu = False
 
@@ -251,15 +352,8 @@ label timur_cp3:
         "Я посмотрел на стены и понял, что всё-таки надо поклеить обои. Может, тогда он заговорит."
 
         # ПЯТНАШКИ
-        $ puzzle = Puzzle15("example1.png", size=3)
+        $ puzzle = Puzzle15(f"images/game/{random.choice(wallpapers)}.png", size=3)
         call screen puzzle15_screen
-        jump puzzle_solved
-        label puzzle_solved:
-            "Дело сделано!"
-            if relate_timur >= 20:
-                jump timur_good_end
-            else:
-                jump timur_bad_end
     else:
         play background room fadein 1.0
         "Утром, открыв глаза, я не обнаружил своего соседа в комнате, но, включив телефон я увидел сообщение от Тимура."
@@ -288,6 +382,15 @@ label timur_cp3:
         play music home fadein 1.0
         scene bg_room_repair_day with dissolve
         # ПЯТНАШКИ
-        $ puzzle = Puzzle15("example1.png", size=3)
+        $ puzzle = Puzzle15(f"images/game/{random.choice(wallpapers)}.png", size=3)
         call screen puzzle15_screen
-        jump puzzle_solved
+
+label puzzle_solved:
+    "Дело сделано!"
+    if relate_timur >= 20:
+        jump timur_good_end
+    else:
+        jump timur_bad_end
+
+label puzzle_skipped:
+    jump timur_bad_end
