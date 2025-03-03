@@ -1,40 +1,88 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script_timur_ch3.rpy", line 256, in script
-    play music EvaMemories fadein 1.0
-  File "renpy/common/000statements.rpy", line 123, in execute_play_music
-    renpy.music.play(_audio_eval(p["file"]),
-  File "renpy/common/000statements.rpy", line 32, in _audio_eval
-    return eval(expr, locals=store.audio.__dict__)
-  File "game/script_timur_ch3.rpy", line 256, in <module>
-    play music EvaMemories fadein 1.0
-NameError: name 'EvaMemories' is not defined
+After initialization, but before game start.
+  File "game/PhoneTexting.rpy", line 74, in analyze_screen
+    screen nvl_phonetext(dialogue):
+  File "game/PhoneTexting.rpy", line 74, in analyze
+    screen nvl_phonetext(dialogue):
+  File "game/PhoneTexting.rpy", line 74, in analyze
+    screen nvl_phonetext(dialogue):
+  File "game/PhoneTexting.rpy", line 78, in analyze
+    vbox:
+  File "game/PhoneTexting.rpy", line 78, in analyze
+    vbox:
+  File "game/PhoneTexting.rpy", line 81, in analyze
+    for id_d, d in enumerate(dialogue):
+  File "game/PhoneTexting.rpy", line 81, in analyze
+    for id_d, d in enumerate(dialogue):
+  File "game/PhoneTexting.rpy", line 82, in analyze
+    if d.who == None: # Narrator
+  File "game/PhoneTexting.rpy", line 98, in analyze
+    else:
+  File "game/PhoneTexting.rpy", line 108, in analyze
+    hbox:
+  File "game/PhoneTexting.rpy", line 108, in analyze
+    hbox:
+  File "game/PhoneTexting.rpy", line 114, in analyze
+    if previous_d_who != d.who:
+  File "game/PhoneTexting.rpy", line 114, in analyze
+    if previous_d_who != d.who:
+  File "game/PhoneTexting.rpy", line 115, in analyze
+    if d.who == MC_Name:
+SyntaxError: invalid syntax (game/PhoneTexting.rpy, line 121)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script_timur_ch3.rpy", line 256, in script
-    play music EvaMemories fadein 1.0
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\ast.py", line 2259, in execute
-    self.call("execute")
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\ast.py", line 2241, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\statements.py", line 342, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 123, in execute_play_music
-    renpy.music.play(_audio_eval(p["file"]),
-  File "renpy/common/000statements.rpy", line 32, in _audio_eval
-    return eval(expr, locals=store.audio.__dict__)
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\python.py", line 1153, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\python.py", line 1146, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script_timur_ch3.rpy", line 256, in <module>
-    play music EvaMemories fadein 1.0
-NameError: name 'EvaMemories' is not defined
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\bootstrap.py", line 275, in bootstrap
+    renpy.main.main()
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\main.py", line 670, in main
+    run(restart)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\main.py", line 85, in run
+    renpy.display.screen.analyze_screens()
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\screen.py", line 973, in analyze_screens
+    s.ast.analyze_screen()
+  File "game/PhoneTexting.rpy", line 74, in analyze_screen
+    screen nvl_phonetext(dialogue):
+  File "game/PhoneTexting.rpy", line 74, in analyze
+    screen nvl_phonetext(dialogue):
+  File "game/PhoneTexting.rpy", line 74, in analyze
+    screen nvl_phonetext(dialogue):
+  File "game/PhoneTexting.rpy", line 78, in analyze
+    vbox:
+  File "game/PhoneTexting.rpy", line 78, in analyze
+    vbox:
+  File "game/PhoneTexting.rpy", line 81, in analyze
+    for id_d, d in enumerate(dialogue):
+  File "game/PhoneTexting.rpy", line 81, in analyze
+    for id_d, d in enumerate(dialogue):
+  File "game/PhoneTexting.rpy", line 82, in analyze
+    if d.who == None: # Narrator
+  File "game/PhoneTexting.rpy", line 98, in analyze
+    else:
+  File "game/PhoneTexting.rpy", line 108, in analyze
+    hbox:
+  File "game/PhoneTexting.rpy", line 108, in analyze
+    hbox:
+  File "game/PhoneTexting.rpy", line 114, in analyze
+    if previous_d_who != d.who:
+  File "game/PhoneTexting.rpy", line 114, in analyze
+    if previous_d_who != d.who:
+  File "game/PhoneTexting.rpy", line 115, in analyze
+    if d.who == MC_Name:
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\py3analysis.py", line 558, in is_constant_expr
+    node, literal = ccache.ast_eval_literal(expr)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\py3analysis.py", line 790, in ast_eval_literal
+    expr = py_compile(expr, 'eval', ast_node=True)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\python.py", line 1088, in py_compile
+    raise e
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\python.py", line 1034, in py_compile
+    raise orig_e
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\python.py", line 1027, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
+SyntaxError: invalid syntax (game/PhoneTexting.rpy, line 121)
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.1.2.23090503
 Ты не один 0.1
-Mon Feb 24 17:33:43 2025
+Mon Mar  3 14:08:36 2025

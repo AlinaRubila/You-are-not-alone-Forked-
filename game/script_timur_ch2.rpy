@@ -349,7 +349,7 @@ label timur_cp2:
 
     "Нет, это уже невозможно, надо хоть с Тимуром поговорить."
 
-    scene bg_room_dawn with dissolve
+    scene bg_room_ruined_morning with dissolve
 
     show mc normal homea at left2 with dissolve
     mc "Что у тебя с численными методами?"
@@ -373,7 +373,7 @@ label timur_cp2:
     mc "Как это нет смысла? Это же так круто! А что за игра была?"
 
     show timur normal homea at right2 with dissolve
-    t "Хотел сделать визуальную новеллу, но совсем нет идей для интересного сценария."
+    t "Хотел сделать визуальную новеллу, но совсем не нашёл идей для интересного сценария."
 
     "Манера общения Тимура меня удивила. Я думал, что мы с ним сблизились, но он разговаривал так, как при первой встрече, будто весь наш прогресс стёрся и ничего не значил."
 
@@ -462,7 +462,7 @@ label timur_cp2:
             show mc sad wintera at left2 with dissolve
             mc "Пока нет, но с ним бывает трудно."
 
-            #Спрайт коменды грустный - есть на диске в работе на неделю в подпапке со спрайтами
+            show comenda sad at right2 with dissolve
             "Её выражение лица сменилось. Своим видом она дала понять, что не потерпит разборки в общежитии и любой возможный конфликт может закончиться неблагоприятно для нас обоих."
 
             show comenda normal at right2 with dissolve
@@ -522,7 +522,9 @@ label timur_cp2:
                     # show mc surprise wintera at left2 with dissolve
                     j_un "Прости, что напугала."
 
-                    # show mc normal wintera at left2 with dissolve
+                    scene bg_street_morning_winter with dissolve
+
+                    show mc normal wintera at left2 with dissolve
                     mc "Ничего страшного. Как тебя зовут? Ты не знаешь, почему здесь лежат эти цветы?"
 
                     j "Женя. А эти цветы… они для призрака общаги."
@@ -533,18 +535,18 @@ label timur_cp2:
 
                     mc "Наверное."
 
-                    # show jenya smile wintera at right2 with dissolve
+                    show jenya smile wintera at right2 with dissolve
                     j "А ты случайно не тот новенький из группы?"
 
-                    # show mc smile wintera at left2 with dissolve
+                    show mc smile wintera at left2 with dissolve
                     mc "Я, кстати, [mcname]. Да, это я."
 
                     j "Я рада, что встретила тебя. А… а ты хорошо разбираешься в объектно-ориентированном программировании?"
 
-                    # show mc normal wintera at left2 with dissolve
+                    show mc normal wintera at left2 with dissolve
                     mc "Не совсем идеально, конечно, но понимаю."
 
-                    # show jenya sad wintera at right2 with dissolve
+                    show jenya sad wintera at right2 with dissolve
                     j "О, а ты можешь мне с этим помочь?"
 
                     "Выражение её лица было таким трогательным, будто милый маленький котёнок смотрел мне в душу. Я был не в силах ей отказать, тем более и так уже подвел сегодня Тимура, не могу же ещё и с Женей так обойтись."
@@ -553,7 +555,7 @@ label timur_cp2:
 
                     mc "Да, давай помогу."
 
-                    # show jenya smile wintera at right2 with dissolve
+                    show jenya smile wintera at right2 with dissolve
                     j "Я очень тебе благодарна. Может, пойдём в кафе и там обсудим?"
 
                     mc "Веди меня."
@@ -1012,25 +1014,28 @@ label timur_cp2:
 
         "После этих слов мы убрали ненужные вещи со стола, чтобы организовать на нём место для нашего карточного сражения."
 
-        "Тимур объяснил мне правила, которые я, хоть и не сразу, но освоил. Цифра к цифре, цвет к цвету. «Реверс», чтобы изменить ход, а «+4», чтобы добавить карту сопернику. Ну, и про смену цвета и блок хода я тоже старался не забывать. Вроде всё просто…"
+        "Тимур объяснил мне правила, которые я, хоть и не сразу, но освоил. Цифра к цифре, цвет к цвету. Вроде всё просто…"
 
         "На словах. Однако во время игры я туго соображал. Тимура, кажется, забавляла моя неумелая игра."
 
-        # show timur normal homea at right2 with dissolve
+        scene bg_room_repair_night with dissolve
+
+        show timur smile homea at right2 with dissolve
         t "Неинтересно как-то выигрывать постоянно. Тебе нужна мотивация к победе."
 
-        # show mc normal homea at left2 with dissolve
+        show mc normal homea at left2 with dissolve
         mc "Предлагаешь сыграть на деньги?"
 
-        # show timur surprised home at right2 with dissolve
+        show timur surprised home at right2 with dissolve
         t "Что? Нет конечно. Игра на деньги – для слабаков. Давай на чай!"
 
-        # show mc surprise home at left2 with dissolve
+        show mc surprise home at left2 with dissolve
         mc "На чай?!"
 
-        # show timur smile homea at right2 with dissolve
+        show timur smile homea at right2 with dissolve
         t "Да, ты прав, просто на чай скучно. Давай на чай с печеньками!"
 
+        scene cj_uno with dissolve
         "Суть была максимально понятна. В начале игры мы делаем ставку в виде чайного пакетика и какой-нибудь вкусности. Победитель забирает всё. И, как ни странно, такая мотивация позволила мне пару раз победить."
 
         "Однако мастерство Тимура в скором времени оставило меня без чайных пакетиков в коробке и трёх шоколадных батончиков. Моих любимых, к слову."
@@ -1048,9 +1053,13 @@ label timur_cp2:
 
         "И Тимур звонко рассмеялся. Рассмеялся так заразительно, что и я попал под это обаяние. Мы ещё долго шутили и смеялись вместе, и это не могло меня не радовать."
 
+        scene bg_room_repair_night with dissolve
+
+        show timur happy homea at right2 with dissolve
         t "Слушай, а давай такие обои купим!"
 
         "Тимур приложил к стене зелёную карточку."
+        show mc smile homea at left2 with dissolve
 
         mc "Интересно! А может, такие?"
 
