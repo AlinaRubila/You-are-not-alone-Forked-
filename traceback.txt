@@ -1,88 +1,71 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-After initialization, but before game start.
-  File "game/PhoneTexting.rpy", line 74, in analyze_screen
-    screen nvl_phonetext(dialogue):
-  File "game/PhoneTexting.rpy", line 74, in analyze
-    screen nvl_phonetext(dialogue):
-  File "game/PhoneTexting.rpy", line 74, in analyze
-    screen nvl_phonetext(dialogue):
-  File "game/PhoneTexting.rpy", line 78, in analyze
-    vbox:
-  File "game/PhoneTexting.rpy", line 78, in analyze
-    vbox:
-  File "game/PhoneTexting.rpy", line 81, in analyze
-    for id_d, d in enumerate(dialogue):
-  File "game/PhoneTexting.rpy", line 81, in analyze
-    for id_d, d in enumerate(dialogue):
-  File "game/PhoneTexting.rpy", line 82, in analyze
-    if d.who == None: # Narrator
-  File "game/PhoneTexting.rpy", line 98, in analyze
-    else:
-  File "game/PhoneTexting.rpy", line 108, in analyze
-    hbox:
-  File "game/PhoneTexting.rpy", line 108, in analyze
-    hbox:
-  File "game/PhoneTexting.rpy", line 114, in analyze
-    if previous_d_who != d.who:
-  File "game/PhoneTexting.rpy", line 114, in analyze
-    if previous_d_who != d.who:
-  File "game/PhoneTexting.rpy", line 115, in analyze
-    if d.who == MC_Name:
-SyntaxError: invalid syntax (game/PhoneTexting.rpy, line 121)
+While loading <renpy.display.im.Image object ('images/cj/cj_door_girl.jpg') at 0x0000000003953ac0>:
+  File "game/script_jenya_ch2.rpy", line 792, in script
+    "Я отскочил от двери и упал на спину."
+OSError: Couldn't find file 'images/cj/cj_door_girl.jpg'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\bootstrap.py", line 275, in bootstrap
-    renpy.main.main()
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\main.py", line 670, in main
-    run(restart)
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\main.py", line 85, in run
-    renpy.display.screen.analyze_screens()
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\screen.py", line 973, in analyze_screens
-    s.ast.analyze_screen()
-  File "game/PhoneTexting.rpy", line 74, in analyze_screen
-    screen nvl_phonetext(dialogue):
-  File "game/PhoneTexting.rpy", line 74, in analyze
-    screen nvl_phonetext(dialogue):
-  File "game/PhoneTexting.rpy", line 74, in analyze
-    screen nvl_phonetext(dialogue):
-  File "game/PhoneTexting.rpy", line 78, in analyze
-    vbox:
-  File "game/PhoneTexting.rpy", line 78, in analyze
-    vbox:
-  File "game/PhoneTexting.rpy", line 81, in analyze
-    for id_d, d in enumerate(dialogue):
-  File "game/PhoneTexting.rpy", line 81, in analyze
-    for id_d, d in enumerate(dialogue):
-  File "game/PhoneTexting.rpy", line 82, in analyze
-    if d.who == None: # Narrator
-  File "game/PhoneTexting.rpy", line 98, in analyze
-    else:
-  File "game/PhoneTexting.rpy", line 108, in analyze
-    hbox:
-  File "game/PhoneTexting.rpy", line 108, in analyze
-    hbox:
-  File "game/PhoneTexting.rpy", line 114, in analyze
-    if previous_d_who != d.who:
-  File "game/PhoneTexting.rpy", line 114, in analyze
-    if previous_d_who != d.who:
-  File "game/PhoneTexting.rpy", line 115, in analyze
-    if d.who == MC_Name:
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\py3analysis.py", line 558, in is_constant_expr
-    node, literal = ccache.ast_eval_literal(expr)
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\py3analysis.py", line 790, in ast_eval_literal
-    expr = py_compile(expr, 'eval', ast_node=True)
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\python.py", line 1088, in py_compile
+  File "game/script_jenya_ch2.rpy", line 792, in script
+    "Я отскочил от двери и упал на спину."
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\ast.py", line 930, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\exports.py", line 1474, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\character.py", line 1352, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\character.py", line 1003, in do_display
+    display_say(who,
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\character.py", line 693, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\core.py", line 3587, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\core.py", line 4180, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\core.py", line 2785, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 492, in renpy.display.render.render_screen
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\layout.py", line 888, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\layout.py", line 888, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\layout.py", line 888, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\transform.py", line 909, in render
+    return RenderTransform(self).render(width, height, st, at)
+  File "accelerator.pyx", line 979, in renpy.display.accelerator.RenderTransform.render
+  File "accelerator.pyx", line 404, in renpy.display.accelerator.RenderTransform.render_child
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\image.py", line 513, in render
+    return wrap_render(self.target, width, height, st, at)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\image.py", line 316, in wrap_render
+    rend = render(child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\im.py", line 676, in render
+    return cache.get(self, render=True)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\im.py", line 330, in get
+    surf = image.load()
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\im.py", line 803, in load
     raise e
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\python.py", line 1034, in py_compile
-    raise orig_e
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\python.py", line 1027, in py_compile
-    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
-SyntaxError: invalid syntax (game/PhoneTexting.rpy, line 121)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\im.py", line 757, in load
+    filelike = renpy.loader.load(self.filename, directory="images")
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\loader.py", line 833, in load
+    raise IOError("Couldn't find file '%s'." % name)
+OSError: Couldn't find file 'images/cj/cj_door_girl.jpg'.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.1.2.23090503
 Ты не один 0.1
-Mon Mar  3 14:08:36 2025
+Thu Mar  6 13:36:01 2025

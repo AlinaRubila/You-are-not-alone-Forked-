@@ -319,6 +319,7 @@ label jenya_good_end:
     scene black with dissolve
 
     play background wind
+    $ renpy.notify("Спасибо за прохождение демо-версии!\nНе забудьте оставить отзыв на странице игры или в наших соцсетях)")
     pause 1
 
     centered "{size=+24}{color=#ffffff}Кому-то ещё нужна твоя помощь."

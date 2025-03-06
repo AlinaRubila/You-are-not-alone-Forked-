@@ -865,6 +865,7 @@ label jenya_cp2:
     n"Вдоль дороги ходила девушка. В ней я сразу узнал свою таинственную преследовательницу."
 
     mc "Я не могу поверить своим глазам. Это сон? Что происходит?!"
+    play sound screamer
 
     scene cj_night_eve_2 at tremble
 
@@ -1055,7 +1056,7 @@ label jenya_cp2:
 
         j "Ой, не волнуйся. Главное, чтобы тебе стало легче."
 
-    scene bg_room_zhenya_dark2 with dissolve
+    scene bg_room_zhenya with dissolve
     stop music fadeout 1.5
 
     n"Женя принялась копошиться в своих вещах. Через мгновение мне вручили оберег."
@@ -1074,7 +1075,7 @@ label jenya_cp2:
         $ renpy.notify("В дневнике появилась новая запись!")
     $ persistent.jenya_endchap2 = True
 
-    scene bg_room_zhenya_dark2 with dissolve
+    scene bg_room_zhenya with dissolve
     show mc blush homea at left2 with dissolve
 
     "Я надел оберег на шею. Странно, но я сразу стал чувствовать себя спокойнее."

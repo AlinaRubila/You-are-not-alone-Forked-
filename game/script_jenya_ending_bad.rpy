@@ -247,6 +247,7 @@ label jenya_bad_end:
     $ quick_menu = False
     scene black with dissolve
     play background wind
+    $ renpy.notify("Спасибо за прохождение демо-версии!\nНе забудьте оставить отзыв на странице игры или в наших соцсетях)")
 
     centered "{size=+24}{color=#ffffff}Давай помогу начать всё сначала."
 

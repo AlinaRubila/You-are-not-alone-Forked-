@@ -35,6 +35,16 @@ screen guySee():
             yalign 0.357
             auto "images/rutChoice/margo_button_%s.png" focus_mask True action [Jump("sMargo"), Return(value=None)]
 
+label timur_1:
+    if persistent.ending1 and persistent.ending122:
+        scene bg_rut
+    else:
+        scene bg_rutnoeve
+    "Мой сосед по комнате выглядит не слишком дружелюбно. Наверное, лучше сесть с кем-то другим."
+
+    "И желательно подальше от первого ряда."
+    scene bg_rutscreen
+    call screen rutChoice
 label timur:
 
     if persistent.ending1 and persistent.ending122:
