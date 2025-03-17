@@ -141,6 +141,8 @@ label timur_cp2:
     "Нужно что-то срочно сымпровизировать! Это будет первый шаг на пути к починке наших… Стоп, точно! У нас же ремонт намечается."
 
     scene cj_discussion with dissolve
+
+    $ persistent.poster5 = True
     mc "Что будем делать с ремонтом?"
 
     "После этого вопроса пара пролетела незаметно. Всё оставшееся время мы с Тимуром обсуждали, что купить, когда приступить к работе и как распределить обязанности."
@@ -272,6 +274,7 @@ label timur_cp2:
     un "Осторожно!"
 
     scene cj_renovation_dream with dissolve
+    $ persistent.poster6 = True
 
     #полка с грохотом падает, громкий звук
     play sound smash
@@ -435,6 +438,10 @@ label timur_cp2:
     scene bg_dorm_winter_day with dissolve
 
     "Неужели девушка хотела предупредить меня об опасности? А что если это не все неприятности, с которыми я сегодня столкнусь? Может, она пыталась меня защитить? Стоит ли продолжать ремонт? Вдруг сегодня не самый удачный день?"
+
+    if persistent.timur_feeling != True:
+        $ renpy.notify("В дневнике появилась новая запись!")
+    $ persistent.timur_feeling = True
 
     menu:
         "Уйти":
@@ -800,6 +807,10 @@ label timur_cp2:
 
         show timur sad homea at right2 with dissolve
         t "Спасибо. Ещё немного, и моей ноге бы не поздоровилось."
+
+        if persistent.timur_help != True:
+            $ renpy.notify("В дневнике появилась новая запись!")
+        $ persistent.timur_help = True
         play music sadness fadein 2.0
 
         "Я смотрел на Тимура, и мне казалось, что вся его напыщенность и агрессия вдруг куда-то исчезли. Его взгляд притупился, будто стыдясь признать, что он не совсем справился сам."
@@ -1009,6 +1020,7 @@ label timur_cp2:
         hide timur smile homea with dissolve
         #убираем спрайты - здесь будет ЦГ (когда-нибудь оно точно появится...)
         scene cj_uno with dissolve
+        $ persistent.poster7 = True
 
         play music funny
 
@@ -1081,6 +1093,10 @@ label timur_cp2:
         scene black with dissolve
         "В моей голове пронеслась мысль: «И всё же он не из титана. И даже не из чугуна. Он такой же человек с такими же эмоциями, переживаниями и, как оказалось, таким тяжёлым прошлым». Но на этом моя рефлексия прервалась, и я провалился в сон."
         "В эту ночь меня уже ничто не тревожило."
+
+        if persistent.timur_fun != True:
+            $ renpy.notify("В дневнике появилась новая запись!")
+        $ persistent.timur_fun = True
 
         pause 2.0
         play music home

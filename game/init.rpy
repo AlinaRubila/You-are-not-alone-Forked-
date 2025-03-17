@@ -241,11 +241,19 @@ init 3 python:
 
     g.button("poster5")
     g.condition("persistent.poster5")
-    g.image("cj_goodbye")
+    g.image("cj_discussion")
 
     g.button("poster6")
     g.condition("persistent.poster6")
-    g.image("cj_eat_cake")
+    g.image("cj_renovation_dream")
+
+    g.button("poster7")
+    g.condition("persistent.poster7")
+    g.image("cj_uno")
+
+    g.button("poster8")
+    g.condition("persistent.poster8")
+    g.image("cj_timur_good_ending")
 
 
 transform tremble:

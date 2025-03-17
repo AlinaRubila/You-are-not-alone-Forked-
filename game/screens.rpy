@@ -491,6 +491,7 @@ screen diary():
     add "gui/diary_menu.png"
 
     imagebutton auto "gui/button/d_zhenya_%s.png" xpos 1323 ypos 120 focus_mask True action ShowMenu("zhenya") hovered [ Play("sound", "audio/bumaga.ogg") ]
+    imagebutton auto "gui/button/d_timur_%s.png" xpos 1323 ypos 240 focus_mask True action ShowMenu("timur") hovered [ Play("sound", "audio/bumaga.ogg") ]
 
 
     imagebutton auto "gui/button/bt_history_back_%s.png" xpos 200 ypos 960 focus_mask True action Return() hovered [ Play("sound", "audio/bumaga.ogg") ]
@@ -559,7 +560,76 @@ screen zhenya:
         if persistent.jenya_withstick:
             text "{image=gui/diary_pictures/cj_portret_jenya_sticker.png}"
 
+screen timur:
+    tag menu
+    add "gui/diary_menu_open.png"
+    imagebutton auto "gui/button/bt_history_back_%s.png" xpos 300 ypos 900 focus_mask True action ShowMenu("diary") hovered [ Play("sound", "audio/bumaga.ogg") ]
 
+    hbox:
+        spacing 0
+        xsize 600
+        ysize 40
+        xalign 0.25 yalign 0.1
+        if persistent.first_note:
+            text "{font=Assya Font Official.otf}{size=+5}Сон какой-то странный приснился, слишком реальный... Может, это реакция на стресс?{/size}{/font}"
+
+    hbox:
+        spacing 0
+        xsize 600
+        ysize 40
+        xalign 0.25 yalign 0.23
+        if persistent.timur_first_note:
+            text "{font=Assya Font Official.otf}{size=+5}Буду осваиваться на новом месте. Условия в общежитии превзошли мои ожидания в лучшую сторону.{/size}{/font}"
+
+    hbox:
+        spacing 0
+        xsize 600
+        ysize 20
+        xalign 0.25 yalign 0.37
+        if persistent.timur_dreamcontinue:
+            text "{font=Assya Font Official.otf}{size=+5}А сны всё продолжаются{/size}{/font}"
+
+    hbox:
+        spacing 0
+        xsize 600
+        ysize 20
+        xalign 0.25 yalign 0.5
+        if persistent.timur_argue:
+            text "{font=Assya Font Official.otf}{size=+5}Ну и урод… Не повезло с соседом!{/size}{/font}"
+
+    hbox:
+        spacing 0
+        xsize 600
+        ysize 100
+        xalign 0.25 yalign 0.63
+        if persistent.timur_feeling:
+            text "{font=Assya Font Official.otf}{size=+5}Какое-то странное совпадение.{/size}{/font}"
+
+    hbox:
+        spacing 0
+        xsize 600
+        ysize 100
+        xalign 0.25 yalign 0.76
+        if persistent.timur_help:
+            text "{font=Assya Font Official.otf}{size=+5}Я рад, что смог помочь Тимуру. Ситуация очень напоминает мой сегодняшний сон.{/size}{/font}"
+
+    hbox:
+        spacing 0
+        xsize 600
+        ysize 100
+        xalign 0.25 yalign 0.89
+        if persistent.timur_fun:
+            text "{font=Assya Font Official.otf}{size=+5}Сегодня мы с Тимуром хорошо провели время. Оказывается, мой сосед – очень интересный собеседник.{/size}{/font}"
+
+    hbox:
+        spacing 0
+        xsize 600
+        ysize 100
+        xalign 0.25 yalign 1.2
+        if persistent.timur_bad and not(persistent.timur_good):
+            text "{font=Assya Font Official.otf}{size=+5}Вот тебе новость – уехал, оставил меня одного со всем разбираться. Разочарование.{/size}{/font}"
+        else:
+            text "{font=Assya Font Official.otf}{size=+5}Я так устал за день, но главное всё сделал. Благодаря советам Тимура работать было легче.{/size}{/font}"
 
 
     # Код галлереи
@@ -576,21 +646,14 @@ screen gallery():
         add g.make_button("poster3", "p_3", xalign=-0.1, yalign=0.5, hover_border="images/posters/hover.png")
         add g.make_button("poster4", "p_4", xalign=-0.8, yalign=0.5, hover_border="images/posters/hover.png")
         add g.make_button("poster5", "p_5", xalign=1.3, yalign=-0.4, hover_border="images/posters/hover.png")
-        add g.make_button("poster6", "hover", xalign=0.6, yalign=-0.4, hover_border="images/posters/hover.png")
-        add g.make_button("poster6", "hover", xalign=-0.1, yalign=-0.4, hover_border="images/posters/hover.png")
-        add g.make_button("poster6", "hover", xalign=-0.8, yalign=-0.4, hover_border="images/posters/hover.png")
+        add g.make_button("poster6", "p_6", xalign=0.6, yalign=-0.4, hover_border="images/posters/hover.png")
+        add g.make_button("poster7", "p_7", xalign=-0.1, yalign=-0.4, hover_border="images/posters/hover.png")
+        add g.make_button("poster8", "p_8", xalign=-0.8, yalign=-0.4, hover_border="images/posters/hover.png")
         add g.make_button("poster6", "hover", xalign=1.3, yalign=-1.3, hover_border="images/posters/hover.png")
         add g.make_button("poster6", "hover", xalign=0.6, yalign=-1.3, hover_border="images/posters/hover.png")
         add g.make_button("poster6", "hover", xalign=-0.1, yalign=-1.3, hover_border="images/posters/hover.png")
         add g.make_button("poster6", "hover", xalign=-0.8, yalign=-1.3, hover_border="images/posters/hover.png")
     imagebutton auto "gui/button/bt_back_%s.png" xpos 161 ypos 965 focus_mask True action Return() hovered [ Play("sound", "audio/bumaga.ogg") ]
-
-
-
-
-
-
-
 
 
 style main_menu_frame is empty
