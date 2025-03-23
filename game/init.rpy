@@ -109,6 +109,7 @@ image timur surprisea = At('timur surprise', sprite_highlight('timur'))
 image timur thoughtfula = At('timur thoughtful', sprite_highlight('timur'))
 image timur angry homea = At('timur angry home', sprite_highlight('timur'))
 image timur angry postera = At('timur angry poster', sprite_highlight('timur'))
+image timur harsh = At('timur_s angry home',  sprite_highlight('timur'))
 image timur surprise homea = At('timur surprised home', sprite_highlight('timur'))
 image timur yell wintera = At('timur yelling winter', sprite_highlight('timur'))
 image timur embarrassed homea = At('timur_s smile home', sprite_highlight('timur'))
@@ -131,14 +132,8 @@ image comenda home normala = At('commandant home', sprite_highlight('comenda'))
 image comenda home angrya = At('commandant home angry', sprite_highlight('comenda'))
 image comenda home scared = At('commandant home scared', sprite_highlight('comenda'))
 
-image eve silhouette = At('eva silhouette ', sprite_highlight('e'))
-image eve silhouette black = At('eva silhouette black', sprite_highlight('e'))
-image eve silhouette black glow = At('eva silhouette black glow', sprite_highlight('e'))
-image eve silhouette grey = At('eva silhouette grey', sprite_highlight('e'))
-image eve silhouette grey glow = At('eva silhouette grey glow', sprite_highlight('e'))
-image eve ghost = At('ghost', sprite_highlight('e'))
-image eve ghost darker = At('ghost darker', sprite_highlight('e'))
-image eve ghost darkest = At('ghost darkest', sprite_highlight('e'))
+image eve silhouette black glow = At('eva silhouette black glow', sprite_highlight('e')) #2 глава Жени
+image eve silhouette grey glow = At('eva silhouette grey glow', sprite_highlight('e')) #1 глава Тимура
 
 # звуки
 define audio.snow = "audio/sounds/snowsteps.mp3"
@@ -149,6 +144,7 @@ define audio.ambulance = "audio/sounds/ambulance.mp3"
 define audio.ambulance2 = "audio/sounds/ambulance2.mp3"
 define audio.stuk = "audio/sounds/stuk.mp3"
 define audio.screamer = "audio/sounds/screamer2.wav"
+define audio.screamer_short = "audio/sounds/screamer_short.mp3"
 define audio.door = "audio/sounds/door.mp3"
 define audio.stamp = "audio/sounds/stamp.mp3"
 define audio.bibika = "audio/sounds/bibika.mp3"
@@ -160,6 +156,8 @@ define audio.coffee = "audio/sounds/spill_coffee.mp3"
 define audio.tire = "audio/sounds/tire.ogg"
 define audio.ruining = "audio/sounds/ruin_room.mp3"
 define audio.smash = "audio/sounds/smash.wav"
+define auidio.trash = "audio/sounds/trash.mp3"
+define audio.scotch = "audio/sounds/scotch.mp3"
 
 #эмбиент
 define audio.city = "audio/ambient/city.mp3"

@@ -286,7 +286,7 @@ label timur:
     mc "Кто ты? Почему ты мне снишься? Что ты хочешь от меня?!"
 
     un "Найди меня."
-    hide eve grey black glow with dissolve
+    hide eve silhouette grey glow with dissolve
 
     "Что? Что всё это значит?"
 

@@ -1,5 +1,6 @@
 label timur_bad_end:
     stop music fadeout 1.0
+    play background room
 
     scene bg_room_after_repair with dissolve
     "Весь день я клеил эти чёртовы обои. Где-то они отклеивались, где-то наслаивались. У меня уже не оставалось сил."
@@ -9,12 +10,12 @@ label timur_bad_end:
     scene black with off
     pause 0.5
     stop music fadeout 2.0
-    stop background fadeout 2.0
 
     "Однако во сне призрак девушки вновь явился ко мне."
 
     "Она смотрела на меня самым что ни на есть суровым взглядом. Стоя в полной темноте, она погрозила мне пальцем, словно маленькому ребёнку."
-    pause 1.0
+    pause 2.0
+    stop background fadeout 2.0
 
     play music mystery fadein 1.0
     #нужна фоновая музыка (возможно, этим займусь уже я, но, если вдруг есть идея по поводу музыки - вперёд!)
@@ -26,12 +27,13 @@ label timur_bad_end:
 
     "После переезда Тимура призрак больше ко мне не являлся."
 
-    stop music
+    pause 2
+    stop music fadeout 2.0
+    $ persistent.ending4 = True
     $ quick_menu = False
-    pause 1
 
     scene black with dissolve
-    play background audio.wind fadein 1.0
+    play background audio.wind
     centered "{size=+24}{color=#ffffff}Давай помогу начать всё сначала."
     stop background fadeout 1.0
 

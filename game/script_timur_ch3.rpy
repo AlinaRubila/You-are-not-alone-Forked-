@@ -134,12 +134,14 @@ label timur_cp3:
         mc "Эй, а моё мнение тебя не интересует? Мне эти обои не нравятся!"
 
         t "И? Ты же у меня насчёт постера не спрашивал."
-        scene bg_hardware_store with dissolve
 
         "Я почувствовал злость, буквально закипал."
-        show mc very angrya at left2 with dissolve
 
+        scene bg_hardware_store with dissolve
+
+        show mc very angrya at left2 with dissolve
         mc "Тоже мне сравнил, маленький постер и обои на всю комнату."
+
         show timur very angrya at right2 with dissolve
 
         "Тимур, казалось, был готов разорваться от накатывающей злости."
@@ -161,15 +163,20 @@ label timur_cp3:
 
         scene bg_room_repair_day with dissolve
         "Стоило нам зайти в комнату, Тимур сразу же ушёл, ничего мне не сказав."
+        stop music fadeout 1.0
+        scene black with dissolve
+        pause 1.0
+        play background room
+
+        scene bg_room_repair_dark with dissolve
 
         "Остаток дня я ходил по общежитию и пытался что-то выяснить насчёт призрака, однако мои старания остались безуспешны. Никто из попавшихся мне на глаза о нём не слышал."
 
-        scene bg_room_repair_night with dissolve
         "Вечером вернулся Тимур и снова уткнулся в свой ноутбук. Вступать в коммуникацию не хотелось. Мой сосед просто продолжал копаться в гаджете. Мне же… Мне стало скучно, и я решил лечь спать."
 
         scene black with off
         stop music fadeout 1.0
-        pause 1.0
+        pause 2.0
     else:
 
         play music wholesome
@@ -319,7 +326,7 @@ label timur_cp3:
 
         scene black with off
         stop music fadeout 1.0
-        pause 1.0
+        pause 2.0
         scene bg_room_repair_morning with dissolve
 
     if relate_timur < 20:
@@ -328,7 +335,7 @@ label timur_cp3:
 
         scene cj_timur_note with dissolve
 
-        "В ней было написано: «Мне надо уехать, клей обои сам, а то скоро дисциплинарка» и подпись «Тимур»."
+        "То есть, как это я должен обои сам? И куда Тимур вообще мог уехать?"
 
         "Моему возмущению не было предела. Мало того, что мы купили эти ужасные обои, так ещё и сосед наверняка меня обманул. Вдруг он гуляет с кем-то, а мне ещё с этими полотнищами мучаться."
 
@@ -358,7 +365,6 @@ label timur_cp3:
 
         "Я был в шоке. Оказалось, что человек с ответами был прямо под моим носом. Осталось только дождаться Тимура, если он вообще захочет говорить со мной…"
 
-        scene bg_room_repair_day with dissolve
         "Но сейчас всё-таки нужно поклеить обои."
 
         # ПЯТНАШКИ
@@ -366,6 +372,7 @@ label timur_cp3:
         call screen puzzle15_screen
     else:
         play background room fadein 1.0
+        play music home fadein 1.0
         "Утром, открыв глаза, я не обнаружил своего соседа в комнате, но, включив телефон я увидел сообщение от Тимура."
         nvl_narrator "{size=+8}{color=#000000}Тимур"
 
@@ -393,7 +400,6 @@ label timur_cp3:
 
         scene black with dissolve
         pause 2.0
-        play music home fadein 1.0
         scene bg_room_repair_day with dissolve
         # ПЯТНАШКИ
         $ puzzle = Puzzle15(f"images/game/Wallpaper1.png", size=3)

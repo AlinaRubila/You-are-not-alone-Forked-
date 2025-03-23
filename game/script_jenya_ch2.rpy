@@ -462,12 +462,12 @@ label jenya_cp2:
 
     mc "А? Что? Кто здесь?"
 
-    show eve silhouette grey glow with dissolve
+    show eve silhouette black glow with dissolve
 
     n "В дверном проёме своей комнаты я увидел чей-то силуэт. Он пристально смотрел на меня. Я никак не мог разглядеть его и определить, чей же он."
 
     mc "Кто ты?"
-    hide eve silhouette grey glow with dissolve
+    hide eve silhouette black glow with dissolve
 
     n"Я решил подойти, чтобы рассмотреть, кто там стоит. Но вдруг чёрный силуэт начал от меня убегать."
 
@@ -785,7 +785,7 @@ label jenya_cp2:
             #Фон двери приближается
             "Я приложил ухо к двери, пытаясь хоть что-то услышать. Наверное, со стороны я выгляжу странно, но моё любопытство взяло верх."
 
-            play sound screamer
+            play sound screamer_short
             scene cj_door_girl with dissolve
             #Пугающий, резкий звук.
 
@@ -865,7 +865,7 @@ label jenya_cp2:
     n"Вдоль дороги ходила девушка. В ней я сразу узнал свою таинственную преследовательницу."
 
     mc "Я не могу поверить своим глазам. Это сон? Что происходит?!"
-    play sound screamer
+    play sound screamer_short
 
     scene cj_night_eve_2 at tremble
 
