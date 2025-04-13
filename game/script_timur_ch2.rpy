@@ -147,7 +147,7 @@ label timur_cp2:
     "После этого вопроса пара пролетела незаметно. Всё оставшееся время мы с Тимуром обсуждали, что купить, когда приступить к работе и как распределить обязанности."
 
     pause 0.5
-    stop music fadeout 1.0
+    stop music fadeout 2.0
     scene bg_classroom with dissolve
     "Мы решили сразу после пары пойти в магазин, и, как только занятия закончились, направились к выходу из университета."
 
@@ -414,7 +414,7 @@ label timur_cp2:
     hide timur normal homea with dissolve
 
     "Такая несправедливость ошарашила меня: я даже не придумал, что ответить."
-    stop music fadeout 1.0
+    stop music fadeout 2.0
     hide mc angry homea at left2 with dissolve
 
     "Я оделся, выхватил мешок с хламом и направился к выходу, громко хлопнув дверью."
@@ -636,7 +636,7 @@ label timur_cp2:
                     j "Верю, верю. А какое у тебя хобби?"
 
                     pause 1
-                    stop music fadeout 1.5
+                    stop music fadeout 2.5
                     scene black with dissolve
                     hide jenya grina with dissolve
                     hide mc normala with dissolve
@@ -715,7 +715,7 @@ label timur_cp2:
         "Я постарался отогнать все плохие мысли и направился ко входу в общежитие. Уже вечерело, и солнце заходило за горизонт, уступая свой пост звездам и луне."
 
         play background room
-        stop music fadeout 1.0
+        stop music fadeout 2.0
         scene bg_room_ruined_day with dissolve #заменяем на дневной фон комнаты со сползшей обоиной
 
         "Зайдя в комнату, я увидел, что Тимур уже убирал учебники с полки в коробку."
@@ -1013,7 +1013,7 @@ label timur_cp2:
         show timur smile homea at right2 with dissolve
         t "Спасибо, буду иметь в виду."
 
-        stop music fadeout 2.0
+        stop music fadeout 2.5
 
         show mc normal homea at left2 with dissolve
         mc "Знаешь, у меня игра есть, «UNO» называется. Может, сыграем? Я, правда, не умею…"
@@ -1097,7 +1097,7 @@ label timur_cp2:
         hide mc smile homea with dissolve
         "И мы, как заведённые, начали бегать по комнате, подбирая цвет к стенам, используя карточки «UNO», попутно болтая обо всё на свете."
 
-        stop music fadeout 2.0
+        stop music fadeout 2.5
         scene bg_room_repair_dark with dissolve
 
         "Перед сном мы ещё долго не могли утихомириться. Даже лёжа в кроватях. Беседа лилась рекой, а в конце Тимур сказал:"
@@ -1132,7 +1132,8 @@ label timur_cp2:
         "На нём лежал тот самый постер, аккуратно склеенный скотчем."
         pause 1.0
         scene black with dissolve
-        stop music fadeout 1.0
+        stop music fadeout 2.0
         stop background fadeout 1.0
+        pause 1.0
 
 jump timur_cp3

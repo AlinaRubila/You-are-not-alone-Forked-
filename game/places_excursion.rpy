@@ -2,7 +2,7 @@ label Canteen:
 
     #Музыка ритмичная, спокойная, средняя по звучанию
 
-    stop music
+    stop music fadeout 2.5
     stop background
 
     play sound steps
@@ -73,7 +73,7 @@ label Park:
 
     j "Моё любимое место!"
 
-    stop music fadeout 2.0
+    stop music fadeout 2.5
     stop background
     scene black with dissolve
     play sound steps
@@ -97,7 +97,7 @@ label Park:
     jump ChoiceExcursion
 
 label Library:
-    stop music
+    stop music fadeout 2.5
     stop background
     scene black with dissolve
     play sound steps

@@ -20,7 +20,7 @@ label jenya_good_end:
 
     hide mc smile homea with dissolve
     hide jenya smile2 homea with dissolve
-    stop music fadeout 1.5
+    stop music fadeout 2.0
 
     "Мы вернулись к учёбе. Спустя полчаса мы наконец-то закончили. Вроде к экзамену готовы… Голова уже раскалывалась от количества информации, а мы с Женей очень устали."
 
@@ -47,7 +47,7 @@ label jenya_good_end:
     "Утром я проснулся с прекрасным настроением. Уверен, что с таким-то настроем экзамен у меня в кармане."
 
     "Быстро собравшись, я направился к Жениной комнате. И вместе мы пошли в универ."
-    stop music fadeout 1.0
+    stop music fadeout 2.0
 
     scene bg_uni_morning with dissolve
     play music wholesome
@@ -152,7 +152,7 @@ label jenya_good_end:
     a "Не-а. В Массачусетском. В 1927 году. Вэниваром Бушем. Что ж, удачи тебе! Мне нужно отойти."
     show mc thoughtful crosseda at left2 with dissolve
     hide alex normala at right2 with dissolve
-    stop music fadeout 1.0
+    stop music fadeout 2.0
 
     "Он повернулся и ушёл."
 
@@ -314,7 +314,7 @@ label jenya_good_end:
 
     "Радовался ещё кое-кто, наверняка хихикая себе под нос. В конце концов, снятие амулета с моего тела для этого человека действительно было новостью недели."
 
-    stop music
+    stop music fadeout 2.5
     $ quick_menu = False
     scene black with dissolve
 

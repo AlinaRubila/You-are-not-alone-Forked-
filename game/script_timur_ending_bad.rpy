@@ -1,5 +1,5 @@
 label timur_bad_end:
-    stop music fadeout 1.0
+    stop music fadeout 2.0
     play background room
 
     scene bg_room_after_repair with dissolve
@@ -28,7 +28,7 @@ label timur_bad_end:
     "После переезда Тимура призрак больше ко мне не являлся."
 
     pause 2
-    stop music fadeout 2.0
+    stop music fadeout 2.5
     $ persistent.ending4 = True
     $ quick_menu = False
 

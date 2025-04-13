@@ -43,7 +43,7 @@ label jenya_cp2:
 
     n"Уже наяву меня стали преследовать странные происшествия. То стакан упадёт со стола, то дверь сама откроется. А однажды ночью я обнаружил на окне отпечаток руки. Я мог бы спихнуть всё на Тимура, но рука явно была не мужская."
 
-    stop music fadeout 2.0
+    stop music fadeout 2.5
 
     scene black with dissolve
 
@@ -52,8 +52,7 @@ label jenya_cp2:
     play sound signal
 
     #scene bg_room_morning at pan
-    scene bg_room_morning
-    with dissolve
+    scene bg_room_morning with dissolve
 
     n"Очередной учебный день. Я уже даже привык к этому жизненному ритму. Но сон для студентов, конечно, больная тема."
 
@@ -75,7 +74,7 @@ label jenya_cp2:
 
     "Те же магазины, та же дорога. Кажется, что даже прохожие каждый день одинаковые."
 
-    stop music fadeout 0.5
+    stop music
     scene black with dissolve
     mc "А?"
 
@@ -163,7 +162,7 @@ label jenya_cp2:
     show mc smilea  at left2 with dissolve
     j "И оказалось, что всё это время ответы были близко, ведь…"
 
-    stop music fadeout 1.0
+    stop music
     play music jenyar
     n "Как только зазвонил телефон, Женя резко изменилась в лице."
 
@@ -245,7 +244,7 @@ label jenya_cp2:
 
     "Я должен с ней поговорить!"
 
-    stop music fadeout 1.0
+    stop music fadeout 2.5
     play background room
     scene bg_classroom2 with dissolve
 
@@ -287,7 +286,7 @@ label jenya_cp2:
             if persistent.jenya_frombin != True:
                 $ renpy.notify("В дневнике появилась новая запись!")
             $ persistent.jenya_frombin = True
-            stop music fadeout 1.0
+            stop music fadeout 2.0
 
         "Не лезть в мусорку":
             $ vzal = 0
@@ -455,7 +454,7 @@ label jenya_cp2:
     "Поэтому я незамедлительно рванул в свою тёплую постель и вырубился, только коснувшись подушки."
 
     scene black with dissolve
-    stop music fadeout 2.0
+    stop music fadeout 2.5
     play background room
     play sound stuk
     scene bg_room_morning with dissolve
@@ -778,7 +777,7 @@ label jenya_cp2:
 
             "Я решился постучать в дверь."
             play sound stuk
-            stop music fadeout 1.0
+            stop music fadeout 2.0
 
             "По-видимому, никто не собирался открывать."
 
@@ -1057,7 +1056,7 @@ label jenya_cp2:
         j "Ой, не волнуйся. Главное, чтобы тебе стало легче."
 
     scene bg_room_zhenya with dissolve
-    stop music fadeout 1.5
+    stop music fadeout 2.5
 
     n"Женя принялась копошиться в своих вещах. Через мгновение мне вручили оберег."
     play music together fadein 1.0
@@ -1170,7 +1169,7 @@ label jenya_cp2:
 
     scene black with dissolve
 
-    stop music fadeout 1.0
+    stop music fadeout 2.0
     stop background fadeout 1.0
 
     jump jenya_cp3

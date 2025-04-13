@@ -172,7 +172,7 @@ label jenya_bad_end:
     hide alex normala at right2 with dissolve
 
     n "Он повернулся и ушёл."
-    stop music fadeout 1.0
+    stop music fadeout 2.0
     show mc thoughtful crosseda at left2 with dissolve
 
     "Сказать, что эта викторина выбила у меня землю из-под ног и серьёзно ударила по моей уверенности — это ничего не сказать."

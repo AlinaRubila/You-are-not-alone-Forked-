@@ -24,9 +24,9 @@ define askedPerson = 0
 
 image bg_classroom = "bg/bg_classroom.jpg"
 image bg_street_d = "bg/bg_street_day.jpg"
-image cookieCG = "coockieChoice/cg_cookie.png"
-image cookieYes = "coockieChoice/cg_yescookie.png"
-image cookieNo = "coockieChoice/cg_nocookie.png"
+image cookieCG = "coockieChoice/cg_cookie.jpg"
+image cookieYes = "coockieChoice/cg_yescookie.jpg"
+image cookieNo = "coockieChoice/cg_nocookie.jpg"
 
 
 image bg_classroom_blur = im.Blur("bg/bg_rutnoeve.jpg", 1.5)
@@ -81,7 +81,7 @@ label jenya_cp1:
     scene cj_meet_jenya with dissolve
 
     stop background fadeout 2.0
-    play music cozy fadein 0.5
+    play music cozy fadein 2.0
 
     mc "Привет. Не против, если подсяду?"
 
@@ -397,7 +397,7 @@ label jenya_cp1:
 
             j "Ой, так я тоже! Пошли вместе!"
 
-            stop music
+            stop music fadeout 2.5
             play background city
             scene black with dissolve
             scene bg_street_night_winter with dissolve
@@ -448,7 +448,7 @@ label jenya_cp1:
 
         #Музыка спокойная, средняя по звучанию
         stop background
-        stop music fadeout 1.0
+        stop music fadeout 2.0
         scene black with dissolve
         pause 1
         play background city
@@ -484,7 +484,7 @@ label jenya_cp1:
     "Домой я пришёл обессилевший, и поэтому сразу лёг спать."
 
     "Утро вечера мудренее..."
-    stop music fadeout 1.0
+    stop music fadeout 2.0
 
     pause 1
 
@@ -705,7 +705,7 @@ label jenya_cp1:
             scene bg_room_morning with dissolve
             play background room
 
-            stop music fadeout 2.0
+            stop music fadeout 2.5
         "Разобрать вещи":
 
             play music sincerely
@@ -777,7 +777,7 @@ label jenya_cp1:
                     "Ключевое слово «справляются»."
 
                     "Так или иначе, но со своими вещами я разобрался. Даже быстрее, чем я ожидал."
-    stop music fadeout 2.0
+    stop music fadeout 2.5
 
     "Я снова оказался на перепутье под названием «Чем бы мне сейчас заняться?»"
 
@@ -833,7 +833,8 @@ label jenya_cp1:
 
     scene black with dissolve
 
-    stop music fadeout 1.0
+    stop music fadeout 2.0
     stop background fadeout 1.0
+    pause 1.0
 
     jump jenya_cp2

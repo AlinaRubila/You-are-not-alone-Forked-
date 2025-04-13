@@ -28,7 +28,7 @@ label timur_good_end:
     "Я всё ещё чувствую чьё-то присутствие, но оно меня больше не пугает."
 
     pause 2.0
-    stop music fadeout 2.0
+    stop music fadeout 2.5
     $ persistent.ending3 = True
     $ quick_menu = False
 

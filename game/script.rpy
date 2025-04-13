@@ -93,7 +93,7 @@ label start:
 
     play background wind fadein 1.0
     #Чёрный экран с анимацией падающего снега, на фоне звуки ветра.
-    stop music fadeout 1.0
+    stop music fadeout 2.5
     $ quick_menu = False
     scene black
 
@@ -287,7 +287,7 @@ label start:
 
     mc "Да неужели!"
 
-    stop music fadeout 2.0
+    stop music fadeout 2.5
 
     play sound door
 

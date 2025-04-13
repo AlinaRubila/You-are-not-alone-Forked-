@@ -162,7 +162,7 @@ label timur:
         "А, может быть, случилось что-то. Завтра будет новый день, и, вероятно, лучи восходящего солнца сумеют зарядить его позитивом."
 
     scene black with dissolve
-    stop music fadeout 1.0
+    stop music fadeout 2.0
     pause 0.5
     scene bg_hallway
     play background room
@@ -229,7 +229,7 @@ label timur:
                     jump Laundry
 
     scene black with dissolve
-    stop music fadeout 1.0
+    stop music fadeout 2.0
     pause 0.5
     scene bg_hallway_light with dissolve
     show comenda home normala at right2 with dissolve
@@ -264,7 +264,7 @@ label timur:
 
     "Общажная кровать, в удобстве которой я сомневался, сегодня показалась мне очень даже мягкой. Я провалился в сон в тот же миг, как моё лицо коснулось подушки."
 
-    stop music fadeout 1.0
+    stop music fadeout 2.0
     stop background fadeout 1.0
     scene black with off
     show snow1
@@ -345,7 +345,7 @@ label timur:
     "Повернувшись обратно, я увидел, что Тимур уже развернулся. Теперь он сверлил меня злобным взглядом человека, чей сон так нагло прервали. Видимо, стоит заканчивать с раскладыванием вещей. По крайней мере, пока Тимур окончательно не проснётся."
 
     #Скример таракана.
-    stop music fadeout 0.5
+    stop music
 
     scene сj_cockroach_bed at zoomin
     play sound screamer2
@@ -442,7 +442,7 @@ label timur:
 
     scene bg_room_evening with dissolve
     stop background fadeout 1.0
-    stop music fadeout 0.5
+    stop music fadeout 2.0
     play sound door
     play background room
 

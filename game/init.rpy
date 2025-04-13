@@ -14,7 +14,7 @@ define un = Character('???', ctc="ctc_atl", ctc_position="fixed", color="#51483f
 
 define mc_nvl = Character("Я", kind=nvl, image="mcimage", callback=Phone_SendSound)
 define j_nvl = Character("Женя Лис", kind=nvl, callback=Phone_ReceiveSound)
-define a_nvl = Character("Староста", kind=nvl, callback=Phone_ReceiveSound)
+define a_nvl = Character("Alexander", kind=nvl, callback=Phone_ReceiveSound)
 define t_nvl = Character("Тимур", kind=nvl, callback=Phone_ReceiveSound)
 
 define config.adv_nvl_transition = None

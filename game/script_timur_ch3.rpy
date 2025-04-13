@@ -163,7 +163,7 @@ label timur_cp3:
 
         scene bg_room_repair_day with dissolve
         "Стоило нам зайти в комнату, Тимур сразу же ушёл, ничего мне не сказав."
-        stop music fadeout 1.0
+        s fadeout 2.0
         scene black with dissolve
         pause 1.0
         play background room
@@ -175,7 +175,7 @@ label timur_cp3:
         "Вечером вернулся Тимур и снова уткнулся в свой ноутбук. Вступать в коммуникацию не хотелось. Мой сосед просто продолжал копаться в гаджете. Мне же… Мне стало скучно, и я решил лечь спать."
 
         scene black with off
-        stop music fadeout 1.0
+        stop music fadeout 2.0
         pause 2.0
     else:
 
@@ -269,7 +269,7 @@ label timur_cp3:
         scene black with dissolve
         pause 1.0
         scene bg_room_repair_night with dissolve
-        stop music fadeout 1.0
+        stop music fadeout 2.0
         play background room
         "Весь оставшийся день прошёл как в тумане. Я прошёлся по общаге. На кухне меня угостила печеньем милая рыжая девушка, которую, кажется, звали Женя."
 
@@ -325,7 +325,7 @@ label timur_cp3:
         "Пожелав друг другу спокойной ночи, мы уложились в кровати, и я погрузился в сон."
 
         scene black with off
-        stop music fadeout 1.0
+        stop music fadeout 2.0
         pause 2.0
         scene bg_room_repair_morning with dissolve
 
