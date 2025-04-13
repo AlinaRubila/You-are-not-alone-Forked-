@@ -132,7 +132,7 @@ label start:
 
     play sound bumaga
 
-    $ mcname = renpy.input("Ваше имя", length=8, default="Антон", allow="йцукенгшщзхъфывапролджэячсмитьбюЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ").strip()
+    $ mcname = renpy.input("Ваше имя", length=8, default="", allow="йцукенгшщзхъфывапролджэячсмитьбюЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ").strip()
     if mcname == "":
         $ mcname = "Антон"
 
