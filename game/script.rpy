@@ -35,7 +35,7 @@ init:
         linear 10 zoom 3
 
 
-image bg_room_morning_blur = im.Blur("bg/bg_room_morning.png", 1.5)
+image bg_room_morning_blur = im.Blur("bg/bg_room_morning.jpg", 1.5)
 
 init python:
     onn = ImageDissolve("eye.png", 1.0, 20, reverse=False)

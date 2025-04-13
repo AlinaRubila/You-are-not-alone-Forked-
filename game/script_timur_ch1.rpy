@@ -11,7 +11,7 @@ define visitLaundry = True
 define dormPlaces = 0
 define helpedWithRepair = False #для 2 главы
 
-image bg_grossery_shop_blur = im.Blur("bg/bg_grossery_shop.png", 1.5)
+image bg_grossery_shop_blur = im.Blur("bg/bg_grossery_shop.jpg", 1.5)
 
 screen guySee():
     if seeJenya == False:

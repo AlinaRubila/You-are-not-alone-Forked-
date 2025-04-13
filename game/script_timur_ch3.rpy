@@ -1,4 +1,4 @@
-image cj_notes_blur = im.Blur("cj/cj_notebook.png", 1.5)
+image cj_notes_blur = im.Blur("cj/cj_notebook.jpg", 1.5)
 init python:
     class Puzzle15:
         def __init__(self, image_path, size=3):
