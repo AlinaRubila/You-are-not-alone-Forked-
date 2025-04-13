@@ -81,7 +81,7 @@ label jenya_cp1:
     scene cj_meet_jenya with dissolve
 
     stop background fadeout 2.0
-    play music cozy fadein 2.0
+    play music cozy
 
     mc "Привет. Не против, если подсяду?"
 

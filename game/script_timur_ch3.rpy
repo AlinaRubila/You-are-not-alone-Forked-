@@ -163,7 +163,7 @@ label timur_cp3:
 
         scene bg_room_repair_day with dissolve
         "Стоило нам зайти в комнату, Тимур сразу же ушёл, ничего мне не сказав."
-        s fadeout 2.0
+        stop music fadeout 2.0
         scene black with dissolve
         pause 1.0
         play background room

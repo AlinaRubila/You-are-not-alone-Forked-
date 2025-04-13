@@ -168,8 +168,8 @@ define audio.birds = "audio/ambient/birds_out.mp3"
 define audio.cooking = "audio/ambient/cooking.mp3"
 define audio.people = "audio/ambient/people_around.mp3"
 define audio.wind = "audio/ambient/winter_wind.mp3"
-define audio.shop = "audio/ambient/Shop.mp3"
-define audio.repair = "audio/ambient/repair.wav"
+define audio.shop = "audio/ambient/shop.mp3"
+define audio.repair = "audio/ambient/repair.mp3"
 
 #музыка
 define audio.sincerely = "audio/music/Sincerely.mp3"

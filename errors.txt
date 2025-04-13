@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script_timur_ch2.rpy", line 727: Line is indented, but the preceding scene statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    "А в реальность и вовсе вернулся лишь тогда, когда прекрасный голос Жени исчез, а я уже стоял один на один с дверью, отделяющей меня от определённо очень злого Тимура."
-    ^
+File "game/script_timur_ch3.rpy", line 166: expected statement.
+    s fadeout 2.0
+               ^
 
 Ren'Py Version: Ren'Py 8.1.2.23090503
-Wed Feb 26 01:56:42 2025
+Sun Apr 13 20:15:29 2025
