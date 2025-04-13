@@ -1,5 +1,5 @@
 
-image cj_trashcan_blur = im.Blur("cj/cj_trashcan.png", 1.5)
+image cj_trashcan_blur = im.Blur("cj/cj_trashcan.jpg", 1.5)
 
 label jenya_cp2:
 

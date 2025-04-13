@@ -22,14 +22,14 @@ define askedPerson = 0
 
 #Выбор печенья
 
-image bg_classroom = "bg/bg_classroom.png"
-image bg_street_d = "bg/bg_street_day.png"
+image bg_classroom = "bg/bg_classroom.jpg"
+image bg_street_d = "bg/bg_street_day.jpg"
 image cookieCG = "coockieChoice/cg_cookie.png"
 image cookieYes = "coockieChoice/cg_yescookie.png"
 image cookieNo = "coockieChoice/cg_nocookie.png"
 
 
-image bg_classroom_blur = im.Blur("bg/bg_rutnoeve.png", 1.5)
+image bg_classroom_blur = im.Blur("bg/bg_rutnoeve.jpg", 1.5)
 
 screen cookieChoice():
     imagebutton:

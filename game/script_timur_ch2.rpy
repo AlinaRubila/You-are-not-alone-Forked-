@@ -521,7 +521,7 @@ label timur_cp2:
                     "Мне стало не по себе. Я оцепенел от холода, но дело было не в погоде на улице."
 
                     # scene bg_street_morning_winter with dissolve
-                     # закомментил спрайты из-за cj (не уверен, что подходит всё)
+                    # закомментил спрайты из-за cj (не уверен, что подходит всё)
                     j_un "Привет. Жуткие, правда? Как кровь."
                     scene cj_flowers_talk with dissolve
                     stop music
