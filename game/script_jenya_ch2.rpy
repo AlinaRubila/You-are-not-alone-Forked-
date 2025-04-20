@@ -939,8 +939,8 @@ label jenya_cp2:
     label find_game:
         $ hf_init("bg_room_zhenya_dark1", 10,
             ("candle", 580, 565, _("Свеча")),
-            ("tablecloth", 335, 835, _("Скатерть")),
-            ("incense", 900, 500, _("Благовония")),
+            ("tablecloth", 335, 845, _("Скатерть")),
+            ("incense", 950, 180, _("Благовония")),
             ("amulet", 1600, 630, _("Оберег")),
             mouse=True,
             inventory=False,
@@ -971,7 +971,7 @@ label jenya_cp2:
                 jump find_game
 
             "Само найдётся":
-                pass
+                $ relate_jenya -= 20
     $ hf_hide()
     with dissolve
 
@@ -1075,7 +1075,8 @@ label jenya_cp2:
     $ persistent.jenya_endchap2 = True
 
     scene bg_room_zhenya with dissolve
-    show mc blush homea at left2 with dissolve
+    #show mc blush homea at left2 with dissolve - пригодится при оптимизации для веб-версии, как и остальные спрайты, заменённые на ca-версии
+    show mc blush home ca at left2 with dissolve
 
     "Я надел оберег на шею. Странно, но я сразу стал чувствовать себя спокойнее."
 
@@ -1087,7 +1088,8 @@ label jenya_cp2:
 
     j "Ничего. Рада, что смогла помочь. Что ещё у тебя нового?"
 
-    show mc sad homea at left2 with dissolve
+    #show mc sad homea at left2 with dissolve
+    show mc sad home ca at left2 with dissolve
 
     mc "Сессия… Сильно волнуюсь из-за экзаменов, а тут ещё это."
 
@@ -1095,7 +1097,8 @@ label jenya_cp2:
 
     j "Понимаю, сама вся на нервах. Но я верю, что мы справимся."
 
-    show mc smile homea at left2 with dissolve
+    #show mc smile homea at left2 with dissolve
+    show mc smile home ca at left2 with dissolve
 
     mc "Это само собой. Куда мы денемся."
     #Звук урчания живота
@@ -1115,25 +1118,29 @@ label jenya_cp2:
 
     scene bg_kitchen_morning with dissolve
     show jenya smile2 homea at right2 with dissolve
-    show mc normal homea at left2 with dissolve
+    #show mc normal homea at left2 with dissolve
+    show mc normal home ca at left2 with dissolve
 
     j "Давай приготовим что-то вместе, ты как раз попрактикуешься."
 
-    show mc smile homea at left2 with dissolve
+    #show mc smile homea at left2 with dissolve
+    show mc smile home ca at left2 with dissolve
 
     mc "Хорошо, что ты хотела приготовить?"
 
     show jenya thoughtful handsa at right2 with dissolve
     j "Думала насчёт пасты карбонара и салата Цезарь."
 
-    show mc surprise homea at left2 with dissolve
+    #show mc surprise homea at left2 with dissolve
+    show mc surprise home ca at left2 with dissolve
     mc "Зачем так сложно? Можно достать котлеты по-киевски из морозилки, я вчера купил."
 
     show jenya angry handsa at right2 with dissolve
 
     j "Это же снова полуфабрикаты…. Давай я тебе потом нормальные котлеты сделаю?"
 
-    show mc blush homea at left2 with dissolve
+    #show mc blush homea at left2 with dissolve
+    show mc blush home ca at left2 with dissolve
     mc "Да не надо."
 
     n"Спор затянулся на минут пять."
@@ -1146,7 +1153,8 @@ label jenya_cp2:
 
     j "Ты совсем не умеешь адекватно питаться."
 
-    show mc normal homea at left2 with dissolve
+    #show mc normal homea at left2 with dissolve
+    show mc normal home ca at left2 with dissolve
 
     mc "Нормально я питаюсь."
 
@@ -1155,7 +1163,8 @@ label jenya_cp2:
     show jenya smile2 homea at right2 with dissolve
     j "Я пасту быстро сейчас сделаю, ты пока нарежь салат."
 
-    show mc smile homea at left2 with dissolve
+    #show mc smile homea at left2 with dissolve
+    show mc smile home ca at left2 with dissolve
     mc "Ладно."
 
     show cj_cooking with dissolve

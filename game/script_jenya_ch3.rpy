@@ -2,6 +2,8 @@
 
 image cj_canteen_timur_blur = im.Blur("cj/cj_canteen_timur.png", 1.5)
 image bg_canteen_blur = im.Blur("bg/bg_canteen.png", 1.5)
+image cj_chapter3_start = "cj/cj_chapter3_start.jpg"
+image cj_chapter3 = "cj/cj_chapter3.jpg"
 
 
 label jenya_cp3:
@@ -85,13 +87,15 @@ label jenya_cp3:
 
     scene bg_canteen with dissolve
 
-    show mc normala at left2 with dissolve
+    #show mc normala at left2 with dissolve
+    show mc normal ca at left2 with dissolve
 
     mc "Привет, эм... как дела с подготовкой к экзаменам?"
 
     n "Тимур проигнорировал меня."
 
-    show mc smile handa at left2 with dissolve
+    #show mc smile handa at left2 with dissolve
+    show mc smile hand ca at left2 with dissolve
 
     mc "Слушай, давай на этой неделе ты уберёшься в комнате, а на следующей я?"
 
@@ -103,7 +107,8 @@ label jenya_cp3:
 
     "Я недовольно пробурчал, не ожидая, что мне кто-то не ответит."
 
-    show mc talk crosseda at left2 with dissolve
+    #show mc talk crosseda at left2 with dissolve
+    show mc talk crossed ca at left2 with dissolve
 
     mc "Одного сэндвича, конечно, мало."
 
@@ -115,9 +120,11 @@ label jenya_cp3:
 
     n "Завести диалог первым – это была его катастрофическая ошибка, ибо я сразу же счёл это за призыв снова попробовать начать с ним диалог. Ничему меня жизнь не учит."
 
-    show mc surprise handa at left2 with dissolve
+    #show mc surprise handa at left2 with dissolve
+    show mc surprise hand ca at left2 with dissolve
 
-    show mc smile handa at left2 with dissolve
+    #show mc smile handa at left2 with dissolve
+    show mc smile hand ca at left2 with dissolve
 
     mc "Да, с радостью, спасибо!"
 
@@ -133,7 +140,8 @@ label jenya_cp3:
 
     n "Я в ответ, чуть погодя."
 
-    show mc normala at left2 with dissolve
+    #show mc normala at left2 with dissolve
+    show mc normal ca at left2 with dissolve
 
     mc "Ты слышал, что скоро у нас по общаге пройдет дезинсекция?"
 
@@ -145,7 +153,8 @@ label jenya_cp3:
 
     n "Дальше нельзя было оплошать. Скажу «Нет», и он сорвется с крючка, ибо его это перестанет касаться, а значит, ему станет неинтересно. Но есть один нюанс. Я-то знаю, что ответ «Нет». Придётся врать, но так, чтобы было невозможно попасться."
 
-    show mc thoughtful crosseda at left2 with dissolve
+    #show mc thoughtful crosseda at left2 with dissolve
+    show mc thoughtful crossed ca at left2 with dissolve
 
     mc "Не знаю. Может да, может нет."
 
@@ -153,7 +162,8 @@ label jenya_cp3:
 
     n "Он недовольно вздыхает и ничего не отвечает. Я рассчитывал обсудить потенциальную генеральную уборку комнаты, но нужно менять план."
 
-    show mc smile handa at left2 with dissolve
+    #show mc smile handa at left2 with dissolve
+    show mc smile hand ca at left2 with dissolve
 
     mc "Кстати о чистоте. Я сегодня видел новость, что у нас рядом с общагой один шаурмист использовал крыс в качестве мяса для шаурмы..."
 
@@ -173,7 +183,8 @@ label jenya_cp3:
 
     "Из-за приступа моего словесного недержания Тимур встал и молча ушёл."
 
-    show mc normala at left2 with dissolve
+    #show mc normala at left2 with dissolve
+    show mc normal ca at left2 with dissolve
 
     "Ну зачем, зачем я об этом заговорил? В какой альтернативной вселенной это был бы уместный диалог в столовой? Чёрт возьми, мне даже самому есть расхотелось."
 
@@ -199,12 +210,14 @@ label jenya_cp3:
 
     "По моему телу пробежали мурашки, и я схватился за Женин амулет с надеждой на то, что он действительно поможет и прогонит ту, о ком я сейчас подумал."
 
-    show mc surprisea at left2 with dissolve
+    #show mc surprisea at left2 with dissolve
+    show mc surprise ca at left2 with dissolve
 
     mc "Эй, это ты?"
     "Сказал я, не зная, на что рассчитываю."
 
-    hide mc surprisea with dissolve
+    #hide mc surprisea with dissolve
+    hide mc surprise ca with dissolve
     play music chill
 
     "Мычание прекратилось. Я выдохнул и снова взглянул на амулет."
@@ -247,10 +260,12 @@ label jenya_cp3:
 
     n "Ничего себе реакция."
 
-    show mc surprisea at left2 with dissolve
+    #show mc surprisea at left2 with dissolve
+    show mc surprise ca at left2 with dissolve
 
     mc "Прости, прости. Меня привлекло твоё громкое мычание."
-    show mc smilea at left2 with dissolve
+    #show mc smilea at left2 with dissolve
+    show mc smile ca at left2 with dissolve
 
     n "Видимо, я слегка улыбнулся, так как Женя агрессивно на меня взглянула."
 
@@ -258,7 +273,8 @@ label jenya_cp3:
 
     j "И что, смешно? Я забавно мычу, верно?"
 
-    show mc sada at left2 with dissolve
+    #show mc sada at left2 with dissolve
+    show mc sad ca at left2 with dissolve
 
     mc "Нет, просто…"
 
@@ -268,7 +284,8 @@ label jenya_cp3:
 
     j "И вообще, я всегда мычу, когда думаю. Кто-то щёлкает ручкой, кто-то мычит. Что ж теперь?"
 
-    show mc normal handa at left2 with dissolve
+    #show mc normal handa at left2 with dissolve
+    show mc normal hand ca at left2 with dissolve
 
     mc "Кое-кто явно не в настроении."
 
@@ -276,7 +293,8 @@ label jenya_cp3:
 
     j "Я ненавижу этот предмет. Всей душой. Видит Бог, как же я терпеть не могу за ним сидеть."
 
-    show mc blush handa at left2 with dissolve
+    #show mc blush handa at left2 with dissolve
+    show mc blush hand ca at left2 with dissolve
 
     mc "Если хочешь, я могу загладить вину за этот смешок и помочь тебе?"
 
@@ -286,7 +304,8 @@ label jenya_cp3:
 
     mc "Всё норм."
 
-    hide mc blush handa with dissolve
+    #hide mc blush handa with dissolve
+    hide mc blush hand ca with dissolve
     hide jenya blusha with dissolve
 
     n "Подставив стул, я сел рядом и первым делом решил узнать, что Женя уже сделала и что конкретно она не понимает."
@@ -295,10 +314,12 @@ label jenya_cp3:
 
     "Она действительно выкладывается на полную: у меня по этому предмету 15 страниц набралось за все полсеместра."
 
-    show mc normal handa at left2 with dissolve
+    #show mc normal handa at left2 with dissolve
+    show mc normal hand ca at left2 with dissolve
     mc "В общем, смотри…"
 
-    hide mc normal handa with dissolve
+    #hide mc normal handa with dissolve
+    hide mc normal hand ca with dissolve
 
     n "И я принялся ей объяснять, в чём конкретно дело, делая перерывы на каждый её вопрос."
 
@@ -315,12 +336,14 @@ label jenya_cp3:
 
     j "Я тупая?"
 
-    show mc surprisea at left2 with dissolve
+    #show mc surprisea at left2 with dissolve
+    show mc surprise ca at left2 with dissolve
     mc "Чего? Нет, просто тебе это тяжело дается. Это нормально."
 
     j "Мне абсолютно все предметы тяжело даются."
 
-    show mc normal handa at left2 with dissolve
+    #show mc normal handa at left2 with dissolve
+    show mc normal hand ca at left2 with dissolve
     mc "Ты неплохо разбираешься в английском."
 
     j "Я имею в виду профильные предметы. Все эти коды, числа, массивы... Я их терпеть не могу!"
@@ -348,13 +371,15 @@ label jenya_cp3:
     show jenya smilea at right2 with dissolve
     j "Да шучу я, шучу. Как же ты тут без меня."
 
-    show mc smile crosseda at left2 with dissolve
+    #show mc smile crosseda at left2 with dissolve
+    show mc smile crossed ca at left2 with dissolve
     mc "Зная, что ты на пути к своему счастью, как-нибудь справлюсь."
 
     mc "Может быть, сейчас ты и ошиблась с направлением, но, пробуя себя в разном, когда-нибудь ты найдешь то, чем действительно хочешь заниматься. Главное – следовать своему сердцу."
 
     show jenya sada at right2 with dissolve
-    show mc sad crosseda at left2 with dissolve
+    #show mc sad crosseda at left2 with dissolve
+    show mc sad crossed ca at left2 with dissolve
 
     n "Улыбка исчезла, остался только печальный взгляд."
 
@@ -368,7 +393,8 @@ label jenya_cp3:
 
     j "Это направление вообще не моё, учиться здесь – просто мучение. Ты не думай…я пыталась, правда, но ничего не выходит."
 
-    show mc normala at left2 with dissolve
+    #show mc normala at left2 with dissolve
+    show mc normal ca at left2 with dissolve
     mc "Мне тоже прошлая специальность не слишком нравилась, поэтому и перевёлся. Важно то, как ты себя чувствуешь. Если так и будешь себя заставлять – ничего хорошего не выйдет."
 
     j "Может, действительно стоит перевестись..."
@@ -381,11 +407,10 @@ label jenya_cp3:
 
     n "Она попыталась улыбнуться."
 
-    #Музыка плавно меняется на обычную, хорошую.
-
     play music leaves fadein 1.0
 
-    show mc normal crosseda at left2 with dissolve
+    #show mc normal crosseda at left2 with dissolve
+    show mc normal crossed ca at left2 with dissolve
 
     mc "Не волнуйся, всё решится и будет просто зашибись. Давай возвращаться в общагу?"
 
@@ -399,7 +424,8 @@ label jenya_cp3:
 
     j "Ты с Тимуром так и не поговорил нормально?"
 
-    show mc sada at left2 with dissolve
+    #show mc sada at left2 with dissolve
+    show mc sad ca at left2 with dissolve
 
     mc "Не, так и не было нормального общения."
 
@@ -409,7 +435,8 @@ label jenya_cp3:
 
     j "Моя соседка тоже славная, очень помогает с домашкой и в общении с преподавателями."
 
-    show mc smile crosseda at left2 with dissolve
+    #show mc smile crosseda at left2 with dissolve
+    show mc smile crossed ca at left2 with dissolve
     mc "Насчёт ужина есть идеи?"
 
     j @smile "Предлагаю зайти в магазин за продуктами и что-то состряпать. Как тебе?"
@@ -468,8 +495,6 @@ label jenya_cp3:
             "Я убрал за собой на кухне. Переживания за Женю меня не покидали. Успокоившись, я пошёл к комнате моей подруги."
             stop music fadeout 2.5
 
-            #Музыка более приглушённая.
-
     scene bg_hallway_day with dissolve
 
     "Я стоял у её двери. Набравшись сил, я постучал в дверь, чуть не уронив всё приготовленное."
@@ -489,13 +514,15 @@ label jenya_cp3:
 
         j "Спасибо большое, ты мне очень помогаешь. Я так устаю, постоянно учу что-то ночью."
 
-        show mc normal homea at left2 with dissolve
+        #show mc normal homea at left2 with dissolve
+        show mc normal home ca at left2 with dissolve
         mc "Ё-моё, каждую ночь? Будь аккуратней, так и до больницы недолго. Давай хотя бы через день."
 
         show jenya normal homea at right2 with dissolve
         j "Ладно, хорошо. Просто за экзамен переживаю очень сильно."
 
-        show mc smile homea at left2 with dissolve
+        #show mc smile homea at left2 with dissolve
+        show mc smile home ca at left2 with dissolve
         mc "Тогда будем вместе готовиться, отказы не принимаются!"
 
         show jenya smile2 homea at right2 with dissolve
@@ -512,7 +539,8 @@ label jenya_cp3:
 
         "Я понял, что хочу помогать ей чаще: она же так устаёт. Да и Женя всегда на моей стороне. Надо почаще устраивать ей сюрпризы!"
 
-        show mc smile homea at left2 with dissolve
+        #show mc smile homea at left2 with dissolve
+        show mc smile home ca at left2 with dissolve
 
         mc "Надеюсь, это придаст тебе сил. Вечером будем вместе готовиться."
 
@@ -550,7 +578,8 @@ label jenya_cp3:
 
     "Мы делали учебные задания уже несколько часов. Женя не отвлекалась и говорила со мной только по теме. Я решил поинтересоваться, как она себя чувствует."
 
-    show mc normal homea at left2 with dissolve
+    #show mc normal homea at left2 with dissolve
+    show mc normal home ca at left2 with dissolve
     play music gone fadein 1.0
 
     mc "С тобой всё в порядке?"
@@ -561,7 +590,8 @@ label jenya_cp3:
 
     n "Я заметил, как её глаза начали наполняться слезами."
 
-    show mc smile homea at left2 with dissolve
+    #show mc smile homea at left2 with dissolve
+    show mc smile home ca at left2 with dissolve
     mc "Ну-ну, тихо. С экзаменами у тебя всё будет просто отлично, я в тебя верю. А вот насчёт родителей… надо что-то менять. Может, стоит с ними серьезно поговорить?"
 
     if relate_jenya <= 50:
