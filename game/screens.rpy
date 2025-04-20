@@ -290,10 +290,12 @@ transform mm_tooltip_show(delaytimer=0.0, duration=0.25):
 ## внеигровым меню.
 screen quick_menu():
 
-    ## Гарантирует, что оно появляется поверх других экранов.
     zorder 50
 
     $ tt = GetTooltip()
+
+    if not quick_menu:
+        on "hide" action Hide("mm_tooltip")
 
     if quick_menu:
 
@@ -351,7 +353,8 @@ screen quick_menu():
                 unhovered Hide("mm_tooltip")
                 action [Hide("mm_tooltip"), HideInterface()]
         imagebutton auto "gui/qm/qm_diary_%s.png" xpos 30 ypos 5 focus_mask True action ShowMenu('diary')
-
+    else:
+        on "show" action Hide("mm_tooltip")
 
 ## Данный код гарантирует, что экран быстрого меню будет показан в игре в любое
 ## время, если только игрок не скроет интерфейс.

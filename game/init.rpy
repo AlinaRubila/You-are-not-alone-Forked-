@@ -287,3 +287,10 @@ transform tremble:
                     linear 0.05 xoffset -10
                     repeat 2
         linear 0.07 xoffset 0
+
+init python:
+    def set_quick_menu(value):
+        global quick_menu
+        quick_menu = value
+        if not quick_menu:
+            renpy.hide_screen("mm_tooltip")

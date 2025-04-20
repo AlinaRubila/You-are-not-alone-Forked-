@@ -315,7 +315,7 @@ label jenya_good_end:
     "Радовался ещё кое-кто, наверняка хихикая себе под нос. В конце концов, снятие амулета с моего тела для этого человека действительно было новостью недели."
 
     stop music fadeout 2.5
-    $ quick_menu = False
+    $ set_quick_menu(False)
     scene black with dissolve
 
     play background wind

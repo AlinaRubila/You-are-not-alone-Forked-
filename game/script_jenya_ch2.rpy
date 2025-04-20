@@ -5,7 +5,7 @@ label jenya_cp2:
 
     #заставка
 
-    $ quick_menu = False
+    $ set_quick_menu(False)
 
     scene black with dissolve
 
@@ -937,7 +937,7 @@ label jenya_cp2:
 
     scene black with dissolve #мини-игра на поиск предметов
     label find_game:
-        $ hf_init("bg_room_zhenya_dark1", 10,
+        $ hf_init("bg_room_zhenya_dark1", 100,
             ("candle", 580, 565, _("Свеча")),
             ("tablecloth", 335, 835, _("Скатерть")),
             ("incense", 900, 500, _("Благовония")),
@@ -945,6 +945,7 @@ label jenya_cp2:
             mouse=True,
             inventory=False,
             hint=True,
+            brightness=0,
             hover=brightness(.05),
             w=200,
             h=200

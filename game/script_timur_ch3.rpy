@@ -101,7 +101,7 @@ screen puzzle15_full_image():
 
 # начало главы
 label timur_cp3:
-    $ quick_menu = False
+    $ set_quick_menu(False)
 
     scene black with dissolve
     pause 1
