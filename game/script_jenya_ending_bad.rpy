@@ -3,18 +3,21 @@ label jenya_bad_end:
     show jenya sad homea at right2 with dissolve
     j "Нет, ты не понимаешь. Они точно меня не поймут. Надо просто смириться. Надо просто смириться, так будет лучше для всех."
 
-    show mc sad homea at left2 with dissolve
+    #show mc sad homea at left2 with dissolve
+    show mc sad home ca at left2 with dissolve
     mc "Но будет ли лучше для тебя?"
 
     j "Не знаю, но что ты мне предлагаешь?! Бросить всё и перепоступить?! Это не так просто!"
 
     mc "Да, непросто сразу решиться на серьёзный шаг. Давай начнём с малого."
 
-    show mc normal homea at left2 with dissolve
+    #show mc normal homea at left2 with dissolve
+    show mc normal home ca at left2 with dissolve
     mc "Вот сдашь ты этот экзамен и станешь на шаг ближе к тому, чтобы легко перепоступить туда, куда хочешь."
 
     "Я ожидал какой-то реакции, но Женя ничего больше не сказала."
-    hide mc normal homea with dissolve
+    #hide mc normal homea with dissolve
+    hide mc normal home ca with dissolve
     hide jenya sad homea with dissolve
     stop music fadeout 2.0
 
@@ -86,13 +89,15 @@ label jenya_bad_end:
 
     a "Ты готов?"
 
-    show mc sada at left2 with dissolve
+    #show mc sada at left2 with dissolve
+    show mc sad ca at left2 with dissolve
     mc "Я не очень уверен в оценке, жутко нервничаю."
 
     show alex smilea at right2 with dissolve
     a "Я наоборот не сомневаюсь в отличной отметке. Может, мне тебя поспрашивать по темам?"
 
-    show mc smile crosseda at left2 with dissolve
+    #show mc smile crosseda at left2 with dissolve
+    show mc smile crossed ca at left2 with dissolve
 
     mc "Давай."
 
@@ -106,7 +111,8 @@ label jenya_bad_end:
         "Комар":
             show alex normala at right2 with dissolve
             "Шнурок отрицательно помотал головой."
-            show mc sada at left2 with dissolve
+            #show mc sada at left2 with dissolve
+            show mc sad ca at left2 with dissolve
             a "Ну… Всякое случается. Ответ: Коммерческий. Ничего, вопрос номер два!"
         "Коммерческий":
             show alex smilea at right2 with dissolve
@@ -116,15 +122,18 @@ label jenya_bad_end:
         "Комиссионный":
             show alex normala at right2 with dissolve
             "Шнурок отрицательно помотал головой."
-            show mc sada at left2 with dissolve
+            #show mc sada at left2 with dissolve
+            show mc sad ca at left2 with dissolve
             a "Ну… Всякое случается. Ответ: Коммерческий. Ничего, вопрос номер два!"
         "Командировочный":
             show alex normala at right2 with dissolve
             "Шнурок отрицательно помотал головой."
-            show mc sada at left2 with dissolve
+            #show mc sada at left2 with dissolve
+            show mc sad ca at left2 with dissolve
             a "Ну… Всякое случается. Ответ: Коммерческий. Ничего, вопрос номер два!"
 
-    show mc normala at left2 with dissolve
+    #show mc normala at left2 with dissolve
+    show mc normal ca at left2 with dissolve
     show alex normala at right2 with dissolve
     a "Второй вопрос простой — как называют приложения для поиска и устранения вредоносных программ на ПК?"
 
@@ -132,23 +141,28 @@ label jenya_bad_end:
 
         "Антивирус":
             show alex smilea at right2 with dissolve
-            show mc smile crosseda at left2 with dissolve
+            #show mc smile crosseda at left2 with dissolve
+            show mc smile crossed ca at left2 with dissolve
             a "Другого я от тебя и не ожидал. Итак, поехали к настоящему вопросу. Цветочки кончились."
         "Стражник":
             show alex gloomya at right2 with dissolve
-            show mc sada at left2 with dissolve
+            #show mc sada at left2 with dissolve
+            show mc sad ca at left2 with dissolve
             a "Серьёзно? Ты не знаешь про антивирус? Дружище, хватит шутки шутить, давай-ка соберись! Итак, поехали к настоящему вопросу. Цветочки кончились."
         "Египтянин":
             show alex gloomya at right2 with dissolve
-            show mc sada at left2 with dissolve
+            #show mc sada at left2 with dissolve
+            show mc sad ca at left2 with dissolve
             a "Серьёзно? Ты не знаешь про антивирус? Дружище, хватит шутки шутить, давай-ка соберись! Итак, поехали к настоящему вопросу. Цветочки кончились."
 
         "Будка":
             show alex gloomya at right2 with dissolve
-            show mc sada at left2 with dissolve
+            #show mc sada at left2 with dissolve
+            show mc sad ca at left2 with dissolve
             a "Серьёзно? Ты не знаешь про антивирус? Дружище, хватит шутки шутить, давай-ка соберись! Итак, поехали к настоящему вопросу. Цветочки кончились."
 
-    show mc normala at left2 with dissolve
+    #show mc normala at left2 with dissolve
+    show mc normal ca at left2 with dissolve
     show alex normala at right2 with dissolve
     a "Вопрос в следующем — в каком институте был разработан первый механический аналоговый компьютер?"
 
@@ -173,7 +187,8 @@ label jenya_bad_end:
 
     n "Он повернулся и ушёл."
     stop music fadeout 2.0
-    show mc thoughtful crosseda at left2 with dissolve
+    #show mc thoughtful crosseda at left2 with dissolve
+    show mc thoughtful crossed ca at left2 with dissolve
 
     "Сказать, что эта викторина выбила у меня землю из-под ног и серьёзно ударила по моей уверенности — это ничего не сказать."
 
@@ -181,7 +196,8 @@ label jenya_bad_end:
 
     "Мне очень хотелось сейчас подойти к ним и тоже пошутить как-нибудь, пока из аудитории не донеслась моя фамилия с просьбой подойти."
 
-    hide mc thoughtful crosseda at left2 with dissolve
+    #hide mc thoughtful crosseda at left2 with dissolve
+    hide mc thoughtful crossed ca at left2 with dissolve
 
     "Держа образ незнакомки в голове, загадка которой продолжала меня напрягать, я перешагнул через порог, взял билет и сел на место."
 
@@ -200,7 +216,8 @@ label jenya_bad_end:
 
     a "[mcname], где Женя? Она всё ещё не появилась на экзамене."
 
-    show mc thoughtful crosseda at left2 with dissolve
+    #show mc thoughtful crosseda at left2 with dissolve
+    show mc thoughtful crossed ca at left2 with dissolve
 
     mc "Не знаю, но она придёт, я уверен. Возможно, проспала…"
 
@@ -247,7 +264,6 @@ label jenya_bad_end:
     $ set_quick_menu(False)
     scene black with dissolve
     play background wind
-    #$ renpy.notify("Спасибо за прохождение демо-версии!\nНе забудьте оставить отзыв на странице игры или в наших соцсетях)")
 
     centered "{size=+24}{color=#ffffff}Давай помогу начать всё сначала."
 

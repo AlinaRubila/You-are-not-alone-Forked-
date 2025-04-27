@@ -1,7 +1,7 @@
 define nvl_mode = "phone"  ##Allow the NVL mode to become a phone conversation
 define MC_Name = "Я" ##The name of the main character, used to place them on the screen
 define Jenya = "Женя Лис"
-define Alex = "Староста"
+define Alex = "Alexander"
 define Timur = "Тимур"
 
 init -1 python:

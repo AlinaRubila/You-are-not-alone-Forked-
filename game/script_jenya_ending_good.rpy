@@ -3,7 +3,8 @@ label jenya_good_end:
     show jenya sad homea at right2 with dissolve
     j "Что ж, это нужно сделать. Просто мне страшно… Я не знаю, как начать."
 
-    show mc smile homea at left2 with dissolve
+    #show mc smile homea at left2 with dissolve
+    show mc smile home ca at left2 with dissolve
     mc "Просто начни говорить. А дальше слова сами польются."
 
     mc "Не пытайся переспорить родителей, а постарайся донести до них свои чувства и переживания."
@@ -18,7 +19,8 @@ label jenya_good_end:
 
     n "В глазах Жени загорелся решительный огонёк. Теперь я был уверен, что она готова отвечать за своё счастье."
 
-    hide mc smile homea with dissolve
+    #hide mc smile homea with dissolve
+    hide mc smile home ca with dissolve
     hide jenya smile2 homea with dissolve
     stop music fadeout 2.0
 
@@ -68,13 +70,15 @@ label jenya_good_end:
     show alex normala at right2 with dissolve
     a "Ты готов?"
 
-    show mc sada at left2 with dissolve
+    #show mc sada at left2 with dissolve
+    show mc sad ca at left2 with dissolve
     mc "Я не очень уверен в оценке, жутко нервничаю."
 
     show alex smilea at right2 with dissolve
     a "Я наоборот не сомневаюсь в отличной отметке. Может, мне тебя поспрашивать по темам?"
 
-    show mc smile crosseda  at left2 with dissolve
+    #show mc smile crosseda  at left2 with dissolve
+    show mc smile crossed ca  at left2 with dissolve
 
     mc "Давай."
 
@@ -88,7 +92,8 @@ label jenya_good_end:
         "Комар":
             show alex normala at right2 with dissolve
             "Шнурок отрицательно помотал головой."
-            show mc sada at left2 with dissolve
+            #show mc sada at left2 with dissolve
+            show mc sad ca at left2 with dissolve
             a "Ну… Всякое случается. Ответ: Коммерческий. Ничего, вопрос номер два!"
         "Коммерческий":
             show alex smilea at right2 with dissolve
@@ -97,15 +102,18 @@ label jenya_good_end:
         "Комиссионный":
             show alex normala at right2 with dissolve
             "Шнурок отрицательно помотал головой."
-            show mc sada at left2 with dissolve
+            #show mc sada at left2 with dissolve
+            show mc sad ca at left2 with dissolve
             a "Ну… Всякое случается. Ответ: Коммерческий. Ничего, вопрос номер два!"
         "Командировочный":
             show alex normala at right2 with dissolve
             "Шнурок отрицательно помотал головой."
-            show mc sada at left2 with dissolve
+            #show mc sada at left2 with dissolve
+            show mc sad ca at left2 with dissolve
             a "Ну… Всякое случается. Ответ: Коммерческий. Ничего, вопрос номер два!"
 
-    show mc normala at left2 with dissolve
+    #show mc normala at left2 with dissolve
+    show mc normal ca at left2 with dissolve
     show alex normala at right2 with dissolve
     a "Второй вопрос простой — как называют приложения для поиска и устранения вредоносных программ на ПК?"
 
@@ -113,23 +121,28 @@ label jenya_good_end:
 
         "Антивирус":
             show alex smilea at right2 with dissolve
-            show mc smile crosseda at left2 with dissolve
+            #show mc smile crosseda at left2 with dissolve
+            show mc smile crossed ca at left2 with dissolve
             a "Другого я от тебя и не ожидал. Итак, поехали к настоящему вопросу. Цветочки кончились."
         "Стражник":
             show alex gloomya at right2 with dissolve
-            show mc sada at left2 with dissolve
+            #show mc sada at left2 with dissolve
+            show mc sad ca at left2 with dissolve
             a "Серьёзно? Ты не знаешь про антивирус? Дружище, хватит шутки шутить, давай-ка соберись! Итак, поехали к настоящему вопросу. Цветочки кончились."
         "Египтянин":
             show alex gloomya at right2 with dissolve
-            show mc sada at left2 with dissolve
+            #show mc sada at left2 with dissolve
+            show mc sad ca at left2 with dissolve
             a "Серьёзно? Ты не знаешь про антивирус? Дружище, хватит шутки шутить, давай-ка соберись! Итак, поехали к настоящему вопросу. Цветочки кончились."
 
         "Будка":
             show alex gloomya at right2 with dissolve
-            show mc sada at left2 with dissolve
+            #show mc sada at left2 with dissolve
+            show mc sad ca at left2 with dissolve
             a "Серьёзно? Ты не знаешь про антивирус? Дружище, хватит шутки шутить, давай-ка соберись! Итак, поехали к настоящему вопросу. Цветочки кончились."
 
-    show mc normala at left2 with dissolve
+    #show mc normala at left2 with dissolve
+    show mc normal ca at left2 with dissolve
     show alex normala at right2 with dissolve
     a "Вопрос в следующем — в каком институте был разработан первый механический аналоговый компьютер?"
 
@@ -150,7 +163,8 @@ label jenya_good_end:
     show alex normala at right2 with dissolve
 
     a "Не-а. В Массачусетском. В 1927 году. Вэниваром Бушем. Что ж, удачи тебе! Мне нужно отойти."
-    show mc thoughtful crosseda at left2 with dissolve
+    #show mc thoughtful crosseda at left2 with dissolve
+    show mc thoughtful crossed ca at left2 with dissolve
     hide alex normala at right2 with dissolve
     stop music fadeout 2.0
 
@@ -169,14 +183,16 @@ label jenya_good_end:
 
     j "Ну всё, удачи, ни пуха ни пера!"
 
-    show mc smilea at left2 with dissolve
+    #show mc smilea at left2 with dissolve
+    show mc smile ca at left2 with dissolve
 
     mc "К чёрту."
 
     n "Её слова, её образ — всё это напомнило мне, что в жизни есть вещи помимо учёбы. Мне стало гораздо теплее на душе, будто бы то, чем я сейчас буду заниматься, это не так уж и важно."
 
     hide jenya smilea at right2 with dissolve
-    hide mc smilea at left2 with dissolve
+    #hide mc smilea at left2 with dissolve
+    hide mc smile ca at left2 with dissolve
     stop background
     scene bg_classroom with dissolve
 
@@ -230,7 +246,8 @@ label jenya_good_end:
 
     scene bg_kitchen_morning with dissolve
 
-    show mc smile homea at left2 with dissolve
+    #show mc smile homea at left2 with dissolve
+    show mc smile home ca at left2 with dissolve
 
     mc "Очень красивый торт!"
 
@@ -254,11 +271,13 @@ label jenya_good_end:
 
     j "Спасибо."
 
-    show mc surprise homea at left2 with dissolve
+    #show mc surprise homea at left2 with dissolve
+    show mc surprise home ca at left2 with dissolve
 
     n "В моей груди начало что-то гореть. Не в метафорическом смысле, а будто бы кто-то абсолютно материально щипал меня за грудь и параллельно резал её горячим ножом."
 
     "Я начал трогать свою грудь, надеясь найти причину боли и желательно выжить, и быстро сообразил, что дело в амулете."
+    show mc surprise homea at left2 with dissolve
 
     play sound amulet
 
