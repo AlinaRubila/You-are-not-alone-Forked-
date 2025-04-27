@@ -2,6 +2,7 @@
 image cj_trashcan_blur = im.Blur("cj/cj_trashcan.jpg", 1.5)
 
 label jenya_cp2:
+    $ save_name = _("Глава 2. Женя")
 
     #заставка
 

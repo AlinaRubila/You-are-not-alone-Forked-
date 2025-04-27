@@ -7,6 +7,7 @@ image cj_chapter3 = "cj/cj_chapter3.jpg"
 
 
 label jenya_cp3:
+    $ save_name = _("Глава 3. Женя")
 
     $ quick_menu = False
 

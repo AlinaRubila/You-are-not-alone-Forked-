@@ -64,7 +64,7 @@ screen guyChoice():
             auto "images/rutChoice/margo_button_%s.png" focus_mask True action [Jump("aMargo"), Return(value=None)]
 
 label jenya_cp1:
-
+    $ save_name = _("Глава 1. Женя")
     if persistent.ending1 and persistent.ending122:
         scene bg_rut
     else:

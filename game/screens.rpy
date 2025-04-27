@@ -319,7 +319,7 @@ screen quick_menu():
             imagebutton auto "gui/qm/qm_skip_%s.png" focus_mask True:
                 hovered Show("mm_tooltip", ttcontent="Пропустить")
                 unhovered Hide("mm_tooltip")
-                action [Hide("mm_tooltip"), Skip()]
+                action [Hide("mm_tooltip"), Skip(fast=False, confirm=True)]
                 alternate Skip(fast=True, confirm=True)
             #textbutton _("Авто") action Preference("auto-forward", "toggle")
             imagebutton auto "gui/qm/qm_auto_%s.png" focus_mask True:
@@ -926,11 +926,11 @@ screen file_slots(title):
 
                         add FileScreenshot(slot) xpos 45 ypos 70
 
-                        text FileTime(slot, format=_("{#file_time}%A, %d %B %Y, %H:%M"), empty=_("Пустой слот")):
-                            style "slot_time_text" xpos 150 ypos 100 size 19
-
                         text FileSaveName(slot):
-                            style "slot_name_text"
+                            style "slot_name_text" xpos 150 ypos 100 size 19
+
+                        text FileTime(slot, format=_("{#file_time}%d.%m.%y, %H:%M"), empty=_("Пустой слот")):
+                            style "slot_time_text" xpos 150 ypos 100 size 19
 
                         key "save_delete" action FileDelete(slot)
 
@@ -1811,7 +1811,9 @@ screen quick_menu():
 
             textbutton _("Назад") action Rollback()
             textbutton _("Пропуск") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Авто") action Preference("auto-forward", "toggle")
+            #textbutton _("Авто") action Preference("auto-forward", "toggle")
+            textbutton _("Авто") action Confirm("Хотите пропустить?",
+            [Preference("auto-forward", "toggle"), NullAction()])
             textbutton _("Меню") action ShowMenu()
 
 

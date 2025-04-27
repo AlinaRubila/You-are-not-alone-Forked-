@@ -90,7 +90,7 @@ init python:
             persistent.AddAchieve.append(achieve)
             renpy.show_screen("notifyAchieve", achieve)
 label start:
-
+    $ save_name = _("Глава 1")
     play background wind fadein 1.0
     #Чёрный экран с анимацией падающего снега, на фоне звуки ветра.
     stop music fadeout 2.5

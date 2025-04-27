@@ -46,7 +46,7 @@ label timur_1:
     scene bg_rutscreen
     call screen rutChoice
 label timur:
-
+    $ save_name = _("Глава 1. Тимур")
     if persistent.ending1 and persistent.ending122:
         scene bg_rut
     else:
