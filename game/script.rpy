@@ -94,7 +94,7 @@ label start:
     play background wind fadein 1.0
     #Чёрный экран с анимацией падающего снега, на фоне звуки ветра.
     stop music fadeout 2.5
-    $ quick_menu = False
+    $ set_quick_menu(False)
     scene black
 
     show snow1
@@ -154,7 +154,7 @@ label start:
 
     pause 1
 
-    $ quick_menu = False
+    $ set_quick_menu(False)
 
     centered "{size=+24}{color=#ffffff}Стой, не уходи!"
 

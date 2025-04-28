@@ -2,6 +2,7 @@
 label timur_cp2:
     $ save_name = _("Глава 2. Тимур")
     $ quick_menu = False
+    $ set_quick_menu(False)
 
     scene black with dissolve
 

@@ -103,6 +103,7 @@ screen puzzle15_full_image():
 label timur_cp3:
     $ save_name = _("Глава 3. Тимур")
     $ quick_menu = False
+    $ set_quick_menu(False)
 
     scene black with dissolve
     pause 1

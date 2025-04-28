@@ -30,7 +30,7 @@ label timur_bad_end:
     pause 2
     stop music fadeout 2.5
     $ persistent.ending4 = True
-    $ quick_menu = False
+    $ set_quick_menu(False)
 
     scene black with dissolve
     play background audio.wind
