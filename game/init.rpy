@@ -7,7 +7,9 @@ define a = Character('Александр', ctc="ctc_atl", ctc_position="fixed", 
 define e = Character('Ева', color="#3d3327")
 define od = Character('Ольга Дмитриевна', ctc_position="fixed", color="#3d3327", image='comenda', callback=name_callback, cb_name="comenda")
 define od_un = Character('???', ctc_position="fixed", color="#3d3327", image='comenda', callback=name_callback, cb_name="comenda")
-define j_un = Character('???', ctc_position="fixed", color="#3d3327", image='comenda', callback=name_callback, cb_name="jenya")
+define j_un = Character('???', ctc_position="fixed", color="#3d3327", image='jenya', callback=name_callback, cb_name="jenya")
+define a_un = Character('???', ctc_position="fixed", color="#3d3327", image='alex', callback=name_callback, cb_name="alex")
+define sh = Character('Шнурок', ctc_position="fixed", color="#3d3327", image='alex', callback=name_callback, cb_name="alex")
 define un = Character('???', ctc="ctc_atl", ctc_position="fixed", color="#3d3327")
 
 #Теги для сообщений
@@ -209,6 +211,7 @@ define audio.knowledge = "audio/music/Knowledge.mp3"
 define audio.leaves = "audio/music/Leaves.mp3"
 define audio.sunshine = "audio/music/Sunshine.mp3"
 define audio.together = "audio/music/Together.mp3"
+define audio.bright = "audio/music/PiensoViento.mp3"
 
 # Переменные
 

@@ -2,8 +2,11 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 322: is not terminated with a newline. (Check strings and parenthesis.)
-                    action [Hide("mm_tooltip"), Skip(fast=True, confirm=True]
+The label alexander is defined twice, at File "game/script_alexander.rpyc", line 3:
+
+and File "game/script_alexander_ch1.rpy", line 31:
+label alexander:
+
 
 Ren'Py Version: Ren'Py 8.1.2.23090503
-Sun Apr 27 17:29:00 2025
+Fri May  2 15:07:49 2025
