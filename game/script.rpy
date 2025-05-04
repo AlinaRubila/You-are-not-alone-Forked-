@@ -104,6 +104,8 @@ label start:
 
     $ quick_menu = True
 
+    show screen floating_tooltip("Что бы включить синтез речи нажмите \"v\"", 3.0) onlayer overlay
+
     "Конец января."
 
     "Давно у меня не было возможности стоять и просто любоваться снежинками."

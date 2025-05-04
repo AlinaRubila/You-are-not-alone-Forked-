@@ -1819,6 +1819,20 @@ screen quick_menu():
             [Preference("auto-forward", "toggle"), NullAction()])
             textbutton _("Меню") action ShowMenu()
 
+screen floating_tooltip(message, duration=2.0):
+    frame:
+        at tooltip_anim
+        xalign 0.5
+        yalign 0.1
+        padding (10, 10)
+        background "#0008"
+        text message color "#fff"
+
+    timer duration action Hide('floating_tooltip')
+
+transform tooltip_anim:
+    alpha 0.0
+    linear 0.2 alpha 1.0
 
 style window:
     variant "small"
