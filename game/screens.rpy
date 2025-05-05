@@ -322,7 +322,7 @@ screen quick_menu():
                 hovered Show("mm_tooltip", ttcontent="Пропустить")
                 unhovered Hide("mm_tooltip")
                 action [Hide("mm_tooltip"), Skip(fast=False, confirm=True)]
-                alternate Skip(fast=True, confirm=True)
+                alternate Skip(fast=True, confirm=False)
             #textbutton _("Авто") action Preference("auto-forward", "toggle")
             imagebutton auto "gui/qm/qm_auto_%s.png" focus_mask True:
                 hovered Show("mm_tooltip", ttcontent="Автодиалог")

@@ -1,28 +1,40 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 307, in script
-    call screen rutChoice
-ScriptError: could not find label 'alexander'.
+  File "game/script_alexander_ch1.rpy", line 124, in script
+    play sound paper
+  File "renpy/common/000statements.rpy", line 300, in execute_play_sound
+    renpy.sound.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 32, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "game/script_alexander_ch1.rpy", line 124, in <module>
+    play sound paper
+NameError: name 'paper' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\bootstrap.py", line 275, in bootstrap
-    renpy.main.main()
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\main.py", line 670, in main
-    run(restart)
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\main.py", line 144, in run
-    renpy.execution.run_context(True)
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\execution.py", line 953, in run_context
-    context.run()
-  File "game/script.rpy", line 307, in script
-    call screen rutChoice
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\script.py", line 1013, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'alexander'.
+  File "game/script_alexander_ch1.rpy", line 124, in script
+    play sound paper
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\ast.py", line 2259, in execute
+    self.call("execute")
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\ast.py", line 2241, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\statements.py", line 342, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 300, in execute_play_sound
+    renpy.sound.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 32, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\python.py", line 1153, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\python.py", line 1146, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script_alexander_ch1.rpy", line 124, in <module>
+    play sound paper
+NameError: name 'paper' is not defined
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.1.2.23090503
 Ты не один 0.1
-Fri May  2 15:12:44 2025
+Mon May  5 14:57:00 2025
