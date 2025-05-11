@@ -3,7 +3,7 @@
 define mc = Character('[mcname]', ctc="ctc_atl", ctc_position="fixed", color="#3d3327", image='mc', callback=name_callback, cb_name="mc")
 define j = Character('Женя', ctc="ctc_atl", ctc_position="fixed", color="#3d3327", image='jenya', callback=name_callback, cb_name="jenya")
 define t = Character('Тимур', ctc="ctc_atl", ctc_position="fixed", color="#3d3327", image='timur', callback=name_callback, cb_name="timur")
-define a = Character('Александр', ctc="ctc_atl", ctc_position="fixed", color="#3d3327", image='alex', callback=name_callback, cb_name="alex")
+define a = Character('Саша', ctc="ctc_atl", ctc_position="fixed", color="#3d3327", image='alex', callback=name_callback, cb_name="alex")
 define e = Character('Ева', color="#3d3327")
 define od = Character('Ольга Дмитриевна', ctc_position="fixed", color="#3d3327", image='comenda', callback=name_callback, cb_name="comenda")
 define od_un = Character('???', ctc_position="fixed", color="#3d3327", image='comenda', callback=name_callback, cb_name="comenda")
