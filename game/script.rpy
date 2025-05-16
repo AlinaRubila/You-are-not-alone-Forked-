@@ -63,14 +63,6 @@ screen rutChoice():
         xalign 0.5189
         yalign 0.411
         auto "images/rutChoice/jenya_button_%s.png" focus_mask True action [Jump("jenya_cp1")]
-    imagebutton:
-        xalign 0.7889
-        yalign 0.825
-        auto "images/rutChoice/alex_button_%s.png" focus_mask True action [Jump("alexander")]
-    imagebutton:
-        xalign 0.914
-        yalign 0.563
-        auto "images/rutChoice/timur_button_%s.png" focus_mask True action [Jump("timur")]
 
     if persistent.ending122:
         imagebutton:
