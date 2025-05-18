@@ -64,13 +64,6 @@ screen rutChoice():
         yalign 0.411
         auto "images/rutChoice/jenya_button_%s.png" focus_mask True action [Jump("jenya_cp1")]
 
-    if persistent.ending122:
-        imagebutton:
-            xalign 0.5798
-            yalign 0.308
-            auto "images/rutChoice/eve_button_%s.png" focus_mask True action [Jump("eve")]
-
-
 init python:
     #список достижений (пока не трогаем, работает так себе)
     allAchievements = {"Печенька дружбы": "Печенька дружбы",
@@ -296,6 +289,6 @@ label start:
 
     "Нужно выбрать, с кем сесть."
 
-    scene bg_rutscreen
+    scene bg_rutnoeve
 
 call screen rutChoice

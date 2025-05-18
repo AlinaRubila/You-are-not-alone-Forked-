@@ -938,7 +938,7 @@ label jenya_cp2:
 
     scene black with dissolve #мини-игра на поиск предметов
     label find_game:
-        $ hf_init("bg_room_zhenya_dark1", 100,
+        $ hf_init("bg_room_zhenya_dark1", 6,
             ("candle", 580, 565, _("Свеча")),
             ("tablecloth", 335, 845, _("Скатерть")),
             ("incense", 950, 180, _("Благовония")),
