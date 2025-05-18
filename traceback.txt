@@ -1,40 +1,38 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script_alexander_ch1.rpy", line 124, in script
-    play sound paper
-  File "renpy/common/000statements.rpy", line 300, in execute_play_sound
-    renpy.sound.play(_audio_eval(p["file"]),
-  File "renpy/common/000statements.rpy", line 32, in _audio_eval
-    return eval(expr, locals=store.audio.__dict__)
-  File "game/script_alexander_ch1.rpy", line 124, in <module>
-    play sound paper
-NameError: name 'paper' is not defined
+  File "game/init.rpy", line 132, in script
+    image timur angry postera = At('timur angry poster', sprite_highlight('timur'))
+  File "game/init.rpy", line 132, in <module>
+    image timur angry postera = At('timur angry poster', sprite_highlight('timur'))
+Exception: Image 'timur angry' does not accept attributes 'poster'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script_alexander_ch1.rpy", line 124, in script
-    play sound paper
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\ast.py", line 2259, in execute
-    self.call("execute")
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\ast.py", line 2241, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\statements.py", line 342, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 300, in execute_play_sound
-    renpy.sound.play(_audio_eval(p["file"]),
-  File "renpy/common/000statements.rpy", line 32, in _audio_eval
-    return eval(expr, locals=store.audio.__dict__)
-  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\python.py", line 1153, in py_eval
-    return py_eval_bytecode(code, globals, locals)
+  File "game/init.rpy", line 132, in script
+    image timur angry postera = At('timur angry poster', sprite_highlight('timur'))
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\ast.py", line 1237, in execute
+    img = renpy.python.py_eval_bytecode(self.code.bytecode)
   File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\python.py", line 1146, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/script_alexander_ch1.rpy", line 124, in <module>
-    play sound paper
-NameError: name 'paper' is not defined
+  File "game/init.rpy", line 132, in <module>
+    image timur angry postera = At('timur angry poster', sprite_highlight('timur'))
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\defaultstore.py", line 343, in At
+    rv = i(child=rv)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\atl.py", line 495, in __call__
+    child = child._duplicate(_args)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\image.py", line 459, in _duplicate
+    rv.find_target()
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\image.py", line 421, in find_target
+    self.target = target._duplicate(a)
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\core.py", line 499, in _duplicate
+    args.extraneous()
+  File "C:\Users\angry\OneDrive\Рабочий стол\renpy\renpy\display\core.py", line 362, in extraneous
+    raise Exception("Image '{}' does not accept attributes '{}'.".format(
+Exception: Image 'timur angry' does not accept attributes 'poster'.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.1.2.23090503
 Ты не один 0.1
-Mon May  5 14:57:00 2025
+Sun May 18 17:32:19 2025

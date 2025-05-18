@@ -464,8 +464,6 @@ screen main_menu():
     imagebutton auto "gui/mm/mm_diary_%s.png" xpos 550 ypos 850 focus_mask True action ShowMenu("diary") hovered [ Play("sound", "audio/zvuk11.ogg") ]
     add "images/mm/bg_class_10.png"
 
-
-
     ## Эта пустая рамка затеняет главное меню.
     frame:
         style "main_menu_frame"
@@ -486,15 +484,12 @@ screen main_menu():
                 style "main_menu_version"
 
 
-
-
 # Код дневника
 screen diary():
     tag menu
     add "gui/diary_menu.png"
 
     imagebutton auto "gui/button/d_zhenya_%s.png" xpos 1323 ypos 120 focus_mask True action ShowMenu("zhenya") hovered [ Play("sound", "audio/bumaga.ogg") ]
-    imagebutton auto "gui/button/d_timur_%s.png" xpos 1323 ypos 240 focus_mask True action ShowMenu("timur") hovered [ Play("sound", "audio/bumaga.ogg") ]
 
 
     imagebutton auto "gui/button/bt_history_back_%s.png" xpos 200 ypos 960 focus_mask True action Return() hovered [ Play("sound", "audio/bumaga.ogg") ]
@@ -562,86 +557,6 @@ screen zhenya:
         xalign 0.75 yalign 0.1
         if persistent.jenya_withstick:
             text "{image=gui/diary_pictures/cj_portret_jenya_sticker.png}"
-
-screen timur:
-    tag menu
-    add "gui/diary_menu_open.png"
-    imagebutton auto "gui/button/bt_history_back_%s.png" xpos 300 ypos 900 focus_mask True action ShowMenu("diary") hovered [ Play("sound", "audio/bumaga.ogg") ]
-
-    hbox:
-        spacing 0
-        xsize 600
-        ysize 40
-        xalign 0.25 yalign 0.1
-        if persistent.first_note:
-            text "{font=Assya Font Official.otf}{size=+5}26.01 Сон какой-то странный приснился, слишком реальный... Может, это реакция на стресс?{/size}{/font}"
-
-    hbox:
-        spacing 0
-        xsize 600
-        ysize 30
-        xalign 0.25 yalign 0.23
-        if persistent.timur_first_note:
-            text "{font=Assya Font Official.otf}{size=+5}Буду осваиваться на новом месте. Условия в общежитии превзошли мои ожидания в лучшую сторону.{/size}{/font}"
-
-    hbox:
-        spacing 0
-        xsize 600
-        ysize 20
-        xalign 0.25 yalign 0.35
-        if persistent.timur_dreamcontinue:
-            text "{font=Assya Font Official.otf}{size=+5}27.01 А сны всё продолжаются{/size}{/font}"
-
-    hbox:
-        spacing 0
-        xsize 600
-        ysize 20
-        xalign 0.25 yalign 0.42
-        if persistent.timur_argue:
-            text "{font=Assya Font Official.otf}{size=+5}Ну и урод. Не повезло с соседом!{/size}{/font}"
-
-    hbox:
-        spacing 0
-        xsize 600
-        ysize 100
-        xalign 0.25 yalign 0.52
-        if persistent.timur_feeling:
-            text "{font=Assya Font Official.otf}{size=+5}17.02 Какое-то странное совпадение со сном.{/size}{/font}"
-    hbox:
-        spacing 0
-        xsize 600
-        ysize 20
-        xalign 0.97 yalign 0.1
-        if persistent.timur_check:
-            text "{image=gui/diary_pictures/cj_check.png}"
-
-    hbox:
-        spacing 0
-        xsize 600
-        ysize 50
-        xalign 0.25 yalign 0.6
-        if persistent.timur_help:
-            text "{font=Assya Font Official.otf}{size=+5}Я рад, что смог помочь Тимуру. Ситуация очень напоминает мой сегодняшний сон.{/size}{/font}"
-
-    hbox:
-        spacing 0
-        xsize 600
-        ysize 50
-        xalign 0.25 yalign 0.75
-        if persistent.timur_fun:
-            text "{font=Assya Font Official.otf}{size=+5}Сегодня мы с Тимуром хорошо провели время. Оказывается, мой сосед – очень интересный собеседник.{/size}{/font}"
-
-    hbox:
-        spacing 0
-        xsize 600
-        ysize 50
-        xalign 0.78 yalign 0.6
-        if persistent.timur_bad and not(persistent.timur_good):
-            text "{font=Assya Font Official.otf}{size=+5}19.02 Вот тебе новость — уехал, оставил меня одного со всем разбираться. Разочарование.{/size}{/font}"
-        elif persistent.timur_good:
-            text "{font=Assya Font Official.otf}{size=+5}19.02 Я так устал за день, но главное всё сделал. Благодаря советам Тимура работать было легче.{/size}{/font}"
-
-
     # Код галлереи
 screen gallery():
     tag menu
