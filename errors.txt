@@ -2,11 +2,9 @@
 errors listed below, and try again.
 
 
-The label alexander is defined twice, at File "game/script_alexander.rpyc", line 3:
-
-and File "game/script_alexander_ch1.rpy", line 31:
-label alexander:
-
+File "game/script_alexander_ch1.rpy", line 427: expected end of line
+    stop sound signal
+               ^
 
 Ren'Py Version: Ren'Py 8.1.2.23090503
-Fri May  2 15:07:49 2025
+Sun May 18 21:26:01 2025
