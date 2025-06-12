@@ -954,7 +954,7 @@ label jenya_cp2:
         $ hf_bg()
         with dissolve
 
-        centered "{size=+24}{color=#ffffe0}Собери все предметы"
+        centered "{size=+24}{color=#ffffe0}Найди все предметы в комнате."
 
         $ hf_start()
 
@@ -963,7 +963,7 @@ label jenya_cp2:
         if hf_return == 0:
             centered "{size=+24}{color=#ffffe0}У тебя получилось!"
         else:
-            centered "{size=+24}{color=#ffffe0}Не расстраивайся! \nНе собрано предметов: [hf_return]."
+            centered "{size=+24}{color=#ffffe0}Не расстраивайся! \nНе найдено предметов: [hf_return]."
     if hf_return != 0:
         menu:
             "Попробуешь ещё раз?"
@@ -1102,7 +1102,7 @@ label jenya_cp2:
     show mc smile home ca at left2 with dissolve
 
     mc "Это само собой. Куда мы денемся."
-    #Звук урчания живота
+    play sound stomach
 
     n"На этот раз это был живот Жени."
 

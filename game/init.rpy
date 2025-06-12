@@ -177,6 +177,7 @@ define audio.ruining = "audio/sounds/ruin_room.mp3"
 define audio.smash = "audio/sounds/smash.wav"
 define auidio.trash = "audio/sounds/trash.mp3"
 define audio.scotch = "audio/sounds/scotch.mp3"
+define audio.stomach = "audio/sounds/stomach_groaning.mp3"
 
 #эмбиент
 define audio.city = "audio/ambient/city.mp3"
