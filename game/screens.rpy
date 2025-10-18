@@ -1038,10 +1038,10 @@ screen preferences():
         style_group "pref"
         bar value Preference("sound volume")
 
-    #text _("Громкость голоса") xpos 1000 ypos 490
-    #frame xpos 1000 ypos 540:
-        #style_group "pref"
-        #bar value Preference("voice volume")
+    text _("Громкость голоса") xpos 1000 ypos 490
+    frame xpos 1000 ypos 540:
+        style_group "pref"
+        bar value Preference("voice volume")
 
     text _("Скорость текста") xpos 1000 ypos 610
     frame xpos 1000 ypos 660:
