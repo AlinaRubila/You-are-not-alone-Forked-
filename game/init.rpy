@@ -11,6 +11,8 @@ define j_un = Character('???', ctc_position="fixed", color="#3d3327", image='jen
 define a_un = Character('???', ctc_position="fixed", color="#3d3327", image='alex', callback=name_callback, cb_name="alex")
 define sh = Character('Шнурок', ctc_position="fixed", color="#3d3327", image='alex', callback=name_callback, cb_name="alex")
 define un = Character('???', ctc="ctc_atl", ctc_position="fixed", color="#3d3327")
+define bb = Character('Библиотекарша', ctc_position="fixed", color="#3d3327", image='librarian', callback=name_callback, cb_name="librarian")
+define cl = Character('Уборщик', ctc_position="fixed", color="#3d3327", image='cleaner', callback=name_callback, cb_name="cleaner")
 
 #Теги для сообщений
 
@@ -152,6 +154,14 @@ image comenda sad = At('commandant winter sad', sprite_highlight('comenda'))
 image comenda home normala = At('commandant home', sprite_highlight('comenda'))
 image comenda home angrya = At('commandant home angry', sprite_highlight('comenda'))
 image comenda home scared = At('commandant home scared', sprite_highlight('comenda'))
+
+image librarian normala = At('librarian normal', sprite_highlight('librarian'))
+image librarian happya = At('librarian happy', sprite_highlight('librarian'))
+image librarian smilea = At('librarian smile', sprite_highlight('librarian'))
+image librarian angrya = At('librarian angry', sprite_highlight('librarian'))
+image librarian surprisea = At('librarian surprise', sprite_highlight('librarian'))
+
+image cleaner normala = At('cleaner normal', sprite_highlight('cleaner'))
 
 image eve silhouette black glow = At('eva silhouette black glow', sprite_highlight('e')) #2 глава Жени
 image eve silhouette grey glow = At('eva silhouette grey glow', sprite_highlight('e')) #1 глава Тимура
