@@ -86,6 +86,7 @@ label jenya_cp1:
     mc "Привет. Не против, если подсяду?"
 
     scene cj_meet_jenya_smile with dissolve
+    #voice jenya_grin
 
     un "Привет! Садись, конечно!"
 
@@ -100,14 +101,16 @@ label jenya_cp1:
     mc "А меня [mcname], приятно познакомиться!"
 
     scene cj_meet_jenya_smile with dissolve
+    voice jenya_grin
 
     j "Взаимно!"
 
-    scene cj_meet_jenya_smile with dissolve
+    #scene cj_meet_jenya_smile with dissolve
 
     "Женя широко улыбнулась мне, и я понял, что сесть к ней было правильным выбором. Какая-то у неё позитивная энергетика, она сразу расположила меня к себе. Думаю, мы даже сможем подружиться."
 
     scene cj_meet_jenya_search with dissolve
+    voice jenya_o
 
     "Неожиданно Женя отвернулась и принялась копошиться в сумке."
 
@@ -116,6 +119,7 @@ label jenya_cp1:
     j "Ой, хочешь печеньку?"
 
     scene cookieCG with dissolve
+    voice mc_thinking
 
     "Я задумался."
 
@@ -173,6 +177,7 @@ label jenya_cp1:
     mc "Давай."
 
     show jenya thoughtfula at right2 with dissolve
+    voice jenya_thinking
 
     j "Про кого ты хочешь узнать?"
     hide jenya thoughtfula at right2 with dissolve
@@ -187,6 +192,7 @@ label jenya_cp1:
             scene bg_classroom_blur with dissolve
             show jenya smilea at right2 with dissolve
             show mc normala at left2 with dissolve
+            voice jenya_laugh_short
 
             j "Поживёшь — увидишь."
 
@@ -230,6 +236,7 @@ label jenya_cp1:
             scene bg_classroom_blur with dissolve
             show jenya normala at right2 with dissolve
             show mc normala at left2 with dissolve
+            voice jenya_sigh_unpleased
 
             j "Я пыталась заговорить с ним, но на всё получала односложные ответы. Лучше уж не говорить совсем, чем говорить так."
 
@@ -253,6 +260,7 @@ label jenya_cp1:
             scene bg_classroom_blur with dissolve
             show jenya smile at right2 with dissolve
             show mc normala at left2 with dissolve
+            voice jenya_grin
 
             j "Такая забавная! Глаза сияют при виде Шнурка, а тот дурак дураком: вроде умный, а ничего не понимает."
 
@@ -274,14 +282,17 @@ label jenya_cp1:
     "И вот наконец-то в аудитории появляется преподаватель. Он, не извинившись за своё опоздание, вальяжно направился к своему месту."
 
     show jenya normala at right2 with dissolve
+    voice jenya_sigh_unpleased
 
     j "Ну вот… я уж думала, пары сегодня не будет."
 
     show mc smile crosseda at left2
+    voice mc_grin
 
     mc "Наверное, препод, как и я, потерялся в этом корпусе."
 
     show jenya smilea at right2
+    voice jenya_o
 
     j "Ой, так давай я тебе после пар экскурсию проведу! Я тут всё знаю!"
 
@@ -292,6 +303,7 @@ label jenya_cp1:
             mc "Давай, а то я снова заблужусь, как сегодня."
 
             show jenya smilea at right2
+            voice jenya_grin
 
             j "Будет весело!"
 
@@ -308,6 +320,7 @@ label jenya_cp1:
             mc "Прости, сегодня не смогу."
 
             show jenya angrya at right2
+            voice jenya_sigh_unpleased
 
             j "Ну и ладно. Если снова потеряешься, то сам виноват."
 
@@ -384,6 +397,7 @@ label jenya_cp1:
             j "Ну как тебе первый день?"
 
             show mc smile crosseda at left2
+            voice mc_chuckle_pleased
 
             mc "Довольно неплохо."
 
@@ -394,6 +408,7 @@ label jenya_cp1:
             mc "В 3 общаге."
 
             show jenya smilea at right2 with dissolve
+            voice jenya_grin
 
             j "Ой, так я тоже! Пошли вместе!"
 
@@ -414,10 +429,12 @@ label jenya_cp1:
         scene bg_classroom with dissolve
         show jenya smilea at right2 with dissolve
         show mc normala at left2 with dissolve
+        voice jenya_grin
 
         j "Ну что, готов к экскурсии от непревзойденной меня?"
 
         show mc smile crosseda at left2
+        voice mc_grin
 
         mc "Конечно!"
 
@@ -427,6 +444,7 @@ label jenya_cp1:
         hide screen scr_hider
 
         show jenya normala at right2 with dissolve
+        voice jenya_thinking
         j "Тогда куда первым делом направимся?"
         jump ChoiceExcursion
 
@@ -512,6 +530,7 @@ label jenya_cp1:
 
     "Мы с ней, казалось, были на одной волне, и это одновременно успокаивало меня и пугало, невероятно пугало."
     "Наконец она уничтожила тишину задумчивым…."
+    voice ghost_sigh_sad
 
     un "Наверное, в парке сейчас так красиво…"
 
@@ -530,6 +549,7 @@ label jenya_cp1:
     "Между нами повисла холодная тишина, лишь ветер осмеливался её нарушить."
 
     "Возможно, если прислушаться, можно было услышать сообщение, которое он пытался передать."
+    voice ghost_sigh_sad
 
     un "Жаль, я не увидела, как цветут яблони в парке."
 
@@ -544,6 +564,7 @@ label jenya_cp1:
     play music ambulance
 
     "Её ответ был будто проигран задом наперёд. Но, что удивительно, я почти догадался, что она имеет в виду. Возможно, я бы понял, что она ответила, если бы не громкий звук сирены в моей голове."
+    voice mc_pain
 
     "Голову словно кто-то сжимал. Я надавил на свои виски, и вся двойственность кончилась. Осталась только боль. Жгучая, как удар скорпиона, и продолжительная, как свежее клеймо."
 
@@ -556,6 +577,7 @@ label jenya_cp1:
     scene black with off
     pause 1
 
+    voice mc_sigh_scared
     "И вот, когда я, казалось, достиг дна этой темноты, я проснулся, и цвет, что я видел, сменился на белый — цвет потолка моей комнаты в общаге."
 
     scene bg_room_morning_blur with onn
@@ -572,6 +594,8 @@ label jenya_cp1:
     play sound ambulance2
 
     "Уборщик подметал мусор, мужчина в костюме шёл по своим, наверняка очень важным, делам, а за поворотом исчезала из виду машина скорой помощи с тем же звуком, что недавно, казалось бы, разрывал мою голову на несколько частей."
+
+    voice mc_sigh_tired
 
     "Жизнь идёт своим чередом. Я выдохнул и попытался поспать ещё раз, но, хоть убей, больше не хотелось."
     if persistent.jenya_dreamcontinue != True:
@@ -603,6 +627,7 @@ label jenya_cp1:
     pause 1
 
     scene cj_cockroach_screamer2 at tremble
+    voice mc_sigh_scared
 
     pause 1
 
@@ -649,6 +674,7 @@ label jenya_cp1:
             mc "О, доброе утро."
 
             show jenya normal homea at right2 with dissolve
+            voice jenya_questioning
 
             j "Что-то ты неважно выглядишь, у тебя всё хорошо?"
 
@@ -659,22 +685,26 @@ label jenya_cp1:
             "Открыв упаковку пельменей, я хотел было приступить к «чуду кулинарии», но…"
 
             show jenya surprise homea at right2 with dissolve
+            voice jenya_thinking
 
             j "Ты действительно будешь это есть?!"
 
             j "Сейчас же только утро, а ты пельмени есть собрался…"
 
             mc "Ну… ничего нормального всё равно нет, так что придётся есть это."
+            voice jenya_sigh_unpleased
 
             show jenya angry homea at right2 with dissolve
 
             n "Не понимаю, чем это было вызвано, но выражение лица Жени резко сменилось. Оно приняло недоуменный и слегка осуждающий вид. Немного подумав, она подуспокоилась и спокойно спросила…"
 
             show jenya normal homea at right2 with dissolve
+            voice jenya_questioning
 
             j "Слушай, а какой у тебя номер комнаты?"
 
             mc "Ну 205, а тебе зачем?"
+            voice mc_chuckle_pleased
 
             mc "В гости хочешь заглянуть?"
 
@@ -682,6 +712,7 @@ label jenya_cp1:
 
             mc "Ну ты это, заходи, если что. Всё равно с соседом нормально не поболтать."
             show jenya smile2 homea at right2 with dissolve
+            voice jenya_grin
 
             j "Возьму на заметку."
 
@@ -715,6 +746,7 @@ label jenya_cp1:
             "Я начал тихо раскладывать свои вещи, стараясь не шуметь, чтобы не мешать соседу, который до сих пор спал. Однако мои усилия, казалось, были напрасными, потому что из-за моих шевелений вещами шума было не избежать."
 
             show timur angry homea with dissolve
+            voice timur_sigh_unpleased
 
             t "Эй, ну ты можешь не шуметь с утра пораньше?!"
 
@@ -803,6 +835,7 @@ label jenya_cp1:
         play sound stuk
         play background room fadein 0.5
         "Меня разбудил стук в дверь."
+        voice mc_asking
 
         "Кто бы это мог быть? Вроде бы я никаких гостей не ждал. Да и Тимур, кажется, собирался провести этот день в одиночестве."
 

@@ -1,21 +1,21 @@
+>>>>>>> TimursChapter
+renpy.alpha renpy.texture
+renpy.dissolve renpy.geometry
 renpy.matrixcolor renpy.texture
 renpy.alpha renpy.geometry renpy.texture
-renpy.alpha renpy.solid
->>>>>>> ForAnagor
-renpy.dissolve renpy.dissolve
-<<<<<<< HEAD
-renpy.geometry renpy.texture
->>>>>>> TimursChapter
+renpy.solid
 =======
+renpy.imagedissolve renpy.imagedissolve
+renpy.geometry renpy.texture
+renpy.alpha renpy.solid
+renpy.geometry renpy.imagedissolve
+renpy.dissolve renpy.dissolve
+>>>>>>> ForAnagor
+>>>>>>> ForINK
+renpy.ftl
 renpy.alpha renpy.geometry renpy.solid
 renpy.texture
-renpy.dissolve renpy.geometry
-renpy.ftl
 >>>>>>> origin
+<<<<<<< HEAD
 renpy.geometry renpy.solid
-renpy.geometry renpy.imagedissolve
->>>>>>> ForINK
-renpy.imagedissolve renpy.imagedissolve
-renpy.solid
-renpy.alpha renpy.texture
 renpy.geometry renpy.matrixcolor renpy.texture

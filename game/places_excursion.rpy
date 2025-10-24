@@ -14,8 +14,10 @@ label Canteen:
     scene bg_uni_day with dissolve
 
     show mc normala at left2 with dissolve
+    voice mc_chuckle_pleased
 
     mc "С моими навыками готовки мне стоит ближе познакомиться со столовой."
+    voice jenya_laugh_short
 
     show jenya smilea at right2 with dissolve
 
@@ -52,10 +54,12 @@ label Canteen:
     j "Ну, столовка, в принципе, нормальная, готовят вкусно. Иногда кто-то из студентов помогает поварам, и им за это разрешают выносить еду с собой. Но я готовлю сама  в общаге, получается довольно вкусно."
 
     show mc smile crosseda at left2 with dissolve
+    voice mc_grin
 
     mc "Напрашиваешься на комплимент?"
 
     show jenya smilea at right2 with dissolve
+    voice jenya_grin
     j "Возможно."
 
     if skolko_mest_na_excursion < 3:
@@ -130,6 +134,7 @@ label Library:
 
     j "Если будешь мил с библиотекаршей, то она может подсказать много интересного. А ещё она ужасная сплетница. Сюда я хожу не часто, но порой хочется побыть в тишине."
 
+    voice jenya_sigh_sad
     n "В глазах Жени промелькнула тоска. Даже такому яркому и весёлому человеку, кажется, было от чего прятаться в тишине библиотеки."
 
     show jenya normala at right2 with dissolve
