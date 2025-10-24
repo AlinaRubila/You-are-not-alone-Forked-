@@ -78,6 +78,7 @@ label jenya_cp2:
     stop music
     scene black with dissolve
     mc "А?"
+    voice mc_sigh_scared
 
     play sound tire
 
@@ -89,6 +90,7 @@ label jenya_cp2:
     play sound bibika
 
     "Свет фар."
+    voice jenya_spooked
 
     "Что-то оттянуло меня назад от проезжей части."
 
@@ -108,14 +110,17 @@ label jenya_cp2:
     n"Я был очень благодарен ей за спасение."
 
     show mc surprise wintera at left2 with dissolve
+    voice mc_sigh_relief
 
     mc "Женя! Как же ты вовремя… Ты меня спасла!"
 
     show mc normal wintera at left2 with dissolve
+    voice mc_sigh_tired
 
     mc "Что-то я совсем не выспался… Эта учёба меня так вымотала."
 
     show jenya angry wintera at right2 with dissolve
+    voice jenya_sigh_unpleased
 
     j "Не выспался? Тебя чуть не убило, дурак!"
 
@@ -134,6 +139,7 @@ label jenya_cp2:
     j "Растяпа… Надо будет тебе лекцию провести о правилах дорожного движения."
 
     show jenya grin wintera at right2 with dissolve
+    voice jenya_grin
 
     j "Но как же круто я тебя спасла! Может, у меня есть суперспособности? Классно я тебя вытянула."
 
@@ -142,6 +148,7 @@ label jenya_cp2:
     n"Мельком пробежал задор на лице Жени. Что ж, это и правда было круто."
 
     n"В голове промелькнул героический образ Жени с развевающимся плащом и широкой улыбкой."
+    voice mc_chuckle_pleased
 
     mc "Да ты настоящая супер-героиня! Что бы я без тебя делал?"
 
@@ -167,11 +174,13 @@ label jenya_cp2:
     play music jenyar
     n "Как только зазвонил телефон, Женя резко изменилась в лице."
 
+    voice jenya_spooked
     show jenya surprisea at right2 with dissolve
 
     j "Ой! Я же забыла позвонить! Блин, даже не написала сегодня. Только не это…"
 
     show mc normala at left2 with dissolve
+    voice mc_asking
 
     mc "Что случилось? Что не написала?"
 
@@ -196,6 +205,7 @@ label jenya_cp2:
     "Интересно, что случилось?"
 
     show jenya angrya at right2 with dissolve
+    voice jenya_sigh_unpleased
 
     j "Ну я не пойму… Неужели это так страшно? Я бы точно позвонила тебе после пар!"
 
@@ -210,6 +220,7 @@ label jenya_cp2:
     "Спустя какое-то время Женя вернулась. Удивительно, но на её лице царила та же улыбка, что и несколькими минутами ранее."
 
     show mc sad crosseda at left2 with dissolve
+    voice mc_sigh_sad
 
     mc "Блин, прости, это из-за меня?"
 
@@ -235,6 +246,7 @@ label jenya_cp2:
 
     "Женя выглядит более нервно, чем обычно. Она даже не смотрит в мою сторону, а просто всю пару рисует в своей тетрадке."
 
+    voice jenya_sigh_surprised
     scene cj_meet_jenya_blush with dissolve
 
     "Несколько раз я пытался подсмотреть, что же она там рисовала. Но все мои попытки были тщетны. Женя отодвинулась от меня подальше и закрыла рисунок рукой."
@@ -310,6 +322,7 @@ label jenya_cp2:
     "Вообще, насколько я помню, сегодня у нас встреча, организованная Шнурком. Как раз подойду, напомню Жене. Глядишь и диалог завяжется."
 
     show jenya angrya at right2 with dissolve
+    voice jenya_angry
 
     j "Как же я ненавижу эту учёбу, ну почему именно здесь… Сегодня не мой день."
 
@@ -318,6 +331,7 @@ label jenya_cp2:
     mc "А ты разве поступила не туда, куда хотела?"
 
     show jenya sada  at right2 with dissolve
+    voice jenya_sigh_sad
 
     j "Не совсем. Я больше горела желанием идти на графический дизайн. Но родители были не слишком рады и, как всегда, всё решили за меня."
 
@@ -341,6 +355,7 @@ label jenya_cp2:
 
     show mc normal crosseda  at left2 with dissolve
     show jenya normala  at right2 with dissolve
+    voice mc_grin
 
     mc "Самому интересно. Опять, наверное, про учёбу, долги..."
 
@@ -375,6 +390,7 @@ label jenya_cp2:
 
             show mc smile crosseda at left2 with dissolve
 
+            voice mc_chuckle_pleased
             mc "Слушай, может, он женится на этой учебе, а?  Он только о ней и говорит."
 
             show jenya normala at right2 with dissolve
@@ -388,6 +404,7 @@ label jenya_cp2:
             mc "А что она на него всё время пялится? Сейчас дыру прожжёт."
 
             show jenya surprisea  at right2 with dissolve
+            voice jenya_sigh_surprised
 
             j "А ты разве не знаешь?"
 
@@ -396,10 +413,12 @@ label jenya_cp2:
             j "Она влюблена в него. На самом деле, это заметно, если присмотреться."
 
             show mc smile crosseda at left2 with dissolve
+            voice mc_grin
 
             mc "Да начнутся любовные страсти!"
 
-            show jenya smilea  at right2 with dissolve
+            show jenya smilea at right2 with dissolve
+            voice jenya_grin
 
             j "Не любитель романтики?"
 
@@ -407,7 +426,8 @@ label jenya_cp2:
 
             "На самом деле, я не против романтики, просто конкретно эта девушка меня пугает. Я в принципе не воспринимаю нормальным любые виды сталкинга."
 
-            show mc normala  at left2 with dissolve
+            show mc normala at left2 with dissolve
+            voice mc_chuckle_unpleased
 
             mc "Да не то, чтобы… Но вот так сталкерить парня и проходу не давать… Со стороны смотрится странно, согласись?"
 
@@ -426,9 +446,11 @@ label jenya_cp2:
     mc "В моём городе, наверное, сейчас всё белое. Хочу взглянуть на любимый парк. Здесь, в Москве, зима выдалась почти без снега."
 
     show jenya normal wintera  at right2 with dissolve
+    voice jenya_grin
 
     j "Здесь-то без снега? Да у меня в городе бывало пару раз за зиму снег выпадет, и то, сразу тает. А в Москве всё такое снежное."
 
+    voice mc_chuckle_pleased
     mc "Это ты просто не видела настоящей снежной зимы. Будь мы сейчас в моём городе, нам бы пришлось в вуз ползти через сугробы."
 
     show jenya grin wintera  at right2 with dissolve
@@ -460,6 +482,7 @@ label jenya_cp2:
     play sound stuk
     scene bg_room_morning with dissolve
 
+    voice mc_a_unpleased
     mc "А? Что? Кто здесь?"
 
     show eve silhouette black glow with dissolve
@@ -485,6 +508,7 @@ label jenya_cp2:
 
     "Над ней была цифра 256. Открыв дверь, я проснулся."
 
+    voice mc_sigh_scared
     scene  bg_room_dawn #at pan
     with dissolve
     #Спокойная музыка.
@@ -518,6 +542,7 @@ label jenya_cp2:
     mc "Как вкусно пахнет. Я уже представляю этот вкус."
 
     show jenya smile3 handsa  at right2 with dissolve
+    voice jenya_questioning
 
     j "Тоже хочешь? Могу на тебя сделать."
 
@@ -552,10 +577,12 @@ label jenya_cp2:
     mc "Ты же знаешь моего соседа, да? Ты вроде про него рассказывала."
 
     show jenya normal handsa at right2 with dissolve
+    voice jenya_questioning
 
     j "Ну да, а что такое?"
 
     show mc sad homea at left2 with dissolve
+    voice mc_sigh_sad
 
     mc "Да он постоянно спит, а когда я пытаюсь заговорить с ним, молчит. Думал, может, ты про него что-нибудь знаешь."
 
@@ -564,6 +591,7 @@ label jenya_cp2:
     mc "Я вообще в этом не разбираюсь."
 
     show jenya grin handsa at right2 with dissolve
+    voice jenya_grin
 
     j "А кто ты по знаку зодиака? Хочешь, погадаю?"
 
@@ -603,22 +631,27 @@ label jenya_cp2:
     mc "Я не очень верю в такое, но спасибо за совет."
 
     show jenya normal smile2 handsa at right2 with dissolve
+    voice jenya_laugh_short
     j "Ты ещё убедишься в достоверности моих гороскопов!"
 
     n"Женя многозначительно ухмыльнулась. Она источала такую уверенность, что, казалось, она с первой нашей встречи уже знала про меня всё."
 
     show mc smile homea  at left2 with dissolve
+    voice mc_grin
 
     mc "Я смотрю, ты такой темой увлекаешься."
 
     j "Да, есть немного. Я ещё и на таро раскладываю, только вот родители…"
     show jenya sad handsa at right2 with dissolve
+    voice jenya_sigh_sad
 
     n"Я сразу заметил, как лицо Жени поменялось."
 
     show mc normal homea at left2 with dissolve
+    voice mc_asking
 
     mc "М?"
+    voice jenya_sigh_unpleased
 
     j "Они сильно недовольны такими увлечениями. Постоянные упрёки, занудные разговоры… «Хватит ерундой заниматься»."
 
@@ -633,6 +666,7 @@ label jenya_cp2:
     "Думаю, когда будет более удобный случай, мы ещё вернёмся к этой теме."
 
     show jenya thoughtful handsa at right2 with dissolve
+    voice jenya_questioning
 
     j "Пойдём погуляем сегодня в парк?"
     menu:
@@ -647,18 +681,23 @@ label jenya_cp2:
             play background park
             scene bg_park_winter with dissolve
             show jenya smile wintera at right2 with dissolve
+            voice jenya_grin
 
             j "Как же здесь красиво!"
 
             show mc smile wintera at left2 with dissolve
+            voice mc_grin
 
             mc "Согласен. С таким человеком рядом вид становится ещё прекраснее."
 
             show jenya normal smile wintera at right2 with dissolve
+            voice jenya_questioning
 
             j "Каким?"
 
             mc "Жизнерадостным, энергичным. Я рад, что мы с тобой познакомились и так сдружились."
+
+            voice jenya_laugh_short
 
             j "Я тоже рада."
 
@@ -669,10 +708,12 @@ label jenya_cp2:
             "На улице, конечно, зима, но мороз не обжигает, и гулять можно долго."
 
             show jenya thoughtful wintera  at right2 with dissolve
+            voice jenya_questioning
 
             j "Ты не против, если мы порисуем?"
 
             show mc normal wintera at left2 with dissolve
+            voice mc_chuckle_pleased
 
             mc "Да, без проблем."
 
@@ -686,6 +727,7 @@ label jenya_cp2:
             hide cj_mcpark with dissolve
 
             show cj_portret_jenya with dissolve
+            voice jenya_laugh_short
 
             "Женя, увидев мой рисунок, улыбнулась. Я, конечно, не такой талантливый художник. Рад, что её позабавили мои каракули."
 
@@ -704,6 +746,7 @@ label jenya_cp2:
             show jenya blush wintera at right2 with dissolve
             n "Женя покраснела."
 
+            voice jenya_thinking
             j "Спасибо."
             show jenya smile wintera at right2 with dissolve
 
@@ -751,6 +794,7 @@ label jenya_cp2:
 
         "Нет":
             show mc normal homea at left2 with dissolve
+            voice mc_sigh_tired
             mc "Сегодня не смогу, я себя не очень хорошо чувствую, прости."
 
             j "Ничего страшного, выздоравливай. Хорошего дня!"
@@ -768,6 +812,7 @@ label jenya_cp2:
 
             "Как вдруг я заметил дверь комнаты, что была в моём сне. Ещё и с тем же номером: “256”."
 
+            voice mc_a_unpleased
             mc "Что за?.."
 
             scene cj_door2 with dissolve
@@ -788,6 +833,7 @@ label jenya_cp2:
             play sound screamer_short
             scene cj_door_girl with dissolve
             #Пугающий, резкий звук.
+            voice mc_sigh_scared
 
             "Я отскочил от двери и упал на спину."
             "Дверь открылась. На пороге стояла девушка, живущая в этой квартире."
@@ -801,6 +847,7 @@ label jenya_cp2:
             "Я растерялся. Медленно встал и от недоумения не придумал ничего лучше, как взять книгу."
 
             "Мало ли, подумает ещё что-то не то…"
+            voice mc_confused
 
             mc "А?"
 
@@ -811,6 +858,7 @@ label jenya_cp2:
             mc "А откуда она у тебя?"
 
             un "Не знаю, когда я сюда въехала, она лежала на столе, а мне чужого добра не надо, своего полно."
+            voice mc_sigh_calming
 
             mc "Спасибо."
 
@@ -840,6 +888,7 @@ label jenya_cp2:
 
             "«Здравствуйте, Вася! Я нашёл ваш номер в книге, которую мне дала девушка из комнаты, которая мне приснилась». Я и сам ничего бы не понял, поступи мне такой звонок."
 
+    voice mc_sigh_tired
     n"Неожиданно моё тело накрыла невероятная усталость. Каждая частичка меня молила прилечь и отдохнуть."
 
     "Я лёг на кровать и всего на мгновение прикрыл глаза."
@@ -860,6 +909,7 @@ label jenya_cp2:
     scene cj_night_eve_1 with dissolve
     stop background fadeout 1.0
 
+    voice mc_sigh_scared
     n"Я посмотрел на дорогу. Меня передёрнуло от страха."
 
     n"Вдоль дороги ходила девушка. В ней я сразу узнал свою таинственную преследовательницу."
@@ -887,6 +937,7 @@ label jenya_cp2:
     n"Я резко открыл глаза. Где я? Это всё ещё сон?"
 
     "С соседней кровати я услышал скрип пружин. Тимур здесь. Значит, это не сон. Или Тимур умудряется даже у меня во сне спать."
+    voice mc_sigh_relief
 
     n "Фух, как же хорошо, что это был лишь сон. Очень реалистичный сон."
 
@@ -910,6 +961,7 @@ label jenya_cp2:
     "Дверь отворила сонная Женя. Она в недоумении посмотрела на меня."
 
     show jenya yawn homea at right2 with dissolve
+    voice jenya_yawn
 
     j "С ума сошёл в такое время будить? Что случилось?"
 
@@ -933,7 +985,7 @@ label jenya_cp2:
     j "Я хочу тебе помочь, очень рада, что ты пришёл ко мне."
 
     mc "Мне больше не к кому идти."
-
+    voice jenya_thinking
     j "Давай посмотрим, что можно сделать. Помоги мне найти вещи для расклада."
 
     scene black with dissolve #мини-игра на поиск предметов
@@ -993,6 +1045,7 @@ label jenya_cp2:
     "Нерешительным движением руки я вытащил три случайные карты, не решаясь взглянуть на их лицевую сторону."
 
     "Вся эта процедура малость затянулась, и я уже не мог дождаться Жениного вердикта. Я был в сильном предвкушении."
+    voice jenya_thinking
 
     if relate_jenya <= 40:
 
@@ -1005,6 +1058,7 @@ label jenya_cp2:
         mc "Пожалуйста, что ещё ты можешь сказать? Что будет дальше? Что мне нужно сделать?"
 
         scene cj_divination1_1 with dissolve
+        voice jenya_thinking
 
         j "Она безобидна, но, пока ты её не выслушаешь, не уйдет."
 
@@ -1030,6 +1084,7 @@ label jenya_cp2:
         mc "И что же дальше будет?"
 
         n"Я удивился своему интересу, но вопрос сам вырвался из меня."
+        voice jenya_thinking
 
         "Женя смущённо отводила взгляд и мяла в руках краешек темной скатерти. Она уже не смотрела на карты, когда ответила…"
 
@@ -1042,6 +1097,7 @@ label jenya_cp2:
         "Но неожиданно по моей спине прошёлся холодок. Тот самый, что преследовал меня во снах. Моё тело сковал страх."
 
         scene cj_divination6 with dissolve
+        voice jenya_sigh_surprised
 
         j "Что с тобой? Что-то не так?"
 
@@ -1087,6 +1143,7 @@ label jenya_cp2:
     mc "Прости, что я так внезапно вломился, помешал тебе."
 
     show jenya normal smile handsa at right2 with dissolve
+    voice jenya_grin
 
     j "Ничего. Рада, что смогла помочь. Что ещё у тебя нового?"
 
@@ -1101,6 +1158,7 @@ label jenya_cp2:
 
     #show mc smile homea at left2 with dissolve
     show mc smile home ca at left2 with dissolve
+    voice mc_chuckle_pleased
 
     mc "Это само собой. Куда мы денемся."
     play sound stomach
@@ -1110,10 +1168,12 @@ label jenya_cp2:
     "Но, признаться, я и сам проголодался."
 
     show jenya smile2 homea at right2 with dissolve
+    voice jenya_laugh_short
 
     j "Ой, что-то мы заговорились. Может поедим?"
 
     n"Как мои мысли прочитала, конечно да! Многомиллионное да!"
+    voice mc_grin
 
     mc "Давай."
     n"Долго мы сидеть не стали и тут же отправились на кухню."
@@ -1135,9 +1195,11 @@ label jenya_cp2:
 
     #show mc surprise homea at left2 with dissolve
     show mc surprise home ca at left2 with dissolve
+    voice mc_confused
     mc "Зачем так сложно? Можно достать котлеты по-киевски из морозилки, я вчера купил."
 
     show jenya angry handsa at right2 with dissolve
+    voice jenya_sigh_unpleased
 
     j "Это же снова полуфабрикаты…. Давай я тебе потом нормальные котлеты сделаю?"
 
