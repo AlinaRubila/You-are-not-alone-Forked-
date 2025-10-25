@@ -58,6 +58,7 @@ label timur:
 
     play music evening fadein 1.0
     scene cj_meet_timur_look with dissolve
+    voice mc_asking
 
     mc "Привет. Можно сесть?"
 
@@ -194,9 +195,11 @@ label timur:
     mc "Я из 205."
 
     show comenda normal at right2 with dissolve
+    voice comenda_grin
     od_un "О, так ты в комнате с Тимуром?"
 
     mc "Кажется, да. Правда я ещё не знаю его имени, он всё время молчит."
+    voice comenda_laugh
 
     od "Тогда это точно Тимур. Ты не переживай, он хороший человек, просто закрытым стал. Я, кстати, Ольга Дмитриевна – комендант общежития."
 
@@ -206,6 +209,7 @@ label timur:
     od "Хочешь, проведу небольшую экскурсию?"
 
     show mc smile wintera at left2 with dissolve
+    voice mc_grin
 
     mc "Было бы неплохо."
 
@@ -253,6 +257,7 @@ label timur:
     scene bg_room_evening with dissolve
 
     "После небольшой экскурсии от коменданта, я вернулся в комнату. Я рад, что Ольга Дмитриевна показала мне общагу, теперь хоть понимаю, где живу."
+    voice mc_sigh_tired
 
     "Этот день сильно меня вымотал. Я понимал, что первый учебный день будет тяжёлым, но не думал, что настолько…"
     if persistent.timur_first_note != True:
@@ -276,14 +281,17 @@ label timur:
 
     #Спрайт чёрного силуэта Евы.
     show eve silhouette grey glow with dissolve
+    voice ghost_grin
 
     un "Вот мы и снова встретились."
 
     "Моя тайная преследовательница улыбалась. Её лица не было видно из-за пелены. Но я знал, что она улыбалась, я это чувствовал."
+    voice mc_sigh_scared
 
     "Я вздрогнул от страха. Этот силуэт сводил меня с ума. Проглотив ком в горле, я прокричал:"
 
     mc "Кто ты? Почему ты мне снишься? Что ты хочешь от меня?!"
+    voice ghost_sigh_glitch
 
     un "Найди меня."
     hide eve silhouette grey glow with dissolve
@@ -313,6 +321,7 @@ label timur:
     if persistent.timur_dreamcontinue != True:
         $ renpy.notify("В дневнике появилась новая запись!")
     $ persistent.timur_dreamcontinue = True
+    voice mc_sigh_calming
 
     "Чтобы разогнать эти мысли и окончательно прийти в себя, я направился в душ."
 
@@ -351,16 +360,19 @@ label timur:
     play sound screamer2
     pause 0.5
     scene сj_cockroach_bed_screamer at tremble
+    voice mc_sigh_scared
     pause 1
 
     mc "Твою ж!"
     play background room
 
     scene bg_room_dawn with dissolve
+    voice timur_growl
 
     t "Ты что орешь с утра пораньше?! Спать мешаешь. В единственный выходной!"
 
     mc "Да у нас в комнате…"
+    voice timur_sigh_unpleased
 
     "Я опять обернулся на своего соседа, но его уже не волновал ни я, ни этот огромный таракан. Тимур просто скрылся под одеялом."
 
@@ -380,9 +392,11 @@ label timur:
         "Спросить":
             $ relate_timur += 10
             show  mc normal wintera at left2 with dissolve
+            voice mc_asking
             mc "Тебе что-то взять в магазине?"
 
             show timur angry homea at right2 with dissolve
+            voice timur_snort
 
             t "Да вали ты уже."
             hide timur angry homea with dissolve
@@ -423,6 +437,7 @@ label timur:
 
     scene bg_grossery_shop_blur with dissolve
     show cj_magazine with dissolve
+    voice mc_chuckle_pleased
 
     "Я присел на корточки и взял журнал в руки. Не может быть. С яркой обложки на меня смотрела главная героиня моего любимого аниме «Маленькая волшебница и её магические друзья». Вот это удача!"
 
@@ -457,14 +472,17 @@ label timur:
     "Я аккуратно прилепил постер на стену, много раз перепроверил, чтобы всё смотрелось ровно."
 
     scene bg_room_poster with dissolve
+    voice mc_grin
     "Идеально."
 
     "Я отошёл немного подальше от стены. Выглядит чудесно! Этот постер не мог не вызывать у меня улыбку. Как хорошо, что я его нашёл. Но тут внезапно из-за спины я услышал угрюмый голос…"
 
     show timur angry homea at right2 with dissolve
+    voice timur_sigh_unpleased
     t "Сними постер."
 
     show mc normal homea at left2 with dissolve
+    voice mc_a_unpleased
 
     mc "Не буду. Почему я должен его снимать?"
 
@@ -481,6 +499,7 @@ label timur:
     "Его фигура всё увеличивалась и увеличивалась, пока он не приблизился настолько,что я стал дышать ему в грудь."
 
     "Он смотрел на меня сверху вниз так, что я видел все его вздувшиеся на лице и руках вены. Сквозь зубы он процедил:"
+    voice timur_growl
 
     t "В последний раз говорю: сними постер. Cейчас же."
 
@@ -495,6 +514,7 @@ label timur:
     "Я не понимаю, кем он себя возомнил, раз может решать что мне делать в нашей комнате!"
 
     "Резким движением я оттолкнул его руку и сделал маленький шаг вперёд, чтобы оказать на него хоть какое-то давление. Из-за разницы в комплекции, к сожалению, особого эффекта я не добился, но зато угрозу в виде его руки убрать удалось."
+    voice mc_a_unpleased
 
     mc "Эй! А ну руки убрал!"
 
@@ -542,6 +562,7 @@ label timur:
     "Она смотрела на всё ошарашенными глазами, в то время как со стены продолжал медленно сползать кусок обоев."
 
     show comenda home angrya with dissolve
+    voice comenda_hm_unpleased
     od "Что это такое? Что вы тут устроили? Как это понимать?!"
 
     #Спрайт злой Гг.
@@ -552,9 +573,11 @@ label timur:
     show timur angry postera with dissolve
 
     t "Это я виноват?! Да если бы ты послушал меня, ничего бы этого не было!"
+    voice comenda_hm_unpleased
 
     od "Значит так, если вы не хотите столкнуться с дисциплинарным взысканием, то вам придётся сделать ремонт."
     show mc angry poster2 at left2 with dissolve
+    voice mc_confused
 
     mc "Но…"
 
@@ -566,10 +589,12 @@ label timur:
     play sound door
 
     "Я было хотел что-то сказать, но она, переняв агрессивное настроение нашей комнаты, развернулась и ушла, хлопнув дверью, окончательно заставив едва державшийся кусок обоев принять поражение и рухнуть."
+    voice timur_growl
 
     "Тимур, словно дикий зверь, что-то рычал и бубнил себе под нос, пока шёл обратно в свою берлогу, явно желая спрятаться на кровати от меня, проблем и всего мира."
 
     "А ещё от этого плаката, разорванного пополам. Что-то в нём сильно разозлило Тимура. Но прямо сейчас, если честно, мне даже не хотелось об этом думать."
+    voice mc_sigh_tired
 
     "Единственная мысль, которая мелькала у меня в голове, была о Тимуре. Суть её была довольно проста: ну и урод."
     if persistent.timur_argue != True:

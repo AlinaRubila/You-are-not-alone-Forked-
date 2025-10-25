@@ -43,6 +43,7 @@ label Kitchen:
     jump ChoiceDorm
 
 label Dayroom:
+    voice mc_asking
     mc "В общежитии есть комната отдыха?"
 
     od "Да, она находится на втором этаже."
@@ -70,6 +71,7 @@ label Dayroom:
 
     od "В комнате отдыха нельзя мусорить. Сидеть ночью можно, но главное тихо."
     show mc smilea at left2 with dissolve
+    voice mc_chuckle_pleased
 
     mc "Ого. А здесь классно."
 
@@ -77,6 +79,7 @@ label Dayroom:
         od "Что ещё тебе показать?"
     jump ChoiceDorm
 label Laundry:
+    voice mc_asking
     mc "Где здесь можно постирать вещи?"
 
     od "На первом этаже у нас стоят стиральные машины."

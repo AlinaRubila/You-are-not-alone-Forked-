@@ -55,8 +55,6 @@ label jenya_cp3:
 
     "А может, Женя тоже, сама того не осознавая, является частью чего-то таинственного и магического. А может, абсолютно все мы — часть этой загадки."
 
-
-
     "К слову о загадках, мой сосед –  это бермудский треугольник, если бы последний был человеком."
 
     "Все мои попытки с ним заговорить заканчивались угрюмым односложным ответом или многозначительным подъёмом бровей."
@@ -101,6 +99,7 @@ label jenya_cp3:
 
     #show mc smile handa at left2 with dissolve
     show mc smile hand ca at left2 with dissolve
+    voice mc_asking
 
     mc "Слушай, давай на этой неделе ты уберёшься в комнате, а на следующей я?"
 
@@ -114,12 +113,14 @@ label jenya_cp3:
 
     #show mc talk crosseda at left2 with dissolve
     show mc talk crossed ca at left2 with dissolve
+    voice mc_thinking
 
     mc "Одного сэндвича, конечно, мало."
 
     n "И получил неожиданную реакцию от Тимура."
 
     show timur normala at right2 with dissolve
+    voice timur_hm
 
     t "Мне наоборот много. Если хочешь, можешь взять второй мой ролл. Я его ещё не трогал."
 
@@ -130,6 +131,7 @@ label jenya_cp3:
 
     #show mc smile handa at left2 with dissolve
     show mc smile hand ca at left2 with dissolve
+    voice mc_grin
 
     mc "Да, с радостью, спасибо!"
 
@@ -140,6 +142,7 @@ label jenya_cp3:
     mc "Очень вкусный ролл. Где ты его купил?"
 
     n "Он парирует."
+    voice timur_hm
 
     t "Здесь."
 
@@ -153,6 +156,7 @@ label jenya_cp3:
     n "Он явно на крючке."
 
     show timur surprisea at right2 with dissolve
+    voice timur_hm_question
 
     t "В комнаты тоже будут заходить?"
 
@@ -164,6 +168,7 @@ label jenya_cp3:
     mc "Не знаю. Может да, может нет."
 
     show timur normala at right2 with dissolve
+    voice timur_sigh_unpleased
 
     n "Он недовольно вздыхает и ничего не отвечает. Я рассчитывал обсудить потенциальную генеральную уборку комнаты, но нужно менять план."
 
@@ -181,6 +186,7 @@ label jenya_cp3:
     mc "Так это что получается – среди нас есть крысоеды?"
 
     show timur sada at right2 with dissolve #не нашла серьёзность, но грусть подходит
+    voice timur_snort
 
     n "Нет! Язык-предатель!"
     hide timur sada with dissolve
@@ -193,6 +199,7 @@ label jenya_cp3:
 
     "Ну зачем, зачем я об этом заговорил? В какой альтернативной вселенной это был бы уместный диалог в столовой? Чёрт возьми, мне даже самому есть расхотелось."
 
+    voice mc_sigh_tired
     "Что ж... Поражения случаются. Возможно даже случаются каждый день, что поделать. Чтобы отвлечься, я решил пойти и просто позаниматься в библиотеке."
 
     stop background fadeout 1.0
@@ -202,6 +209,7 @@ label jenya_cp3:
     "Я решил почитать что-то из азиатской литературы, но такое всегда было тяжело найти, тем более в студенческой библиотеке."
 
     "Ходя туда-сюда между стеллажами с книгами, я не встретил ни одного человека, даже библиотекарши нигде не было."
+    play background humming
 
     "Но откуда-то стало доноситься мычание, будто бы знакомое мне."
 
@@ -221,7 +229,7 @@ label jenya_cp3:
     mc "Эй, это ты?"
     "Сказал я, не зная, на что рассчитываю."
 
-    #hide mc surprisea with dissolve
+    stop background fadeout 1.0
     hide mc surprise ca with dissolve
     play music chill
 
@@ -239,7 +247,7 @@ label jenya_cp3:
 
     "Но мой покой нарушило очередное мычание, на этот раз ещё громче, чем было раньше."
 
-    #Звук мычания.
+    play background humming
 
     "Автоматически моя рука сразу взяла амулет и подняла его в воздух, как бы показывая, что я в домике."
 
@@ -254,6 +262,7 @@ label jenya_cp3:
     "Всё это время, по-видимому, мычание издавалось от неё и её тяжелых мыслительных процессов."
 
     "В ушах у неё были наушники. Видимо, она из тех, кого не напрягают лишние шумы во время учёбы."
+    stop background
 
     "Я аккуратно потрогал её за плечо, от чего она вздрогнула и громко выругалась."
 
@@ -262,11 +271,12 @@ label jenya_cp3:
     show jenya surprisea at right2 with dissolve
 
     j "Эй, я же могла тебя ударить ненароком! Нельзя же так пугать!"
+    voice mc_sigh_calming
 
     n "Ничего себе реакция."
 
-    #show mc surprisea at left2 with dissolve
     show mc surprise ca at left2 with dissolve
+    voice jenya_spooked
 
     mc "Прости, прости. Меня привлекло твоё громкое мычание."
     #show mc smilea at left2 with dissolve
@@ -275,11 +285,13 @@ label jenya_cp3:
     n "Видимо, я слегка улыбнулся, так как Женя агрессивно на меня взглянула."
 
     show jenya angrya at right2 with dissolve
+    voice jenya_sigh_unpleased
 
     j "И что, смешно? Я забавно мычу, верно?"
 
     #show mc sada at left2 with dissolve
     show mc sad ca at left2 with dissolve
+    voice mc_confused
 
     mc "Нет, просто…"
 
@@ -295,6 +307,7 @@ label jenya_cp3:
     mc "Кое-кто явно не в настроении."
 
     show jenya angrya at right2 with dissolve
+    voice jenya_angry
 
     j "Я ненавижу этот предмет. Всей душой. Видит Бог, как же я терпеть не могу за ним сидеть."
 
@@ -345,6 +358,7 @@ label jenya_cp3:
     show mc surprise ca at left2 with dissolve
     mc "Чего? Нет, просто тебе это тяжело дается. Это нормально."
 
+    voice jenya_sigh_sad
     j "Мне абсолютно все предметы тяжело даются."
 
     #show mc normal handa at left2 with dissolve
@@ -374,10 +388,12 @@ label jenya_cp3:
     "Женя точно заметила моё напряжение и решила окончить мои мучения явно натянутой улыбкой."
 
     show jenya smilea at right2 with dissolve
+    voice jenya_laugh_short
     j "Да шучу я, шучу. Как же ты тут без меня."
 
     #show mc smile crosseda at left2 with dissolve
     show mc smile crossed ca at left2 with dissolve
+    voice mc_grin
     mc "Зная, что ты на пути к своему счастью, как-нибудь справлюсь."
 
     mc "Может быть, сейчас ты и ошиблась с направлением, но, пробуя себя в разном, когда-нибудь ты найдешь то, чем действительно хочешь заниматься. Главное – не бояться действовать."
@@ -385,8 +401,10 @@ label jenya_cp3:
     show jenya sada at right2 with dissolve
     #show mc sad crosseda at left2 with dissolve
     show mc sad crossed ca at left2 with dissolve
+    voice mc_sigh_sad
 
     n "Улыбка исчезла, остался только печальный взгляд."
+    voice jenya_sigh_sad
 
     j "Я понимаю. Я всё прекрасно понимаю."
 
@@ -442,6 +460,7 @@ label jenya_cp3:
 
     #show mc smile crosseda at left2 with dissolve
     show mc smile crossed ca at left2 with dissolve
+    voice mc_asking
     mc "Насчёт ужина есть идеи?"
 
     j @smile "Предлагаю зайти в магазин за продуктами и что-то состряпать. Как тебе?"
@@ -469,6 +488,7 @@ label jenya_cp3:
     "Я зашёл на её страничку ВК и увидел, что она была онлайн очень поздно. Наверное, опять училась допоздна. Ей так тяжело это даётся. Бедная, устала, наверное."
 
     "А сделаю-ка я ей сюрприз. Думаю, она обрадуется, если я приготовлю ей завтрак. Только что же мне сделать?"
+    voice mc_thinking
 
     menu:
         "Приготовить блинчики":
@@ -507,6 +527,7 @@ label jenya_cp3:
     "Женя не открывала. Мне стало немного неловко – вдруг я её разбужу? Я уже был готов уходить, как вдруг дверь всё же открылась."
 
     show jenya yawn homea at right2 with dissolve
+    voice jenya_yawn
     "Женя стояла передо мной. Она выглядела очень потерянной и уставшей."
 
     if favorite_food:
@@ -516,6 +537,7 @@ label jenya_cp3:
         "Я понял, что хочу помогать ей чаще: она же так устаёт. Да и Женя всегда на моей стороне. Надо почаще устраивать ей сюрпризы!"
 
         show jenya normal smile handsa at right2 with dissolve
+        voice jenya_grin
 
         j "Спасибо большое, ты мне очень помогаешь. Я так устаю, постоянно учу что-то ночью."
 
@@ -528,6 +550,7 @@ label jenya_cp3:
 
         #show mc smile homea at left2 with dissolve
         show mc smile home ca at left2 with dissolve
+        voice mc_grin
         mc "Тогда будем вместе готовиться, отказы не принимаются!"
 
         show jenya smile2 homea at right2 with dissolve
@@ -537,6 +560,7 @@ label jenya_cp3:
         play music sincerely fadein 1.0
 
         show jenya sad homea at right2 with dissolve
+        voice jenya_thinking
 
         j "О, спасибо, на вид очень вкусно."
 
@@ -586,12 +610,14 @@ label jenya_cp3:
     #show mc normal homea at left2 with dissolve
     show mc normal home ca at left2 with dissolve
     play music sadness fadein 1.0
+    voice mc_asking
 
     mc "С тобой всё в порядке?"
-
+    voice jenya_sigh_sad
     show jenya sad homea at right2 with dissolve
 
     j "Родители опять за своё. А мне очень обидно, у нас постоянные ссоры. Я очень устала, а долги всё не кончаются."
+    voice jenya_sobbing
 
     n "Я заметил, как её глаза начали наполняться слезами."
 

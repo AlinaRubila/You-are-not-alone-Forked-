@@ -14,6 +14,7 @@ label jenya_bad_end:
     #show mc normal homea at left2 with dissolve
     show mc normal home ca at left2 with dissolve
     mc "Вот сдашь ты этот экзамен и станешь на шаг ближе к тому, чтобы легко перепоступить туда, куда хочешь."
+    voice jenya_sigh_sad
 
     "Я ожидал какой-то реакции, но Женя ничего больше не сказала."
     #hide mc normal homea with dissolve
@@ -44,6 +45,7 @@ label jenya_bad_end:
 
     "Конец января. Давно у меня не было возможности стоять и просто любоваться снежинками. Они, маленькие, совсем хрупкие, аккуратно садятся мне на нос, щёки, ресницы и тут же тают. От каждого этого мимолётного «поцелуя» зимы я ощущаю, как по спине бегут мурашки."
 
+    voice mc_a_unpleased
     "Дежавю. Я точно уже был здесь, но чего-то или кого-то не хватает…"
 
     mc "Выходи! Я знаю, что ты здесь!"
@@ -91,19 +93,23 @@ label jenya_bad_end:
 
     #show mc sada at left2 with dissolve
     show mc sad ca at left2 with dissolve
+    voice mc_laugh_nevrous
     mc "Я не очень уверен в оценке, жутко нервничаю."
 
     show alex smilea at right2 with dissolve
+    voice alex_grin
     a "Я наоборот не сомневаюсь в отличной отметке. Может, мне тебя поспрашивать по темам?"
 
     #show mc smile crosseda at left2 with dissolve
     show mc smile crossed ca at left2 with dissolve
+    voice mc_grin
 
     mc "Давай."
 
     "Шнурок улыбнулся так, что не ясно для кого эта викторина затевается. Он встал на цыпочки, а потом резко приземлился, источая энтузиазм. Подняв палец вверх, он спросил:"
 
     show alex normala at right2 with dissolve
+    voice alex_hm
     a "Вопрос один! Для разогрева что-нибудь простое… Например, от какого слова образовано доменное имя .com?"
 
     menu:
@@ -116,6 +122,7 @@ label jenya_bad_end:
             a "Ну… Всякое случается. Ответ: Коммерческий. Ничего, вопрос номер два!"
         "Коммерческий":
             show alex smilea at right2 with dissolve
+            voice alex_grin
             "Шнурок улыбнулся и кивнул."
             a "Так держать! Итак, вопрос номер два."
             show alex normala at right2 with dissolve
@@ -143,22 +150,26 @@ label jenya_bad_end:
             show alex smilea at right2 with dissolve
             #show mc smile crosseda at left2 with dissolve
             show mc smile crossed ca at left2 with dissolve
+            voice alex_grin
             a "Другого я от тебя и не ожидал. Итак, поехали к настоящему вопросу. Цветочки кончились."
         "Стражник":
             show alex gloomya at right2 with dissolve
             #show mc sada at left2 with dissolve
             show mc sad ca at left2 with dissolve
+            voice alex_hm
             a "Серьёзно? Ты не знаешь про антивирус? Дружище, хватит шутки шутить, давай-ка соберись! Итак, поехали к настоящему вопросу. Цветочки кончились."
         "Египтянин":
             show alex gloomya at right2 with dissolve
             #show mc sada at left2 with dissolve
             show mc sad ca at left2 with dissolve
+            voice alex_hm
             a "Серьёзно? Ты не знаешь про антивирус? Дружище, хватит шутки шутить, давай-ка соберись! Итак, поехали к настоящему вопросу. Цветочки кончились."
 
         "Будка":
             show alex gloomya at right2 with dissolve
             #show mc sada at left2 with dissolve
             show mc sad ca at left2 with dissolve
+            voice alex_hm
             a "Серьёзно? Ты не знаешь про антивирус? Дружище, хватит шутки шутить, давай-ка соберись! Итак, поехали к настоящему вопросу. Цветочки кончились."
 
     #show mc normala at left2 with dissolve
@@ -179,6 +190,7 @@ label jenya_bad_end:
             pass
 
     show alex gloomya at right2 with dissolve
+    voice alex_hm_unpleased
     "Когда я ответил, я сразу понял, что я ответил неправильно. В принципе, я и так знал, что не знаю, но взгляд Шнурка будто бы усилил моё чувство стыда в 10 раз. Он вздохнул и сказал:"
     show alex normala at right2 with dissolve
 
@@ -189,6 +201,7 @@ label jenya_bad_end:
     stop music fadeout 2.0
     #show mc thoughtful crosseda at left2 with dissolve
     show mc thoughtful crossed ca at left2 with dissolve
+    voice mc_thinking
 
     "Сказать, что эта викторина выбила у меня землю из-под ног и серьёзно ударила по моей уверенности — это ничего не сказать."
 
@@ -218,6 +231,7 @@ label jenya_bad_end:
 
     #show mc thoughtful crosseda at left2 with dissolve
     show mc thoughtful crossed ca at left2 with dissolve
+    voice mc_chuckle_unpleased
 
     mc "Не знаю, но она придёт, я уверен. Возможно, проспала…"
 
@@ -241,6 +255,7 @@ label jenya_bad_end:
     "В моей берлоге было как всегда тихо и одиноко. На мгновение мне даже захотелось снять амулет, чтобы хоть призрак успокаивал меня своим тихим присутствием."
 
     scene cj_ticket_1 with dissolve
+    voice mc_thinking
 
     "Моё внимание привлекла какая-то бумажка на моём столе. Присмотревшись, я не поверил своим глазам: это был распечатанный билет на самолёт. Я не собирался никуда лететь и уж тем более на юг."
 
@@ -255,7 +270,6 @@ label jenya_bad_end:
 
     "Женя скрылась за завесой облаков, оставив меня лишь с билетом в руках. Волны смятения, разочарования и необъяснимой тревоги захлестнули меня. Я сел на стул и закрыл лицо руками. Все мои планы и надежды рассыпались в прах с этим одним исчезновением."
 
-    #scene cj_goodbye with dissolve
 
     #$ persistent.poster5 = True
     pause 2
@@ -264,6 +278,7 @@ label jenya_bad_end:
     $ set_quick_menu(False)
     scene black with dissolve
     play background wind
+    voice ghost_sigh_glitch
 
     centered "{size=+24}{color=#ffffff}Давай помогу начать всё сначала."
 

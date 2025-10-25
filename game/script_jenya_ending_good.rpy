@@ -72,19 +72,23 @@ label jenya_good_end:
 
     #show mc sada at left2 with dissolve
     show mc sad ca at left2 with dissolve
+    voice mc_laugh_nevrous
     mc "Я не очень уверен в оценке, жутко нервничаю."
 
     show alex smilea at right2 with dissolve
+    voice alex_grin
     a "Я наоборот не сомневаюсь в отличной отметке. Может, мне тебя поспрашивать по темам?"
 
     #show mc smile crosseda  at left2 with dissolve
     show mc smile crossed ca  at left2 with dissolve
+    voice mc_grin
 
     mc "Давай."
 
     "Шнурок улыбнулся так, что не ясно, для кого эта викторина затевается. Он встал на цыпочки, а потом резко приземлился, источая энтузиазм. Подняв палец вверх, он спросил:"
 
     show alex normala at right2 with dissolve
+    voice alex_hm
     a "Вопрос один! Для разогрева что-нибудь простое… Например, от какого слова образовано доменное имя .com?"
 
     menu:
@@ -97,6 +101,7 @@ label jenya_good_end:
             a "Ну… Всякое случается. Ответ: Коммерческий. Ничего, вопрос номер два!"
         "Коммерческий":
             show alex smilea at right2 with dissolve
+            voice alex_grin
             "Шнурок улыбнулся и кивнул."
             a "Так держать! Итак, вопрос номер два."
         "Комиссионный":
@@ -123,22 +128,26 @@ label jenya_good_end:
             show alex smilea at right2 with dissolve
             #show mc smile crosseda at left2 with dissolve
             show mc smile crossed ca at left2 with dissolve
+            voice alex_grin
             a "Другого я от тебя и не ожидал. Итак, поехали к настоящему вопросу. Цветочки кончились."
         "Стражник":
             show alex gloomya at right2 with dissolve
             #show mc sada at left2 with dissolve
             show mc sad ca at left2 with dissolve
+            voice alex_hm
             a "Серьёзно? Ты не знаешь про антивирус? Дружище, хватит шутки шутить, давай-ка соберись! Итак, поехали к настоящему вопросу. Цветочки кончились."
         "Египтянин":
             show alex gloomya at right2 with dissolve
             #show mc sada at left2 with dissolve
             show mc sad ca at left2 with dissolve
+            voice alex_hm
             a "Серьёзно? Ты не знаешь про антивирус? Дружище, хватит шутки шутить, давай-ка соберись! Итак, поехали к настоящему вопросу. Цветочки кончились."
 
         "Будка":
             show alex gloomya at right2 with dissolve
             #show mc sada at left2 with dissolve
             show mc sad ca at left2 with dissolve
+            voice alex_hm
             a "Серьёзно? Ты не знаешь про антивирус? Дружище, хватит шутки шутить, давай-ка соберись! Итак, поехали к настоящему вопросу. Цветочки кончились."
 
     #show mc normala at left2 with dissolve
@@ -159,12 +168,14 @@ label jenya_good_end:
             pass
 
     show alex gloomya at right2 with dissolve
+    voice alex_hm_unpleased
     "Когда я ответил, я сразу понял, что я ответил неправильно. В принципе, я и так знал, что не знаю, но взгляд Шнурка будто бы усилил моё чувство стыда в 10 раз. Он вздохнул и сказал:"
     show alex normala at right2 with dissolve
 
     a "Не-а. В Массачусетском. В 1927 году. Вэниваром Бушем. Что ж, удачи тебе! Мне нужно отойти."
     #show mc thoughtful crosseda at left2 with dissolve
     show mc thoughtful crossed ca at left2 with dissolve
+    voice mc_thinking
     hide alex normala at right2 with dissolve
     stop music fadeout 2.0
 
@@ -180,11 +191,13 @@ label jenya_good_end:
 
     play music leaves
     show jenya smilea at right2 with dissolve
+    voice jenya_grin
 
     j "Ну всё, удачи, ни пуха ни пера!"
 
     #show mc smilea at left2 with dissolve
     show mc smile ca at left2 with dissolve
+    voice mc_grin
 
     mc "К чёрту."
 
@@ -252,12 +265,14 @@ label jenya_good_end:
     mc "Очень красивый торт!"
 
     show jenya normal smile homea at right2 with dissolve
+    voice jenya_grin
 
     j "Спасибо! Приглашаю тебя его попробовать."
 
     mc "Как экзамен?"
 
     show jenya sad homea at right2 with dissolve
+    voice jenya_sigh_sad
 
     j "Я получила тройку."
 
@@ -273,6 +288,7 @@ label jenya_good_end:
 
     #show mc surprise homea at left2 with dissolve
     show mc surprise home ca at left2 with dissolve
+    voice mc_sigh_scared
 
     n "В моей груди начало что-то гореть. Не в метафорическом смысле, а будто бы кто-то абсолютно материально щипал меня за грудь и параллельно резал её горячим ножом."
 
@@ -283,10 +299,12 @@ label jenya_good_end:
 
     "Тотчас я сорвал его с себя и отбросил в сторону, развалив на десятки мелких кусочков. Подняв глаза, я увидел Женино недоумение. Оно и понятно."
 
+    voice jenya_sigh_surprised
     show jenya surprise homea at right2 with dissolve
 
     j "Ты чего делаешь?!"
 
+    voice mc_sigh_calming
     mc "Он вдруг стал таким горячим, аж больно стало."
 
     j "Может, это…"
@@ -294,6 +312,7 @@ label jenya_good_end:
     mc "Что?"
 
     show jenya normal smile homea at right2 with dissolve
+    voice mc_asking
 
     j "Да нет, ничего, не бери в голову, всё хорошо. Я сделаю тебе ещё один позже."
 
@@ -301,6 +320,7 @@ label jenya_good_end:
     mc "Ладно, хорошо. Спасибо большое."
 
     show mc blush homea at left2 with dissolve
+    voice mc_confused
     mc "Недавно вышел фильм с твоим любимым актёром. Не хочешь сходить?"
 
     show jenya blush homea at right2 with dissolve
@@ -330,6 +350,7 @@ label jenya_good_end:
     "Закончив есть торт и обсудив планы на вечер, я сказал Жене спасибо. Она наверняка подумала, что я имел в виду торт, но речь шла не только о нём."
 
     "К счастью, я не знал, что в тот день на этой кухне, радовались не только я и Женя."
+    voice ghost_giggle
 
     "Радовался ещё кое-кто, наверняка хихикая себе под нос. В конце концов, снятие амулета с моего тела для этого человека действительно было новостью недели."
 
@@ -340,6 +361,7 @@ label jenya_good_end:
     play background wind
     #$ renpy.notify("Спасибо за прохождение демо-версии!\nНе забудьте оставить отзыв на странице игры или в наших соцсетях)")
     pause 1
+    voice ghost_sigh_sad
 
     centered "{size=+24}{color=#ffffff}Кому-то ещё нужна твоя помощь."
 

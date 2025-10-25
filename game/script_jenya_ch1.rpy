@@ -86,7 +86,7 @@ label jenya_cp1:
     mc "Привет. Не против, если подсяду?"
 
     scene cj_meet_jenya_smile with dissolve
-    #voice jenya_grin
+    voice jenya_grin
 
     un "Привет! Садись, конечно!"
 

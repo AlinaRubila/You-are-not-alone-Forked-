@@ -59,6 +59,7 @@ label timur_cp2:
     play sound bibika
 
     scene cj_car_1 with dissolve
+    voice mc_sigh_scared
 
     "Что это? Машина. И куда он гонит? А, стоп. Это же я на красный вышел. Значит, сейчас меня собьют. Чёрт."
 
@@ -71,6 +72,7 @@ label timur_cp2:
     scene bg_street_morning_winter with dissolve
 
     "А?"
+    voice mc_sigh_relief
 
     "Живёхонек."
 
@@ -87,6 +89,7 @@ label timur_cp2:
     "Так злится, будто бы сам чуть не умер."
 
     show timur yell wintera with dissolve
+    voice timur_growl
 
     t "Смотри, куда прёшь, дурак! Умереть захотел?! Совсем жить надоело?! Ты просто невыносим!"
 
@@ -122,12 +125,14 @@ label timur_cp2:
     "Наверное, внутри меня всё-таки были честь и небольшое количество благородства, которые заставили меня коснуться плеча своего соседа и прошептать:"
 
     show mc sada at left2 with dissolve
+    voice mc_sigh_sad
 
     mc "С-спасибо."
 
     "Реакция Тимура крайне удивила меня. Я предполагал, что в ответ, как обычно, буду довольствоваться игнорированием моих слов, но сейчас он повернулся и посмотрел на меня так, что я совсем не понимал, чего ожидать от него прямо сейчас."
 
     show timur normala at right2 with dissolve
+    voice timur_hm
 
     t "Да ничего, любой бы так сделал. Только в следующий раз спасать не буду."
 
@@ -144,6 +149,7 @@ label timur_cp2:
     scene cj_discussion with dissolve
 
     $ persistent.poster5 = True
+    voice mc_asking
     mc "Что будем делать с ремонтом?"
 
     "После этого вопроса пара пролетела незаметно. Всё оставшееся время мы с Тимуром обсуждали, что купить, когда приступить к работе и как распределить обязанности."
@@ -156,6 +162,7 @@ label timur_cp2:
     scene cj_exit with dissolve
     play music knowledge fadein 1.0
     "Прямо у дверей перед нами внезапно появился староста группы. Все называли его Шнурком."
+    voice alex_hm
 
     a "Попрошу всех остаться в свободной аудитории, у меня есть пара важных объявлений. Это не займёт много времени."
 
@@ -173,6 +180,7 @@ label timur_cp2:
             a "Поздравляем с первым местом в конкурсе…"
 
             "Он всё говорил и говорил, а я слышал только: «Бла-бла-бла…»"
+            voice mc_sigh_tired
 
             "Признаюсь, я очень старался слушать старосту. Но этот монолог о каких-то документах, успехах наших одногруппников, долгах, сессии… Очень скучный."
 
@@ -200,6 +208,7 @@ label timur_cp2:
             scene bg_classroom with dissolve
 
             show mc normala at left2 with dissolve
+            voice mc_asking
             mc "Слушай, а что это за девушка?"
 
             show timur normala at right2 with dissolve
@@ -207,6 +216,7 @@ label timur_cp2:
 
             mc "А чего она на него так пялится?"
 
+            voice timur_grin
             t "Так она влюблена в Шнурка ещё с начала года, а тот то ли реально не замечает, то ли специально игнорирует. Вся группа уже ставки делает на то, заметит или нет."
 
             mc "Это же очевидные намёки, как можно этого не замечать…"
@@ -290,6 +300,7 @@ label timur_cp2:
 
     #переключиться обратно на фон с обвисшей обоиной на рассвете
     scene bg_room_ruined_morning with dissolve
+    voice mc_pain
 
     "Жгучая боль, вся нога просто горела."
 
@@ -303,6 +314,7 @@ label timur_cp2:
     scene black with dissolve
     pause 1
     scene bg_room_ruined_morning with onn #меняем на фон комнаты с обвалившейся обоиной на рассвете
+    voice mc_sigh_scared
 
     "Темнота прояснилась. Меня переполнял липкий, окутывающий всё тело и разум страх. Я тут же вскочил и посмотрел на свою ногу."
 
@@ -318,10 +330,12 @@ label timur_cp2:
 
     show timur angry homea at right2 with dissolve
     play music circus fadein 3.0
+    voice timur_snort
 
     t "Ты что до сих пор спишь? У нас дел по горло, давай вставай!"
 
     show mc sad home at left2 with dissolve
+    voice mc_sigh_sad
     mc "Как же не хочу…"
 
     #спрайт гг ленивый, недовольный
@@ -340,9 +354,11 @@ label timur_cp2:
     "Но тут я почувствовал сверлящий меня взгляд Тимура. Пожалуй, ускорюсь."
 
     show mc normal homea at left2 with dissolve
+    voice mc_asking
     mc "С чего начнём?"
 
     show timur normal homea at right2 with dissolve
+    voice timur_hm
     t "Давай для начала выкинем весь хлам."
 
     hide mc normal homea with dissolve
@@ -363,6 +379,7 @@ label timur_cp2:
     mc "Что у тебя с численными методами?"
 
     show timur normal homea at right2 with dissolve
+    voice timur_hm
     t "Сделаю за пару дней."
 
     show mc surprise homea at left2 with dissolve
@@ -375,6 +392,7 @@ label timur_cp2:
     mc "О, так ты уже и игры делаешь?"
 
     show timur sad homea at right2 with dissolve
+    voice timur_sigh_tired
     t "Когда-то начал, но потом как-то не срослось. Сейчас нет смысла об этом думать."
 
     show mc smile homea at left2 with dissolve
@@ -392,6 +410,7 @@ label timur_cp2:
     mc "Пиши о том, что тебя волнует, что знаешь. Может, кто-то поймёт, что он не один и есть ещё люди с такими же проблемами."
 
     show timur embarrassed homea at right2 with dissolve
+    voice timur_grin
     t "Ну ты и философ. Спасибо за идею."
 
     "Не уверен, что мой совет был полезным. Я пытался понять, какие эмоции испытывает Тимур в данный момент."
