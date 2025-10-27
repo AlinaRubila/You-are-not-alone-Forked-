@@ -428,9 +428,11 @@ label timur_cp2:
     "Однако моё приподнятое настроение резко изменилось, когда Тимур с выражением лица командира вручил мне мешок с мусором."
 
     show mc surprise homea at left2 with dissolve
+    voice mc_a_unpleased
     mc "Почему только я должен тащить весь этот мусор?!"
 
     show timur normal homea at right2 with dissolve
+    voice timur_hm
     t "Я нёс пакеты из магазина, а ты мусор выносишь. Всё честно."
     hide timur normal homea with dissolve
 
@@ -458,6 +460,7 @@ label timur_cp2:
     play sound trash
 
     "Я замахнулся, чтобы выкинуть весь этот хлам, но пакет порвался, и содержимое упало прямо на мою ногу."
+    voice mc_pain
 
     "Жгучая боль, вся моя пострадавшая конечность просто горела. Я опять вспомнил о сне."
     scene bg_dorm_winter_day with dissolve
@@ -492,15 +495,18 @@ label timur_cp2:
             od "Как дела у Тимура? Не ругаетесь больше?"
 
             show mc sad wintera at left2 with dissolve
+            voice mc_sigh_sad
             mc "Пока нет, но с ним бывает трудно."
 
             show comenda sad at right2 with dissolve
+            voice comenda_sigh_sad
             "Её выражение лица сменилось. Своим видом она дала понять, что не потерпит разборки в общежитии и любой возможный конфликт может закончиться неблагоприятно для нас обоих."
 
             show comenda normal at right2 with dissolve
             od "У Тимура сейчас трудный период, отнесись к нему с пониманием. Советую вам поладить. В следующий раз предупреждать не буду – сразу последует наказание."
 
             show comenda smile at right2 with dissolve
+            voice comenda_grin
             od "Ну ладно, мне идти пора. Удачи с ремонтом!"
 
             hide comenda normal with dissolve
@@ -509,6 +515,7 @@ label timur_cp2:
             "Мне стало не по себе. Я плохо знал Тимура, наверное, даже слишком плохо. Может, у него и вправду что-то случилось, а я тут его бросать собрался…"
 
             "Во мне заиграла совесть. Хотя, если честно, настроя продолжать ремонт у меня не было абсолютно."
+            voice mc_thinking
 
             "А, может, всё-таки стоит вернуться и помочь? С другой стороны, я и так постоянно оказываюсь крайним. Тварь я дрожащая, или право имею? Извечный вопрос, на который мы ищем ответ…"
 
@@ -545,6 +552,7 @@ label timur_cp2:
                     # закомментил спрайты из-за cj (не уверен, что подходит всё)
                     j_un "Привет. Жуткие, правда? Как кровь."
                     scene cj_flowers_talk with dissolve
+                    voice mc_sigh_scared
                     stop music
                     play background city
 
@@ -553,6 +561,7 @@ label timur_cp2:
                     "Я обернулся. Рядом со мной стояла моя одногруппница."
 
                     # show mc surprise wintera at left2 with dissolve
+                    voice jenya_sigh_surprised
                     j_un "Прости, что напугала."
 
                     scene bg_street_morning_winter with dissolve
@@ -570,6 +579,7 @@ label timur_cp2:
                     mc "Наверное."
 
                     show jenya smile wintera at right2 with dissolve
+                    voice jenya_grin
                     j "А ты случайно не тот новенький из группы?"
 
                     show mc smile wintera at left2 with dissolve
@@ -578,9 +588,11 @@ label timur_cp2:
                     j "Я рада, что встретила тебя. А… а ты хорошо разбираешься в объектно-ориентированном программировании?"
 
                     show mc normal wintera at left2 with dissolve
+                    voice mc_thinking
                     mc "Не совсем идеально, конечно, но понимаю."
 
                     show jenya sad wintera at right2 with dissolve
+                    voice jenya_sigh_sad
                     j "О, а ты можешь мне с этим помочь?"
 
                     "Выражение её лица было таким трогательным, будто милый маленький котёнок смотрел мне в душу. Я был не в силах ей отказать, тем более и так уже подвел сегодня Тимура, не могу же ещё и с Женей так обойтись."
@@ -590,6 +602,7 @@ label timur_cp2:
                     mc "Да, давай помогу."
 
                     show jenya smile wintera at right2 with dissolve
+                    voice jenya_grin
                     j "Я очень тебе благодарна. Может, пойдём в кафе и там обсудим?"
 
                     mc "Веди меня."
@@ -625,12 +638,15 @@ label timur_cp2:
                     scene bg_cafe with dissolve
 
                     show mc normala at left2 with dissolve
+                    voice mc_asking
                     mc "А что за призрак, можешь рассказать?"
 
                     show jenya normala at right2 with dissolve
+                    voice jenya_thinking
                     j "Я многого не знаю, но говорят, что он появился около года назад и ходит по коридорам общаги."
 
                     show jenya grina at right2 with dissolve
+                    voice jenya_grin
 
                     "Женя нарочито прищурила глаза и наклонила голову. Она замолчала, будто стараясь придать атмосфере каплю таинственности. Моё сердце пропустило удар, а может, и все десять…"
 
@@ -639,12 +655,14 @@ label timur_cp2:
                     j "Этого призрака видел только один человек, но он не выдержал такого соседства и съехал с общаги."
 
                     show mc sad crosseda at left2 with dissolve
+                    voice mc_chuckle_unpleased
 
                     "В голове отчётливо и в подробностях всплыли недавние сны, а ощущение чьего-то присутствия лишь усилилось. Мне стало не по себе."
 
                     "Неужели всё это не случайно, и теперь призрак теперь ходит за мной?"
 
                     show jenya normala at right2 with dissolve
+                    voice jenya_questioning
                     j "Ты чего?"
                     mc "Да нет, ничего, всё нормально. Я просто задумался."
 
@@ -654,6 +672,7 @@ label timur_cp2:
                     mc "Да нет, всё нормально, говорю же."
 
                     show jenya grina at right2 with dissolve
+                    voice jenya_grin
                     j "Верю, верю. А какое у тебя хобби?"
 
                     pause 1
@@ -700,8 +719,10 @@ label timur_cp2:
 
                     "Мне очень хотелось извиниться перед соседом. Я долго подбирал нужные слова и оправдания своему поступку и наконец решился обратиться."
 
+                    voice mc_confused
                     mc "Тимур, я…"
 
+                    voice timur_sigh_unpleased
                     t "Отвали."
 
                     "Это одно слово сразу вычеркнуло из моей головы все извинения и объяснения. Хотя… Какие тут могут быть оправдания тому, что я бросил соседа в нашем общем деле? Ещё и Тимур получил из-за меня травму."
@@ -743,9 +764,11 @@ label timur_cp2:
         play music cozy fadein 0.5
 
         show timur normal homea at right2 with dissolve
+        voice timur_hm_question
         t "Готов к тяжёлой работе? На это уйдёт много времени."
 
         show mc sad homea at left2 with dissolve
+        voice mc_sigh_tired
         mc "Д-да."
 
         t "Нужно сдвинуть всю мебель и освободить стены."
@@ -774,6 +797,7 @@ label timur_cp2:
         "Невольно закрадывались мысли, из какого же материала сделана эта кровать. Чугунная, что ли…"
 
         show timur angry homea at right2 with dissolve
+        voice timur_sigh_unpleased
         t "Чё ты там возишься?"
 
         show mc surprise homea at left2 with dissolve
@@ -789,6 +813,7 @@ label timur_cp2:
         "Теперь я уже думал не о том, из чего сделана кровать, а о том, из чего сделан Тимур, раз ему так легко поддалась такая тяжесть."
 
         show timur angry homea at right2 with dissolve
+        voice timur_snort
         t "Толку от тебя ноль."
 
         show mc angry homea at left2 with dissolve
@@ -802,6 +827,7 @@ label timur_cp2:
         "Присев на неё, я стал наблюдать за своим соседом. Тимур очень быстро и легко сдвигал всю мебель, словно она ничего не весила. Он был титаном, непрошибаемым, сильным, опасным."
 
         show mc sad homea at left2 with dissolve
+        voice mc_sigh_sad
         mc "Ты хорошо и один справляешься. Видимо, моя помощь совсем не требуется."
 
         show timur normal homea at right2 with dissolve
@@ -816,8 +842,10 @@ label timur_cp2:
         "Перед моими глазами всплыл недавний сон, и я, словно молния, возможно даже со скоростью света, вскочил с кровати, подбегая к Тимуру."
 
         show mc surprise homea at left2 with dissolve
+        voice mc_sigh_scared
         mc "Осторожно!"
         show timur surprise homea at right2 with dissolve
+        voice timur_sigh_spooked
 
         scene cj_smash with dissolve
         #звук грохот падающей полки
@@ -830,11 +858,13 @@ label timur_cp2:
         t "Ну у тебя и реакция! Радиоактивные пауки случайно не кусали?"
 
         # show mc normal homea at left2 with dissolve #с учётом цг можно убрать
+        voice mc_sigh_relief
         mc "Да вроде нет. А мебель здесь, похоже, вся на соплях держится."
 
         scene bg_room_ruined_day with dissolve
 
         show timur sad homea at right2 with dissolve
+        voice timur_sigh_sad
         t "Спасибо. Ещё немного, и моей ноге бы не поздоровилось."
 
         if persistent.timur_help != True:
@@ -855,6 +885,7 @@ label timur_cp2:
         t "Ладно. Только делай, что скажу."
 
         show mc smile homea at left2 with dissolve
+        voice mc_grin
         mc "Слушаюсь, босс."
 
         hide mc smile homea with dissolve
@@ -868,6 +899,7 @@ label timur_cp2:
         "Тимур всё распланировал от «А» до «Я» и не забыл уточнить, какие товары необходимо докупить и как делать то или иное действие. Его познания меня сильно удивили и даже впечатлили. Впервые встречаю своего сверстника, который бы разбирался в этой сфере."
 
         show mc normal homea at left2 with dissolve
+        voice mc_asking
         mc "Откуда ты так много о ремонте знаешь? Прямо настоящий профи!"
 
         show timur normal homea at right2 with dissolve
@@ -875,6 +907,7 @@ label timur_cp2:
 
         mc "И тебе родители такое доверяли?"
 
+        voice timur_hm
         t "А почему нет? Это не так уж сложно. Мне в целом много чего ответственного поручали. Я и за мелкими часто приглядывал."
 
         mc "У тебя есть младшие братья и сёстры?"
@@ -887,18 +920,21 @@ label timur_cp2:
 
         mc "М-да, не завидую тебе. Я-то в семье один рос."
         show timur harsh at right2 with dissolve
+        voice timur_sigh_unpleased
 
         "Тимур резко взглянул на меня серьёзным, как будто даже строгим взглядом. Так обычно смотрит учительница, если во время урока ты болтаешь. Это немного нарушило наладившуюся между нами идиллию и тёплую дружескую атмосферу."
 
         "Мне стало не по себе. Я начал думать, вдруг я что-то не то сказал и задел чувства соседа? Вроде ничего такого не было."
 
         show timur sad homea at right2 with dissolve
+        voice timur_sigh_sad
         t "Ты не понимаешь. Мне нравилось проводить с ними время. Без них было бы слишком пусто и тихо. А тебе разве не одиноко?"
 
         mc "Да не особо. Когда у тебя нет чего-то изначально, ты по этому скучать не можешь."
 
         "Тут я заметил, что лёгкая тоска и грусть появились на лице Тимура. Взгляд резко застыл и стал как будто пустым. Мой сосед явно погрузился в воспоминания о семье."
 
+        voice mc_asking
         mc "Скучаешь по ним?"
 
         t "Очень. Мне часто звонят из дома с вопросом, когда я приеду. У меня редко получается их навестить, хотя хотелось бы это делать чаще. Но я обещал хорошо учиться, а если буду каждый раз ездить, то времени на учебу останется меньше."
@@ -907,6 +943,7 @@ label timur_cp2:
         "Я заметил, как Тимур остановил в моменте свои эмоциональные порывы и душевную речь про семью, постеснявшись, что он такой сентиментальный и позволил сбросить свою железную маску при мне. А я, наоборот, был очень тронут и даже восхищен таким тёплым и заботливым отношением моего соседа к своей семье."
 
         show mc smile homea at left2 with dissolve
+        voice mc_chuckle_pleased
         mc "Им повезло иметь такого старшего брата, как ты."
 
         "Тимур смотрел мне в глаза, дабы удостовериться, что я не вру и это не сарказм и не ирония."
@@ -914,6 +951,7 @@ label timur_cp2:
         "Однако, увидев мою искренность, отвернулся, попытавшись скрыть улыбку, но в его глазах было заметно — ему очень приятно и важно слышать такое."
 
         show timur smile homea at right2 with dissolve
+        voice timur_grin
         t "Спасибо."
 
         hide timur smile homea with dissolve
@@ -945,9 +983,11 @@ label timur_cp2:
         stop background
         play background room fadein 2.0
         show timur smile homea at right2 with dissolve
+        voice timur_grin
         t "Хорошо поработали, теперь можно и отдохнуть."
 
         show mc smile homea at left2 with dissolve
+        voice mc_grin
         mc "Окей, начальник."
         show timur happy homea at right2 with dissolve
 
@@ -977,14 +1017,17 @@ label timur_cp2:
         "Вдруг Тимур странно притих, как будто весь немного съёжился. Он задумчиво посмотрел в кружку с чаем, словно видя что-то в своём отражении. В его глазах я заметил некую тоску и отстранённость."
 
         show mc normal homea at left2 with dissolve
+        voice mc_asking
         mc "С тобой всё хорошо, что-то случилось?"
 
+        voice timur_sigh_sad
         t "Дело не в самом плакате, а в аниме."
 
         show mc smile homea at left2 with dissolve
         mc "Да ладно тебе, нормальный фильм, лёгкий, местами смешной. Особенно мне нравится момент, когда главная героиня впервые встречается со своей сестрой Миюки на Рифовом острове. Было одновременно и трогательно, и забавно."
 
         show timur embarrassed homea at right2 with dissolve
+        voice timur_grin
         t "Ну, вообще-то, это была не первая их встреча. Помнишь Фестиваль цветов, на котором похитили магического зверька Рен? Нацуко тогда столкнулась у кондитерского ларька со странной девушкой в маске. Это как раз и была Миюки."
 
         mc "Точно, совсем об этом позабыл."
@@ -993,14 +1036,17 @@ label timur_cp2:
 
         "В моей голове не сходился пазл: откуда Тимур знал этот момент так точно?"
 
+        voice mc_sigh_scared
         mc "А откуда ты это знаешь?"
 
         show timur normal homea at right2 with dissolve
+        voice timur_hm
         t "Я это аниме наизусть знаю."
 
         "Тут мои мысли запутались ещё больше. С чего это мой сосед знает это аниме наизусть? Почему он тогда сорвал плакат? Догадок не было, а мысли противоречили друг другу. Тимур сделал глоток чая и с тяжёлым вздохом, словно через силу, начал объяснять."
 
         show timur sad homea at right2 with dissolve
+        voice timur_sigh_sad
         t "Раньше я любил это аниме, но теперь оно напоминает мне о прошлом… О том, что я потерял."
 
         show mc normal homea at left2 with dissolve
@@ -1017,6 +1063,7 @@ label timur_cp2:
         mc "Я точно не знаю, что именно произошло у тебя в жизни, но одно могу сказать точно – не стоит держать всё в себе. В прошлом у меня тоже был сложный период, однако я вовремя обратился за помощью."
 
         show timur normal homea at right2 with dissolve
+        voice timur_hm_question
         t "Тебе стало легче?"
 
         mc "Я обратился к специалисту и со временем мне стало лучше. До конца, конечно, боль не ушла, но я стал спокойнее воспринимать пережитую ситуацию."
@@ -1040,15 +1087,18 @@ label timur_cp2:
         mc "Знаешь, у меня игра есть, «UNO» называется. Может, сыграем? Я, правда, не умею…"
 
         show timur normal homea at right2 with dissolve
+        voice timur_questioning
 
         t "А зачем тебе игра, в которую ты не умеешь играть?"
 
         mc "Так я её и купил, чтобы научиться играть. Логично ведь."
 
         show timur smile homea at right2 with dissolve
+        voice timur_grin
         t "Ну хорошо, научу, так уж и быть. Но учти, поддаваться не буду."
 
         show mc smile homea at left2 with dissolve
+        voice mc_grin
         mc "Договорились."
 
         hide mc smile homea with dissolve
@@ -1068,6 +1118,7 @@ label timur_cp2:
         scene bg_room_repair_night with dissolve
 
         show timur smile homea at right2 with dissolve
+        voice timur_grin
         t "Неинтересно как-то выигрывать постоянно. Тебе нужна мотивация к победе."
 
         show mc normal homea at left2 with dissolve
@@ -1077,9 +1128,11 @@ label timur_cp2:
         t "Что? Нет конечно. Игра на деньги – для слабаков. Давай на чай!"
 
         show mc surprise home at left2 with dissolve
+        voice mc_a_unpleased
         mc "На чай?!"
 
         show timur smile homea at right2 with dissolve
+        voice timur_hm
         t "Да, ты прав, просто на чай скучно. Давай на чай с печеньками!"
 
         scene cj_uno with dissolve
@@ -1091,22 +1144,28 @@ label timur_cp2:
         mc "Так нечестно! Ты жульничаешь!"
 
         # show timur happy homea at right2 with dissolve
+        voice timur_grin
+
         t "Что? Я? Да никогда в жизни! Фортуна на моей стороне, вот и всё. Учись играть!"
 
         # show mc smile homea at left2 with dissolve
+        voice mc_grin
         mc "Uno uno uno un momento, сейчас я тебя точно обыграю!"
 
         t "Так-то лучше!"
+        voice timur_laugh
 
         "И Тимур звонко рассмеялся. Рассмеялся так заразительно, что и я попал под это обаяние. Мы ещё долго шутили и смеялись вместе, и это не могло меня не радовать."
 
         scene bg_room_repair_night with dissolve
-
         show timur happy homea at right2 with dissolve
+        voice timur_laugh
+
         t "Слушай, а давай такие обои купим!"
 
         "Тимур приложил к стене зелёную карточку."
         show mc smile homea at left2 with dissolve
+        voice mc_grin
 
         mc "Интересно! А может, такие?"
 
@@ -1140,6 +1199,7 @@ label timur_cp2:
         #звук скотча? (если посчитаете нужным или найдёте подходящее, можете вставить)
 
         "Было холодно. Я сильнее укутался в одеяло, как вдруг звук скотча заставил меня резко развернуться."
+        voice mc_sigh_scared
 
         scene bg_room_repair_dark with dissolve
 
@@ -1148,6 +1208,7 @@ label timur_cp2:
         "Я встал и осторожно приблизился к ней. Моя рука очень медленно коснулась её плеча. Мгновение… Секунда…"
 
         "Девушка испарилась, будто её здесь никогда и не было. Стало тихо, уши словно оказались в вакууме, а взгляд опустился на стол."
+        voice mc_asking
 
         scene cj_poster_glued with dissolve
         "На нём лежал тот самый постер, аккуратно склеенный скотчем."

@@ -34,6 +34,7 @@ label timur_good_end:
 
     scene black with dissolve
     play background audio.wind
+    voice ghost_sigh_sad
     centered "{size=+24}{color=#ffffff}Кому-то ещё нужна твоя помощь"
     stop background fadeout 1.0
 

@@ -7,7 +7,7 @@ label timur_bad_end:
     if persistent.timur_bad != True:
         $ renpy.notify("В дневнике появилась новая запись!")
     $ persistent.timur_bad = True
-
+    voice mc_sigh_tired
     "В конечном итоге я махнул рукой и лёг спать."
 
     scene black with off
@@ -37,6 +37,7 @@ label timur_bad_end:
 
     scene black with dissolve
     play background audio.wind
+    voice ghost_sigh_sad
     centered "{size=+24}{color=#ffffff}Давай помогу начать всё сначала."
     stop background fadeout 1.0
 

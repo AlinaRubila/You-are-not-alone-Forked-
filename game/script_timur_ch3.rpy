@@ -131,8 +131,10 @@ label timur_cp3:
         "Я разглядывал разноцветные рулоны, представляя, какой может стать наша комната. Взгляд упал на обои, которые, как мне казалось, подошли бы идеально. Но Тимур опередил меня и одной «левой», в прямом и переносном смысле, закинул в тележку два рулона других обоев."
 
         scene cj_timur_argument with dissolve
+        voice mc_a_unpleased
         mc "Эй, а моё мнение тебя не интересует? Мне эти обои не нравятся!"
 
+        voice timur_snort
         t "И? Ты же у меня насчёт постера не спрашивал."
 
         "Я почувствовал злость, буквально закипал."
@@ -143,6 +145,7 @@ label timur_cp3:
         mc "Тоже мне сравнил, маленький постер и обои на всю комнату."
 
         show timur very angrya at right2 with dissolve
+        voice timur_growl
 
         "Тимур, казалось, был готов разорваться от накатывающей злости."
 
@@ -153,9 +156,11 @@ label timur_cp3:
         "Я ждал, пока злость Тимура достигнет предела, но он молчал и смотрел на меня убийственным взглядом. Я нервничал. Всё же злой Тимур – не самое безопасное существо. В момент он выдохнул и отвел взгляд. Пронесло?"
 
         show timur normal wintera at right2 with dissolve
+        voice timur_sigh_tired
         t "Ладно, давай так: обои берём мои, но клеить я их буду сам."
 
         show mc normal winter at left2 with dissolve
+        voice mc_sigh_tired
         mc "Хорошо. Ты сам это предложил."
 
         scene bg_street_morning_winter with dissolve
@@ -187,6 +192,7 @@ label timur_cp3:
         scene bg_room_repair_morning with dissolve
 
         show mc normal home at left2 with dissolve
+        voice mc_asking
         mc "Какие планы на сегодня?"
 
         show timur normal home at right2 with dissolve
@@ -201,9 +207,11 @@ label timur_cp3:
         "Я рассмотрел стеллажи с рулонами и нашёл, как мне казалось, самый лучший вариант. Я хотел окликнуть Тимура, но заметил, что в тележке уже лежат рулоны других обоев."
 
         show mc surprise winter at left2 with dissolve
+        voice mc_a_unpleased
         mc "Тимур, что это?"
 
         show timur normal wintera at right2 with dissolve
+        voice timur_hm
         t "Обои."
 
         mc "Я вижу, но почему ты меня даже не спросил?"
@@ -219,11 +227,13 @@ label timur_cp3:
         "И он замолчал, видимо поняв, что наши вчерашние приколы сегодня уже неактуальны. Кажется он немного смутился."
 
         show timur sad wintera at right2 with dissolve
+        voice timur_sigh_tired
 
         t "М-да… Неловко вышло. А ты какие хотел?"
 
         "Я указал на те, что мне понравились."
         show timur angry wintersa at right2 with dissolve
+        voice timur_hm
 
         t "Эти обои не подходят. У них качество не очень. Я хорошие выбрал… Ну, по качеству."
 
@@ -242,6 +252,7 @@ label timur_cp3:
         mc "По рукам."
 
         show timur smile wintera at right2 with dissolve
+        voice timur_grin
 
         t "Отлично."
 
@@ -260,6 +271,7 @@ label timur_cp3:
         t "Слушай, мне уже бежать пора. Обои завтра поклею."
 
         show mc smile winter at left2 with dissolve
+        voice mc_grin
         mc "Хорошо. Удачи!"
 
         hide timur normal wintera with dissolve
@@ -280,10 +292,12 @@ label timur_cp3:
         scene cj_teatalking with dissolve #здесь будет цг с диска - из папки с цг для ветки Тимура, где гг и Тимур пьют чай в комнате без обоев и обсуждаются - спрайты в таком случае убираем
 
 
+        voice mc_asking
         mc "Что-то случилось?"
         play music sadness fadein 1.0
 
         #show timur normal home at right2 with dissolve
+        voice timur_hm
         t "Да вроде нет. За пару часов, что меня не было, ничего особо не поменялось."
 
         mc "Просто, мне кажется, у тебя в жизни что-то не ладится."
@@ -334,6 +348,7 @@ label timur_cp3:
         "Утром, открыв глаза, я не обнаружил своего соседа в комнате, но заметил записку, лежавшую на столе. "
 
         scene cj_timur_note with dissolve
+        voice mc_a_unpleased
 
         "То есть, как это я должен обои сам? И куда Тимур вообще мог уехать?"
 
@@ -355,6 +370,7 @@ label timur_cp3:
         play music mystery fadein 1.0
 
         "На ней был Тимур и ещё несколько человек, а на фоне красовалось слово «Посвят» и год «2023». Я хотел было отложить фото, но тут вгляделся в силуэт девушки рядом с Тимуром."
+        voice mc_sigh_scared
 
         "Это же она! Это тот призрак!"
         hide cj_photo with dissolve
@@ -388,6 +404,7 @@ label timur_cp3:
 
         scene cj_notes_blur with dissolve
         show cj_schedule with dissolve
+        voice mc_thinking
 
         "Расписание Тимура…"
         #на диске в папке у Тимура есть цг, в которой список дел Тимура показан подробно - можно вывести его ненадолго перед мини-игрой
