@@ -13,7 +13,7 @@ define sh = Character('Шнурок', ctc_position="fixed", color="#3d3327", ima
 define un = Character('???', ctc="ctc_atl", ctc_position="fixed", color="#3d3327")
 define bb = Character('Библиотекарша', ctc_position="fixed", color="#3d3327", image='librarian', callback=name_callback, cb_name="librarian")
 define cl = Character('Уборщик', ctc_position="fixed", color="#3d3327", image='cleaner', callback=name_callback, cb_name="cleaner")
-
+define dad = Character('Папа', ctc="ctc_atl", ctc_position="fixed", color="#3d3327")
 #Теги для сообщений
 
 define mc_nvl = Character("Я", kind=nvl, image="mcimage", callback=Phone_SendSound)
