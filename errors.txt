@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script_alexander_ch1.rpy", line 427: expected end of line
-    stop sound signal
-               ^
+File "game/script_alexander_ch1.rpy", line 927: 'auto' is not a keyword argument or valid child of the screen statement.
+    auto "images/game/table_button_%s.png" focus_mask True
+        ^
 
 Ren'Py Version: Ren'Py 8.1.2.23090503
-Sun May 18 21:26:01 2025
+Fri Nov 21 23:43:50 2025

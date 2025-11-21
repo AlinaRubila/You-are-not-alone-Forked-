@@ -228,9 +228,9 @@ define audio.bright = "audio/music/PiensoViento.mp3"
 #озвучка
 define voice.alex_grin = "audio/voice/alex/alex_grin.mp3"
 define voice.alex_hm = "audio/voice/alex/alex_hm.mp3"
-define voice.alex_hm_unpleased = "audio/voice/alex/alex_hm_unpleased.mp3"
 define voice.alex_shush = "audio/voice/alex/alex_shush.mp3"
 define voice.alex_sigh_unpleased = "audio/voice/alex/alex_sigh_unpleased.mp3"
+define alex_unpleased = "audio/voice/alex/alex_hm_unpleased.mp3.mp3"
 
 define voice.comenda_grin = "audio/voice/commendant/comenda_grin.mp3"
 define voice.comenda_hm_unpleased = "audio/voice/commendant/comenda_hm_unpleased.mp3"
