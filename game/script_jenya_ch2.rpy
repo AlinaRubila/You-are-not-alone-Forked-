@@ -915,11 +915,13 @@ label jenya_cp2:
     n"Вдоль дороги ходила девушка. В ней я сразу узнал свою таинственную преследовательницу."
 
     mc "Я не могу поверить своим глазам. Это сон? Что происходит?!"
-    play sound screamer_short
 
-    scene cj_night_eve_2 at tremble
+    scene cj_night_eve_2 with dissolve
 
     n"И тут я вижу на себе взгляд того самого силуэта, который смотрит прямо мне в душу."
+    scene cj_night_eve_4 with dissolve
+    play sound screamer_short
+    scene cj_night_eve_3 at tremble
 
     "Но меня же никто не может видеть с улицы! Тем более, сейчас темно. Почему же тогда я ощущаю на себе взгляд?"
 

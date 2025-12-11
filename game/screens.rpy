@@ -461,7 +461,7 @@ screen main_menu():
     imagebutton auto "gui/mm/mm_load_%s.png" xpos 840 ypos 465 focus_mask True action ShowMenu("load") hovered [ Play("sound", "audio/zvuk11.ogg") ]
     add "images/mm/bg_class_8.png"
     imagebutton auto "gui/mm/mm_start_%s.png" xpos 50 ypos 460 focus_mask True action Start() hovered [ Play("sound", "audio/zvuk11.ogg") ]
-    imagebutton auto "gui/mm/mm_diary_%s.png" xpos 550 ypos 850 focus_mask True action ShowMenu("diary") hovered [ Play("sound", "audio/zvuk11.ogg") ]
+    imagebutton auto "gui/mm/mm_diary_%s.png" xpos 610 ypos 822 focus_mask True action ShowMenu("diary") hovered [ Play("sound", "audio/zvuk11.ogg") ]
     add "images/mm/bg_class_10.png"
 
 
